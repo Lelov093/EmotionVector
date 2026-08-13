@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_held_out_execution_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Held-out Execution v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary_version", "status", "runtime", "access", "execution", "artifacts", "generation", "blind_review", "test_boundary", "claim_boundary"],
+  "properties": {
+    "summary_version": {"const": "phase_3_held_out_execution_v0_1"},
+    "status": {"const": "held_out_candidates_complete_blinding_deviation_pending_user_decision"},
+    "runtime": {"type": "object"},
+    "access": {"type": "object"},
+    "execution": {"type": "object"},
+    "artifacts": {"type": "object"},
+    "generation": {"type": "object"},
+    "blind_review": {"type": "object"},
+    "test_boundary": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

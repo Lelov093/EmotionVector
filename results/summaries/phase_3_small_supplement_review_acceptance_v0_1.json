@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "check_id": "all_12_input_ids_complete",
+      "status": "pass"
+    },
+    {
+      "check_id": "raw_packet_identity_hash_text_and_provenance_preserved",
+      "status": "pass"
+    },
+    {
+      "check_id": "family_schema_and_eligibility_valid",
+      "status": "pass"
+    },
+    {
+      "check_id": "isolation_schema_and_relations_valid",
+      "status": "pass"
+    },
+    {
+      "check_id": "merge_transitive_closure_and_canonical_ids",
+      "status": "pass"
+    },
+    {
+      "check_id": "split_not_created",
+      "status": "pass"
+    },
+    {
+      "check_id": "disjoint_40_15_40_feasibility",
+      "status": "blocked_shortfall_1"
+    }
+  ],
+  "claim_boundary": "The confirmed supplemental review improves the maximum disjoint allocation to 39/15/40, not 40/15/40. The frozen gate remains unmet; no split or model execution is authorized.",
+  "decision": {
+    "automatic_expansion_allowed": false,
+    "model_execution_authorized": false,
+    "outcome": "blocked_shortfall_1",
+    "split_created": false
+  },
+  "disjoint_gate_audit": {
+    "both_role_families": 78,
+    "evaluation_eligible_families": 80,
+    "evaluation_only_families": 2,
+    "maximum_qlora_train_families_after_reserving_15_dev_and_40_test": 39,
+    "meets_40_15_40": false,
+    "qlora_eligible_families": 92,
+    "qlora_only_families": 14,
+    "qlora_train_shortfall": 1
+  },
+  "family_counts": {
+    "mapping_decisions": {
+      "accept": 9,
+      "reject": 3
+    },
+    "pair_contrasts": {
+      "insufficient_trait_evidence": 3,
+      "same_axis_not_opposite": 5,
+      "valid_single_axis": 4
+    },
+    "paired_evaluation_eligible": 4,
+    "qlora_training_eligible_responses": 5
+  },
+  "formal_reviews": {
+    "family": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_small_supplement_family_review_completed_v0_1.jsonl",
+      "row_count": 12,
+      "sha256": "39c8aa643e73071d2002a7d31dc14fe632868f1eeafa81f51720ade3d811b879",
+      "tracked": false
+    },
+    "isolation": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_small_supplement_isolation_review_completed_v0_1.jsonl",
+      "row_count": 12,
+      "sha256": "b3d9d95209d86cb647dbfeaa089006ee20afe787e78560598ab10ee0a4033c20",
+      "tracked": false
+    }
+  },
+  "inputs": {
+    "family_packet": {
+      "modified": false,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_small_supplement_review_packet_v0_1.jsonl",
+      "sha256": "fac93d82f807776a9191563103087d0fb28aa1d8e94b0cf0aef4de45c6ca5ac1"
+    },
+    "family_prereview": {
+      "filename": "phase_3_small_supplement_family_ai_prereview_v0_1.jsonl",
+      "sha256": "830bc9bb04441b8df36e90a717a9636ec43bc3c202df0a7b8ecd118d3366ae47"
+    },
+    "isolation_packet": {
+      "modified": false,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_small_supplement_isolation_review_packet_v0_1.jsonl",
+      "sha256": "4a8c3ff251bf600a95c56d9d020f6e5fe51b7f614041d879e9873fe6abb22ace"
+    },
+    "isolation_prereview": {
+      "filename": "phase_3_small_supplement_isolation_ai_prereview_v0_1.jsonl",
+      "sha256": "cecc4aa76ee661600b87ab2fac1a048b0c78ec8a783380b545dd4915eed61c40"
+    },
+    "prior_final_isolation_manifest": {
+      "modified": false,
+      "path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_2.json",
+      "sha256": "a7beff0c422285444929a6e15b426a9ccf51532c2017fecef80cc044b4f6cf9b"
+    }
+  },
+  "isolation_counts": {
+    "candidate_count": 282,
+    "component_size_distribution": {
+      "1": 162,
+      "2": 29,
+      "3": 6,
+      "4": 2,
+      "5": 3,
+      "7": 3
+    },
+    "final_isolation_families": 205,
+    "merged_components": 43,
+    "supplemental_confirm": 7,
+    "supplemental_exclude": 0,
+    "supplemental_ids_canonicalized_to_frozen_family_id": 0,
+    "supplemental_merge": 5
+  },
+  "reviewed_at": "2026-08-04T21:38:08+08:00",
+  "reviewer_id": "researcher_01",
+  "status": "reviews_complete_40_15_40_blocked_shortfall_1_no_split",
+  "summary_version": "phase_3_small_supplement_review_acceptance_v0_1"
+}

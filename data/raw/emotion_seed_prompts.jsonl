@@ -1,0 +1,40 @@
+{"id":"calm_001","label":"calm","text":"面对突发情况，她先停下脚步，逐项确认眼前的信息，而不是立刻下结论。","split":"train"}
+{"id":"calm_002","label":"calm","text":"会议出现分歧时，他没有急着反驳，而是把每个人的意见写在白板上重新梳理。","split":"train"}
+{"id":"calm_003","label":"calm","text":"即使时间紧迫，她仍然保持稳定语速，先确认任务优先级，再安排下一步。","split":"train"}
+{"id":"calm_004","label":"calm","text":"听到坏消息后，他沉默了几秒，然后开始检查哪些问题仍然可以补救。","split":"train"}
+{"id":"calm_005","label":"calm","text":"她没有被周围的催促带乱节奏，只是认真核对清单上的每一项。","split":"train"}
+{"id":"calm_006","label":"calm","text":"面对质疑，他先承认对方的担忧，再用清楚的步骤解释自己的判断。","split":"train"}
+{"id":"calm_007","label":"calm","text":"房间里一片嘈杂，但他仍然把资料分成三类，按顺序处理。","split":"train"}
+{"id":"calm_008","label":"calm","text":"她把杯子放回桌面，语气平稳地说，先确认事实，再讨论责任。","split":"train"}
+{"id":"calm_009","label":"calm","text":"他没有急于证明自己，而是先把已经发生的过程完整复盘了一遍。","split":"train"}
+{"id":"calm_010","label":"calm","text":"局面变得复杂后，她依然专注于可验证的信息，没有被情绪牵着走。","split":"train"}
+{"id":"angry_001","label":"angry","text":"被连续误解后，她的语气明显变硬，每一句话都带着压不住的不满。","split":"train"}
+{"id":"angry_002","label":"angry","text":"他盯着那份被随意改动的计划，声音比平时高了许多。","split":"train"}
+{"id":"angry_003","label":"angry","text":"听到对方再次推卸责任，她立刻打断了对方，话语变得尖锐。","split":"train"}
+{"id":"angry_004","label":"angry","text":"他原本还能忍耐，但看到成果被轻描淡写地否定后，表情彻底沉了下来。","split":"train"}
+{"id":"angry_005","label":"angry","text":"她握紧手里的文件，强压着火气问，对方到底有没有认真看过内容。","split":"train"}
+{"id":"angry_006","label":"angry","text":"对方反复嘲讽让他再也无法维持礼貌，回答变得短促而强硬。","split":"train"}
+{"id":"angry_007","label":"angry","text":"他说话时已经没有先前的耐心，每个字都像是在压着怒意。","split":"train"}
+{"id":"angry_008","label":"angry","text":"她听完那句指责后，立刻反问对方凭什么这样判断。","split":"train"}
+{"id":"angry_009","label":"angry","text":"原本安静的讨论被一句挑衅打断，他的脸色立刻变得难看。","split":"train"}
+{"id":"angry_010","label":"angry","text":"他看着被浪费的准备成果，语气里已经带上明显的愤懑。","split":"train"}
+{"id":"neutral_001","label":"neutral","text":"这份文档介绍了系统的主要模块、数据结构和运行流程。","split":"train"}
+{"id":"neutral_002","label":"neutral","text":"实验记录包括模型名称、参数设置、输入文本和输出结果。","split":"train"}
+{"id":"neutral_003","label":"neutral","text":"项目目录下包含 backend、experiments、data、results 和 docs 等文件夹。","split":"train"}
+{"id":"neutral_004","label":"neutral","text":"该函数接收字符串输入，并返回经过 tokenizer 处理后的张量。","split":"train"}
+{"id":"neutral_005","label":"neutral","text":"配置文件用于集中管理模型路径、层索引、最大长度和输出目录。","split":"train"}
+{"id":"neutral_006","label":"neutral","text":"CSV 文件中保存了每条测试文本对应的分数和预测标签。","split":"train"}
+{"id":"neutral_007","label":"neutral","text":"运行脚本前需要确认虚拟环境已经激活，并且依赖包安装完整。","split":"train"}
+{"id":"neutral_008","label":"neutral","text":"模型缓存目录通过环境变量指定，以避免占用系统盘空间。","split":"train"}
+{"id":"neutral_009","label":"neutral","text":"数据集采用 JSONL 格式，每一行都是一个独立的 JSON 对象。","split":"train"}
+{"id":"neutral_010","label":"neutral","text":"向量文件会被保存到 results 目录下，便于后续实验复用。","split":"train"}
+{"id":"neutral_011","label":"neutral","text":"该模块负责读取输入文件，并按照标签对样本进行分组。","split":"train"}
+{"id":"neutral_012","label":"neutral","text":"程序会在控制台输出当前设备、模型名称和实验参数。","split":"train"}
+{"id":"neutral_013","label":"neutral","text":"测试脚本会加载已保存的向量文件，然后对若干新文本进行评分。","split":"train"}
+{"id":"neutral_014","label":"neutral","text":"依赖项包括 PyTorch、Transformers、Pandas、Scikit-learn 和 Rich。","split":"train"}
+{"id":"neutral_015","label":"neutral","text":"后续版本可以将实验逻辑封装为 API，并提供给前端页面调用。","split":"train"}
+{"id":"neutral_016","label":"neutral","text":"本阶段只处理单模型和小规模数据，不进行多模型对比。","split":"train"}
+{"id":"neutral_017","label":"neutral","text":"日志文件用于记录每次实验的输入、输出和关键指标。","split":"train"}
+{"id":"neutral_018","label":"neutral","text":"路径处理统一使用 pathlib，以提升跨平台可维护性。","split":"train"}
+{"id":"neutral_019","label":"neutral","text":"如果输出目录不存在，程序会在运行时自动创建。","split":"train"}
+{"id":"neutral_020","label":"neutral","text":"当前实验只抽取指定层最后一个有效 token 的 hidden state。","split":"train"}

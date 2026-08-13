@@ -1,0 +1,164 @@
+{
+  "created_at": "2026-07-04T14:02:20.202637+00:00",
+  "record_count": 276,
+  "condition_counts": {
+    "base": 120,
+    "prompt-only": 120,
+    "selected-steering": 36
+  },
+  "axis_counts": {
+    "calm-agitated": 26,
+    "warm-cold": 20,
+    "empathetic-detached": 26,
+    "supportive-critical": 20,
+    "assertive-compliant": 26,
+    "boundary-preserving-over-accommodating": 26,
+    "cautious-impulsive": 26,
+    "confident-uncertain": 20,
+    "stable-reactive": 26,
+    "analytical-intuitive": 20,
+    "concise-expressive": 20,
+    "reflective-impulsively-answering": 20
+  },
+  "per_axis": {
+    "analytical-intuitive": {
+      "base_trait_avg": 2.4,
+      "prompt_only_trait_avg": 2.5,
+      "prompt_only_minus_base": 0.1,
+      "selected_steering_trait_avg": null,
+      "selected_steering_minus_base": null,
+      "selected_steering_minus_prompt_only": null,
+      "base_side_effect_avg": 0.2,
+      "prompt_only_side_effect_avg": 0.0
+    },
+    "assertive-compliant": {
+      "base_trait_avg": 2.5,
+      "prompt_only_trait_avg": 2.7,
+      "prompt_only_minus_base": 0.2,
+      "selected_steering_trait_avg": 2.6667,
+      "selected_steering_minus_base": 0.1667,
+      "selected_steering_minus_prompt_only": -0.0333,
+      "base_side_effect_avg": 0.7,
+      "prompt_only_side_effect_avg": 0.7
+    },
+    "boundary-preserving-over-accommodating": {
+      "base_trait_avg": 2.9,
+      "prompt_only_trait_avg": 2.9,
+      "prompt_only_minus_base": 0.0,
+      "selected_steering_trait_avg": 2.8333,
+      "selected_steering_minus_base": -0.0667,
+      "selected_steering_minus_prompt_only": -0.0667,
+      "base_side_effect_avg": 0.7,
+      "prompt_only_side_effect_avg": 0.9
+    },
+    "calm-agitated": {
+      "base_trait_avg": 2.9,
+      "prompt_only_trait_avg": 3.0,
+      "prompt_only_minus_base": 0.1,
+      "selected_steering_trait_avg": 3.0,
+      "selected_steering_minus_base": 0.1,
+      "selected_steering_minus_prompt_only": 0.0,
+      "base_side_effect_avg": 0.0,
+      "prompt_only_side_effect_avg": 0.0
+    },
+    "cautious-impulsive": {
+      "base_trait_avg": 3.2,
+      "prompt_only_trait_avg": 3.2,
+      "prompt_only_minus_base": 0.0,
+      "selected_steering_trait_avg": 3.0,
+      "selected_steering_minus_base": -0.2,
+      "selected_steering_minus_prompt_only": -0.2,
+      "base_side_effect_avg": 0.6,
+      "prompt_only_side_effect_avg": 0.3
+    },
+    "concise-expressive": {
+      "base_trait_avg": 2.3,
+      "prompt_only_trait_avg": 2.0,
+      "prompt_only_minus_base": -0.3,
+      "selected_steering_trait_avg": null,
+      "selected_steering_minus_base": null,
+      "selected_steering_minus_prompt_only": null,
+      "base_side_effect_avg": 0.0,
+      "prompt_only_side_effect_avg": 0.0
+    },
+    "confident-uncertain": {
+      "base_trait_avg": 2.9,
+      "prompt_only_trait_avg": 3.1,
+      "prompt_only_minus_base": 0.2,
+      "selected_steering_trait_avg": null,
+      "selected_steering_minus_base": null,
+      "selected_steering_minus_prompt_only": null,
+      "base_side_effect_avg": 0.3,
+      "prompt_only_side_effect_avg": 0.2
+    },
+    "empathetic-detached": {
+      "base_trait_avg": 3.7,
+      "prompt_only_trait_avg": 3.8,
+      "prompt_only_minus_base": 0.1,
+      "selected_steering_trait_avg": 3.8333,
+      "selected_steering_minus_base": 0.1333,
+      "selected_steering_minus_prompt_only": 0.0333,
+      "base_side_effect_avg": 0.1,
+      "prompt_only_side_effect_avg": 0.0
+    },
+    "reflective-impulsively-answering": {
+      "base_trait_avg": 2.6,
+      "prompt_only_trait_avg": 2.5,
+      "prompt_only_minus_base": -0.1,
+      "selected_steering_trait_avg": null,
+      "selected_steering_minus_base": null,
+      "selected_steering_minus_prompt_only": null,
+      "base_side_effect_avg": 0.2,
+      "prompt_only_side_effect_avg": 0.2
+    },
+    "stable-reactive": {
+      "base_trait_avg": 2.4,
+      "prompt_only_trait_avg": 2.1,
+      "prompt_only_minus_base": -0.3,
+      "selected_steering_trait_avg": 2.5,
+      "selected_steering_minus_base": 0.1,
+      "selected_steering_minus_prompt_only": 0.4,
+      "base_side_effect_avg": 0.3,
+      "prompt_only_side_effect_avg": 0.3
+    },
+    "supportive-critical": {
+      "base_trait_avg": 2.9,
+      "prompt_only_trait_avg": 2.8,
+      "prompt_only_minus_base": -0.1,
+      "selected_steering_trait_avg": null,
+      "selected_steering_minus_base": null,
+      "selected_steering_minus_prompt_only": null,
+      "base_side_effect_avg": 0.3,
+      "prompt_only_side_effect_avg": 0.1
+    },
+    "warm-cold": {
+      "base_trait_avg": 2.5,
+      "prompt_only_trait_avg": 3.2,
+      "prompt_only_minus_base": 0.7,
+      "selected_steering_trait_avg": null,
+      "selected_steering_minus_base": null,
+      "selected_steering_minus_prompt_only": null,
+      "base_side_effect_avg": 0.1,
+      "prompt_only_side_effect_avg": 0.1
+    }
+  },
+  "prompt_only_dominates_axes": [
+    "warm-cold"
+  ],
+  "model_already_satisfies_target_axes": [
+    "cautious-impulsive",
+    "empathetic-detached"
+  ],
+  "ambiguous_axes": [
+    "analytical-intuitive",
+    "confident-uncertain",
+    "reflective-impulsively-answering",
+    "supportive-critical"
+  ],
+  "side_effect_summary": {
+    "avg_side_effect_load": 0.2826,
+    "refusal_records": 64,
+    "synthetic_marker_records": 2
+  },
+  "claim_boundary": "Heuristic evaluator is independent of representation projections but is not a human or final LLM judge."
+}

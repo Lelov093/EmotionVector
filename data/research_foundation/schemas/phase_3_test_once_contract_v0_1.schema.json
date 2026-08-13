@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_test_once_contract_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Test-once Contract v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["contract_version", "status", "split_manifest", "test_freeze", "access_policy", "forbidden_uses", "required_preconditions", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_test_once_contract_v0_1"},
+    "status": {"const": "frozen_before_model_or_test_execution"},
+    "split_manifest": {"type": "object"}, "test_freeze": {"type": "object"},
+    "access_policy": {"type": "object"}, "forbidden_uses": {"type": "array", "minItems": 5},
+    "required_preconditions": {"type": "array", "minItems": 5},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

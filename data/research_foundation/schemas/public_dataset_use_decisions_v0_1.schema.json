@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/public_dataset_use_decisions_v0_1.schema.json",
+  "title": "EmotionVector Public Dataset Research-use Decisions v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision_version", "recorded_at", "authority", "scope", "decisions", "claim_boundary"],
+  "properties": {
+    "decision_version": {"const": "public_dataset_use_decisions_v0_1"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "authority": {"const": "project_owner"},
+    "scope": {"const": "EmotionVector non-commercial research"},
+    "decisions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "dataset_id", "source_revision", "license_identifier", "decision", "allowed_roles",
+          "prohibited_roles", "requirements", "withdrawal_condition"
+        ],
+        "properties": {
+          "dataset_id": {"enum": ["empathetic_dialogues", "pku_safe_rlhf"]},
+          "source_revision": {"type": "string", "minLength": 8},
+          "license_identifier": {"const": "CC-BY-NC-4.0"},
+          "decision": {"const": "approved_noncommercial_research_use"},
+          "allowed_roles": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "prohibited_roles": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "requirements": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "withdrawal_condition": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

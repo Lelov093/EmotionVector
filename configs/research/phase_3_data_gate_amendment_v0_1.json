@@ -1,0 +1,41 @@
+{
+  "amendment_version": "phase_3_data_gate_amendment_v0_1",
+  "status": "user_approved_post_review_data_gate_amendment",
+  "authorized_by": "researcher_01",
+  "authorized_at": "2026-08-04T21:44:43+08:00",
+  "timing_disclosure": "authorized_after_all_282_family_and_isolation_reviews_and_after_the_39_15_40_capacity_result_was_known",
+  "bound_evidence": {
+    "review_acceptance_path": "results/summaries/phase_3_small_supplement_review_acceptance_v0_1.json",
+    "review_acceptance_sha256": "ef603210133186cf25ae1b1c92b2f9d87de40c5ae0c5b07885c3786bacc4f3b5",
+    "final_isolation_manifest_path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_3.json",
+    "final_isolation_manifest_sha256": "21b6c89cce6c13b00a371d44ce18e7389d2edaffb5457b6bd7dc642c76d76fdc"
+  },
+  "original_gate": {
+    "qlora_train_families": 40,
+    "development_families": 15,
+    "held_out_test_families": 40,
+    "observed_maximum_train_families": 39,
+    "passed": false
+  },
+  "amended_gate": {
+    "qlora_train_families": 39,
+    "development_families": 15,
+    "held_out_test_families": 40,
+    "observed_maximum_train_families": 39,
+    "passed": true
+  },
+  "decision": {
+    "data_gate_outcome": "pass_under_amended_39_15_40_standard",
+    "additional_candidate_expansion_allowed": false,
+    "split_creation_allowed": true,
+    "model_or_gpu_execution_authorized": false
+  },
+  "unchanged_boundaries": {
+    "single_axis_only": "boundary-preserving-over-accommodating",
+    "confirmatory_steering_gate": "no_go",
+    "study_role": "limited_nonconfirmatory_fair_method_comparison",
+    "representation_evidence_is_not_causal_steering": true,
+    "same_axis_not_opposite_is_not_paired_evaluation_eligible": true
+  },
+  "claim_boundary": "The original preregistered 40/15/40 gate did not pass. The researcher explicitly accepted a post-review 39/15/40 amendment and stopped further expansion. This permits split construction and auditing only; it does not retroactively make 40/15/40 true or authorize model, GPU, training, steering, or causal claims."
+}

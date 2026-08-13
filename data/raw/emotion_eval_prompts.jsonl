@@ -1,0 +1,30 @@
+{"id":"eval_calm_001","expected":"calm","text":"被当众质疑后，他没有立刻提高音量，而是逐一列出支撑自己判断的数据。"}
+{"id":"eval_calm_002","expected":"calm","text":"她收到紧急通知时，先确认截止时间，再评估哪些任务必须调整顺序。"}
+{"id":"eval_calm_003","expected":"calm","text":"讨论变得激烈后，他提议先各自整理论点，十分钟后再继续。"}
+{"id":"eval_calm_004","expected":"calm","text":"失败了两次之后，她没有推卸责任，而是从头复盘每一个决策节点。"}
+{"id":"eval_calm_005","expected":"calm","text":"几个同事同时向他求助，他在便签上快速列出优先级，逐个回应。"}
+{"id":"eval_calm_006","expected":"calm","text":"即使在最后期限前，她仍然先核对检查清单上的关键项，而不是盲目加速。"}
+{"id":"eval_calm_007","expected":"calm","text":"对方情绪激动地指责时，他等了片刻，然后请对方举出具体例子。"}
+{"id":"eval_calm_008","expected":"calm","text":"看到意外错误后，她先隔离了问题范围，确认没有影响到其他模块。"}
+{"id":"eval_calm_009","expected":"calm","text":"计划被打乱后，他没有抱怨，而是坐下来重新画了一张时间线。"}
+{"id":"eval_calm_010","expected":"calm","text":"她把注意力集中在可操作的部分，暂时搁置了无法立刻改变的因素。"}
+{"id":"eval_angry_001","expected":"angry","text":"被连续讽刺了三轮后，他终于忍不住提高了声调，不再掩饰自己的不满。"}
+{"id":"eval_angry_002","expected":"angry","text":"她看到自己通宵做的方案被随意删改，当场要求对方解释删除每一条的理由。"}
+{"id":"eval_angry_003","expected":"angry","text":"对方把责任全部推给下属时，他猛地站起来，语气已经完全没有商量余地。"}
+{"id":"eval_angry_004","expected":"angry","text":"被反复打断发言后，她把稿子拍在桌上，语速变快，每个词都像在回击。"}
+{"id":"eval_angry_005","expected":"angry","text":"他意识到自己的核心贡献被故意忽略后，再也没有保持沉默的耐心。"}
+{"id":"eval_angry_006","expected":"angry","text":"听到那句轻蔑的评价，她的脸立刻沉了下来，回答变得冰冷而简短。"}
+{"id":"eval_angry_007","expected":"angry","text":"同行在会议上公开歪曲他的数据，他不等对方说完就直接站起来反驳。"}
+{"id":"eval_angry_008","expected":"angry","text":"原本他想冷静沟通，但对方的敷衍态度让他直接关掉了对话框。"}
+{"id":"eval_angry_009","expected":"angry","text":"看到承诺再三被打破，他的回复从长篇解释变成了一句话质问。"}
+{"id":"eval_angry_010","expected":"angry","text":"她紧盯着那封推卸责任的邮件，手指在键盘上停留片刻后，打出了毫不客气的回信。"}
+{"id":"eval_neutral_001","expected":"neutral-ish","text":"该配置文件包含模型名称、最大输入长度以及向量保存路径等参数。"}
+{"id":"eval_neutral_002","expected":"neutral-ish","text":"评估脚本会读取向量文件，对测试文本逐条计算余弦相似度分数。"}
+{"id":"eval_neutral_003","expected":"neutral-ish","text":"函数返回一个字典，键为标签名称，值为对应的浮点数分数。"}
+{"id":"eval_neutral_004","expected":"neutral-ish","text":"项目使用 pathlib 处理文件路径，以兼容 Windows 和 Linux 系统。"}
+{"id":"eval_neutral_005","expected":"neutral-ish","text":"数据集的每一行是一个 JSON 对象，包含 id、label、text 和 split 字段。"}
+{"id":"eval_neutral_006","expected":"neutral-ish","text":"模型通过 HuggingFace Transformers 加载，推理时使用 torch.no_grad 上下文。"}
+{"id":"eval_neutral_007","expected":"neutral-ish","text":"输出的 CSV 文件采用 UTF-8 with BOM 编码，方便在 Excel 中直接打开。"}
+{"id":"eval_neutral_008","expected":"neutral-ish","text":"准确率定义为正确预测数量除以总样本数量，按类别分别统计。"}
+{"id":"eval_neutral_009","expected":"neutral-ish","text":"向量归一化使用 L2 范数，确保不同向量之间的比较不受长度影响。"}
+{"id":"eval_neutral_010","expected":"neutral-ish","text":"日志目录在每次实验前会自动创建，不需要手动新建文件夹。"}

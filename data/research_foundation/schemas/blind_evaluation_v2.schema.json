@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/blind_evaluation_v2.schema.json",
+  "title": "EmotionVector Blind Human Evaluation v2",
+  "oneOf": [
+    {"$ref": "#/$defs/review_item"},
+    {"$ref": "#/$defs/human_annotation"},
+    {"$ref": "#/$defs/restricted_condition_key"}
+  ],
+  "$defs": {
+    "review_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type", "review_item_id", "prompt_id", "axis_id", "target_pole",
+        "contrast_pole", "user_prompt", "blind_outputs", "rubric_version", "review_round"
+      ],
+      "properties": {
+        "record_type": {"const": "review_item"},
+        "review_item_id": {"type": "string"},
+        "prompt_id": {"type": "string"},
+        "axis_id": {"type": "string"},
+        "target_pole": {"type": "string"},
+        "contrast_pole": {"type": "string"},
+        "user_prompt": {"type": "string"},
+        "blind_outputs": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["blind_output_id", "output_text"],
+            "properties": {
+              "blind_output_id": {"type": "string"},
+              "output_text": {"type": "string"}
+            }
+          }
+        },
+        "rubric_version": {"type": "string"},
+        "review_round": {"type": "integer", "minimum": 1, "maximum": 2}
+      }
+    },
+    "human_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type", "review_item_id", "blind_output_id", "reviewer_id", "trait_score",
+        "task_quality_score", "naturalness_score", "refusal_appropriateness", "over_refusal",
+        "sycophancy", "alternative_quality", "repetition", "verbosity_side_effect",
+        "other_side_effects", "confidence", "notes", "reviewed_at", "review_round"
+      ],
+      "properties": {
+        "record_type": {"const": "human_annotation"},
+        "review_item_id": {"type": "string"},
+        "blind_output_id": {"type": "string"},
+        "reviewer_id": {"type": "string"},
+        "trait_score": {"type": "integer", "minimum": 0, "maximum": 4},
+        "task_quality_score": {"type": "integer", "minimum": 0, "maximum": 4},
+        "naturalness_score": {"type": "integer", "minimum": 0, "maximum": 4},
+        "refusal_appropriateness": {"enum": ["not_applicable", "appropriate", "unnecessary", "insufficient", "unclear"]},
+        "over_refusal": {"type": "boolean"},
+        "sycophancy": {"type": "boolean"},
+        "alternative_quality": {"enum": ["not_applicable", "none", "weak", "adequate", "strong"]},
+        "repetition": {"type": "integer", "minimum": 0, "maximum": 2},
+        "verbosity_side_effect": {"enum": ["too_short", "appropriate", "too_verbose"]},
+        "other_side_effects": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"enum": ["low", "medium", "high"]},
+        "notes": {"type": "string"},
+        "reviewed_at": {"type": "string", "format": "date-time"},
+        "review_round": {"type": "integer", "minimum": 1, "maximum": 2}
+      }
+    },
+    "restricted_condition_key": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "record_type", "blind_output_id", "condition_id", "artifact_id",
+        "canonical_output_id", "review_round"
+      ],
+      "properties": {
+        "record_type": {"const": "restricted_condition_key"},
+        "blind_output_id": {"type": "string"},
+        "condition_id": {"type": "string"},
+        "artifact_id": {"type": "string"},
+        "canonical_output_id": {"type": "string"},
+        "review_round": {"type": "integer", "minimum": 1, "maximum": 2}
+      }
+    }
+  }
+}

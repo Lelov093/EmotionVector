@@ -1,0 +1,50 @@
+{
+  "contract_version": "phase_3_additional_tranche_contract_v0_3",
+  "status": "frozen_before_additional_tranche_human_review",
+  "preceding_contract_path": "configs/research/phase_3_isolation_and_expansion_contract_v0_2.json",
+  "preceding_contract_sha256": "85900f6b5bb67ac011238baad13bae350b9c816c2978eec847db2b3876746f88",
+  "review_acceptance_path": "results/summaries/phase_3_expansion_and_isolation_review_acceptance_v0_1.json",
+  "review_acceptance_sha256": "2026c050d92d9ed829a27cf23d09bd2fced3be331bce7f4a6fa984527bcdf0a2",
+  "final_isolation_manifest_path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_1.json",
+  "final_isolation_manifest_sha256": "3f46e8132ba971b9301d97b643dfcc7815bcb3eb05a1baafa64a084522b1aa45",
+  "source": {
+    "dataset_id": "pku_safe_rlhf",
+    "revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+    "model_paths": {
+      "Alpaca-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/train.jsonl",
+      "Alpaca2-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/train.jsonl",
+      "Alpaca3-8B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/train.jsonl"
+    }
+  },
+  "sampling": {
+    "seed": 2026080459,
+    "mixed_safety_per_model": 8,
+    "both_safe_per_model": 2,
+    "candidate_count": 30,
+    "exclude_phase_2_all_splits": true,
+    "exclude_reviewed_phase_3_240": true,
+    "positive_yield_required": false
+  },
+  "isolation_extension_policy": {
+    "strict_split_ownership_field": "isolation_family_id",
+    "compare_against_existing_candidate_count": 240,
+    "compare_against_existing_final_family_count": 189,
+    "exact_normalized_and_token_3gram_jaccard_at_or_above_0_90_excluded_before_review": true,
+    "human_semantic_merge_review_required": true,
+    "transitive_merge_with_existing_and_new_candidates_required": true
+  },
+  "unchanged_targets": {
+    "qlora_train_minimum_families": 40,
+    "development_minimum_families": 15,
+    "held_out_test_minimum_families": 40,
+    "current_qlora_train_shortfall_upper_bound": 11,
+    "allocation_before_review_forbidden": true
+  },
+  "review_schema_path": "data/research_foundation/schemas/phase_3_family_review_v0_1.schema.json",
+  "manifest_schema_path": "data/research_foundation/schemas/phase_3_additional_tranche_manifest_v0_1.schema.json",
+  "isolation_review_schema_path": "data/research_foundation/schemas/phase_3_isolation_extension_review_v0_1.schema.json",
+  "tracked_manifest_path": "data/research_foundation/manifests/phase_3_additional_tranche_manifest_v0_1.json",
+  "local_review_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_additional_tranche_review_packet_v0_1.jsonl",
+  "local_isolation_review_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_additional_tranche_isolation_review_packet_v0_1.jsonl",
+  "claim_boundary": "This exact 30-candidate tranche is the bounded follow-up authorized after the reviewed 240 pool remained 11 train families short. It promises no eligibility yield, creates no split, and cannot lower the unchanged 40/15/40 gates."
+}

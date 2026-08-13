@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this research code or evidence archive, please cite it using this metadata."
+title: "EmotionVector: Trait Representation, Steering, and Evaluation Research Prototype"
+type: software
+authors:
+  - family-names: "Lelov"
+    alias: "Lelov093"
+version: 0.1.0
+repository-code: "https://github.com/Lelov093/EmotionVector"
+url: "https://github.com/Lelov093/EmotionVector"
+license: Apache-2.0
+keywords:
+  - large language models
+  - activation steering
+  - representation analysis
+  - QLoRA
+  - evaluation
+  - negative results

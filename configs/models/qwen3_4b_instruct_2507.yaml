@@ -1,0 +1,24 @@
+model_id: Qwen/Qwen3-4B-Instruct-2507
+role: main
+local_cache_policy:
+  user_local_model_root_note: "D:\\AI_Models"
+  user_local_hf_hub_note: "D:\\AI_Models\\huggingface\\hub"
+  portable_required_path: false
+  loader_should_support: [HF_HOME, TRANSFORMERS_CACHE, cache_dir, local_files_only]
+recommended_dtype: fp16
+quantization_mode: none_or_8bit_if_needed
+device_map_strategy: auto_single_gpu_with_optional_cpu_offload
+default_context_length: 768
+default_max_new_tokens: 128
+batch_size_policy: "1 for hidden-state extraction, steering, and generation."
+hidden_state_policy: "Shard by axis/layer/split; move tensors to CPU; write only local artifacts."
+local_files_only_policy: "Prefer true after the model is present in the local cache."
+artifact_policy: "Track only summaries/cards/figures/configs; keep tensors and logs local-only."
+known_risks:
+  - 8GB VRAM may require short context and strict batch size.
+  - Windows native quantization dependencies may need separate validation.
+  - Full all-layer/all-axis extraction should be sharded.
+acceptance_use:
+  - Main Representation Atlas runs
+  - Main activation steering runs
+  - Selected QLoRA feasibility

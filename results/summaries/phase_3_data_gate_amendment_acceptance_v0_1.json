@@ -1,0 +1,25 @@
+{
+  "summary_version": "phase_3_data_gate_amendment_acceptance_v0_1",
+  "status": "data_gate_passed_under_user_amended_39_15_40_standard",
+  "authorized_by": "researcher_01",
+  "authorized_at": "2026-08-04T21:44:43+08:00",
+  "amendment_path": "configs/research/phase_3_data_gate_amendment_v0_1.json",
+  "observed_population": {
+    "candidate_count": 282,
+    "final_isolation_families": 205,
+    "evaluation_eligible_families": 80,
+    "qlora_eligible_families": 92,
+    "maximum_train_after_reserving_15_dev_and_40_test": 39
+  },
+  "gate_accounting": {
+    "original_40_15_40_passed": false,
+    "amended_39_15_40_passed": true,
+    "accepted_train_families": 39,
+    "accepted_development_families": 15,
+    "accepted_held_out_test_families": 40
+  },
+  "next_gate": "construct_and_audit_family_isolated_39_15_40_split_before_any_model_execution",
+  "model_or_gpu_run": false,
+  "model_or_gpu_execution_authorized": false,
+  "claim_boundary": "This is a transparent post-review threshold amendment. It closes further candidate expansion and passes the data-count gate at 39/15/40, while preserving the historical fact that the original 40/15/40 gate failed by one train family."
+}

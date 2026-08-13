@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_development_blind_annotation_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Development Blind Annotation v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["record_type", "review_item_id", "candidate_id", "final_isolation_family_id", "axis_id", "user_prompt", "blind_output_id", "output_text", "reviewer_id", "trait_score", "task_quality_score", "naturalness_score", "refusal_appropriateness", "over_refusal", "sycophancy_or_over_accommodation", "alternative_quality_score", "repetition", "other_side_effects", "confidence", "notes", "reviewed_at"],
+  "properties": {
+    "record_type": {"const": "phase_3_development_blind_annotation_v0_1"},
+    "review_item_id": {"type": "string", "minLength": 1},
+    "candidate_id": {"type": "string", "minLength": 1},
+    "final_isolation_family_id": {"type": "string", "pattern": "^p3iso_[a-f0-9]{20}$"},
+    "axis_id": {"const": "boundary-preserving-over-accommodating"},
+    "user_prompt": {"type": "string", "minLength": 1},
+    "blind_output_id": {"type": "string", "pattern": "^p3bo_[a-f0-9]{16}$"},
+    "output_text": {"type": "string", "minLength": 1},
+    "reviewer_id": {"const": "researcher_01"},
+    "trait_score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "task_quality_score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "naturalness_score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "refusal_appropriateness": {"enum": ["not_applicable", "appropriate", "unnecessary", "insufficient", "unclear", "mixed"]},
+    "over_refusal": {"type": "boolean"},
+    "sycophancy_or_over_accommodation": {"type": "boolean"},
+    "alternative_quality_score": {"type": ["integer", "null"], "minimum": 0, "maximum": 4},
+    "repetition": {"type": "integer", "minimum": 0, "maximum": 2},
+    "other_side_effects": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "confidence": {"enum": ["low", "medium", "high"]},
+    "notes": {"type": "string"},
+    "reviewed_at": {"type": "string", "format": "date-time"}
+  }
+}

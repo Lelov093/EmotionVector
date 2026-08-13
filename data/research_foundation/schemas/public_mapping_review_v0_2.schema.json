@@ -1,0 +1,372 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/public_mapping_review_v0_2.schema.json",
+  "title": "EmotionVector Public Dataset Trait-Mapping Review v0.2",
+  "$comment": "Axis-pole legality is validated directly against data/trait_space/axis_registry.yaml and is intentionally not duplicated here.",
+  "oneOf": [
+    {"$ref": "#/$defs/empathetic_review"},
+    {"$ref": "#/$defs/pku_review"}
+  ],
+  "$defs": {
+    "nullable_identifier": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "source_locator": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "trait_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis_id", "pole"],
+      "properties": {
+        "axis_id": {"$ref": "#/$defs/nullable_identifier"},
+        "pole": {"$ref": "#/$defs/nullable_identifier"}
+      }
+    },
+    "required_trait_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis_id", "pole"],
+      "properties": {
+        "axis_id": {"type": "string", "minLength": 1},
+        "pole": {"type": "string", "minLength": 1}
+      }
+    },
+    "reviewed_family_assignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_family_id", "scenario_family_id", "prompt_template_id", "semantic_cluster_id"
+      ],
+      "properties": {
+        "task_family_id": {"$ref": "#/$defs/nullable_identifier"},
+        "scenario_family_id": {"$ref": "#/$defs/nullable_identifier"},
+        "prompt_template_id": {"$ref": "#/$defs/nullable_identifier"},
+        "semantic_cluster_id": {"$ref": "#/$defs/nullable_identifier"}
+      }
+    },
+    "required_reviewed_family_assignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_family_id", "scenario_family_id", "prompt_template_id", "semantic_cluster_id"
+      ],
+      "properties": {
+        "task_family_id": {"type": "string", "minLength": 1},
+        "scenario_family_id": {"type": "string", "minLength": 1},
+        "prompt_template_id": {"type": "string", "minLength": 1},
+        "semantic_cluster_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "proposed_family_assignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_family_id", "scenario_family_id", "prompt_template_id",
+        "semantic_cluster_id", "assignment_status"
+      ],
+      "properties": {
+        "task_family_id": {"type": "string", "minLength": 1},
+        "scenario_family_id": {"type": "string", "minLength": 1},
+        "prompt_template_id": {"type": "string", "minLength": 1},
+        "semantic_cluster_id": {"type": "string", "minLength": 1},
+        "assignment_status": {"const": "machine_proposed_pending_human"}
+      }
+    },
+    "quality_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "keyword_leakage", "length_mismatch", "task_answer_mismatch", "confound_risk",
+          "unsafe_content", "too_subtle", "too_obvious", "exact_duplicate",
+          "near_duplicate", "template_dominated", "insufficient_context", "source_label_only",
+          "multi_axis_confound", "poor_response_quality", "other"
+        ]
+      }
+    },
+    "common_properties": {
+      "type": "object",
+      "properties": {
+        "schema_version": {"const": "public_mapping_review_v0_2"},
+        "record_type": {"const": "public_mapping_review"},
+        "dataset_id": {"enum": ["empathetic_dialogues", "pku_safe_rlhf"]},
+        "sample_id": {"type": "string", "minLength": 1},
+        "source_family_id": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Read-only provenance-derived field checked against the tracked manifest."
+        },
+        "source_locator": {"$ref": "#/$defs/source_locator"},
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "candidate_trait_axes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "proposed_family_assignment": {"$ref": "#/$defs/proposed_family_assignment"}
+      }
+    },
+    "empathetic_human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mapping_decision", "reviewer_id", "reviewed_at", "trait_annotation", "reviewed_family_assignment",
+        "quality_flags", "rewrite_notes", "notes"
+      ],
+      "properties": {
+        "mapping_decision": {
+          "type": ["string", "null"],
+          "enum": ["accept", "reject", "ambiguous", "needs_rewrite", null]
+        },
+        "reviewer_id": {"type": ["string", "null"], "minLength": 1},
+        "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+        "trait_annotation": {"$ref": "#/$defs/trait_annotation"},
+        "reviewed_family_assignment": {"$ref": "#/$defs/reviewed_family_assignment"},
+        "quality_flags": {"$ref": "#/$defs/quality_flags"},
+        "rewrite_notes": {"type": "string"},
+        "notes": {"type": "string"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"mapping_decision": {"enum": ["accept", "reject", "ambiguous", "needs_rewrite"]}}},
+          "then": {
+            "properties": {
+              "reviewer_id": {"type": "string", "minLength": 1},
+              "reviewed_at": {"type": "string", "format": "date-time"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "accept"}}},
+          "then": {
+            "properties": {
+              "trait_annotation": {"$ref": "#/$defs/required_trait_annotation"},
+              "reviewed_family_assignment": {"$ref": "#/$defs/required_reviewed_family_assignment"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "needs_rewrite"}}},
+          "then": {
+            "properties": {
+              "trait_annotation": {"$ref": "#/$defs/required_trait_annotation"},
+              "reviewed_family_assignment": {
+                "properties": {"scenario_family_id": {"type": "string", "minLength": 1}}
+              },
+              "rewrite_notes": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "ambiguous"}}},
+          "then": {"properties": {"notes": {"type": "string", "minLength": 1}}}
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "reject"}}},
+          "then": {
+            "anyOf": [
+              {"properties": {"quality_flags": {"minItems": 1}}},
+              {"properties": {"notes": {"type": "string", "minLength": 1}}}
+            ]
+          }
+        }
+      ]
+    },
+    "response_annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["response_id", "behavior", "trait_annotation"],
+      "properties": {
+        "response_id": {"enum": ["response_0", "response_1"]},
+        "behavior": {
+          "type": ["string", "null"],
+          "enum": [
+            "reasonable_accept", "reasonable_refusal", "clarification", "alternative",
+            "unsafe_compliance", "over_refusal", "other", null
+          ]
+        },
+        "trait_annotation": {"$ref": "#/$defs/trait_annotation"}
+      }
+    },
+    "required_response_behavior": {
+      "type": "object",
+      "properties": {
+        "behavior": {
+          "enum": [
+            "reasonable_accept", "reasonable_refusal", "clarification", "alternative",
+            "unsafe_compliance", "over_refusal", "other"
+          ]
+        }
+      }
+    },
+    "pair_contrast": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "axis_id"],
+      "properties": {
+        "status": {
+          "type": ["string", "null"],
+          "enum": [
+            "valid_single_axis", "same_axis_not_opposite", "multi_axis",
+            "insufficient_trait_evidence", "ambiguous", null
+          ]
+        },
+        "axis_id": {"$ref": "#/$defs/nullable_identifier"}
+      }
+    },
+    "pku_human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mapping_decision", "reviewer_id", "reviewed_at", "response_annotations", "pair_contrast",
+        "reviewed_family_assignment", "quality_flags", "rewrite_notes", "notes"
+      ],
+      "properties": {
+        "mapping_decision": {
+          "type": ["string", "null"],
+          "enum": ["accept", "reject", "ambiguous", "needs_rewrite", null]
+        },
+        "reviewer_id": {"type": ["string", "null"], "minLength": 1},
+        "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+        "response_annotations": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            {"allOf": [{"$ref": "#/$defs/response_annotation"}, {"properties": {"response_id": {"const": "response_0"}}}]},
+            {"allOf": [{"$ref": "#/$defs/response_annotation"}, {"properties": {"response_id": {"const": "response_1"}}}]}
+          ],
+          "items": false
+        },
+        "pair_contrast": {"$ref": "#/$defs/pair_contrast"},
+        "reviewed_family_assignment": {"$ref": "#/$defs/reviewed_family_assignment"},
+        "quality_flags": {"$ref": "#/$defs/quality_flags"},
+        "rewrite_notes": {"type": "string"},
+        "notes": {"type": "string"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"mapping_decision": {"enum": ["accept", "reject", "ambiguous", "needs_rewrite"]}}},
+          "then": {
+            "properties": {
+              "reviewer_id": {"type": "string", "minLength": 1},
+              "reviewed_at": {"type": "string", "format": "date-time"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"enum": ["accept", "needs_rewrite"]}}},
+          "then": {
+            "properties": {
+              "response_annotations": {
+                "prefixItems": [
+                  {"allOf": [{"$ref": "#/$defs/response_annotation"}, {"$ref": "#/$defs/required_response_behavior"}]},
+                  {"allOf": [{"$ref": "#/$defs/response_annotation"}, {"$ref": "#/$defs/required_response_behavior"}]}
+                ]
+              },
+              "pair_contrast": {
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "valid_single_axis", "same_axis_not_opposite", "multi_axis",
+                      "insufficient_trait_evidence", "ambiguous"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "accept"}}},
+          "then": {
+            "properties": {
+              "reviewed_family_assignment": {"$ref": "#/$defs/required_reviewed_family_assignment"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "needs_rewrite"}}},
+          "then": {
+            "properties": {
+              "reviewed_family_assignment": {
+                "properties": {"scenario_family_id": {"type": "string", "minLength": 1}}
+              },
+              "rewrite_notes": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "ambiguous"}}},
+          "then": {"properties": {"notes": {"type": "string", "minLength": 1}}}
+        },
+        {
+          "if": {"properties": {"mapping_decision": {"const": "reject"}}},
+          "then": {
+            "anyOf": [
+              {"properties": {"quality_flags": {"minItems": 1}}},
+              {"properties": {"notes": {"type": "string", "minLength": 1}}}
+            ]
+          }
+        }
+      ]
+    },
+    "empathetic_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version", "record_type", "dataset_id", "sample_id", "source_family_id",
+        "source_locator", "source_context_label", "situation_prompt", "user_utterance",
+        "candidate_response", "content_sha256", "candidate_trait_axes",
+        "proposed_family_assignment", "human_review"
+      ],
+      "properties": {
+        "schema_version": {"const": "public_mapping_review_v0_2"},
+        "record_type": {"const": "public_mapping_review"},
+        "dataset_id": {"const": "empathetic_dialogues"},
+        "sample_id": {"type": "string", "minLength": 1},
+        "source_family_id": {"type": "string", "minLength": 1},
+        "source_locator": {"$ref": "#/$defs/source_locator"},
+        "source_context_label": {"type": "string", "minLength": 1},
+        "situation_prompt": {"type": "string"},
+        "user_utterance": {"type": "string", "minLength": 1},
+        "candidate_response": {"type": "string", "minLength": 1},
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "candidate_trait_axes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "proposed_family_assignment": {"$ref": "#/$defs/proposed_family_assignment"},
+        "human_review": {"$ref": "#/$defs/empathetic_human_review"}
+      }
+    },
+    "pku_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version", "record_type", "dataset_id", "sample_id", "source_family_id",
+        "content_warning", "source_locator", "prompt", "response_0", "response_1",
+        "source_labels", "content_sha256", "candidate_trait_axes",
+        "proposed_family_assignment", "human_review"
+      ],
+      "properties": {
+        "schema_version": {"const": "public_mapping_review_v0_2"},
+        "record_type": {"const": "public_mapping_review"},
+        "dataset_id": {"const": "pku_safe_rlhf"},
+        "sample_id": {"type": "string", "minLength": 1},
+        "source_family_id": {"type": "string", "minLength": 1},
+        "content_warning": {"type": "string", "minLength": 1},
+        "source_locator": {"$ref": "#/$defs/source_locator"},
+        "prompt": {"type": "string", "minLength": 1},
+        "response_0": {"type": "string", "minLength": 1},
+        "response_1": {"type": "string", "minLength": 1},
+        "source_labels": {"type": "object", "minProperties": 1},
+        "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "candidate_trait_axes": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+        "proposed_family_assignment": {"$ref": "#/$defs/proposed_family_assignment"},
+        "human_review": {"$ref": "#/$defs/pku_human_review"}
+      }
+    }
+  }
+}

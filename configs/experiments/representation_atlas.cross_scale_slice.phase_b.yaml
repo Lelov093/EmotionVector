@@ -1,0 +1,52 @@
+experiment_id: representation_atlas.cross_scale_slice.phase_b
+module: representation_atlas
+model_config_options:
+  - configs/models/qwen2_5_7b_instruct_4bit.yaml
+  - configs/models/qwen3_8b_4bit.yaml
+dataset_version: trait_space_v1
+axes:
+  focused_validation_slice:
+    - calm-agitated
+    - assertive-compliant
+    - boundary-preserving-over-accommodating
+    - cautious-impulsive
+split_manifest: data/trait_space/splits/trait_space_v1.split_manifest.json
+layers:
+  selection_policy: "selected layer scan only; no all-layer matrix"
+  candidate_layers: [12, 20, 28]
+positions: [last_token, mean_last_4_tokens]
+pooling_modes: [last_token, mean_last_k]
+vector_methods:
+  - direct_contrast_axis
+  - difference_of_means
+metrics:
+  - balanced_accuracy
+  - auroc
+  - separability_margin
+  - prompt_family_holdout_accuracy
+  - failure_case_rate
+bootstrap_policy:
+  enabled: true
+  iterations: 500
+  paired_by: pair_id
+artifact_outputs:
+  local_only:
+    - hidden_states
+    - vector_tensors
+    - quantized_runtime_logs
+  tracked:
+    - result_card
+    - summary_json
+    - sampled_failure_cases
+local_artifact_dir: results/local_artifacts/representation_atlas/cross_scale_slice
+tracked_summary_outputs:
+  - results/cards/representation_atlas.cross_scale_slice.phase_b.card.json
+expected_runtime_notes:
+  - This is a focused validation slice, not a smoke test.
+  - Requires local model availability or explicit user approval before download.
+  - 4-bit hook compatibility must be validated before interpreting results.
+non_goals:
+  - no full 12-axis by all-layer run
+  - no full FP16 7B or 8B local run
+  - no post-training
+  - no dashboard changes

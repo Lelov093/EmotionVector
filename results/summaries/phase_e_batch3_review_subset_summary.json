@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-07-04T17:23:28.107030+00:00",
+  "total_review_items": 36,
+  "axes_coverage": [
+    "analytical-intuitive",
+    "assertive-compliant",
+    "boundary-preserving-over-accommodating",
+    "calm-agitated",
+    "cautious-impulsive",
+    "concise-expressive",
+    "confident-uncertain",
+    "empathetic-detached",
+    "reflective-impulsively-answering",
+    "stable-reactive",
+    "supportive-critical",
+    "warm-cold"
+  ],
+  "items_per_axis": {
+    "calm-agitated": 3,
+    "warm-cold": 3,
+    "empathetic-detached": 3,
+    "supportive-critical": 3,
+    "assertive-compliant": 3,
+    "boundary-preserving-over-accommodating": 3,
+    "cautious-impulsive": 3,
+    "confident-uncertain": 3,
+    "stable-reactive": 3,
+    "analytical-intuitive": 3,
+    "concise-expressive": 3,
+    "reflective-impulsively-answering": 3
+  },
+  "comparison_type_distribution": {
+    "steering_vs_base": 6,
+    "steering_vs_prompt_only": 6,
+    "prompt_only_vs_base": 24
+  },
+  "split_distribution": {
+    "dev": 24,
+    "test": 12
+  },
+  "selected_steering_available_items": 18,
+  "judge_confidence_distribution": {
+    "count": 24,
+    "low_or_equal_0_65": 2,
+    "high_or_equal_0_85": 10
+  },
+  "heuristic_judge_disagreement_count": 17,
+  "selection_reasons": {
+    "heuristic_judge_disagreement": 17,
+    "judge_backed": 24,
+    "selected_steering_available": 18,
+    "selected_steering_mixed": 14,
+    "steering_vs_base": 6,
+    "steering_vs_prompt_only": 6,
+    "prompt_only_vs_base": 24,
+    "test_split_coverage": 12,
+    "high_judge_confidence": 10,
+    "prompt_only_stronger": 5,
+    "side_effect_or_style_risk": 15,
+    "low_judge_confidence": 2
+  },
+  "known_limitations": [
+    "AI preannotation fields are pending/null and are not human labels.",
+    "External judge evidence exists only for the Batch 2 pairwise sample.",
+    "Selected steering exists only for six axes.",
+    "Test split coverage includes heuristic-only items when no external judge item exists."
+  ],
+  "next_step": "Send phase_e_ai_preannotation_packet_v0_1.md or .jsonl to the AI assistant for preannotation, then perform user secondary review."
+}

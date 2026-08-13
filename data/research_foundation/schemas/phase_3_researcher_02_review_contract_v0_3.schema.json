@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_researcher_02_review_contract_v0_3.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "status",
+    "supersedes_review_route",
+    "reviewer",
+    "compliance_record_policy",
+    "scoring",
+    "artifacts",
+    "claim_boundary"
+  ],
+  "properties": {
+    "contract_version": {"const": "phase_3_researcher_02_review_contract_v0_3"},
+    "status": {"const": "frozen_before_researcher_02_rating"},
+    "supersedes_review_route": {"const": "phase_3_independent_blind_review_amendment_v0_2"},
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewer_id", "human_review_required", "researcher_01_eligible", "automated_agent_eligible"],
+      "properties": {
+        "reviewer_id": {"const": "researcher_02"},
+        "human_review_required": {"const": true},
+        "researcher_01_eligible": {"const": false},
+        "automated_agent_eligible": {"const": false}
+      }
+    },
+    "compliance_record_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "reviewer_id_only_no_personal_name_or_signature",
+        "all_required_independence_checks_marked_compliant",
+        "must_not_be_described_as_reviewer_signed_attestation"
+      ],
+      "properties": {
+        "source": {"const": "user_confirmed_in_chat_before_researcher_02_rating"},
+        "reviewer_id_only_no_personal_name_or_signature": {"const": true},
+        "all_required_independence_checks_marked_compliant": {"const": true},
+        "must_not_be_described_as_reviewer_signed_attestation": {"const": true}
+      }
+    },
+    "scoring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["guide_path", "required_rows", "rubric_dimensions_unchanged", "partial_completion_allowed", "condition_key_access_before_rating_freeze_allowed"],
+      "properties": {
+        "guide_path": {"type": "string", "minLength": 1},
+        "required_rows": {"const": 780},
+        "rubric_dimensions_unchanged": {"const": true},
+        "partial_completion_allowed": {"const": false},
+        "condition_key_access_before_rating_freeze_allowed": {"const": false}
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_packet", "review_packet", "review_sheet", "compliance_record", "formal_annotations"],
+      "properties": {
+        "source_packet": {"type": "string", "minLength": 1},
+        "review_packet": {"type": "string", "minLength": 1},
+        "review_sheet": {"type": "string", "minLength": 1},
+        "compliance_record": {"type": "string", "minLength": 1},
+        "formal_annotations": {"type": "string", "minLength": 1}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

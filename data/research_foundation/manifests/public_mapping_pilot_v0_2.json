@@ -1,0 +1,3773 @@
+{
+  "manifest_version": "public_mapping_pilot_v0_2",
+  "created_at": "2026-08-03T20:00:00+08:00",
+  "random_seed": 20260803,
+  "status": "v0_2_blank_packets_prepared_pending_single_researcher_review",
+  "review_schema_path": "data/research_foundation/schemas/public_mapping_review_v0_2.schema.json",
+  "axis_registry_path": "data/trait_space/axis_registry.yaml",
+  "local_review_root": "results/local_artifacts/research_foundation/public_mapping_pilot_v0_2",
+  "historical_predecessor": {
+    "manifest": "data/research_foundation/manifests/public_mapping_pilot_v0_1.json",
+    "local_review_root": "results/local_artifacts/research_foundation/public_mapping_pilot_v0_1",
+    "status": "retained_for_traceability_not_formal_annotation"
+  },
+  "datasets": [
+    {
+      "dataset_id": "empathetic_dialogues",
+      "source_revision": "d8b8066548b8bc2bb36af41f878f1ec5f03badd2",
+      "license_identifier": "CC-BY-NC-4.0",
+      "summary": {
+        "candidate_count": 64,
+        "context_count": 32,
+        "per_context_target": 2,
+        "source_split_counts": {
+          "train": 64
+        }
+      },
+      "records": [
+        {
+          "sample_id": "edmap_f10178e6811c882a",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3939_conv:7879",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "afraid",
+          "content_sha256": "f10178e6811c882a55ea56ef59dae7e8699c808e04059e2a46b5144e18d86571",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_afraid_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_f10178e6811c882a",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_c967065c28960469",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3372_conv:6744",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "afraid",
+          "content_sha256": "c967065c289604698a5bd972c3c509c9e67f60bc6a9d8c8735dbcf75aad5f939",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_afraid_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_c967065c28960469",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_13029bf7ff2110f8",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3806_conv:7613",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "angry",
+          "content_sha256": "13029bf7ff2110f8c189c213d3a20efb66984314a121895e072cd762337f6434",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_angry_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_13029bf7ff2110f8",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_c8e14958531f0708",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:502_conv:1004",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "angry",
+          "content_sha256": "c8e14958531f0708eb9b0903b9e8de9de0aba1acff431b7748d169067bcbf70d",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_angry_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_c8e14958531f0708",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_62c5722ee7100204",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:4923_conv:9847",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "annoyed",
+          "content_sha256": "62c5722ee71002049953a69a5578c0b100fc36768ff657d9787f4738c366ac4f",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_annoyed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_62c5722ee7100204",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_a0b35fbb29161fa3",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:2905_conv:5810",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "annoyed",
+          "content_sha256": "a0b35fbb29161fa368d7ec4d493641200376769fb9f8cab2f213135b35626f97",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_annoyed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_a0b35fbb29161fa3",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_ae6b4b7f9fcaa838",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:10982_conv:21964",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "anticipating",
+          "content_sha256": "ae6b4b7f9fcaa8381b7bbfdeebf41de3b4a0d01f9c464a7cde3efc5e96900615",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_anticipating_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_ae6b4b7f9fcaa838",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_277a9c642aa963c4",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:6821_conv:13642",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "anticipating",
+          "content_sha256": "277a9c642aa963c482daa3cc2f68422e6a611dd0cc48b54bdc73bfbccb5e34e0",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_anticipating_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_277a9c642aa963c4",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_2d8a452055db93d0",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:1164_conv:2329",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "anxious",
+          "content_sha256": "2d8a452055db93d04adf247e1331bdda21f5d4d572d569356111f5f0bd20a7c0",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_anxious_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_2d8a452055db93d0",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_58694404b5437ceb",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:46_conv:92",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "anxious",
+          "content_sha256": "58694404b5437ceb60137e10c39c8d70d9c90acd980937852aca5fea13a77314",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_anxious_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_58694404b5437ceb",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_ca9eca4252f762a7",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:11148_conv:22297",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "apprehensive",
+          "content_sha256": "ca9eca4252f762a75ca222fbba57b90e1ffb77f1ef7709e9e9ea66232ffa48dc",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_apprehensive_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_ca9eca4252f762a7",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_f20e0961b0fc2ee2",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:11214_conv:22429",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "apprehensive",
+          "content_sha256": "f20e0961b0fc2ee212c46c19a44c88e3b330bdbc27ba96bd5e785a31fc960eac",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_apprehensive_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_f20e0961b0fc2ee2",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_94db2770c91110d1",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:9248_conv:18497",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "ashamed",
+          "content_sha256": "94db2770c91110d1a195c61759c095f83dd6bc3829a54196d0a9af86a0196947",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_ashamed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_94db2770c91110d1",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_7d3fcf23f576419f",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:8638_conv:17277",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "ashamed",
+          "content_sha256": "7d3fcf23f576419f8ebcf35749be932a07a48fee7d1da84d633722779a48509d",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_ashamed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_7d3fcf23f576419f",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_853f36d479e054b4",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:8287_conv:16575",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "caring",
+          "content_sha256": "853f36d479e054b48d2066392a9b17f074a1a24f88e8f3ff08ceb53026a694bd",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_caring_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_853f36d479e054b4",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_051474dd166049c3",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:7689_conv:15379",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "caring",
+          "content_sha256": "051474dd166049c39b4cb9598ccca4694aebaed7fda3ffde15cb2d656806555f",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_caring_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_051474dd166049c3",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_05bfe8d90bfead55",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:977_conv:1955",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "confident",
+          "content_sha256": "05bfe8d90bfead55d48296c8dd2f346a28ef04ca3de5f8b9f1bc35dd4716549b",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_confident_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_05bfe8d90bfead55",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_47b9b71575395838",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:7687_conv:15375",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "confident",
+          "content_sha256": "47b9b71575395838bca0f097b87e4897003e7d7d0dec90322bf67cb38dd93d51",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_confident_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_47b9b71575395838",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_c166e21cf9627c47",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:5633_conv:11267",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "content",
+          "content_sha256": "c166e21cf9627c47976a539d85c4cc423a35e45dddf083d93ebe429122c4e339",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_content_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_c166e21cf9627c47",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_d165295efdeaa247",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:11699_conv:23398",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "content",
+          "content_sha256": "d165295efdeaa2477382ff8a11114197aeab1f4c2705de27102c0f2cba7d6a26",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_content_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_d165295efdeaa247",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_3f26599c5654d5b7",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:10823_conv:21647",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "devastated",
+          "content_sha256": "3f26599c5654d5b7b1b572b17505562fd10f0903a1862fa629cfa3f1136b83d5",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_devastated_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_3f26599c5654d5b7",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_799f6fee47c0871d",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:7815_conv:15631",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "devastated",
+          "content_sha256": "799f6fee47c0871d82ae9f4060feb6679470f5bf22c4a34dec6b629b8c098a9f",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_devastated_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_799f6fee47c0871d",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_bf375c350b3de44f",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:7243_conv:14487",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "disappointed",
+          "content_sha256": "bf375c350b3de44f7cb0ba96a00ff4179c2d89b8d8d630cb8691ac75396a7609",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_disappointed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_bf375c350b3de44f",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_828f767057cce1b2",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:248_conv:497",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "disappointed",
+          "content_sha256": "828f767057cce1b2add1b43f645028f43cb9e6940a4b75cd13b5d4c5659041c5",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_disappointed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_828f767057cce1b2",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_27f96a5c38fd6c64",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3537_conv:7074",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "disgusted",
+          "content_sha256": "27f96a5c38fd6c64e6c5aa50097d89b3908bd388873c0fa10063335c5a0c12f4",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_disgusted_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_27f96a5c38fd6c64",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_60e662dff0a95a7d",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:7841_conv:15682",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "disgusted",
+          "content_sha256": "60e662dff0a95a7d5db963498c2e7fe8d189be59f33a238ca6852d1e02a04bb7",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_disgusted_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_60e662dff0a95a7d",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_cd1f880390f58bfb",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3684_conv:7368",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "embarrassed",
+          "content_sha256": "cd1f880390f58bfbaa756e7daba930abb6b0aa526588c5759ffabd06363b509b",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_embarrassed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_cd1f880390f58bfb",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_1baf303aafe75b3a",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:4928_conv:9856",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "embarrassed",
+          "content_sha256": "1baf303aafe75b3aca02060df731e5d0fa28d7b4ed61868c3fb9d94eae0dd87b",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_embarrassed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_1baf303aafe75b3a",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_77801f48c5c917c2",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:498_conv:997",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "excited",
+          "content_sha256": "77801f48c5c917c21a48e640fcc3c1e4ab99188f637ef403add5b6690f4cec02",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_excited_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_77801f48c5c917c2",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_df97f7dac408cec0",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:495_conv:990",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "excited",
+          "content_sha256": "df97f7dac408cec0abc8b1f69ef3d02f8349d5aa72047e9a104d75d60f595ec6",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_excited_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_df97f7dac408cec0",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_26595bdc64a7c7c9",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:10718_conv:21436",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "faithful",
+          "content_sha256": "26595bdc64a7c7c9a78248e3e6d4327abb38a0eb671bc635137d0ccde5843a28",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_faithful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_26595bdc64a7c7c9",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_be6430d8ddf2e3da",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:182_conv:364",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "faithful",
+          "content_sha256": "be6430d8ddf2e3dae90ca71fe4fa7f74dd96e2da172601c0e1c28f2358b25105",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_faithful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_be6430d8ddf2e3da",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_4490f939ab9764c0",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:61_conv:122",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "furious",
+          "content_sha256": "4490f939ab9764c0b1c091f3ca423193e8727e5d17d5d75e4e4107212161bba0",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_furious_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_4490f939ab9764c0",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_55621dd4cd8f10ed",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:4397_conv:8795",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "furious",
+          "content_sha256": "55621dd4cd8f10edb49611237ce3861d0060e34f348c5b419e0b675116c6442f",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_furious_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_55621dd4cd8f10ed",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_4151da0b067088ca",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:8196_conv:16393",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "grateful",
+          "content_sha256": "4151da0b067088cac539a8fc43649e57dc9822918b82645334f55c4a22afdd0d",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_grateful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_4151da0b067088ca",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_8a4589593041d701",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:12186_conv:24372",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "grateful",
+          "content_sha256": "8a4589593041d701e976cc90c3d97e55f278275dec1c7e1a51a6e734a66fad16",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_grateful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_8a4589593041d701",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_4ca5f95820908742",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:4012_conv:8024",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "guilty",
+          "content_sha256": "4ca5f958209087427dd7763beb33d3d0deed8716146aaa7d4690e4dae61db817",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_guilty_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_4ca5f95820908742",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_b8ff9bba92336907",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:6085_conv:12170",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "guilty",
+          "content_sha256": "b8ff9bba92336907e58e13e14a31bab18aa4ef7602ab7626a198f3f3955907fa",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_guilty_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_b8ff9bba92336907",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_3b97b96966624adb",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:6401_conv:12802",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "hopeful",
+          "content_sha256": "3b97b96966624adbb5ac8c1a37c68385dc6ba7367d22378aabd9645c633d7829",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_hopeful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_3b97b96966624adb",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_a26bfb4bcbea4a95",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:11125_conv:22250",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "hopeful",
+          "content_sha256": "a26bfb4bcbea4a95c4d3dc7e49f0efec6d9892b672a479aae5fca5988e55a5ad",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_hopeful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_a26bfb4bcbea4a95",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_9e55111e81c44a0b",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:6334_conv:12668",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "impressed",
+          "content_sha256": "9e55111e81c44a0bf5b34631ce879d276f260d9158fb4d901a14a415c6b3500d",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_impressed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_9e55111e81c44a0b",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_6f92beaa5765b0fd",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:5000_conv:10001",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "impressed",
+          "content_sha256": "6f92beaa5765b0fdc1845f2e423b4b58fe2c06c93413c3aad20b37917655e84d",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_impressed_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_6f92beaa5765b0fd",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_6926859384269cc7",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:4350_conv:8701",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "jealous",
+          "content_sha256": "6926859384269cc7fa2f37c5340718a6703d19fbe934e189f98d1fd70827f80a",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_jealous_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_6926859384269cc7",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_b552e614078017c7",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:5601_conv:11202",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "jealous",
+          "content_sha256": "b552e614078017c79453542a84433d4450b1b47d7faae1b579c37f18fdfbdd5b",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_jealous_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_b552e614078017c7",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_4ed797b8a09043a3",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:2114_conv:4229",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "joyful",
+          "content_sha256": "4ed797b8a09043a3f948139c1811fe2ae365ccd68f6c3356f193c113bddb2b57",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_joyful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_4ed797b8a09043a3",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_231e75332a014a09",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3010_conv:6020",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "joyful",
+          "content_sha256": "231e75332a014a0913c4f0b6fbf790a825b61a0b24bb60bce0e6670b1eef36b9",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_joyful_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_231e75332a014a09",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_07278825b9bae309",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:7179_conv:14359",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "lonely",
+          "content_sha256": "07278825b9bae309966628bf99eedede069a9a30a306c0e5de9d44c743a4a0bd",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_lonely_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_07278825b9bae309",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_f2c0d85be9d88849",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3731_conv:7463",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "lonely",
+          "content_sha256": "f2c0d85be9d88849d5de7a4b96dcc5cdff45b380604e21acde5c28c63d66744e",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_lonely_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_f2c0d85be9d88849",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_3df078603f7dbe49",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:9253_conv:18507",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "nostalgic",
+          "content_sha256": "3df078603f7dbe493d65f6b191ba2ce54a4dae7f36c5f1e206d47cf7f5642955",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_nostalgic_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_3df078603f7dbe49",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_59ac23e44a535462",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:6594_conv:13188",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "nostalgic",
+          "content_sha256": "59ac23e44a535462f93d1ba3914711d3d149e9e9a1f9a5deff3bc870d6ff95e5",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_nostalgic_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_59ac23e44a535462",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_3cf715092430aa00",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:6181_conv:12362",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "prepared",
+          "content_sha256": "3cf715092430aa000cae11a9704e0e1f0d2c94e9a6ff9fc9e8ab0c9bf5f9d9da",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_prepared_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_3cf715092430aa00",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_8743b161c50cd8bb",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:9600_conv:19201",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "prepared",
+          "content_sha256": "8743b161c50cd8bb47384c59f0c12c86bc1285c79aa524cb08ce76856ac7af54",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_prepared_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_8743b161c50cd8bb",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_043a976523c29e2b",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:10513_conv:21026",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "proud",
+          "content_sha256": "043a976523c29e2bd584517a460a5e6341c6dd356c2562b85cdb641bbd689282",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_proud_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_043a976523c29e2b",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_9831f0e6068d69e0",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3301_conv:6602",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "proud",
+          "content_sha256": "9831f0e6068d69e0328df2462e2c1f289d8f4c27417c5cfb50b8a84428b667d3",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_proud_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_9831f0e6068d69e0",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_406be3e88c390c18",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:11343_conv:22686",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "sad",
+          "content_sha256": "406be3e88c390c18095b6324f696d08e6c20c1a962ace9a7e81aa6713de4784a",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_sad_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_406be3e88c390c18",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_852cac7e7ea4cc74",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:6406_conv:12812",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "sad",
+          "content_sha256": "852cac7e7ea4cc746d722731fb2582ca374343fe6564051cd523d8b57217b4b2",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_sad_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_852cac7e7ea4cc74",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_5af326b8924c663a",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3821_conv:7643",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "sentimental",
+          "content_sha256": "5af326b8924c663a4664b0be38d584d95bdc113f13493a3c95158fca7ec1b0e0",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_sentimental_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_5af326b8924c663a",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_31c2cbf0e6701b0b",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:5712_conv:11425",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "sentimental",
+          "content_sha256": "31c2cbf0e6701b0bc474460a1db213b4e577370591a3c863e0d2e90476e4f393",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_sentimental_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_31c2cbf0e6701b0b",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_31107c3ce13a9f60",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:815_conv:1630",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "surprised",
+          "content_sha256": "31107c3ce13a9f605d4e0e40bbba44d5ca7a0b6a3d6e60451a78c7be113dc3e6",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_surprised_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_31107c3ce13a9f60",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_43a38b208097c1cd",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3609_conv:7218",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "surprised",
+          "content_sha256": "43a38b208097c1cd2b7c307ea90f5818c3cf0e18cda094942eef1a7fc1e80d99",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_surprised_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_43a38b208097c1cd",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_9ce807bbbd3b89c9",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:9025_conv:18051",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "terrified",
+          "content_sha256": "9ce807bbbd3b89c9c71509163af295fad1acc4426ff175ebc5e9a3ed6cab6df8",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_terrified_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_9ce807bbbd3b89c9",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_964dc3131cc5e399",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:3288_conv:6576",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "terrified",
+          "content_sha256": "964dc3131cc5e399e64d1ccce29db477efaa71adcdbae4dd5ef863b81ef235c7",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_terrified_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_964dc3131cc5e399",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_1f00c82256dbf9fc",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:5952_conv:11905",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "trusting",
+          "content_sha256": "1f00c82256dbf9fcb4ad80325fdeb125b6a4a35aeeec91aa57823c251fe22c62",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_trusting_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_1f00c82256dbf9fc",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "edmap_1ffcf2f8ae95a59b",
+          "dataset_id": "empathetic_dialogues",
+          "source_family_id": "empathetic_dialogues_d8b80665",
+          "source_locator": {
+            "source_split": "train",
+            "conv_id": "hit:11529_conv:23058",
+            "response_utterance_idx": 2
+          },
+          "source_context_label": "trusting",
+          "content_sha256": "1ffcf2f8ae95a59bb6ab753871eafb9bf83e9f27866a22e04be44bafab11701e",
+          "candidate_trait_axes": [
+            "empathetic-detached",
+            "warm-cold",
+            "supportive-critical"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "empathetic_response",
+            "scenario_family_id": "emotion_context_trusting_pending_human",
+            "prompt_template_id": "natural_dialogue_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_edmap_1ffcf2f8ae95a59b",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        }
+      ]
+    },
+    {
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "license_identifier": "CC-BY-NC-4.0",
+      "summary": {
+        "candidate_count": 60,
+        "selected_stratum_counts": {
+          "both_safe": 15,
+          "mixed_safety": 45
+        },
+        "selected_model_family_counts": {
+          "Alpaca-7B": 20,
+          "Alpaca2-7B": 20,
+          "Alpaca3-8B": 20
+        },
+        "available_source_strata": {
+          "Alpaca-7B": {
+            "both_safe": 10960,
+            "both_unsafe": 12689,
+            "mixed_safety": 4264
+          },
+          "Alpaca2-7B": {
+            "both_safe": 10461,
+            "both_unsafe": 11019,
+            "mixed_safety": 4530
+          },
+          "Alpaca3-8B": {
+            "both_safe": 9017,
+            "both_unsafe": 8948,
+            "mixed_safety": 3187
+          }
+        },
+        "excluded_from_pilot": [
+          "both_unsafe"
+        ]
+      },
+      "records": [
+        {
+          "sample_id": "pkumap_69c4454c8a43ea0a",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 3048
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "db3ae9bfecccfe61db46dbe1dcb95204693cc370e430724c6096d4341a3ad122",
+            "15ea85f8acfd5e01accc21414e28aa9e3a5f4bb0846f3429572916114db5ede4"
+          ],
+          "content_sha256": "69c4454c8a43ea0a4aed769f1c44f0e578a9015fa3ef757e53a5d4838485b74d",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_69c4454c8a43ea0a",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_69c4454c8a43ea0a",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_79b4bbde6909d0f2",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 11683
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "8775da6eadaa5c59fd5e3a0c210764e51782c0c541a1682633bfb9328cda0fe6",
+            "1497cabcc2d5bae4555a129104cc2db80528209e7f832daf4ea3b5d29532b86f"
+          ],
+          "content_sha256": "79b4bbde6909d0f23aef8685118698e1597f3f695546ea00ffc41eeefdeff78d",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_79b4bbde6909d0f2",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_79b4bbde6909d0f2",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_bdb8b4037bb7d1c1",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 14116
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "13e0ba177d495cafd49cde1fb1d851b1d7fb87eebb0b495c67d03002c9be0acb",
+            "fd4042da2dfa3ca1619056e027ac771b9890b27d38c35ed611e2695fc1a62c63"
+          ],
+          "content_sha256": "bdb8b4037bb7d1c1769baf740e72ee05fe279f4234f474f45bfc09609f7322a8",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_bdb8b4037bb7d1c1",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_bdb8b4037bb7d1c1",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_3bc0fa2adf37a146",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 22745
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "66c31419824f7dab0e6dd55d8103e5f840a19f3fb655b9b49316401bd23cafa1",
+            "7b3d37b9ebe2f2a48329564284bd7d9f35f1b4a74051ab69c1801eb5d1b906db"
+          ],
+          "content_sha256": "3bc0fa2adf37a14646471ad317368029232d9cbb891d0336fb580e15f94b8116",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_3bc0fa2adf37a146",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_3bc0fa2adf37a146",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_108d129aca5a391d",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 23521
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "0ccb6d7d588461d9144dc827844e31b161c39bf24b3be416555ebfc5d94d3f68",
+            "7ac65051107139ba1641ff8f721477435c34d20bcff6314ec51fcc3e650ffa97"
+          ],
+          "content_sha256": "108d129aca5a391dc48cc5050bd636ba88e88449f480544e74694e42fd6a9380",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_108d129aca5a391d",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_108d129aca5a391d",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_d458e3a908f0a71e",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 4852
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "b2f6e1d94cd52107190630be2eea531baefaea44f466a907aa5283119f324f7a",
+            "28d54055c04460e6d2b35228b1a7ccf7c57cbc64ef81916b8a14a840d5cfed0f"
+          ],
+          "content_sha256": "d458e3a908f0a71ee12757b0ac1b4094612174c593d2c50eb4aeb67f0b777485",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_d458e3a908f0a71e",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_d458e3a908f0a71e",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_54c35b92a94d9f1b",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 4936
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "50fede95f34b51b20f5f04f9962ef401de0372ad4fe838d09594e2daeab397ee",
+            "7f858933806e0b29dc7890c6b8ceb25254626757d2b498b57c3cfc12e241cf61"
+          ],
+          "content_sha256": "54c35b92a94d9f1b5fa9dd9160c297f61a122d366944c0ee4a852746b6cf6444",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_54c35b92a94d9f1b",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_54c35b92a94d9f1b",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_9639b4f257c02462",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 6485
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "2e9c4fee25e7b9685f591808bed86d647bcf53bfc283f1dc35a1093f490d193b",
+            "7d05a03de1a5923c387b1215a0e8c23350b33433f59ac7672e5203268d2b498e"
+          ],
+          "content_sha256": "9639b4f257c024621f6b2b5c48c0efffa84eff6fe1c06ce4e8cf79923d093594",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_9639b4f257c02462",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_9639b4f257c02462",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_47a58a0d681e8f5a",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 9813
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "6b84a6017ef3eab4a11e5d150250ca341d144a232126b0cba62f9654fb66c30d",
+            "8464ba19a7c84a74ab31584b9b4c1f823058ec3b249af9694d2ced7bf86ea00d"
+          ],
+          "content_sha256": "47a58a0d681e8f5ad62fb84160b4af54c21f17403eb4326e078f641f04599029",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_47a58a0d681e8f5a",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_47a58a0d681e8f5a",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_a8a45b6bbdbfab36",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 11320
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "4b5174b6a6854043b30268e23b3e6b0611104daaddbe3ccb635429cbe447fe7f",
+            "02677a541c413f9934d78cdc22227839b422697c49b2d3b7b83d398267bf6f60"
+          ],
+          "content_sha256": "a8a45b6bbdbfab3609b56a73adfb6a6cf6202eec15f96dd153aa352ee78b2139",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_a8a45b6bbdbfab36",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_a8a45b6bbdbfab36",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_1bdb124954dbcaed",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 11609
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "2c1e0a34004c486336aceffc2a7e95b9397036d197407931ce3ca34896097c8e",
+            "563235c1c1a7c9d1f240dc85ef1dd6714c50635b8bdcf8af6cc893a6e82bd04f"
+          ],
+          "content_sha256": "1bdb124954dbcaed198349646ba827ef0cf038d25669565723ae2351c7481016",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_1bdb124954dbcaed",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_1bdb124954dbcaed",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_b206c28fd9c9db8d",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 13700
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "36dea31f81b740a89d30e7be6653769bfcaf140a01193301b09c197703de8652",
+            "8bd1b2c0d8c35b8d7fe31f180b323e7caeeb767cd5dd8025343c55d60cbd630e"
+          ],
+          "content_sha256": "b206c28fd9c9db8d5c701677b5feecbf08227f69f36eb8ea00f70ad2d89fa1ae",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_b206c28fd9c9db8d",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_b206c28fd9c9db8d",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_df710371e6051114",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 16389
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 1,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "c852a2950ed4ee462da9eba1cfcbda1a953b4c831aad6779cc1f43cc13ae59e8",
+            "4e17746a7241400a4202942bb175da7f5a6b1e8c2c453bac12179a8dda5bd5df"
+          ],
+          "content_sha256": "df710371e60511144e286e806502ed6e981923b06dbb2be9d797c116e38daae0",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_df710371e6051114",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_df710371e6051114",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_3b4551de9401f32c",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 17639
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "7c1800789ade36039084a913bee1122d5dd9bdb48378c79c5d307837c03e6134",
+            "e55c882d5ddcc4cd19425258d75d3d2e87d96c8b3ba036598f331c8399e233c0"
+          ],
+          "content_sha256": "3b4551de9401f32c7b6d89f695af93a6b96572a15c57a8fb38e7f57c2e5b5eb4",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_3b4551de9401f32c",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_3b4551de9401f32c",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_db0324b0e94ffc55",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 18780
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "285dc8556762763dfd7f843034bb005d1428212f46eeb26433455b636efd3663",
+            "04f3111ff2eeee385e90046b267cb1499f55c55d13104638d48d33d69ced8aa8"
+          ],
+          "content_sha256": "db0324b0e94ffc558649c93999b3ada65e45b0756daeea6b1ccdafcd19ac1f51",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_db0324b0e94ffc55",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_db0324b0e94ffc55",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_0b890d6f880d36ae",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 21614
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "872a6d87ec74308c82167d8c2e621565522eddce85d725b154d07b91c05b5bf6",
+            "f82a032c1d15a2e0c92ae93fce90e2986a2b8ce237cc5a4347dcf3469dec7132"
+          ],
+          "content_sha256": "0b890d6f880d36ae3542ab9005ec5eb933bd1c37eb152437125fb6902f55288e",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_0b890d6f880d36ae",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_0b890d6f880d36ae",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_67ae1de3ae89bed3",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 22394
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "95285e205fa0a09097614fe082c1548fbd1057ebed9714ee5c2866d0a3f3ff5d",
+            "07a7c9109a856ba89ff5dd27b454adb046bb11ac8941e6a4dbba1308e60812e8"
+          ],
+          "content_sha256": "67ae1de3ae89bed3e888beb7cdea1930d21251c18af94e5ccc4f3322602f2f77",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_67ae1de3ae89bed3",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_67ae1de3ae89bed3",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_e13161765b3142f6",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 24456
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "33698826ac26b63f7834b432c7bd98541811b9b1c228f7cdc2f2eeb10180d761",
+            "1904b56608cbe5e4531a8297e0afcbc3a35477ae05c145347b424403dde466a0"
+          ],
+          "content_sha256": "e13161765b3142f6a38c1cfdcb66d8f4c7b427eece94a6d1d7ee8d1ea321c5ba",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_e13161765b3142f6",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_e13161765b3142f6",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_77e86f1b1264287d",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 25321
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "dcd0fabaea13b93a94ab035133b753bda3d6941417aac98a8ef8ec49aa102343",
+            "c547c0f221b968a3f9abad6b1bae04a06cb6045ce26437aff2d2784529e1f4e9"
+          ],
+          "content_sha256": "77e86f1b1264287dab5d254582355163b716d2ebac6d44d50725c5374da4221b",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_77e86f1b1264287d",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_77e86f1b1264287d",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_54ab4209de80274e",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+          "source_locator": {
+            "model_family": "Alpaca-7B",
+            "source_split": "train",
+            "lf_record_number": 27263
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "572db5ffbb000453715fb6a3e4b8a1422b44f6e284536ecb54511063552b5823",
+            "1e037da9b9084feb1d2ba933e00e80d1d0e43e41371f3ba9ec05d92d48515630"
+          ],
+          "content_sha256": "54ab4209de80274e4aca93b0b14c0c8cfe88f2f3d9a3492925f5e3fe04d8da76",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_54ab4209de80274e",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_54ab4209de80274e",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_44d60172a12b9964",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 5028
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "8703f18d410b2c20ef707dadc43350ae411bdc35373a9b28539c6013d117d75a",
+            "02ac9f2e9c059f6177b8dd6c23204196d9be7a74df8f45d86a477eb1ac8c91b1"
+          ],
+          "content_sha256": "44d60172a12b9964be52bf60228822edacae70fd7e374112f470d39f1e5ce510",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_44d60172a12b9964",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_44d60172a12b9964",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_0a9b4e66a4be202c",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 7904
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "0caa4a0099c43fb43a383249b6eb151edcd721dce47ab4139120697f4bf54522",
+            "97213c8ed9332403f0e6031ddd3a34d07fc5880f363a1d38bdb8fb68546db51d"
+          ],
+          "content_sha256": "0a9b4e66a4be202c81469f580edabb5921d2fd2ee4414f45890bc5c2efeae765",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_0a9b4e66a4be202c",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_0a9b4e66a4be202c",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_2f565ea4745e6010",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 10907
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "246acca707a88061894787de6d078d5d28d34e0bf4a520667eeb82b6cc989ca7",
+            "93d3e8c4da57db3f29f8430cba91885e0fd2c779c8a52a8746d6fb0efd8c970b"
+          ],
+          "content_sha256": "2f565ea4745e6010e19d9a06cdd70c53c45fd930ea96b7a4703d7ef41b4a4cd1",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_2f565ea4745e6010",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_2f565ea4745e6010",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_120673a0cf4287d4",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 14323
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "0bf6ab7eb9f919f2ccefde0ac0a2f96a05367b371fdced29172ece169994ec06",
+            "19eb70f0c7ce3a2e60c91b1b4d7da774e4c8610367dce563e06cf856c9149123"
+          ],
+          "content_sha256": "120673a0cf4287d4cae98ffb4e68e70b6747bb97967b6a4837e58974af639f64",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_120673a0cf4287d4",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_120673a0cf4287d4",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_979e381d3b6275a1",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 20665
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "77f4aeb3364dd9375569b42b245505684d8edfdcb32f498c692df8a9fb634d12",
+            "a7f2f2ba40dfbcf20100bc35cf3717ae8f75f981258542666810bd1c05366385"
+          ],
+          "content_sha256": "979e381d3b6275a1d4cd1102c4467af6bac2bfe7f0370e97196de60063a968a7",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_979e381d3b6275a1",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_979e381d3b6275a1",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_11b7ed3115150342",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 777
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "55e52484a903762891a127c2dee3e4e8e1b51067505d798044086435121ce1c7",
+            "a66256bdc4ba0934bdb9d3b1993c800fb69cff5563746c16c28b1e0706482b99"
+          ],
+          "content_sha256": "11b7ed3115150342e46762064d26de8290cb3696ee7b7b806746f3c1b8e48222",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_11b7ed3115150342",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_11b7ed3115150342",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_1b78334ba4a0b0bd",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 1245
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "fe4d0fb3329ae7afb4ae24004da109fbf88b197c065fe7eac9c19a35e1582eed",
+            "1bd91b3d47240577cca6bc574d15027f6866dc56524b37b909053ae6077dce77"
+          ],
+          "content_sha256": "1b78334ba4a0b0bd78e6505ff86b74a8ae37306aa259ad1a7a17e60bb14b21f4",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_1b78334ba4a0b0bd",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_1b78334ba4a0b0bd",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_9038633c50682304",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 2610
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "021da94a56e535747545ab561016c744a945626636acd8bf17b3e3aed1fbad93",
+            "20151835eac624bfcdcb1414bc579835e82b79c7be41a3af879d704d1be0c085"
+          ],
+          "content_sha256": "9038633c5068230453804d2209e64f498f66ed6bf0df8774e9c54b5dee4765d5",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_9038633c50682304",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_9038633c50682304",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_e6d302e1e9c1f2f2",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 6839
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 1,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "c1bed86feeff1f694eff34475b086f50a8d189ef1f64ec260f59b64514027bde",
+            "557eaa4ce4356468f5369a16cc75a88b18980fe5910d773cdc3edd878bdf331a"
+          ],
+          "content_sha256": "e6d302e1e9c1f2f2e8cd48f17ebf6dc03f871f8f2af8a40ffacebb5e2f7fb871",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_e6d302e1e9c1f2f2",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_e6d302e1e9c1f2f2",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_03b7f4e129553594",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 10638
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 1,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "d784b255aeb0750c3816a10d6e5101483417d719fb5ed3e778a86e06d3b64f04",
+            "74de85e41a4448175d0603b4d18d382838ddd522525c9a957c3bfbb7e6f55c5c"
+          ],
+          "content_sha256": "03b7f4e129553594a28fab75b5fd863483e18b289bb801247b8114cda6d9060f",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_03b7f4e129553594",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_03b7f4e129553594",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_b8cf97d89f50c958",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 13580
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "fd883fcb812b727f5496be4db7f2109dace727e10567c117d8fb639c61f01bd3",
+            "d6f2795c8d9dea347166894bf27b6443967b28997acc7ddbf48e0f2308c66226"
+          ],
+          "content_sha256": "b8cf97d89f50c9584fb6c7c04d92b26ab0293f6080aea0a9a8eae731a8567de0",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_b8cf97d89f50c958",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_b8cf97d89f50c958",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_07513833c864808e",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 15098
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "b84643e2dc7187ab5ed847dce46dc0e7468573900dcb36849cf05796b8fb977c",
+            "0e923266369e277cca16468757de207301dfcc111513f5343add091e7ba3c4c2"
+          ],
+          "content_sha256": "07513833c864808e7c34259ee9c8407553c3ec774e67d5ba3d1094a0f75903e8",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_07513833c864808e",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_07513833c864808e",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_46171c8f5a1bd36e",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 16777
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "f1ead2b28ad0169a42a4a6ac9c8514481bd8d4f45896c11105ac44479e1e6d81",
+            "6acfcb32893a8764340606a0b4ba13a2e1787421e2ba3d708e9d76786af50268"
+          ],
+          "content_sha256": "46171c8f5a1bd36e683feca4e3005e32748fb505661ab5e5df5a9afc66944c0b",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_46171c8f5a1bd36e",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_46171c8f5a1bd36e",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_67c971e2b79b2dbc",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 19471
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "0b1ca31ea55eef8c36675bed46c2f626e29c19f38909fada61a5ddd43e8d4b0c",
+            "c24bf410efd809641c7d337e52484de41f3ef415cb2b587cd8a9bbcda3effcac"
+          ],
+          "content_sha256": "67c971e2b79b2dbcbd658866c06653ed2b75774f47ea12b5f29dfe8c2b28f441",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_67c971e2b79b2dbc",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_67c971e2b79b2dbc",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_6a27b3330c151c9a",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 19735
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "593626e81cfe49c8678835bc5d03f95258a317ae95a701c5bbb54bd2b5578df4",
+            "289ad308452b36d280ef49c0c9a95f73f1d6ee95ed3f5cd4b63453fc3ef420a2"
+          ],
+          "content_sha256": "6a27b3330c151c9a570503858a26d3ad52ea258f678f420df11d7715f0df8ba8",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_6a27b3330c151c9a",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_6a27b3330c151c9a",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_6fd75c4c5e1b8841",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 20240
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "80acd317199819475d251e744e53d18f87a9ac6007bef636b6aa6cf2d0ca815d",
+            "1d2a3a2afe5c3d61a2fa42e7928114252fcfe97fbb714f41b736cedd49d67c72"
+          ],
+          "content_sha256": "6fd75c4c5e1b8841f502afe37b0df07003de31b79f9e9d482c6aae36da0bc5b9",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_6fd75c4c5e1b8841",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_6fd75c4c5e1b8841",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_b2fcdd0b63340992",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 20523
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "ec943935f5cf5f13d1d7003e24ac29b5c5dbac1bd934efbb7e7a6dab7086dd12",
+            "d28d2e4fc91989690296fe3653f5704830418aeb6c908f68c491d53f125d8275"
+          ],
+          "content_sha256": "b2fcdd0b63340992409ea88c81ead5921424dd8922f9449d58f8e450dd1ddda8",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_b2fcdd0b63340992",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_b2fcdd0b63340992",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_2db28823acf06312",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 20848
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "5385f00f8f1e398119e3f23b03c2f91341b9b9408c7699f45a3af5608204a94c",
+            "861c7fda1ccffcd7d9fdfdca66cdb307ca138ef47ce1e8eb2d9836f9f9b50d00"
+          ],
+          "content_sha256": "2db28823acf06312df09858ae6e3d33207f39a0e81ee4fafe5908d4fb953c50c",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_2db28823acf06312",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_2db28823acf06312",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_5abf45a065266730",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 22641
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "b5e88f8839de22d446d59c1a5f2000720d6c6fc95982114ebcc45cec6de35f77",
+            "6faa297a79547e0245feb383adcb65779cccc563a0ae932416d030f240d1cbb6"
+          ],
+          "content_sha256": "5abf45a065266730ce31523cb47577ee7ea22f1839f12d789482085684552063",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_5abf45a065266730",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_5abf45a065266730",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_2df45143906304e5",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+          "source_locator": {
+            "model_family": "Alpaca2-7B",
+            "source_split": "train",
+            "lf_record_number": 25854
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "0143bbc9c673f67d83849083c84ed3b59478c50a987282e79c113e47da972a82",
+            "46b0d1c5fa2f60d730d2afa8d9acb0f9ea6eff55ef1f01de92a5ab03a81ea0d6"
+          ],
+          "content_sha256": "2df45143906304e54d10de9d034dc596421c1cc4f981da7569af2b1137e48114",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_2df45143906304e5",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_2df45143906304e5",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_b1467a404bbcc110",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 1906
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "803ae749da4244b0898a929d8cb318a560f1db8e02be35db27bd69d5d1688d55",
+            "3f5737edfc69b445708fd4fdb800cd573d8bd2d2d6bf144154b6027d9c427afa"
+          ],
+          "content_sha256": "b1467a404bbcc110fbbf5e9cbc5434cd510341fd4391253ccba3015c8825e255",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_b1467a404bbcc110",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_b1467a404bbcc110",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_861348ee85528e55",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 7625
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "3fe17c0ace85cd37263e1dd389a7a245cc69eb79725541bf7b12194bbbc4a690",
+            "e67bea6b43a37a503df3664f81dcf4dd42381d348a008a16795b97c0430bda43"
+          ],
+          "content_sha256": "861348ee85528e55a82b5bc59dd4cc2412232a2ea5b5e32453b5f919b9859a54",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_861348ee85528e55",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_861348ee85528e55",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_f4fcafa75203dd30",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 8063
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "bc2c302bbbfcab13099136ffc8f5bba5a9587bd3d57d6438561d307440e308df",
+            "43fdcc659f6870cf02d59aa898cb74493bd04e8903899b567fe5f88cb79af4a2"
+          ],
+          "content_sha256": "f4fcafa75203dd3068d99820ee2fadb589bc35159e5be45cd4fdd64bf7256649",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_f4fcafa75203dd30",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_f4fcafa75203dd30",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_450624cb32604c4f",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 8206
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "79c5352ea378a7b46a06bc7e1a3ce9621714ef97869c8ed0f74fa303ce67db6e",
+            "dfb1e4a7d5b003921b8d36ca34d0ad801e6fdeb65f989a1551c2a6ceef26e99c"
+          ],
+          "content_sha256": "450624cb32604c4fbb53f0dfdea3fcdf0026e84b2919f5210cefd31b0ddae4cd",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_450624cb32604c4f",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_450624cb32604c4f",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_61493b348b20bf34",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 16355
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "both_safe"
+          },
+          "response_sha256": [
+            "a76e955d6faa0b8def916a42acde939b5a44efe6904d7a0e20b8541f1b19452d",
+            "0d27c339664d2ae3ba7c426994baf4833881e174b215259854b112d0b07fc814"
+          ],
+          "content_sha256": "61493b348b20bf34231f678c5f83c279bd3b3db4636c75e323e84e5f2bd4609b",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_61493b348b20bf34",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_61493b348b20bf34",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_d672b053415785ac",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 699
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "e074be216f253a1557287fa6bbf9bd363d1b045a8b5ed6ee92a26e99408ee548",
+            "66eff46508d3a6f6cb7b2993fac3e7a4e88ed0e4e906bda6a1c4c7ed161d69f1"
+          ],
+          "content_sha256": "d672b053415785acfc60598004de39362138c06a66f5a3a89687b600df1a7ce4",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_d672b053415785ac",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_d672b053415785ac",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_25ce544706f003ed",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 1692
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 1,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "75cc29fb744fa308685302516a5246d96937332348b928ebd8c0703c3f2f6ac5",
+            "911168b7ae6b163a34acdc8a558b9bfcecb67b02e696d409cb7037f50181a0b5"
+          ],
+          "content_sha256": "25ce544706f003ed1867f3dba6c37c3584a20a652403d0b773353c847d1b8fa3",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_25ce544706f003ed",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_25ce544706f003ed",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_2b21d79ce5b821d5",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 2509
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "b79ac98645cf159d1b53b146be64010212b60a833233227fcf349d2657e84f2e",
+            "70f696a6f7f4215f2ffac69ccbe0901afa0d9a6ddcbaf5e5ffeb978df781ea19"
+          ],
+          "content_sha256": "2b21d79ce5b821d574d4e62d4f5b9014dfd576cea910b0bd5f39555526b244a2",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_2b21d79ce5b821d5",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_2b21d79ce5b821d5",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_5e8dadd000057297",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 3178
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "b76e68b5f062e69af788ae12544df1c04c67ec28bd6adc8e8a6b20d0b1a9e89c",
+            "d91655d8a702a60712b110a86cd5c623e324e586966b63149c2a08703bccf142"
+          ],
+          "content_sha256": "5e8dadd000057297512a6215ad3376b440cad3dbd8f2020d3fc33ad24747e41a",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_5e8dadd000057297",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_5e8dadd000057297",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_39cee834f76f8a06",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 6683
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "ab73439fd2148b24b1ce35706255c1612324576c24806500da1838601ad81997",
+            "f1653eeccaaa3cbfbe9b9867af03b27f6897878d20c3c2f4d9a66ad8f6fc5148"
+          ],
+          "content_sha256": "39cee834f76f8a06266cbc3a47ba83fbf7821f25b48133b884f713790a70d3be",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_39cee834f76f8a06",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_39cee834f76f8a06",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_ab6e87716f608287",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 8333
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "cbb0c54fb9d6f4a32e620a27a8f1a7e1d48bc97db5f13dd91f5c5e3c201ae3b0",
+            "122f2fac5521dc1f0dfcf9c171a2dbac50ea0c40b7f77e4ebc04b08c894f58a5"
+          ],
+          "content_sha256": "ab6e87716f60828745beb9438b90e86538dded45d63a86c4b754297dc71c4ad3",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_ab6e87716f608287",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_ab6e87716f608287",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_b734d3e0ddb61cd5",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 9157
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "ee55893132bdc3346665182e4251eede51c4488ec71a17ce4f3b6272eda19ab9",
+            "cc3eeed2d3dbd9db9ff01aa2ef1b45a58d9dbf982635073931532c39e74c1fd9"
+          ],
+          "content_sha256": "b734d3e0ddb61cd5448821cc86081e5aa6879df7ff2b5ad51738e2ad18962d35",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_b734d3e0ddb61cd5",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_b734d3e0ddb61cd5",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_97da01c5dcb8fee0",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 11437
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "b756bcf81813949153a067595dffa64ead86b46064ae7f70a8c1ebf0dad2c7a8",
+            "829a4eb16b66134b9731326d568d2d2c211f6528da81c6316c8fc7df576978f7"
+          ],
+          "content_sha256": "97da01c5dcb8fee00057deabf6f247fd26d21f7ea7162b3abd1d88f49789b3ff",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_97da01c5dcb8fee0",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_97da01c5dcb8fee0",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_ff71e5bf8ec6d44f",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 11476
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 1,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "2cbb0c2e9feb5ec162436bda9bc847442df6f9580ee96b614dd27aa5962ab884",
+            "65e45f5127626657a99d2fb9b6ce513fbec5a32710cbf8a525cf5114d78de41e"
+          ],
+          "content_sha256": "ff71e5bf8ec6d44fd9ec4304c1602abf3ecfc5badd22cb9a8e0fb13c74e1e0b5",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_ff71e5bf8ec6d44f",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_ff71e5bf8ec6d44f",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_537ed24443006521",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 13835
+          },
+          "source_label_summary": {
+            "is_response_0_safe": true,
+            "is_response_1_safe": false,
+            "better_response_id": 0,
+            "safer_response_id": 0,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "2356020e44f6982fd5bbee240d3a04e1cc65fd7d46a69372a3c00868aa88e3d5",
+            "3d7cbc163141c45dbf2e15456c471fb895f8691163f86e037aea0a9d736c8dd1"
+          ],
+          "content_sha256": "537ed24443006521f3d0c9180515d6e0ccfdb73988420d95bf94ac19f89dbe7c",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_537ed24443006521",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_537ed24443006521",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_5ebbfed0284cfabd",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 14141
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "61314041825ea57f938f5209ec25d46f6b90c818dd29800e0205ef0c94e021a2",
+            "74091f2985d1b8badb99b04583173f9e176020e3c3c95b7e1bfead6fa472d3d4"
+          ],
+          "content_sha256": "5ebbfed0284cfabdbbd26263ca53123872b2a13b40542f3584f5d960f7a8934f",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_5ebbfed0284cfabd",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_5ebbfed0284cfabd",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_2a21cc6bafcf97e6",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 15088
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "5293790a58571a26f05339958b9700fbc27d208820dbd8381298040270a65b40",
+            "234c104bea659565bfdbcb4a511fef8ab975968b00aed83f991a2498b352e03b"
+          ],
+          "content_sha256": "2a21cc6bafcf97e63ea268db260e673085df994ecb2fac32e6bedc6ac40d6699",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_2a21cc6bafcf97e6",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_2a21cc6bafcf97e6",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_30b7a50cc8b94375",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 16248
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 0,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "227c917a09ff1f13f21de8113efb135ddc873305e661702f25d9eea499c72609",
+            "8c14756067436d493294c009428269b5842f1e6549611b8d29e92637fc743e35"
+          ],
+          "content_sha256": "30b7a50cc8b94375e23c1db659882ad32524c88992463318e388a48c91136b6a",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_30b7a50cc8b94375",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_30b7a50cc8b94375",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_1c2e503039c59818",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 18560
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "5248c1c0596effbbb6f8782d9c72b58ba143d0d9fdb141e40e72c9ce408c21a3",
+            "80b2df845c0f530e87f84a4fc5ab0a6632fa27657eb306f02f82f297704841f5"
+          ],
+          "content_sha256": "1c2e503039c598187aeaeffc13304a3845dede75fdb22cb20f26d57587813b75",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_1c2e503039c59818",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_1c2e503039c59818",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        },
+        {
+          "sample_id": "pkumap_ef6cbb2867506dcc",
+          "dataset_id": "pku_safe_rlhf",
+          "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+          "source_locator": {
+            "model_family": "Alpaca3-8B",
+            "source_split": "train",
+            "lf_record_number": 21113
+          },
+          "source_label_summary": {
+            "is_response_0_safe": false,
+            "is_response_1_safe": true,
+            "better_response_id": 1,
+            "safer_response_id": 1,
+            "sampling_stratum": "mixed_safety"
+          },
+          "response_sha256": [
+            "7ad1ce4ff64c913a479d3f6f18dc4f4c01561eabaf362362a6d5b81c9247aa98",
+            "78f287edc4909f536a5de81088b3bf4b5fc4915ceda18a2a10f87b340329c7f2"
+          ],
+          "content_sha256": "ef6cbb2867506dcce732b9d70606a56329f4ac7b0131fd172e41b2e15b3bfaf6",
+          "candidate_trait_axes": [
+            "boundary-preserving-over-accommodating",
+            "assertive-compliant",
+            "cautious-impulsive"
+          ],
+          "proposed_family_assignment": {
+            "task_family_id": "safety_helpfulness_preference",
+            "scenario_family_id": "safety_scenario_unknown_pending_human_pkumap_ef6cbb2867506dcc",
+            "prompt_template_id": "source_prompt_unknown_pending_human",
+            "semantic_cluster_id": "pending_human_pkumap_ef6cbb2867506dcc",
+            "assignment_status": "machine_proposed_pending_human"
+          },
+          "human_review_status": "pending"
+        }
+      ]
+    }
+  ],
+  "formal_split_status": "not_created",
+  "human_review_status": "not_started",
+  "claim_boundary": "The v0.2 files are blank review instruments. Proposed families are non-authoritative; only accepted human-reviewed mappings may enter later family-unit allocation."
+}

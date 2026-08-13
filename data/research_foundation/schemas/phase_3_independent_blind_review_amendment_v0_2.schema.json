@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_independent_blind_review_amendment_v0_2.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["amendment_version", "status", "bound_evidence", "deviation", "independent_reviewer", "review_contract", "artifacts", "claim_boundary"],
+  "properties": {
+    "amendment_version": {"const": "phase_3_independent_blind_review_amendment_v0_2"},
+    "status": {"const": "frozen_after_blinding_deviation_before_any_human_rating"},
+    "bound_evidence": {"type": "object"},
+    "deviation": {"type": "object"},
+    "independent_reviewer": {"type": "object"},
+    "review_contract": {"type": "object"},
+    "artifacts": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

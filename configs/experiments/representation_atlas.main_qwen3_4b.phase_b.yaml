@@ -1,0 +1,58 @@
+experiment_id: representation_atlas.main_qwen3_4b.phase_b
+module: representation_atlas
+model_config: configs/models/qwen3_4b_instruct_2507.yaml
+dataset_version: trait_space_seed_v0_1
+axes:
+  design_scope: all_12_axes
+  first_execution_slice:
+    - calm-agitated
+    - empathetic-detached
+    - assertive-compliant
+    - boundary-preserving-over-accommodating
+    - cautious-impulsive
+    - stable-reactive
+dataset_path: data/trait_space/curated/trait_space_seed_v0_1.jsonl
+axis_registry: data/trait_space/axis_registry.yaml
+split_manifest: data/trait_space/splits/trait_space_seed_v0_1_split_manifest.json
+layers:
+  selection_policy: "candidate_middle_late_layers_first; expand after memory validation"
+  candidate_layers: [8, 16, 24, 32]
+positions: [last_token, mean_last_4_tokens, mean_all_prompt_tokens]
+pooling_modes: [last_token, mean_all_tokens]
+vector_methods:
+  - difference_of_means
+  - direct_contrast_axis
+metrics:
+  - balanced_accuracy
+  - auroc
+  - separability_margin
+  - cosine_similarity_matrix
+  - prompt_family_holdout_accuracy
+bootstrap_policy:
+  enabled: true
+  iterations: 1000
+  paired_by: pair_id
+artifact_outputs:
+  local_only:
+    - hidden_states
+    - vector_tensors
+    - full_generation_logs
+  tracked:
+    - result_card
+    - summary_json
+    - sampled_failure_cases
+    - figures
+local_artifact_dir: results/local_artifacts/representation_atlas/main_qwen3_4b
+tracked_summary_outputs:
+  - results/cards/representation_atlas_main_qwen3_4b_v0_1.json
+  - results/cards/representation_atlas_main_qwen3_4b_v0_1.md
+  - results/summaries/vector_registry.jsonl
+expected_runtime_notes:
+  - No model download during config creation.
+  - Batch size 1 for hidden-state extraction.
+  - Shard by axis, layer, and split.
+non_goals:
+  - no activation steering
+  - no LoRA or QLoRA training
+  - no dashboard changes
+  - no 7B or 8B full matrix

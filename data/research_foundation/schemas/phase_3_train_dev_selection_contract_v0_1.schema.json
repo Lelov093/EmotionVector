@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_train_dev_selection_contract_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Train/Dev Selection Contract v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "status", "bound_evidence", "data_access", "steering_selection", "qlora_training", "development_selection_rule", "future_selection_lock", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_train_dev_selection_contract_v0_1"},
+    "status": {"const": "frozen_before_training_or_development_generation"},
+    "bound_evidence": {"type": "object"},
+    "data_access": {"type": "object"},
+    "steering_selection": {
+      "type": "object",
+      "properties": {
+        "layer": {"const": 24},
+        "pooling": {"const": "last_response_token"},
+        "direction_source": {"const": "phase_2_train_only_difference_of_means"},
+        "alpha_candidates": {"const": [1.0, 3.0]},
+        "candidate_order_for_ties": {"const": [1.0, 3.0]},
+        "random_draws": {"const": 5},
+        "shuffled_draws": {"const": 5},
+        "controls_may_influence_target_alpha_selection": {"const": false}
+      },
+      "required": ["layer", "pooling", "direction_source", "alpha_candidates", "candidate_order_for_ties", "random_draws", "shuffled_draws", "controls_may_influence_target_alpha_selection"],
+      "additionalProperties": false
+    },
+    "qlora_training": {"type": "object"},
+    "development_selection_rule": {"type": "object"},
+    "future_selection_lock": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

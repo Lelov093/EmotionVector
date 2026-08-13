@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/trait_sample.schema.json",
+  "title": "EmotionVector Trait Space Sample",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sample_id",
+    "axis_id",
+    "pole",
+    "split",
+    "prompt_family",
+    "scenario_id",
+    "text",
+    "language",
+    "explicit_marker",
+    "intensity",
+    "source",
+    "annotator",
+    "created_at",
+    "revision",
+    "quality_flags",
+    "pair_id",
+    "positive_negative_pair_role"
+  ],
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_\\-\\.]+$"
+    },
+    "axis_id": {
+      "type": "string",
+      "enum": [
+        "calm-agitated",
+        "warm-cold",
+        "empathetic-detached",
+        "supportive-critical",
+        "assertive-compliant",
+        "boundary-preserving-over-accommodating",
+        "cautious-impulsive",
+        "confident-uncertain",
+        "stable-reactive",
+        "analytical-intuitive",
+        "concise-expressive",
+        "reflective-impulsively-answering"
+      ]
+    },
+    "pole": {
+      "type": "string",
+      "description": "The intended trait pole expressed by this sample. Must match one pole from the axis registry."
+    },
+    "split": {
+      "type": "string",
+      "enum": ["train", "dev", "test", "holdout", "unassigned"]
+    },
+    "prompt_family": {
+      "type": "string",
+      "description": "Scenario family used for prompt-family holdout and robustness checks."
+    },
+    "scenario_id": {
+      "type": "string",
+      "description": "Stable scenario identifier shared by contrastive variants."
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "type": "string",
+      "enum": ["zh", "en", "mixed"]
+    },
+    "explicit_marker": {
+      "type": "boolean",
+      "description": "True if the target trait is expressed with obvious lexical markers. Used to build keyword-removed eval sets."
+    },
+    "intensity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Trait expression intensity from subtle to strong."
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "name"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["human_written", "human_revised", "model_assisted_draft", "imported", "schema_example"]
+        },
+        "name": { "type": "string" },
+        "license": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "annotator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role"],
+      "properties": {
+        "id": { "type": "string" },
+        "role": {
+          "type": "string",
+          "enum": ["author", "reviewer", "adjudicator", "unreviewed"]
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "quality_flags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "needs_review",
+          "keyword_leakage",
+          "length_mismatch",
+          "task_answer_mismatch",
+          "confound_risk",
+          "unsafe_content",
+          "too_subtle",
+          "too_obvious",
+          "approved"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "confound_notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "pair_id": {
+      "type": "string",
+      "description": "Contrastive pair identifier. All samples in a pair must remain in the same split."
+    },
+    "positive_negative_pair_role": {
+      "type": "string",
+      "enum": ["positive", "negative", "neutral_control", "hard_negative", "unpaired"]
+    },
+    "length_control_group": {
+      "type": "string",
+      "description": "Group ID for length-matched variants."
+    },
+    "task_answer_equivalence_group": {
+      "type": "string",
+      "description": "Group ID for variants intended to preserve task answer content."
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

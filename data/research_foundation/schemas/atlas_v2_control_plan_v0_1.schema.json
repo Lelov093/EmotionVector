@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/atlas_v2_control_plan_v0_1.schema.json",
+  "title": "EmotionVector Atlas v2 Control Plan v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "control_plan_version", "status", "timing_disclosure", "candidate_summary",
+    "preliminary_selection", "surface_control", "unrelated_control", "orthogonal_control",
+    "veto_policy", "claim_boundary"
+  ],
+  "properties": {
+    "control_plan_version": {"const": "atlas_v2_control_plan_v0_1"},
+    "status": {"const": "frozen_before_control_activation_execution"},
+    "timing_disclosure": {"const": "defined_after_train_dev_target_metrics_were_observed_before_any_control_results_or_test_opening"},
+    "candidate_summary": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+      "properties": {
+        "path": {"const": "results/summaries/atlas_v2_train_dev_candidate_summary_v0_1.json"},
+        "sha256": {"pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "preliminary_selection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rule", "layer", "pooling", "observed_dev_auroc", "status"],
+      "properties": {
+        "rule": {"const": "maximum_dev_auroc_then_balanced_accuracy_then_earlier_layer"},
+        "layer": {"const": 24},
+        "pooling": {"const": "last_response_token"},
+        "observed_dev_auroc": {"const": 0.953125},
+        "status": {"const": "provisional_pending_controls"}
+      }
+    },
+    "surface_control": {
+      "type": "object", "additionalProperties": false,
+      "required": ["feature", "fit_split", "method"],
+      "properties": {
+        "feature": {"const": "response_token_count"},
+        "fit_split": {"const": "train"},
+        "method": {"const": "normalized_activation_feature_covariance"}
+      }
+    },
+    "unrelated_control": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_path", "source_sha256", "axis_id", "fit_split", "pair_count", "input_prompt", "role"],
+      "properties": {
+        "source_path": {"const": "data/trait_space/curated/trait_space_seed_v0_1.jsonl"},
+        "source_sha256": {"pattern": "^[a-f0-9]{64}$"},
+        "axis_id": {"const": "calm-agitated"},
+        "fit_split": {"const": "train"},
+        "pair_count": {"const": 6},
+        "input_prompt": {"type": "string", "minLength": 1},
+        "role": {"const": "legacy_template_dominated_unrelated_confound_stress_test_only"}
+      }
+    },
+    "orthogonal_control": {
+      "type": "object", "additionalProperties": false,
+      "required": ["target", "nuisance"],
+      "properties": {
+        "target": {"const": "difference_of_means_target_direction"},
+        "nuisance": {"const": "surface_response_token_count_direction"}
+      }
+    },
+    "veto_policy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["control_auroc_margin", "maximum_orthogonalized_auroc_drop", "on_veto"],
+      "properties": {
+        "control_auroc_margin": {"const": 0.05},
+        "maximum_orthogonalized_auroc_drop": {"const": 0.10},
+        "on_veto": {"const": "do_not_create_selection_lock_or_open_test"}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

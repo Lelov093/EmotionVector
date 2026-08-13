@@ -1,0 +1,40 @@
+{
+  "runtime_version": "atlas_v2_runtime_v0_1",
+  "status": "frozen_before_first_model_run",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "cache_root": "D:/AI_Models/huggingface/hub",
+    "snapshot_size_gib": 7.507,
+    "load_dtype": "bfloat16",
+    "quantization": "bitsandbytes_int8"
+  },
+  "execution": {
+    "axis_id": "boundary-preserving-over-accommodating",
+    "allowed_splits": ["train", "dev"],
+    "batch_size": 1,
+    "local_files_only": true,
+    "device_map": "auto",
+    "max_sequence_tokens": 768
+  },
+  "input_contract": {
+    "format": "chat_user_prompt_plus_assistant_response",
+    "prefix": "tokenizer_chat_template_user_with_add_generation_prompt",
+    "response_tokens": "standalone_response_without_added_special_tokens_appended_to_prefix_ids",
+    "terminal_special_token": "not_appended",
+    "truncation": "reject_over_limit"
+  },
+  "candidate_specifications": {
+    "layers": [8, 16, 24, 32],
+    "pooling": ["last_response_token", "mean_response_tokens"]
+  },
+  "artifact_policy": {
+    "root": "results/local_artifacts/research_foundation/atlas_v2",
+    "array_dtype": "float32",
+    "one_artifact_per_specification": true,
+    "raw_text_persistence": "forbidden",
+    "smoke_samples": 2,
+    "smoke_writes_canonical_artifacts": false
+  },
+  "claim_boundary": "This runtime is limited to one-axis train/dev representation extraction. Quantization is an execution constraint, not a research contribution. Test, steering, training, and confirmatory claims are forbidden."
+}

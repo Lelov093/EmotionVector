@@ -1,0 +1,14 @@
+{
+  "freeze_version": "representation_family_split_v2_1_freeze",
+  "frozen_at": "2026-08-04T00:00:00+08:00",
+  "manifest_path": "data/research_foundation/manifests/representation_family_split_v2_1.json",
+  "manifest_sha256": "00e10c3c6b1f07ad7e03daa42aead0dbe738ff74566307c9d5992370d4389a40",
+  "hash_basis": "canonical_json_sort_keys_compact_utf8",
+  "pair_counts": {
+    "train": 11,
+    "dev": 8,
+    "test": 7
+  },
+  "test_pair_ids_sha256": "d74daf80f63638022310cb1a77fc1e23f4b0c8482ffe5997f0839164847b14b3",
+  "condition": "frozen_before_any_stage_2_model_execution"
+}

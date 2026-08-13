@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_family_split_contract_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Family Split Contract v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["contract_version", "status", "seed", "bound_evidence", "targets", "allocation_policy", "eligibility_policy", "leakage_policy", "outputs", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_family_split_contract_v0_1"},
+    "status": {"const": "frozen_before_split_construction"},
+    "seed": {"const": 2026080473},
+    "bound_evidence": {"type": "object"},
+    "targets": {"type": "object", "properties": {"qlora_train_families": {"const": 39}, "development_families": {"const": 15}, "held_out_test_families": {"const": 40}}, "required": ["qlora_train_families", "development_families", "held_out_test_families"]},
+    "allocation_policy": {"type": "object"}, "eligibility_policy": {"type": "object"},
+    "leakage_policy": {"type": "object"}, "outputs": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

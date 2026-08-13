@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_isolation_extension_review_v0_2.schema.json",
+  "title": "EmotionVector Phase 3 Isolation Extension Review v0.2",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "candidate_id", "cohort", "prompt", "prompt_sha256", "provisional_isolation_family_id", "comparison_population", "machine_linked_candidate_ids", "human_review"],
+  "properties": {
+    "schema_version": {"const": "phase_3_isolation_extension_review_v0_2"},
+    "candidate_id": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"},
+    "cohort": {"const": "supplemental_12_v0_4"},
+    "prompt": {"type": "string", "minLength": 1},
+    "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "provisional_isolation_family_id": {"type": "string", "pattern": "^p3iso_[a-f0-9]{20}$"},
+    "comparison_population": {"type": "object"},
+    "machine_linked_candidate_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"}},
+    "human_review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["decision", "reviewed_isolation_family_id", "merge_with_candidate_ids", "reviewer_id", "reviewed_at", "notes"],
+      "properties": {
+        "decision": {"enum": ["confirm", "merge", "exclude", null]},
+        "reviewed_isolation_family_id": {"type": ["string", "null"], "pattern": "^p3iso_[a-f0-9]{20}$"},
+        "merge_with_candidate_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"}},
+        "reviewer_id": {"type": ["string", "null"]},
+        "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

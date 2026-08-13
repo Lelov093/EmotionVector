@@ -1,0 +1,48 @@
+{
+  "notice_version": "phase_3_held_out_model_gpu_execution_notice_v0_1",
+  "notice_status": "issued_before_user_execution_authorization_and_before_test_opening",
+  "issued_at": "2026-08-05T00:33:15.3137124+08:00",
+  "runtime_path": "configs/research/phase_3_held_out_runtime_v0_1.json",
+  "runtime_sha256": "6e6e8aa3695bb251c42f4908eabf5efd3e4df957fa7b2b199d283c3f48ae6e45",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "local_files_only": true,
+    "quantization": "bitsandbytes_nf4_4bit",
+    "compute_dtype": "float16"
+  },
+  "planned_scope": {
+    "held_out_families": 40,
+    "held_out_pairs": 52,
+    "conditions": 15,
+    "expected_outputs": 780,
+    "training_planned": false,
+    "external_llm_api_planned": false,
+    "automatic_judge_planned": false,
+    "human_review_runs_after_complete_blind_packet": true
+  },
+  "planned_resources": {
+    "environment": ".venv/Scripts/python.exe",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU 8GB",
+    "estimated_elapsed_minutes": [90, 240],
+    "estimated_peak_gpu_memory_gib": [4.5, 5.5],
+    "estimate_basis": "bounded extrapolation from the completed Phase 3 train/dev Qwen3-4B NF4 runtime; actual duration remains unvalidated"
+  },
+  "acceptance_boundary": {
+    "single_access_event_before_any_held_out_pair_read": true,
+    "all_780_outputs_required_before_blind_packet_freeze": true,
+    "selective_condition_omission_allowed": false,
+    "test_retuning_or_rerun_allowed": false,
+    "positive_result_required": false,
+    "qlora_epoch_1_remains_failed_quality_gate_fallback": true,
+    "primary_evidence_requires_condition_blind_human_review": true,
+    "confirmatory_causal_steering_claim_allowed": false
+  },
+  "authorization_state": {
+    "runtime_freeze_authorizes_execution": false,
+    "fresh_user_authorization_required": true,
+    "test_access_log_exists_at_notice": false,
+    "model_test_openings_at_notice": 0
+  },
+  "claim_boundary": "This notice reports the frozen scope, expected resources and acceptance boundary before any held-out opening or model/GPU execution. It is not execution authorization or outcome evidence."
+}

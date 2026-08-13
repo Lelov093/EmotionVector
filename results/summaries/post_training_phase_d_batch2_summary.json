@@ -1,0 +1,125 @@
+{
+  "created_at": "2026-07-04T11:04:28.254623+00:00",
+  "experiment_id": "post_training_qwen3_4b_boundary_preserving.phase_d_batch2",
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "axis_id": "boundary-preserving-over-accommodating",
+  "target_pole": "boundary-preserving",
+  "sft_dataset": "data/post_training/boundary_preserving_sft_v0_2.jsonl",
+  "train_samples": 60,
+  "candidate_count": 2,
+  "best_candidate": {
+    "best_candidate_id": "candidate_a_r8_s60",
+    "best_adapter_dir": "results\\local_artifacts\\post_training\\adapters\\qwen3_4b_4bit\\boundary_preserving\\post_training_boundary_preserving_phase_d_batch2_candidate_a_r8_s60_20260704T103523Z",
+    "selection_basis": "dev subset heuristic: avg_trait_score + avg_quality_score - 0.25*refusal_rate",
+    "candidate_scores": [
+      {
+        "candidate_id": "candidate_a_r8_s60",
+        "adapter_dir": "results\\local_artifacts\\post_training\\adapters\\qwen3_4b_4bit\\boundary_preserving\\post_training_boundary_preserving_phase_d_batch2_candidate_a_r8_s60_20260704T103523Z",
+        "avg_trait_score": 2.5,
+        "avg_quality_score": 0.6667,
+        "refusal_rate": 0.6667,
+        "selection_score": 3.0
+      },
+      {
+        "candidate_id": "candidate_b_r8_s120",
+        "adapter_dir": "results\\local_artifacts\\post_training\\adapters\\qwen3_4b_4bit\\boundary_preserving\\post_training_boundary_preserving_phase_d_batch2_candidate_b_r8_s120_20260704T103632Z",
+        "avg_trait_score": 2.5,
+        "avg_quality_score": 0.1667,
+        "refusal_rate": 0.5,
+        "selection_score": 2.5417
+      }
+    ]
+  },
+  "batch1_adapter_dir": "results\\local_artifacts\\post_training\\adapters\\qwen3_4b_4bit\\boundary_preserving\\post_training_boundary_preserving_phase_d_batch1_20260704T095920Z",
+  "batch2_best_adapter_dir": "results\\local_artifacts\\post_training\\adapters\\qwen3_4b_4bit\\boundary_preserving\\post_training_boundary_preserving_phase_d_batch2_candidate_a_r8_s60_20260704T103523Z",
+  "generation_count": 120,
+  "pairwise_count": 120,
+  "runtime_seconds": 1491.4144,
+  "heuristic_by_condition": {
+    "activation-steering": {
+      "count": 24,
+      "avg_trait_score": 2.3333,
+      "avg_quality_score": 0.25,
+      "refusal_rate": 0.9167
+    },
+    "base": {
+      "count": 24,
+      "avg_trait_score": 2.4583,
+      "avg_quality_score": 0.0833,
+      "refusal_rate": 0.9167
+    },
+    "prompt-only": {
+      "count": 24,
+      "avg_trait_score": 2.7083,
+      "avg_quality_score": 0.2917,
+      "refusal_rate": 1.0
+    },
+    "qlora_adapter_batch1": {
+      "count": 24,
+      "avg_trait_score": 2.2917,
+      "avg_quality_score": 0.125,
+      "refusal_rate": 0.0
+    },
+    "qlora_adapter_batch2_best": {
+      "count": 24,
+      "avg_trait_score": 2.75,
+      "avg_quality_score": 0.4583,
+      "refusal_rate": 0.7917
+    }
+  },
+  "pairwise_summary": {
+    "batch2 adapter vs activation-steering": {
+      "count": 24,
+      "avg_trait_delta": 0.4167,
+      "avg_quality_delta": 0.2083,
+      "avg_side_effect_delta": 0.0581
+    },
+    "batch2 adapter vs base": {
+      "count": 24,
+      "avg_trait_delta": 0.2917,
+      "avg_quality_delta": 0.375,
+      "avg_side_effect_delta": 0.0568
+    },
+    "batch2 adapter vs batch1 adapter": {
+      "count": 24,
+      "avg_trait_delta": 0.4583,
+      "avg_quality_delta": 0.3333,
+      "avg_side_effect_delta": 0.4178
+    },
+    "batch2 adapter vs prompt-only": {
+      "count": 24,
+      "avg_trait_delta": 0.0417,
+      "avg_quality_delta": 0.1667,
+      "avg_side_effect_delta": -0.0365
+    },
+    "prompt-only vs activation-steering": {
+      "count": 24,
+      "avg_trait_delta": 0.375,
+      "avg_quality_delta": 0.0417,
+      "avg_side_effect_delta": 0.0946
+    }
+  },
+  "judge_summary": {
+    "judge_available": true,
+    "smoke_check": {
+      "ok": true,
+      "model_used": "glm-5.1",
+      "fallback_used": false
+    },
+    "judge_model_effective": "glm-5.1",
+    "sample_count": 30,
+    "preference_counts": {
+      "B": 10,
+      "A": 20
+    }
+  },
+  "failure_case_count": 71,
+  "artifact_pointers": {
+    "local_raw_generations": "results\\local_artifacts\\post_training\\phase_d_batch2\\adapter_eval_generations_batch2.jsonl"
+  },
+  "limitations": [
+    "Synthetic derived v0.2 SFT data; human annotation is still absent.",
+    "Adapter selection uses a small dev heuristic and external judge sample, not a full benchmark.",
+    "Results compare one boundary-preserving axis only and do not prove stable trait control."
+  ]
+}

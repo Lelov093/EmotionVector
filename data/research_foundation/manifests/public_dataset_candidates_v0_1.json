@@ -1,0 +1,66 @@
+{
+  "registry_version": "public_dataset_candidates_v0_1",
+  "reviewed_at": "2026-08-03T00:00:00+08:00",
+  "download_status": "downloaded_raw_human_mapping_review_complete_scoped_use_approved",
+  "downloaded_at": "2026-08-03T15:42:45+08:00",
+  "candidates": [
+    {
+      "dataset_id": "empathetic_dialogues",
+      "official_dataset_url": "https://huggingface.co/datasets/facebook/empathetic_dialogues/blob/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/README.md",
+      "official_repository_url": "https://github.com/facebookresearch/EmpatheticDialogues",
+      "license_identifier": "CC-BY-NC-4.0",
+      "license_review_status": "approved_noncommercial_research_use",
+      "license_decision_path": "data/research_foundation/manifests/public_dataset_use_decisions_v0_1.json",
+      "source_fields_reviewed": ["conv_id", "utterance_idx", "context", "prompt", "speaker_idx", "utterance", "selfeval", "tags"],
+      "candidate_trait_axes": ["empathetic-detached", "warm-cold", "supportive-critical"],
+      "mapping_status": "schema_v0_2_human_review_complete_not_representation_ready",
+      "pilot_manifest_path": "data/research_foundation/manifests/public_mapping_pilot_v0_2.json",
+      "historical_pilot_manifest_path": "data/research_foundation/manifests/public_mapping_pilot_v0_1.json",
+      "local_snapshot_path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2",
+      "actual_data_source": "https://dl.fbaipublicfiles.com/parlai/empatheticdialogues/empatheticdialogues.tar.gz",
+      "allowed_pilot_role": "independent source candidate for evaluation and representation controls",
+      "blocked_roles": ["direct unreviewed SFT mixing", "trait gold labels", "commercial use", "raw-data redistribution"],
+      "notes": "The project owner approved scoped non-commercial research use on 2026-08-04. Mapping review is complete, but negative-pole and held-out family coverage remain insufficient for the frozen representation split. Empathy context is not automatically a Trait label."
+    },
+    {
+      "dataset_id": "pku_safe_rlhf",
+      "official_dataset_url": "https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF/blob/f4b036fc262da341565c0d01b2e8cf47d386921e/README.md",
+      "official_repository_url": "https://github.com/PKU-Alignment/safe-rlhf",
+      "license_identifier": "CC-BY-NC-4.0",
+      "license_review_status": "approved_noncommercial_research_use",
+      "license_decision_path": "data/research_foundation/manifests/public_dataset_use_decisions_v0_1.json",
+      "source_fields_reviewed": [
+        "prompt",
+        "response_0",
+        "response_1",
+        "prompt_source",
+        "response_0_source",
+        "response_1_source",
+        "is_response_0_safe",
+        "is_response_1_safe",
+        "response_0_harm_category",
+        "response_1_harm_category",
+        "response_0_severity_level",
+        "response_1_severity_level",
+        "better_response_id",
+        "safer_response_id",
+        "response_0_sha256",
+        "response_1_sha256"
+      ],
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating",
+        "assertive-compliant",
+        "cautious-impulsive"
+      ],
+      "mapping_status": "schema_v0_2_human_review_complete_representation_subset_frozen",
+      "pilot_manifest_path": "data/research_foundation/manifests/public_mapping_pilot_v0_2.json",
+      "historical_pilot_manifest_path": "data/research_foundation/manifests/public_mapping_pilot_v0_1.json",
+      "local_snapshot_path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "actual_data_source": "https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF/tree/f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "allowed_pilot_role": "safety/helpfulness preference source candidate and over-refusal evaluation source",
+      "blocked_roles": ["direct unreviewed SFT mixing", "personality gold labels", "commercial use", "raw-data redistribution", "assertive-compliant or cautious-impulsive inference without separate evidence"],
+      "notes": "The project owner approved scoped non-commercial research use on 2026-08-04. Human review is complete; only valid_single_axis boundary-preserving-over-accommodating opposite-pole pairs enter the frozen representation subset. Safety/helpfulness preferences are not personality truth."
+    }
+  ],
+  "claim_boundary": "The separate decision manifest records scoped non-commercial research use. It does not validate Trait labels, permit commercial use or raw redistribution, or authorize automatic source mixing or training."
+}

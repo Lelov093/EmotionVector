@@ -1,0 +1,45 @@
+experiment_id: post_training_qwen3_4b_boundary_preserving.phase_d_batch1
+run_id: post_training_boundary_preserving_phase_d_batch1
+model_id: Qwen/Qwen3-4B-Instruct-2507
+cache_dir: D:\AI_Models\huggingface\hub
+local_files_only: true
+axis_id: boundary-preserving-over-accommodating
+target_pole: boundary-preserving
+source_dataset: data/trait_space/curated/trait_space_seed_v0_1.jsonl
+split_manifest: data/trait_space/splits/trait_space_seed_v0_1_split_manifest.json
+axis_registry: data/trait_space/axis_registry.yaml
+sft_dataset: data/post_training/boundary_preserving_sft_v0_1.jsonl
+sft_dataset_card: data/post_training/boundary_preserving_sft_v0_1.card.md
+adapter_output_root: results/local_artifacts/post_training/adapters/qwen3_4b_4bit/boundary_preserving
+local_artifact_dir: results/local_artifacts/post_training/phase_d_batch1
+runtime:
+  quantization: 4bit
+  compute_dtype: fp16
+training:
+  max_steps: 20
+  learning_rate: 0.0002
+  max_seq_length: 256
+  gradient_accumulation_steps: 2
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+evaluation:
+  prompt_set: data/trait_space/steering_prompts/phase_c_batch1_steering_prompts.jsonl
+  max_new_tokens: 64
+  activation_vector_artifact: results/local_artifacts/representation_atlas/main_qwen3_4b/representation_atlas_main_qwen3_4b_v0_1/vectors.pt
+  activation_layer: 24
+  activation_alpha: 3
+  judge_sample_size: 12
+tracked_outputs:
+  result_card_json: results/cards/post_training_boundary_preserving_phase_d_batch1.json
+  result_card_md: results/cards/post_training_boundary_preserving_phase_d_batch1.md
+  summary_json: results/summaries/post_training_phase_d_batch1_summary.json
+  pairwise_records_jsonl: results/cards/post_training_phase_d_batch1_pairwise_records.jsonl
+  judge_results_jsonl: results/cards/post_training_phase_d_batch1_judge_results.jsonl
+  judge_summary_json: results/summaries/post_training_phase_d_batch1_judge_summary.json
+non_goals:
+  - no stable trait-control claim
+  - no broad adapter bank
+  - no 7B or 8B training
+  - no dashboard or frontend work

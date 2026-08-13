@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-07-04T14:02:05.678098+00:00",
+  "experiment_id": "trait_eval_generation_qwen3_4b.phase_e_batch2",
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "runtime": "bnb_4bit",
+  "generation_count": 240,
+  "condition_counts": {
+    "base": 120,
+    "prompt-only": 120
+  },
+  "axis_counts": {
+    "calm-agitated": 20,
+    "warm-cold": 20,
+    "empathetic-detached": 20,
+    "supportive-critical": 20,
+    "assertive-compliant": 20,
+    "boundary-preserving-over-accommodating": 20,
+    "cautious-impulsive": 20,
+    "confident-uncertain": 20,
+    "stable-reactive": 20,
+    "analytical-intuitive": 20,
+    "concise-expressive": 20,
+    "reflective-impulsively-answering": 20
+  },
+  "runtime_seconds": 1622.8419,
+  "avg_generation_seconds": 5.7976,
+  "local_raw_log_pointer": "results\\local_artifacts\\evaluation\\phase_e_batch2\\trait_eval_generations_raw.jsonl"
+}

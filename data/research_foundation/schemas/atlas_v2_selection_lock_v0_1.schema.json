@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/atlas_v2_selection_lock_v0_1.schema.json",
+  "title": "EmotionVector Atlas v2 Train/Dev Selection Lock v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "selection_lock_version", "locked_at", "dataset_manifest_sha256", "analysis_plan_sha256",
+    "activation_metadata_path", "activation_metadata_sha256", "selection_source_splits",
+    "selected_specification", "candidate_results_sha256", "all_candidates_reported",
+    "control_plan_path", "control_plan_sha256", "control_results_path",
+    "control_results_sha256", "control_gate_status", "control_registry_complete",
+    "test_opening_status", "claim_boundary"
+  ],
+  "properties": {
+    "selection_lock_version": {"const": "atlas_v2_selection_lock_v0_1"},
+    "locked_at": {"type": "string", "format": "date-time"},
+    "dataset_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "analysis_plan_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "activation_metadata_path": {
+      "type": "string",
+      "pattern": "^results/local_artifacts/"
+    },
+    "activation_metadata_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "selection_source_splits": {"const": ["train", "dev"]},
+    "selected_specification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layer", "pooling", "threshold", "probe_regularization_c", "direction_method"],
+      "properties": {
+        "layer": {"type": "integer", "minimum": 0},
+        "pooling": {"type": "string", "minLength": 1},
+        "threshold": {"type": "number"},
+        "probe_regularization_c": {"type": "number", "exclusiveMinimum": 0},
+        "direction_method": {"const": "difference_of_means"}
+      }
+    },
+    "candidate_results_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "all_candidates_reported": {"const": true},
+    "control_plan_path": {"const": "configs/research/representation_atlas_v2_control_plan_v0_1.json"},
+    "control_plan_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "control_results_path": {"type": "string", "pattern": "^results/local_artifacts/"},
+    "control_results_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "control_gate_status": {"const": "pass"},
+    "control_registry_complete": {
+      "const": [
+        "orthogonalized_target_direction",
+        "random_isotropic_direction",
+        "shuffled_label_direction",
+        "sign_flipped_target_direction",
+        "surface_style_direction",
+        "unrelated_trait_direction"
+      ]
+    },
+    "test_opening_status": {"const": "locked_not_opened"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

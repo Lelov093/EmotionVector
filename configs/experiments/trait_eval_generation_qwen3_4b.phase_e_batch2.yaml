@@ -1,0 +1,51 @@
+experiment_id: trait_eval_generation_qwen3_4b.phase_e_batch2
+run_id: trait_eval_generation_qwen3_4b_phase_e_batch2
+model_id: Qwen/Qwen3-4B-Instruct-2507
+cache_dir: D:\AI_Models\huggingface\hub
+local_files_only: true
+runtime:
+  quantization: 4bit
+  compute_dtype: fp16
+dataset: data/evaluation/trait_eval_12axis_v0_1.jsonl
+review_packet_v1: data/evaluation/human_review/trait_eval_12axis_review_packet_v0_1.jsonl
+local_artifact_dir: results/local_artifacts/evaluation/phase_e_batch2
+generation:
+  max_new_tokens: 96
+  do_sample: false
+  temperature: 0.0
+  max_input_tokens: 512
+conditions:
+  - base
+  - prompt-only
+selected_steering:
+  enabled: true
+  axes:
+    - calm-agitated
+    - empathetic-detached
+    - assertive-compliant
+    - boundary-preserving-over-accommodating
+    - cautious-impulsive
+    - stable-reactive
+  prompts_per_axis: 6
+  layer: 24
+  alpha: 3
+  pooling: last_token
+  vector_method: difference_of_means
+  vector_artifact: results/local_artifacts/representation_atlas/main_qwen3_4b/representation_atlas_main_qwen3_4b_v0_1/vectors.pt
+tracked_outputs:
+  base_prompt_outputs: results/cards/phase_e_batch2_model_outputs_base_prompt.jsonl
+  selected_steering_outputs: results/cards/phase_e_batch2_selected_steering_outputs.jsonl
+  generation_summary: results/summaries/phase_e_batch2_generation_summary.json
+  steering_summary: results/summaries/phase_e_batch2_selected_steering_summary.json
+  heuristic_results: results/cards/phase_e_batch2_heuristic_eval_results.jsonl
+  heuristic_summary: results/summaries/phase_e_batch2_heuristic_eval_summary.json
+  review_packet_v2: data/evaluation/human_review/trait_eval_12axis_review_packet_v0_2.jsonl
+  review_packet_v2_card: data/evaluation/human_review/trait_eval_12axis_review_packet_v0_2.card.md
+  judge_results: results/cards/phase_e_batch2_judge_results.jsonl
+  judge_summary: results/summaries/phase_e_batch2_judge_summary.json
+  judge_report: results/cards/phase_e_batch2_judge_report.md
+non_goals:
+  - no LoRA or QLoRA training
+  - no full 12-axis steering matrix
+  - no dashboard or frontend work
+  - no raw local artifact logs in git

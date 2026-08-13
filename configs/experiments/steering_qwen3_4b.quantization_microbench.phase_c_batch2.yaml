@@ -1,0 +1,50 @@
+experiment_id: steering_qwen3_4b.quantization_microbench.phase_c_batch2
+run_id: steering_qwen3_4b_quantization_microbench_phase_c_batch2
+module: quantization_microbench
+model_config: configs/models/qwen3_4b_instruct_2507.yaml
+vector_registry: results/summaries/vector_registry.jsonl
+vector_run_id: representation_atlas_main_qwen3_4b_v0_1
+vector_artifact: results/local_artifacts/representation_atlas/main_qwen3_4b/representation_atlas_main_qwen3_4b_v0_1/vectors.pt
+dataset_version: trait_space_seed_v0_1
+dataset_path: data/trait_space/curated/trait_space_seed_v0_1.jsonl
+split_manifest: data/trait_space/splits/trait_space_seed_v0_1_split_manifest.json
+axes:
+  - cautious-impulsive
+layers: [24]
+pooling_modes: [last_token]
+vector_methods: [difference_of_means]
+alpha_values: [0, 3]
+conditions:
+  - no-steering
+  - activation-steering
+condition_matrix:
+  no-steering:
+    alphas: [0]
+    uses_activation_hook: false
+  activation-steering:
+    alphas: [3]
+    uses_activation_hook: true
+prompt_set:
+  path: data/trait_space/steering_prompts/phase_c_batch1_steering_prompts.jsonl
+  min_prompts_per_axis: 2
+microbench_prompt_count: 2
+generation_config:
+  max_new_tokens: 40
+  do_sample: false
+  generation_seed: 20260704
+runtime_modes:
+  - runtime_id: fp16_auto_offload
+    quantization: none
+  - runtime_id: bnb_8bit
+    quantization: 8bit
+  - runtime_id: bnb_4bit
+    quantization: 4bit
+local_artifact_dir: results/local_artifacts/steering/phase_c_batch2_quantization_microbench
+tracked_outputs:
+  microbench_json: results/cards/steering_qwen3_4b_quantization_microbench_phase_c_batch2.json
+  microbench_md: results/cards/steering_qwen3_4b_quantization_microbench_phase_c_batch2.md
+non_goals:
+  - no quantized vector registry claim
+  - no 7B or 8B run
+  - no dashboard changes
+  - no LoRA or QLoRA training

@@ -1,0 +1,140 @@
+{
+  "created_at": "2026-07-04T07:47:00.713262+00:00",
+  "smoke_check": {
+    "ok": true,
+    "model_used": "glm-5.1",
+    "fallback_used": true
+  },
+  "judge_model_requested": "qwen3.6-plus-2026-04-02",
+  "judge_model_effective": "glm-5.1",
+  "model_used_counts": {
+    "glm-5.1": 60
+  },
+  "fallback_used_count": 60,
+  "fallback_models": [
+    "gui-plus-2026-02-26",
+    "qwen3.6-plus",
+    "glm-5.1",
+    "qwen3.6-flash-2026-04-16",
+    "qwen3.6-35b-a3b",
+    "qwen3.6-flash"
+  ],
+  "sample_count": 60,
+  "result_count": 60,
+  "agreement_rate": 0.4333,
+  "agreement_by_axis": {
+    "boundary-preserving-over-accommodating": 0.35,
+    "calm-agitated": 0.4,
+    "cautious-impulsive": 0.55
+  },
+  "agreement_by_comparison_type": {
+    "activation vs no-steering": 0.4667,
+    "activation vs prompt-only": 0.2667,
+    "activation vs random-vector": 0.5333,
+    "activation vs shuffled-vector": 0.4667
+  },
+  "judge_preference_by_comparison_type": {
+    "activation vs no-steering": {
+      "A": 4,
+      "tie": 6,
+      "B": 5
+    },
+    "activation vs prompt-only": {
+      "A": 7,
+      "B": 8
+    },
+    "activation vs random-vector": {
+      "B": 6,
+      "tie": 8,
+      "A": 1
+    },
+    "activation vs shuffled-vector": {
+      "B": 4,
+      "tie": 7,
+      "A": 4
+    }
+  },
+  "major_disagreement_case_ids": [
+    "phase_c_b3_001",
+    "phase_c_b3_003",
+    "phase_c_b3_004",
+    "phase_c_b3_005",
+    "phase_c_b3_006",
+    "phase_c_b3_007",
+    "phase_c_b3_009",
+    "phase_c_b3_010",
+    "phase_c_b3_011",
+    "phase_c_b3_013",
+    "phase_c_b3_014",
+    "phase_c_b3_015",
+    "phase_c_b3_016",
+    "phase_c_b3_023",
+    "phase_c_b3_024",
+    "phase_c_b3_025",
+    "phase_c_b3_026",
+    "phase_c_b3_029",
+    "phase_c_b3_030",
+    "phase_c_b3_033",
+    "phase_c_b3_035",
+    "phase_c_b3_036",
+    "phase_c_b3_037",
+    "phase_c_b3_039",
+    "phase_c_b3_040",
+    "phase_c_b3_042",
+    "phase_c_b3_047",
+    "phase_c_b3_048",
+    "phase_c_b3_049",
+    "phase_c_b3_050"
+  ],
+  "low_confidence_case_ids": [
+    "phase_c_b3_024",
+    "phase_c_b3_055"
+  ],
+  "side_effect_disagreement_cases": [],
+  "heuristic_likely_overestimated_cases": [
+    "phase_c_b3_053"
+  ],
+  "prompt_only_dominates_cases": [
+    "phase_c_b3_008",
+    "phase_c_b3_010",
+    "phase_c_b3_026",
+    "phase_c_b3_028",
+    "phase_c_b3_029",
+    "phase_c_b3_030",
+    "phase_c_b3_047",
+    "phase_c_b3_049"
+  ],
+  "random_shuffled_competitive_cases": [
+    "phase_c_b3_011",
+    "phase_c_b3_012",
+    "phase_c_b3_014",
+    "phase_c_b3_015",
+    "phase_c_b3_016",
+    "phase_c_b3_017",
+    "phase_c_b3_019",
+    "phase_c_b3_020",
+    "phase_c_b3_031",
+    "phase_c_b3_032",
+    "phase_c_b3_033",
+    "phase_c_b3_034",
+    "phase_c_b3_035",
+    "phase_c_b3_037",
+    "phase_c_b3_038",
+    "phase_c_b3_040",
+    "phase_c_b3_051",
+    "phase_c_b3_052",
+    "phase_c_b3_053",
+    "phase_c_b3_054",
+    "phase_c_b3_055",
+    "phase_c_b3_056",
+    "phase_c_b3_057",
+    "phase_c_b3_058",
+    "phase_c_b3_059"
+  ],
+  "limitations": [
+    "External LLM judge is calibration evidence, not ground truth.",
+    "Sample is small and drawn from Batch 2 outputs.",
+    "A is always activation-steering, so position bias is possible.",
+    "No raw API key or secrets are stored."
+  ]
+}

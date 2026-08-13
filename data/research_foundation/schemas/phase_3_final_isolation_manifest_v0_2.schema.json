@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_final_isolation_manifest_v0_2.schema.json",
+  "title": "EmotionVector Phase 3 Final Isolation Manifest v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "status", "reviewer_id", "reviewed_at", "formal_reviews", "counts", "records", "checks", "claim_boundary"],
+  "properties": {
+    "manifest_version": {"const": "phase_3_final_isolation_manifest_v0_2"},
+    "status": {"const": "additional_30_review_complete_no_split"},
+    "reviewer_id": {"const": "researcher_01"},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "formal_reviews": {"type": "object"},
+    "counts": {"type": "object"},
+    "records": {
+      "type": "array", "minItems": 270, "maxItems": 270,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "cohort", "prompt_sha256", "final_isolation_family_id", "component_size", "review_decision", "split_status"],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"},
+          "cohort": {"enum": ["confirmed_180", "expansion_60", "additional_30_v0_3"]},
+          "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "final_isolation_family_id": {"type": "string", "pattern": "^p3iso_[a-f0-9]{20}$"},
+          "component_size": {"type": "integer", "minimum": 1},
+          "review_decision": {"enum": ["confirm", "merge"]},
+          "split_status": {"const": "not_assigned_pending_authorized_small_supplement"}
+        }
+      }
+    },
+    "checks": {"type": "array", "minItems": 9, "items": {"type": "object"}},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

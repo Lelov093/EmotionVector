@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "check_id": "all_input_counts_and_ids_complete",
+      "status": "pass"
+    },
+    {
+      "check_id": "raw_packet_identity_hash_text_and_provenance_preserved",
+      "status": "pass"
+    },
+    {
+      "check_id": "expansion_review_schema_and_eligibility_valid",
+      "status": "pass"
+    },
+    {
+      "check_id": "isolation_review_schema_valid",
+      "status": "pass"
+    },
+    {
+      "check_id": "merge_transitive_closure_and_uniform_ids",
+      "status": "pass"
+    },
+    {
+      "check_id": "split_not_created",
+      "status": "pass"
+    },
+    {
+      "check_id": "disjoint_40_15_40_feasibility",
+      "status": "blocked"
+    }
+  ],
+  "claim_boundary": "Both user-confirmed reviews are formally accepted. The final 189 isolation families still cannot support the disjoint 40/15/40 allocation, so no split or model execution is authorized.",
+  "disjoint_gate_audit": {
+    "both_role_families": 71,
+    "evaluation_eligible_families": 72,
+    "evaluation_only_families": 1,
+    "maximum_qlora_train_families_after_reserving_15_dev_and_40_test": 29,
+    "meets_40_15_40": false,
+    "qlora_eligible_families": 83,
+    "qlora_only_families": 12,
+    "qlora_train_shortfall": 11
+  },
+  "expansion_counts": {
+    "mapping_decisions": {
+      "accept": 43,
+      "ambiguous": 1,
+      "reject": 16
+    },
+    "pair_contrasts": {
+      "insufficient_trait_evidence": 17,
+      "same_axis_not_opposite": 18,
+      "valid_single_axis": 25
+    },
+    "paired_evaluation_eligible": 25,
+    "qlora_training_eligible_responses": 31
+  },
+  "formal_reviews": {
+    "expansion": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_expansion_review_completed_v0_1.jsonl",
+      "row_count": 60,
+      "sha256": "52b521543351b3ad47e246538e766b09235d424fdcfe401e2dd3e19bf6122ed3",
+      "tracked": false
+    },
+    "isolation": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_isolation_semantic_merge_review_completed_v0_1.jsonl",
+      "row_count": 240,
+      "sha256": "c0c9983d8ef9e58db1972106d56b8ae2739bb93068d5a5de12430468b0ffed4b",
+      "tracked": false
+    }
+  },
+  "inputs": {
+    "expansion_packet": {
+      "modified": false,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_expansion_review_packet_v0_1.jsonl",
+      "sha256": "33a1df0574976539adb66b3ada0cc8f960db8235dce2793e06e91e2baee5ace5"
+    },
+    "expansion_prereview": {
+      "filename": "phase_3_family_expansion_ai_prereview_v0_1.jsonl",
+      "sha256": "b2218f00b655c6a7ec3891fdb73086da491efbd270ff70e596b9208523d3fef0"
+    },
+    "isolation_packet": {
+      "modified": false,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_isolation_semantic_merge_review_packet_v0_1.jsonl",
+      "sha256": "d1fbd96ea0959d8c2622ca7f44f1097cf13cdc894b1bec102e1cc7f40e460014"
+    },
+    "isolation_prereview": {
+      "filename": "phase_3_isolation_semantic_merge_ai_prereview_v0_1.jsonl",
+      "sha256": "cdf335eeab70f78719cf1f228292c083407818c6f2fe3131a587e8f35754b0f2"
+    }
+  },
+  "isolation_counts": {
+    "component_size_distribution": {
+      "1": 158,
+      "2": 21,
+      "3": 6,
+      "5": 2,
+      "6": 2
+    },
+    "confirm": 158,
+    "exclude": 0,
+    "final_isolation_families": 189,
+    "merge": 82,
+    "merged_components": 31
+  },
+  "reviewed_at": "2026-08-04T20:31:11+08:00",
+  "reviewer_id": "researcher_01",
+  "status": "reviews_complete_no_go_240_for_disjoint_40_15_40",
+  "summary_version": "phase_3_expansion_and_isolation_review_acceptance_v0_1"
+}

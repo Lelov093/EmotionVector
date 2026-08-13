@@ -1,0 +1,49 @@
+experiment_id: representation_atlas.regression_qwen2_5_1_5b.phase_b
+module: representation_atlas
+model_config: configs/models/qwen2_5_1_5b_instruct.yaml
+dataset_version: trait_space_seed_v0_1
+axes:
+  design_scope: all_12_axes_schema_validation
+  regression_slice:
+    - calm-agitated
+    - boundary-preserving-over-accommodating
+    - cautious-impulsive
+dataset_path: data/trait_space/curated/trait_space_seed_v0_1.jsonl
+axis_registry: data/trait_space/axis_registry.yaml
+split_manifest: data/trait_space/splits/trait_space_seed_v0_1_split_manifest.json
+layers:
+  selection_policy: "cheap regression layers around prior layer 16"
+  candidate_layers: [8, 16, 24]
+positions: [last_token, mean_last_4_tokens]
+pooling_modes: [last_token, mean_all_tokens]
+vector_methods:
+  - difference_of_means
+  - direct_contrast_axis
+metrics:
+  - balanced_accuracy
+  - auroc
+  - separability_margin
+  - prompt_family_holdout_accuracy
+bootstrap_policy:
+  enabled: true
+  iterations: 500
+  paired_by: pair_id
+artifact_outputs:
+  local_only:
+    - hidden_states
+    - vector_tensors
+  tracked:
+    - result_card
+    - summary_json
+local_artifact_dir: results/local_artifacts/representation_atlas/regression_qwen2_5_1_5b
+tracked_summary_outputs:
+  - results/cards/representation_atlas_regression_qwen2_5_1_5b_v0_1.json
+  - results/cards/representation_atlas_regression_qwen2_5_1_5b_v0_1.md
+  - results/summaries/vector_registry.jsonl
+expected_runtime_notes:
+  - Regression run validates schema, runner, split handling, and artifact safety.
+  - It is not main research evidence.
+non_goals:
+  - no main research claim from 1.5B alone
+  - no full Trait Space V1 conclusion
+  - no dashboard changes

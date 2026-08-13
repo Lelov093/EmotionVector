@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_data_gate_amendment_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Data Gate Amendment v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["amendment_version", "status", "authorized_by", "authorized_at", "timing_disclosure", "bound_evidence", "original_gate", "amended_gate", "decision", "unchanged_boundaries", "claim_boundary"],
+  "properties": {
+    "amendment_version": {"const": "phase_3_data_gate_amendment_v0_1"},
+    "status": {"const": "user_approved_post_review_data_gate_amendment"},
+    "authorized_by": {"const": "researcher_01"},
+    "authorized_at": {"type": "string", "format": "date-time"},
+    "timing_disclosure": {"type": "string", "minLength": 1},
+    "bound_evidence": {"type": "object"},
+    "original_gate": {
+      "type": "object",
+      "properties": {"qlora_train_families": {"const": 40}, "development_families": {"const": 15}, "held_out_test_families": {"const": 40}, "observed_maximum_train_families": {"const": 39}, "passed": {"const": false}},
+      "required": ["qlora_train_families", "development_families", "held_out_test_families", "observed_maximum_train_families", "passed"]
+    },
+    "amended_gate": {
+      "type": "object",
+      "properties": {"qlora_train_families": {"const": 39}, "development_families": {"const": 15}, "held_out_test_families": {"const": 40}, "observed_maximum_train_families": {"const": 39}, "passed": {"const": true}},
+      "required": ["qlora_train_families", "development_families", "held_out_test_families", "observed_maximum_train_families", "passed"]
+    },
+    "decision": {"type": "object"}, "unchanged_boundaries": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

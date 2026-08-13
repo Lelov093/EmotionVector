@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_provisional_isolation_manifest_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Provisional Isolation Manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "status", "contract", "cohort_counts", "construction", "local_semantic_review_packet", "records", "checks", "claim_boundary"],
+  "properties": {
+    "manifest_version": {"const": "phase_3_provisional_isolation_manifest_v0_1"},
+    "status": {"const": "provisional_components_pending_human_semantic_merge_review_no_split"},
+    "contract": {"type": "object"},
+    "cohort_counts": {"type": "object"},
+    "construction": {"type": "object"},
+    "local_semantic_review_packet": {"type": "object"},
+    "records": {
+      "type": "array", "minItems": 240, "maxItems": 240,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "cohort", "prompt_sha256", "provisional_isolation_family_id", "component_size", "machine_linked_candidate_ids", "isolation_review_status", "split_status"],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"},
+          "cohort": {"enum": ["confirmed_180", "expansion_60"]},
+          "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "provisional_isolation_family_id": {"type": "string", "pattern": "^p3iso_[a-f0-9]{20}$"},
+          "component_size": {"type": "integer", "minimum": 1},
+          "machine_linked_candidate_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"}},
+          "isolation_review_status": {"const": "pending_human_semantic_merge_review"},
+          "split_status": {"const": "not_assigned_before_all_reviews"}
+        }
+      }
+    },
+    "checks": {"type": "array", "minItems": 7, "items": {"type": "object"}},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

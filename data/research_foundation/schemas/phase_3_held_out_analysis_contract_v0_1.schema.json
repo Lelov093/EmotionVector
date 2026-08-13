@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_held_out_analysis_contract_v0_1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "status", "scope", "analysis", "control_reporting", "timing_disclosure", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_held_out_analysis_contract_v0_1"},
+    "status": {"const": "frozen_after_rating_freeze_and_condition_key_access_before_condition_level_outcome_computation"},
+    "scope": {"type": "object"},
+    "analysis": {
+      "type": "object",
+      "required": ["seed", "cluster_unit", "within_family_aggregation", "paired_effect_size", "bootstrap_iterations", "bootstrap_interval", "bootstrap_method", "permutation_iterations", "permutation_test", "win_tie_loss_unit", "quality_noninferiority_margin", "quality_noninferiority_decision", "failure_taxonomy_reported_per_condition"],
+      "properties": {
+        "seed": {"type": "integer"},
+        "bootstrap_iterations": {"const": 5000},
+        "bootstrap_interval": {"const": 0.95},
+        "permutation_iterations": {"const": 10000},
+        "quality_noninferiority_margin": {"const": -0.5}
+      }
+    },
+    "control_reporting": {"type": "object"},
+    "timing_disclosure": {"type": "string", "minLength": 1},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "decision_version": "public_dataset_use_decisions_v0_1",
+  "recorded_at": "2026-08-04T00:00:00+08:00",
+  "authority": "project_owner",
+  "scope": "EmotionVector non-commercial research",
+  "decisions": [
+    {
+      "dataset_id": "empathetic_dialogues",
+      "source_revision": "d8b8066548b8bc2bb36af41f878f1ec5f03badd2",
+      "license_identifier": "CC-BY-NC-4.0",
+      "decision": "approved_noncommercial_research_use",
+      "allowed_roles": [
+        "human-reviewed mapping research",
+        "representation evaluation candidate construction",
+        "non-commercial error and control analysis"
+      ],
+      "prohibited_roles": [
+        "commercial use",
+        "unreviewed Trait gold-label claims",
+        "raw-data redistribution from this repository",
+        "automatic inclusion in post-training data"
+      ],
+      "requirements": [
+        "preserve source attribution and pinned revision",
+        "keep raw snapshots and review text in Git-ignored local artifacts",
+        "apply human mapping and family-isolation gates before formal use"
+      ],
+      "withdrawal_condition": "Remove the source from future formal artifacts if license scope, attribution requirements, or project non-commercial status changes."
+    },
+    {
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "license_identifier": "CC-BY-NC-4.0",
+      "decision": "approved_noncommercial_research_use",
+      "allowed_roles": [
+        "human-reviewed boundary-preserving versus over-accommodating mapping",
+        "representation evaluation candidate construction",
+        "non-commercial safety and refusal-side-effect analysis"
+      ],
+      "prohibited_roles": [
+        "commercial use",
+        "personality gold-label claims",
+        "mapping to assertive-compliant or cautious-impulsive without separate evidence and approval",
+        "raw-data redistribution from this repository",
+        "automatic inclusion in post-training data"
+      ],
+      "requirements": [
+        "preserve source attribution and pinned revision",
+        "keep raw harmful-content snapshots and review text in Git-ignored local artifacts",
+        "treat same_axis_not_opposite as an invalid contrast",
+        "distinguish reasonable refusal, alternative, unsafe compliance, and over-refusal"
+      ],
+      "withdrawal_condition": "Remove the source from future formal artifacts if license scope, attribution requirements, or project non-commercial status changes."
+    }
+  ],
+  "claim_boundary": "This project-owner decision records scoped non-commercial research use; it is not legal advice, commercial permission, Trait-label validation, or permission to redistribute raw source data."
+}

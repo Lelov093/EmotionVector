@@ -1,0 +1,15 @@
+{
+  "config_version": "public_mapping_pilot_v0_2",
+  "created_at": "2026-08-03T20:00:00+08:00",
+  "random_seed": 20260803,
+  "sampling_config_path": "configs/research/public_mapping_pilot_v0_1.json",
+  "axis_registry_path": "data/trait_space/axis_registry.yaml",
+  "review_schema_path": "data/research_foundation/schemas/public_mapping_review_v0_2.schema.json",
+  "local_review_root": "results/local_artifacts/research_foundation/public_mapping_pilot_v0_2",
+  "tracked_manifest_path": "data/research_foundation/manifests/public_mapping_pilot_v0_2.json",
+  "historical_predecessor": {
+    "manifest": "data/research_foundation/manifests/public_mapping_pilot_v0_1.json",
+    "local_review_root": "results/local_artifacts/research_foundation/public_mapping_pilot_v0_1",
+    "status": "retained_for_traceability_not_formal_annotation"
+  }
+}

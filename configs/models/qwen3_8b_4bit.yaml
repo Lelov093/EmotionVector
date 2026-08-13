@@ -1,0 +1,25 @@
+model_id: Qwen/Qwen3-8B
+role: cross_scale_validation
+local_cache_policy:
+  user_local_model_root_note: "D:\\AI_Models"
+  user_local_hf_hub_note: "D:\\AI_Models\\huggingface\\hub"
+  portable_required_path: false
+  loader_should_support: [HF_HOME, TRANSFORMERS_CACHE, cache_dir, local_files_only]
+recommended_dtype: quantized
+quantization_mode: 4bit
+device_map_strategy: auto_with_cpu_offload_if_needed
+default_context_length: 512
+default_max_new_tokens: 96
+batch_size_policy: "1 only."
+hidden_state_policy: "Focused validation slice only; selected layers, axes, and prompts."
+local_files_only_policy: "Required for planned validation unless user explicitly permits download."
+artifact_policy: "No weights/cache/hidden states/logs in git; selected result cards only."
+known_risks:
+  - 8GB VRAM is tight even with 4-bit when extracting hidden states.
+  - Quantized hooks must be validated before conclusions.
+  - Do not treat as full Phase B execution model.
+acceptance_use:
+  - cross-scale verification slice
+  - 3-4 core axes
+  - selected layer scan and steering sweep
+  - independent evaluation and failure analysis

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/family_split_v2.schema.json",
+  "title": "EmotionVector Family-isolated Split Manifest v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version", "dataset_version", "created_at", "random_seed", "allocation_unit",
+    "test_access_policy", "records", "leakage_checks", "human_review_status"
+  ],
+  "properties": {
+    "manifest_version": {"type": "string"},
+    "dataset_version": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "random_seed": {"type": "integer"},
+    "allocation_unit": {"const": "source_task_scenario_template_semantic_family"},
+    "test_access_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frozen", "allowed_uses", "forbidden_uses", "access_log_path"],
+      "properties": {
+        "frozen": {"type": "boolean"},
+        "allowed_uses": {"type": "array", "items": {"type": "string"}},
+        "forbidden_uses": {"type": "array", "items": {"type": "string"}},
+        "access_log_path": {"type": "string"}
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sample_id", "split", "source_family_id", "task_family_id", "scenario_family_id",
+          "prompt_template_id", "semantic_cluster_id", "assignment_status"
+        ],
+        "properties": {
+          "sample_id": {"type": "string"},
+          "split": {"enum": ["train", "dev", "test", "excluded"]},
+          "source_family_id": {"type": "string"},
+          "task_family_id": {"type": "string"},
+          "scenario_family_id": {"type": "string"},
+          "prompt_template_id": {"type": "string"},
+          "semantic_cluster_id": {"type": "string"},
+          "assignment_status": {"enum": ["human_verified", "machine_proposed_pending_human", "excluded"]}
+        }
+      }
+    },
+    "leakage_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["check_id", "status", "evidence_path"],
+        "properties": {
+          "check_id": {"type": "string"},
+          "status": {"enum": ["pass", "fail", "not_run", "human_review_required"]},
+          "evidence_path": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "human_review_status": {"enum": ["not_started", "in_progress", "complete"]}
+  }
+}

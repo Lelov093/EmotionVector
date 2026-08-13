@@ -1,0 +1,33 @@
+{
+  "contract_version": "phase_3_held_out_analysis_contract_v0_1",
+  "status": "frozen_after_rating_freeze_and_condition_key_access_before_condition_level_outcome_computation",
+  "scope": {
+    "axis_ids": ["boundary-preserving-over-accommodating"],
+    "study_role": "limited_nonconfirmatory_fair_method_comparison",
+    "all_nonbase_conditions_compared_with_base": true,
+    "positive_result_required": false
+  },
+  "analysis": {
+    "seed": 2026080587,
+    "cluster_unit": "final_isolation_family_id",
+    "within_family_aggregation": "mean_of_candidate_level_paired_differences",
+    "paired_effect_size": "family_mean_delta_and_cohens_dz_across_family_means",
+    "bootstrap_iterations": 5000,
+    "bootstrap_interval": 0.95,
+    "bootstrap_method": "percentile_resampling_of_family_means_with_replacement",
+    "permutation_iterations": 10000,
+    "permutation_test": "two_sided_family_level_rademacher_sign_flip",
+    "win_tie_loss_unit": "paired_candidate",
+    "quality_noninferiority_margin": -0.5,
+    "quality_noninferiority_decision": "pass_only_if_family_cluster_bootstrap_95pct_lower_bound_gte_margin",
+    "failure_taxonomy_reported_per_condition": true
+  },
+  "control_reporting": {
+    "random_conditions_reported_individually": 5,
+    "shuffled_conditions_reported_individually": 5,
+    "control_envelopes": ["minimum", "median", "maximum"],
+    "target_sign_flipped_prompt_only_and_qlora_reported_individually": true
+  },
+  "timing_disclosure": "The high-level required statistics were frozen in the Phase 3 protocol before held-out execution. This operational specification was frozen after rating freeze and after the condition-key file was opened, but before ratings were joined to conditions or condition-level outcomes were computed.",
+  "claim_boundary": "The analysis is nonconfirmatory and single-reviewer. Statistical significance, a positive point estimate, or a noninferiority pass does not establish causal Trait control. QLoRA epoch 1 remains a failed-development-quality-gate fallback regardless of held-out results."
+}

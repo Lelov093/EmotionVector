@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/atlas_v2_test_access_event_v0_1.schema.json",
+  "title": "EmotionVector Atlas v2 Single Test-opening Event v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_version", "event_id", "opened_at", "operator_id", "dataset_manifest_sha256",
+    "selection_lock_path", "selection_lock_sha256", "planned_test_activation_path",
+    "model", "representation_spec", "opening_reason", "prior_opening_count",
+    "irreversible_warning_acknowledged", "claim_boundary"
+  ],
+  "properties": {
+    "event_version": {"const": "atlas_v2_test_access_event_v0_1"},
+    "event_id": {"type": "string", "pattern": "^testopen_[a-f0-9]{20}$"},
+    "opened_at": {"type": "string", "format": "date-time"},
+    "operator_id": {"type": "string", "minLength": 1},
+    "dataset_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "selection_lock_path": {"type": "string"},
+    "selection_lock_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "planned_test_activation_path": {
+      "type": "string",
+      "pattern": "^results/local_artifacts/"
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_id", "revision", "dtype", "quantization"],
+      "properties": {
+        "model_id": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "minLength": 1},
+        "dtype": {"type": "string", "minLength": 1},
+        "quantization": {"type": ["string", "null"]}
+      }
+    },
+    "representation_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layer", "pooling", "dimension", "array_dtype"],
+      "properties": {
+        "layer": {"type": "integer", "minimum": 0},
+        "pooling": {"type": "string", "minLength": 1},
+        "dimension": {"type": "integer", "minimum": 2},
+        "array_dtype": {"enum": ["float16", "float32", "float64"]}
+      }
+    },
+    "opening_reason": {"const": "single_confirmatory_opening_after_train_dev_lock"},
+    "prior_opening_count": {"const": 0},
+    "irreversible_warning_acknowledged": {"const": true},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

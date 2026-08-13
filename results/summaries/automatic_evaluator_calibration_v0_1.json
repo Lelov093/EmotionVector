@@ -1,0 +1,324 @@
+{
+  "schema_version": "automatic_evaluator_calibration_v0_1",
+  "created_at": "2026-08-03T23:32:02+08:00",
+  "scope": "existing_30_output_blind_pilot_only",
+  "human_reference": {
+    "reviewer_id": "researcher_01",
+    "primary_round": 1,
+    "sensitivity_round": 2,
+    "independent_external_annotation": false,
+    "round_2_protocol_compliant_washout": false
+  },
+  "coverage": {
+    "output_level_pairs": 30,
+    "source_review_items": 12,
+    "llm_judge_pairwise_records": 12
+  },
+  "evaluator_versions": {
+    "heuristic": "not_recorded_in_source_artifact",
+    "llm_judge_models": {
+      "glm-5.1": 10
+    }
+  },
+  "round_results": {
+    "round_1_primary": {
+      "heuristic": {
+        "ordinal": {
+          "trait_expression": {
+            "n": 30,
+            "exact_agreement": 0.266667,
+            "mean_absolute_error": 1.133333,
+            "spearman_rho": -0.301625,
+            "quadratic_weighted_kappa": -0.100592,
+            "alignment": "direct_score_alignment"
+          },
+          "response_quality": {
+            "n": 30,
+            "exact_agreement": 0.333333,
+            "mean_absolute_error": 1.1,
+            "spearman_rho": 0.139873,
+            "quadratic_weighted_kappa": 0.012158,
+            "alignment": "closest_available_human_dimension"
+          },
+          "usefulness": {
+            "n": 30,
+            "exact_agreement": 0.333333,
+            "mean_absolute_error": 1.133333,
+            "spearman_rho": 0.054643,
+            "quadratic_weighted_kappa": -0.044776,
+            "alignment": "proxy_gap_helpfulness_is_not_identical_to_task_quality"
+          },
+          "repetition": {
+            "n": 30,
+            "exact_agreement": 0.4,
+            "mean_absolute_error": 0.6,
+            "spearman_rho": -0.212351,
+            "quadratic_weighted_kappa": -0.067194,
+            "alignment": "direct_after_human_schema_clamp"
+          }
+        },
+        "binary": {
+          "over_refusal": {
+            "n": 30,
+            "accuracy": 0.766667,
+            "balanced_accuracy": null,
+            "confusion": {
+              "tp": 0,
+              "tn": 23,
+              "fp": 7,
+              "fn": 0
+            },
+            "human_positive_n": 0,
+            "human_negative_n": 30,
+            "alignment": "direct_binary_alignment"
+          },
+          "sycophancy": {
+            "n": 30,
+            "accuracy": 1.0,
+            "balanced_accuracy": null,
+            "confusion": {
+              "tp": 0,
+              "tn": 30,
+              "fp": 0,
+              "fn": 0
+            },
+            "human_positive_n": 0,
+            "human_negative_n": 30,
+            "alignment": "direct_binary_alignment"
+          },
+          "verbosity_warning": {
+            "n": 30,
+            "accuracy": 0.366667,
+            "balanced_accuracy": 0.423077,
+            "confusion": {
+              "tp": 0,
+              "tn": 11,
+              "fp": 2,
+              "fn": 17
+            },
+            "human_positive_n": 17,
+            "human_negative_n": 13,
+            "alignment": "binary_proxy_any_human_verbosity_side_effect"
+          }
+        }
+      },
+      "llm_judge": {
+        "matched_pairwise_records": 10,
+        "model_counts": {
+          "glm-5.1": 10
+        },
+        "fallback_count": 0,
+        "against_human_task_quality_preference": {
+          "n": 10,
+          "human_non_tie_n": 4,
+          "human_tie_n": 6,
+          "agreement_on_human_non_ties": 0.75,
+          "automatic_choice_counts": {
+            "A": 4,
+            "B": 6
+          },
+          "human_preference_counts": {
+            "A": 1,
+            "B": 3,
+            "tie": 6
+          }
+        },
+        "against_human_trait_preference": {
+          "n": 10,
+          "human_non_tie_n": 3,
+          "human_tie_n": 7,
+          "agreement_on_human_non_ties": 0.666667,
+          "automatic_choice_counts": {
+            "A": 4,
+            "B": 6
+          },
+          "human_preference_counts": {
+            "A": 3,
+            "tie": 7
+          }
+        },
+        "construct_warning": "LLM Judge preferred_output is holistic; task-quality and Trait preferences are partial comparison targets, not equivalent gold labels."
+      }
+    },
+    "round_2_accelerated_sensitivity": {
+      "heuristic": {
+        "ordinal": {
+          "trait_expression": {
+            "n": 30,
+            "exact_agreement": 0.266667,
+            "mean_absolute_error": 1.133333,
+            "spearman_rho": -0.301625,
+            "quadratic_weighted_kappa": -0.100592,
+            "alignment": "direct_score_alignment"
+          },
+          "response_quality": {
+            "n": 30,
+            "exact_agreement": 0.3,
+            "mean_absolute_error": 1.1,
+            "spearman_rho": 0.12272,
+            "quadratic_weighted_kappa": 0.012539,
+            "alignment": "closest_available_human_dimension"
+          },
+          "usefulness": {
+            "n": 30,
+            "exact_agreement": 0.3,
+            "mean_absolute_error": 1.133333,
+            "spearman_rho": 0.03646,
+            "quadratic_weighted_kappa": -0.046154,
+            "alignment": "proxy_gap_helpfulness_is_not_identical_to_task_quality"
+          },
+          "repetition": {
+            "n": 30,
+            "exact_agreement": 0.466667,
+            "mean_absolute_error": 0.533333,
+            "spearman_rho": -0.185695,
+            "quadratic_weighted_kappa": -0.066667,
+            "alignment": "direct_after_human_schema_clamp"
+          }
+        },
+        "binary": {
+          "over_refusal": {
+            "n": 30,
+            "accuracy": 0.766667,
+            "balanced_accuracy": null,
+            "confusion": {
+              "tp": 0,
+              "tn": 23,
+              "fp": 7,
+              "fn": 0
+            },
+            "human_positive_n": 0,
+            "human_negative_n": 30,
+            "alignment": "direct_binary_alignment"
+          },
+          "sycophancy": {
+            "n": 30,
+            "accuracy": 1.0,
+            "balanced_accuracy": null,
+            "confusion": {
+              "tp": 0,
+              "tn": 30,
+              "fp": 0,
+              "fn": 0
+            },
+            "human_positive_n": 0,
+            "human_negative_n": 30,
+            "alignment": "direct_binary_alignment"
+          },
+          "verbosity_warning": {
+            "n": 30,
+            "accuracy": 0.466667,
+            "balanced_accuracy": 0.4375,
+            "confusion": {
+              "tp": 0,
+              "tn": 14,
+              "fp": 2,
+              "fn": 14
+            },
+            "human_positive_n": 14,
+            "human_negative_n": 16,
+            "alignment": "binary_proxy_any_human_verbosity_side_effect"
+          }
+        }
+      },
+      "llm_judge": {
+        "matched_pairwise_records": 10,
+        "model_counts": {
+          "glm-5.1": 10
+        },
+        "fallback_count": 0,
+        "against_human_task_quality_preference": {
+          "n": 10,
+          "human_non_tie_n": 2,
+          "human_tie_n": 8,
+          "agreement_on_human_non_ties": 1.0,
+          "automatic_choice_counts": {
+            "A": 4,
+            "B": 6
+          },
+          "human_preference_counts": {
+            "B": 2,
+            "tie": 8
+          }
+        },
+        "against_human_trait_preference": {
+          "n": 10,
+          "human_non_tie_n": 3,
+          "human_tie_n": 7,
+          "agreement_on_human_non_ties": 0.666667,
+          "automatic_choice_counts": {
+            "A": 4,
+            "B": 6
+          },
+          "human_preference_counts": {
+            "A": 3,
+            "tie": 7
+          }
+        },
+        "construct_warning": "LLM Judge preferred_output is holistic; task-quality and Trait preferences are partial comparison targets, not equivalent gold labels."
+      }
+    }
+  },
+  "allowed_uses": {
+    "heuristic": [
+      "triage and error-case prioritization",
+      "auxiliary sensitivity analysis with human results shown separately"
+    ],
+    "llm_judge": [
+      "exploratory pairwise review aid on matched constructs",
+      "disagreement sampling for later human review"
+    ]
+  },
+  "forbidden_uses": [
+    "human gold-label replacement",
+    "sole model-selection criterion",
+    "independent validation claims",
+    "automatic proof of Trait control",
+    "cross-dataset or cross-model generalization claims"
+  ],
+  "interpretation": {
+    "heuristic_trait": {
+      "n": 30,
+      "exact_agreement": 0.266667,
+      "mean_absolute_error": 1.133333,
+      "spearman_rho": -0.301625,
+      "quadratic_weighted_kappa": -0.100592,
+      "alignment": "direct_score_alignment"
+    },
+    "heuristic_response_quality": {
+      "n": 30,
+      "exact_agreement": 0.333333,
+      "mean_absolute_error": 1.1,
+      "spearman_rho": 0.139873,
+      "quadratic_weighted_kappa": 0.012158,
+      "alignment": "closest_available_human_dimension"
+    },
+    "llm_judge_task_preference": {
+      "n": 10,
+      "human_non_tie_n": 4,
+      "human_tie_n": 6,
+      "agreement_on_human_non_ties": 0.75,
+      "automatic_choice_counts": {
+        "A": 4,
+        "B": 6
+      },
+      "human_preference_counts": {
+        "A": 1,
+        "B": 3,
+        "tie": 6
+      }
+    },
+    "evidence_level": "auxiliary_single_researcher_pilot",
+    "no_preregistered_automatic_evaluator_gate": true
+  },
+  "evidence": {
+    "source_path": "data/evaluation/human_review/phase_e_review_subset_ai_preannotated_v0_1.jsonl",
+    "source_sha256": "17c6a99354ef0c115d4a924694b4353b739eaf85114677aca29d09f930158af3",
+    "round_1_annotation_sha256": "476c6e66a95a8edb70ef7691bcee83d29140d52427283203d44b5e34bbbc9b7f",
+    "round_2_annotation_sha256": "be066dcee201288e40d71ec02931506ae31eb92cbf63ab5e196598177f0a0582",
+    "restricted_condition_key_sha256": "6869f52a232e05e689603d9a718a9e77e71af03496f9d91fa222951f46e2605e",
+    "ai_preannotation_used_as_human_reference": false,
+    "condition_or_method_fields_emitted": false
+  },
+  "claim_boundary": "Calibration is limited to 30 reused outputs and one researcher. Round 2 is an accelerated sensitivity check. The results define auxiliary uses only and do not validate either evaluator as a human substitute."
+}

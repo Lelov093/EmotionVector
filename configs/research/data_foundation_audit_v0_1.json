@@ -1,0 +1,70 @@
+{
+  "audit_version": "research_data_foundation_audit_v0_1",
+  "config_path": "configs/research/data_foundation_audit_v0_1.json",
+  "datasets": [
+    {
+      "dataset_id": "trait_space_seed_v0_1",
+      "path": "data/trait_space/curated/trait_space_seed_v0_1.jsonl",
+      "id_field": "sample_id",
+      "split_field": "split",
+      "text_fields": ["text"],
+      "legacy_group_fields": ["pair_id", "scenario_id", "prompt_family"],
+      "known_template_phrases": [],
+      "near_duplicate_threshold": 0.9,
+      "template_blocker_min_rows": 2,
+      "formal_use_status": "historical_candidate_pool_only"
+    },
+    {
+      "dataset_id": "trait_eval_12axis_v0_1",
+      "path": "data/evaluation/trait_eval_12axis_v0_1.jsonl",
+      "id_field": "eval_id",
+      "split_field": "split",
+      "text_fields": ["user_prompt"],
+      "legacy_group_fields": ["scenario_id", "prompt_family"],
+      "known_template_phrases": ["Write the assistant response", "Draft the assistant's response"],
+      "near_duplicate_threshold": 0.9,
+      "template_blocker_min_rows": 2,
+      "formal_use_status": "historical_evaluation_candidate_only"
+    },
+    {
+      "dataset_id": "boundary_preserving_sft_v0_1",
+      "path": "data/post_training/boundary_preserving_sft_v0_1.jsonl",
+      "id_field": "sample_id",
+      "split_field": "split",
+      "text_fields": ["instruction", "user_prompt", "response"],
+      "legacy_group_fields": ["pair_id", "scenario_id", "prompt_family"],
+      "known_template_phrases": ["Respond in a boundary-preserving way"],
+      "near_duplicate_threshold": 0.9,
+      "template_blocker_min_rows": 2,
+      "formal_use_status": "retired_from_formal_training"
+    },
+    {
+      "dataset_id": "boundary_preserving_sft_v0_2",
+      "path": "data/post_training/boundary_preserving_sft_v0_2.jsonl",
+      "id_field": "sample_id",
+      "split_field": "split",
+      "text_fields": ["instruction", "user_prompt", "response"],
+      "legacy_group_fields": ["pair_id", "scenario_id", "prompt_family"],
+      "known_template_phrases": [
+        "Respond in a boundary-preserving way",
+        "The request asks me to",
+        "If you want, I can help"
+      ],
+      "near_duplicate_threshold": 0.9,
+      "template_blocker_min_rows": 2,
+      "formal_use_status": "retired_from_formal_training"
+    },
+    {
+      "dataset_id": "phase_e_review_subset_ai_preannotated_v0_1",
+      "path": "data/evaluation/human_review/phase_e_review_subset_ai_preannotated_v0_1.jsonl",
+      "id_field": "review_item_id",
+      "split_field": "split",
+      "text_fields": ["user_prompt"],
+      "legacy_group_fields": ["prompt_family"],
+      "known_template_phrases": [],
+      "near_duplicate_threshold": 0.9,
+      "template_blocker_min_rows": 2,
+      "formal_use_status": "auxiliary_calibration_only_not_independent_human_annotation"
+    }
+  ]
+}

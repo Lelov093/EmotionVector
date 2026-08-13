@@ -1,0 +1,177 @@
+{
+  "created_at": "2026-07-04T17:46:49.787191+00:00",
+  "axes": {
+    "analytical-intuitive": {
+      "difficulty": "hard",
+      "base_already_strong": true,
+      "prompt_only_effect": "weak",
+      "selected_steering_availability": "none",
+      "selected_steering_signal": "unavailable",
+      "disagreement_level": "medium",
+      "common_failure_modes": [
+        "prompt_only_more_abstract",
+        "prompt_only_axis_leakage",
+        "prompt_only_concept_error"
+      ],
+      "recommended_next_action": "tighten prompt-only instruction and check style leakage"
+    },
+    "assertive-compliant": {
+      "difficulty": "hard",
+      "base_already_strong": false,
+      "prompt_only_effect": "moderate",
+      "selected_steering_availability": "partial",
+      "selected_steering_signal": "mixed",
+      "disagreement_level": "medium",
+      "common_failure_modes": [
+        "output_truncated",
+        "no_clear_difference",
+        "steering_not_above_base",
+        "selected_steering_stronger"
+      ],
+      "recommended_next_action": "rerun a small subset with higher max_new_tokens before final claims"
+    },
+    "boundary-preserving-over-accommodating": {
+      "difficulty": "hard",
+      "base_already_strong": false,
+      "prompt_only_effect": "strong",
+      "selected_steering_availability": "partial",
+      "selected_steering_signal": "weak",
+      "disagreement_level": "high",
+      "common_failure_modes": [
+        "prompt_only_stronger",
+        "legal_boundary",
+        "appropriate_refusal",
+        "user_controlled_storage"
+      ],
+      "recommended_next_action": "treat prompt-only as a strong baseline for this axis"
+    },
+    "calm-agitated": {
+      "difficulty": "hard",
+      "base_already_strong": false,
+      "prompt_only_effect": "strong",
+      "selected_steering_availability": "partial",
+      "selected_steering_signal": "weak",
+      "disagreement_level": "medium",
+      "common_failure_modes": [
+        "output_truncated",
+        "no_clear_difference",
+        "steering_not_above_base",
+        "steering_not_above_prompt_only"
+      ],
+      "recommended_next_action": "rerun a small subset with higher max_new_tokens before final claims"
+    },
+    "cautious-impulsive": {
+      "difficulty": "hard",
+      "base_already_strong": false,
+      "prompt_only_effect": "strong",
+      "selected_steering_availability": "partial",
+      "selected_steering_signal": "weak",
+      "disagreement_level": "high",
+      "common_failure_modes": [
+        "prompt_only_stronger",
+        "steering_not_above_prompt_only"
+      ],
+      "recommended_next_action": "treat prompt-only as a strong baseline for this axis"
+    },
+    "concise-expressive": {
+      "difficulty": "hard",
+      "base_already_strong": false,
+      "prompt_only_effect": "strong",
+      "selected_steering_availability": "none",
+      "selected_steering_signal": "unavailable",
+      "disagreement_level": "high",
+      "common_failure_modes": [
+        "prompt_only_stronger",
+        "concise"
+      ],
+      "recommended_next_action": "treat prompt-only as a strong baseline for this axis"
+    },
+    "confident-uncertain": {
+      "difficulty": "easy",
+      "base_already_strong": false,
+      "prompt_only_effect": "strong",
+      "selected_steering_availability": "none",
+      "selected_steering_signal": "unavailable",
+      "disagreement_level": "low",
+      "common_failure_modes": [
+        "prompt_only_stronger",
+        "identical_outputs"
+      ],
+      "recommended_next_action": "treat prompt-only as a strong baseline for this axis"
+    },
+    "empathetic-detached": {
+      "difficulty": "hard",
+      "base_already_strong": false,
+      "prompt_only_effect": "strong",
+      "selected_steering_availability": "partial",
+      "selected_steering_signal": "weak",
+      "disagreement_level": "high",
+      "common_failure_modes": [
+        "output_truncated",
+        "selected_steering_overcomforting",
+        "steering_not_above_prompt_only",
+        "decision_bias"
+      ],
+      "recommended_next_action": "rerun a small subset with higher max_new_tokens before final claims"
+    },
+    "reflective-impulsively-answering": {
+      "difficulty": "easy",
+      "base_already_strong": true,
+      "prompt_only_effect": "moderate",
+      "selected_steering_availability": "none",
+      "selected_steering_signal": "unavailable",
+      "disagreement_level": "low",
+      "common_failure_modes": [
+        "base_stronger",
+        "prompt_only_overly_poetic",
+        "base_irrelevant",
+        "prompt_only_meta_style"
+      ],
+      "recommended_next_action": "tighten prompt-only instruction and check style leakage"
+    },
+    "stable-reactive": {
+      "difficulty": "hard",
+      "base_already_strong": true,
+      "prompt_only_effect": "weak",
+      "selected_steering_availability": "partial",
+      "selected_steering_signal": "mixed",
+      "disagreement_level": "medium",
+      "common_failure_modes": [
+        "meta_style",
+        "selected_steering_not_above_base",
+        "selected_steering_stronger",
+        "prompt_only_over_refusal"
+      ],
+      "recommended_next_action": "retain in final review set and calibrate with human review"
+    },
+    "supportive-critical": {
+      "difficulty": "hard",
+      "base_already_strong": false,
+      "prompt_only_effect": "strong",
+      "selected_steering_availability": "none",
+      "selected_steering_signal": "unavailable",
+      "disagreement_level": "high",
+      "common_failure_modes": [
+        "base_underanswers",
+        "prompt_only_assumes_missing_artifact",
+        "prompt_only_stronger",
+        "mild_overagreement"
+      ],
+      "recommended_next_action": "treat prompt-only as a strong baseline for this axis"
+    },
+    "warm-cold": {
+      "difficulty": "hard",
+      "base_already_strong": true,
+      "prompt_only_effect": "moderate",
+      "selected_steering_availability": "none",
+      "selected_steering_signal": "unavailable",
+      "disagreement_level": "medium",
+      "common_failure_modes": [
+        "prompt_only_over_warm",
+        "sycophancy_or_over_accommodation",
+        "prompt_only_stronger"
+      ],
+      "recommended_next_action": "retain in final review set and calibrate with human review"
+    }
+  }
+}

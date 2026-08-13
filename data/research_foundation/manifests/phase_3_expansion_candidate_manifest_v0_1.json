@@ -1,0 +1,1600 @@
+{
+  "manifest_version": "phase_3_expansion_candidate_manifest_v0_1",
+  "status": "expansion_generated_pending_human_review_and_semantic_isolation_review_no_split",
+  "contract": {
+    "path": "configs/research/phase_3_isolation_and_expansion_contract_v0_2.json",
+    "sha256": "85900f6b5bb67ac011238baad13bae350b9c816c2978eec847db2b3876746f88",
+    "hash_basis": "canonical_json_sort_keys_compact_utf8"
+  },
+  "sampling": {
+    "seed": 2026080447,
+    "mixed_safety_per_model": 15,
+    "both_safe_per_model": 5,
+    "candidate_count": 60,
+    "exclude_phase_2_all_splits": true,
+    "exclude_confirmed_phase_3_180": true,
+    "positive_yield_required": false,
+    "observed_model_family_counts": {
+      "Alpaca-7B": 20,
+      "Alpaca2-7B": 20,
+      "Alpaca3-8B": 20
+    },
+    "observed_stratum_counts": {
+      "both_safe": 15,
+      "mixed_safety": 45
+    },
+    "rejection_counts": {
+      "both_unsafe": 32656,
+      "empty_text": 37,
+      "existing_180": 501,
+      "phase_2": 159
+    }
+  },
+  "isolation_policy": {
+    "strict_split_ownership_field": "isolation_family_id",
+    "provisional_construction": "connected_component_over_exact_normalized_prompt_and_token_3gram_jaccard_at_or_above_0_90",
+    "provisional_status": "pending_human_semantic_merge_review",
+    "human_semantic_merge_review_required_before_split": true,
+    "broad_stratification_fields": [
+      "source_family_id",
+      "task_family_id",
+      "scenario_family_id",
+      "prompt_template_id",
+      "semantic_cluster_id"
+    ],
+    "broad_fields_are_automatic_union_keys": false,
+    "exact_normalized_and_near_duplicate_cross_split_forbidden": true
+  },
+  "local_review_packet": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_expansion_review_packet_v0_1.jsonl",
+    "tracked": false,
+    "row_count": 60,
+    "sha256": "33a1df0574976539adb66b3ada0cc8f960db8235dce2793e06e91e2baee5ace5",
+    "schema_path": "data/research_foundation/schemas/phase_3_family_review_v0_1.schema.json"
+  },
+  "records": [
+    {
+      "candidate_id": "p3fam_034e5d823c7d9198981a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 8421
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "daa27e2a9b3fd845e61ef6371e814e57bd7141032851a638a767935b471360bb",
+      "response_sha256": [
+        "65ac150b8f009cac3f283afb0457644ee456a62b0fd149654f2864566a50f5fe",
+        "3e9c4a58234ac9db90ab1863e6e1de363661588981c29769f0ed199da6b72726"
+      ],
+      "content_sha256": "034e5d823c7d9198981a0e66890b2ce17a05018d88991b50c6965f4236918703",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_127cd134d5bed9ed750c",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_04b83a41278d1e7a3d87",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 5630
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "dc12a37609ae31d809558e3b02f685f43c6a34365d66ad353bfd59710df1c848",
+      "response_sha256": [
+        "e7af9de84eb8edefe3b9fb66ddb73a885ce52b37121386d91084034249347dbd",
+        "0e89e86a2dc2aba2cee77ce5d0ab5c896fe163c04bf5cb9ff7a3d1cb3fc37a9e"
+      ],
+      "content_sha256": "04b83a41278d1e7a3d874e98ad4546eacb8ee821e3e72d50ea6c96896474ee68",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_f65f625ccbc72086e785",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_0605be27c23a8e48620c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 25978
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6b486b58b9b4fc060feea70739547966a5fcbd46ad3bd1e2419c16b566e94e26",
+      "response_sha256": [
+        "0f73c38441c4ad8e6a79159f9d03965b2e1904fad7e0c4c62d5cc163c2ffe3bd",
+        "bc0524096d25a1f5d9ede7e2e683e2ff293988616c99ffc23f01a92c3d464514"
+      ],
+      "content_sha256": "0605be27c23a8e48620c9b96149b17d948e8a9d23dff858057b5344b82a23339",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_67b9068118f34693259c",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_0aea17b3347152a19405",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 18693
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "2021fd4bb2a683eb1ece327f81a8e413df362ba0d5a1b423a5441d2d1b2090ca",
+      "response_sha256": [
+        "0646a89dd7e9d31508a67bacbe11d2d5ba8dca3fc262607106c92949edd8cbad",
+        "dfe50921f6c3e7492146c7811b8d3dc5be76cfa06c5f9e539d241e3535235d3d"
+      ],
+      "content_sha256": "0aea17b3347152a19405f9387a45214b9f221b3707b91a2567ccfec5eed6fb87",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_ee0426a18c68bed598f3",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_1134cb00d225094b7fc0",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 13306
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "aa4d30ef7ae982f6039558f57179d4926a25c072f8360d5cb0c91f3c47b23d02",
+      "response_sha256": [
+        "6a22eafcafa5cfd41c5ebec3dc685bee4518a5616a59c2675cc443baf0d74c47",
+        "b731444d973d158072a0816801685fd300571dcb0cadf40af50f4b3562f01b6f"
+      ],
+      "content_sha256": "1134cb00d225094b7fc0bf013ee5ee42886e4ffd20c79070171c397b7492486c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_4d1ffc93754588bc2dcf",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_1378d054194378bea7ec",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 16891
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "76dcf588d8fc8c307f49193f61a61f0f132e8f96c2b98d4aa9357d7b5da312b4",
+      "response_sha256": [
+        "ce999b59d489c3c436aa585bd998f5d43ac0955b47b6df412e4fcf20552ab53c",
+        "59754b9a76c0e32877995baad338b36a1856624c3aa48ba2de1f09ba215bfa22"
+      ],
+      "content_sha256": "1378d054194378bea7eca07ce8d9abdf8d964065f0b32126425de6dfdf852966",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_878f97b17edd794c9ff0",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_143a32aae10396907c53",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 16389
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "de4650a1c94244001eccdaeff9702be0dfcd5193331f1bf1c7c5bddd08ce8ab1",
+      "response_sha256": [
+        "edd5bf800bae7fda5a7c8bb4bc4f04cf87d0163b616990570f8e8045e22afe1b",
+        "39e93110ad38cb5e179ed4932263a010b1f4cc76e59baa53135f63862e1c7215"
+      ],
+      "content_sha256": "143a32aae10396907c53600f82cf13f44ca5ebe2a5494686abafd91c4cac1149",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_16df87658e90a84ca75d",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_164706c1a1f8b1025055",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 7051
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "115881a544e894a05e7e69641ab6e692befd328b57cef31fcfa567cb5bc5ba83",
+      "response_sha256": [
+        "f7c2e6b6f7d76c3a795a3734a7fd9423d824b88a68e9db2b0cfce176e30390ad",
+        "0f128b6a27727438217a36ecd199e89fdc8518ab3c9bf71b2be14c0bab62d9f0"
+      ],
+      "content_sha256": "164706c1a1f8b1025055c8ea77454cdea6542f6d6ff9a144e72da4c7a34f7e0a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_0d5e3d26ffb8f3fb4d7e",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_183c0598adc55d046566",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 12582
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "9a07b2db4e23cd68a6bc53ed90254931a50341bea0872d90035dd846d8984f28",
+      "response_sha256": [
+        "d28e03fee1471110be6746cd3011bc4a431d48e64d525accb96bdfc7f1af4d98",
+        "9c52b142ac0c42b441a9983580d70ccd31e5ead33562fa61ef39c7b8bc2407fb"
+      ],
+      "content_sha256": "183c0598adc55d046566cde8747049d8a0e4638b1b4e32d26e56ccde0e900f0f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_1c7332122d49048d0d1c",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_1cdde4bbdb72b2ec4e94",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 21740
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "df35c0bd07fde5eb8938562729121657fdc031fa7d1a530fd95842cd5fc41088",
+      "response_sha256": [
+        "0f34585789027eb78a13940470bf34c88b028f6f5d854bc81c9c6e4a9b28a20c",
+        "0e5da510e3f6f8ee96be8771af485a8739e468e9740a4db8fef51dea2eda6986"
+      ],
+      "content_sha256": "1cdde4bbdb72b2ec4e94deb2e7ab9d4d95b3013626a3252d9994745887bc8b94",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_54786c9cee9bc46d0522",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_1dcbc83f42c3c11e1fb4",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 19928
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "dc72e6d2c391e3ab2914f2410cd4cd38a469000fcd3ea2b2f3d8082f986eb8d3",
+      "response_sha256": [
+        "3052669b80ac3f7a66d6841483ca4c0828c93596d7e1c886f59e0713e960ab74",
+        "4a82ba0650b5f93ddbaa779c9546ddd65149e13d0e6a67bda1ffd96776e7a754"
+      ],
+      "content_sha256": "1dcbc83f42c3c11e1fb4ce3d7fd8c17759cbdc2be4aded04937b83875f529337",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_287ad346bf0d6f4dbbc1",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_2028365a7b91a9ecc01f",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 1989
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "9c9e5f6b3f2cc8cf351350318e8fd1f0b695d0f39b96d70ad7158daf4837f26c",
+      "response_sha256": [
+        "555ad89fb6e18d06b08e4998e55250f53372cb43ea7c09db543c8194b61ce92e",
+        "9bc9bdf47286f46fc0986c855d7479210290efea0ae8355690f41788502572c6"
+      ],
+      "content_sha256": "2028365a7b91a9ecc01f37c95fe36ee394b69c258dd2a7bfff2d744e26b69a63",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_a16ad91c20106578e5b4",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_31671d37b3562971f4bd",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 4586
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "51ac8039166fe64a5dd15343b6ab9a014ff957db08c2dc7bc0e88290828f88c1",
+      "response_sha256": [
+        "0651275564796f23bed9b8ba615ef7cd0b57db33d5fdba2645e5e4fa4c70dc6a",
+        "4ad652eb369946ec95a1a16ffc23f55f174af0050db73a5174c4aebda3e58330"
+      ],
+      "content_sha256": "31671d37b3562971f4bda59d8e2dc88b5b943aeb19ccae023967b5c97369cca3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_e307efbc6a5cf7af935d",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_3188dabc7a046def3de2",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 8054
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a80467a2394ce391befc0794e1d6a54e5d5e8b33909513b46379b78883983ed2",
+      "response_sha256": [
+        "3a67c6c3012565233d83e2cdf35705beba3ebfe07b9c69b9c40bee97c1f7f437",
+        "7ad3e5f5677d7c68ee5eb34f43a223d67b2a560e4d6ba0f58ff950d8bfdd5174"
+      ],
+      "content_sha256": "3188dabc7a046def3de2d0510c6da2eaf69cb5cf6705b1da3394348a18712e2a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_3ef5e5fbf4a5c6d11e2f",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_31d323f3debb30ee0199",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 9227
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "e50c369ba0aa3584a76c4fdbadab16991328487057ba07d56c0316659341cba8",
+      "response_sha256": [
+        "6cf2af32b652f51aeaca2df66fa20b0bad8ca7ca6307909957ec966a75db0863",
+        "e761e3d885bd0c2048144520a96de10a484ab339196fcbafc7b801cecb3dbddd"
+      ],
+      "content_sha256": "31d323f3debb30ee01999129894ca42f4cad7faaad7bb97a199ca2b8e4296e1d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_b36f1c8c371b16eef945",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_325c139d5275fdbd95e0",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 19497
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "b062e5348c1972215598807d08dcd2447015143be9fd7406f9f0d36e7e76d8ac",
+      "response_sha256": [
+        "eaebd75ed16c50d253eb15d27fae12edcc3744bfe4b5975d762b3051ea071773",
+        "da8b92ea6a5278c03bac15fed5d559890508df6fce983fd29b0bc9c6968617bf"
+      ],
+      "content_sha256": "325c139d5275fdbd95e048d1325f7f0828ea5c7ece0a052d2014a403a48b960a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_942659fc6615c2488e44",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_342a65c3743aa9488f91",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 1090
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7eb5297ce2c6c75b2582add39c0a997841cf9b9027cb39cf8731d1925a81e636",
+      "response_sha256": [
+        "0abde5ea79cf84970745c20615e38ba169f4971c244776a0fd7cdc3807d877b6",
+        "356c87ee892faa6b35d618004416ebac6c512321b853ab6785f93ab528304cd1"
+      ],
+      "content_sha256": "342a65c3743aa9488f91cb4bafcfdb0de733e1697a27ae4cda39c1d88e92bffc",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_8bffe0020ed2a0fd8df8",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_356e2e4bc5551989606b",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 15449
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "e5c9ab06dd654f4d55b2b14f655b9d6a9b08171c457be4e42967e54371497318",
+      "response_sha256": [
+        "0e2b6ad341abdcf0a5f186ec11a17f01bcceafae0e01068fdfac26f5927f7c9e",
+        "88a8823b13b7790b50414de100e5ea46af9d874eea478bb0a352db62c744f8c5"
+      ],
+      "content_sha256": "356e2e4bc5551989606bc71eaf501e25711c687b6919fc9379c529ada07dc9a7",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_2ba6f0789f06948eba23",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_3a2bb3b006d1d7c625e5",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 17372
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "32dbdcf9bc25f6f65e135484274b4d8c6b837f0cfcb1bb6dfab00963813acc3e",
+      "response_sha256": [
+        "41a9fbc2c396f1dd0188807f4a8672bc96187d62ea853d70e1485ab9d1109208",
+        "979692232e891ecef58a6a03e50d88af71694bfc92ac48669188cef328fe16bd"
+      ],
+      "content_sha256": "3a2bb3b006d1d7c625e577c9afb00cb8425934c148e5f22f139e800efea21830",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_a9a87f16d71853811694",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_437d6e250a067adf7b40",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 25106
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7031b156c9c47130b55b6076e376ff34782b9c40f97c6c4bdcb24fdea06ea8b4",
+      "response_sha256": [
+        "3524ac0014a4a279e0af4f05bf9aa2e367d86869b6e6a567cca0810536bd629a",
+        "093d592b0fa2e9229bb0674ee79fac79ffdfc2670238abdd40014287de1bcf39"
+      ],
+      "content_sha256": "437d6e250a067adf7b4087bb19c769be77b6eb07d3c9420996c159bf9b750a57",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_f2a2844fb75a2452d73a",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_465ae9bea918094f7ca2",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 435
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "01acc01f455d46f64638d73207c248554f16eaef598c778773f567890a0908d1",
+      "response_sha256": [
+        "ddc11b634694ccf260fc067539660c390e8bf3892daadec5eba6b59fbea9d7b2",
+        "a365bb7e897a908095d1764ef3a0cdbefb2d0d1f3b5a57e335e2c3d0cab3f2bd"
+      ],
+      "content_sha256": "465ae9bea918094f7ca22c97c2f9ca80ea3ac74ef2038d3b0f2a4c991d41293c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_84e77fe1a6361557fbf9",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_46bb6f7d659a5a609708",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 11998
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "025227493e5917d096861d2610cacca485c1102ad368dd1581bd2f1cfcef0892",
+      "response_sha256": [
+        "744ef56cb4aa40d493b21bd5d619a3c8bbbeb91c3a947f9f8d5e37e84d9063cf",
+        "6b50ef06973e029c3dc1aece101cb190b5b68bb6fa029a5efdb57736b8afd232"
+      ],
+      "content_sha256": "46bb6f7d659a5a609708250ab2ef30ee9644c90d65990ec426929b280c105c0d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_74f985de750abeb40199",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_4864c31bfc36d9fa910c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 14963
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "dfe436dc658103bce07e5054a9c3461713eac49e53e34cb7da8998e29b51e9be",
+      "response_sha256": [
+        "d3cf2b68f86d053258a01db36dfa922c8aa3df57e26bb0057ceffa3379e94475",
+        "a694adccb0718fe7060f491a1bc7f15f64c60853fef7ccee99de353dd9123c40"
+      ],
+      "content_sha256": "4864c31bfc36d9fa910cab74f589b642f538268e9816031ff4a89c2c10a812fb",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_44c570e2c98e208af5b0",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_4b50a12d406f889e4ee8",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 5082
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "65dc0cfaa3df2b0928c660ecaa38f720a3bc5ccc3db071a914935df45b354ce7",
+      "response_sha256": [
+        "323cd8fd8bf023e351569a1138d0d82671db23a098783f6dd79e16593b02185b",
+        "22c4240bafc8c34dba3df7e2eb23f794a77f14cdfcd55fd9419ad18113faafed"
+      ],
+      "content_sha256": "4b50a12d406f889e4ee80f1951adfeebe6a102867a2e878346ac35f42360119a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_4a1472fb56bec1419215",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_4fcc38986a9dff168b1c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 8149
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ed0f982d60c89379fb57e20c7526b058c41b2d2bb852bb870df06c49c0573d8f",
+      "response_sha256": [
+        "d98c94ace32a90718cb0ee3127f00bcbeecd62777c55c89acda6c5755849b12f",
+        "b9c7fd29bb8ec92eee811435be23f767adfbdc5d056c650fc600ae97ce319cea"
+      ],
+      "content_sha256": "4fcc38986a9dff168b1c7fa29cbb9cb66e4a11ffa87d35d7771d6cd6e43ff05f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_86727a5aaf1e8524007c",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_5958810d29ecc07d13f4",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 2202
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "06885ca44e29fb549a1c3eee48670a22d46579dd8c96c432f64fa3b785826db5",
+      "response_sha256": [
+        "233d30ca1dfa3c13f2e54bb9df4ccade935c9213482edc5a176b240176694a99",
+        "ca970ca40bfb4beb6d57eea2f7eab21983528c4e091aaff38129d015c921301a"
+      ],
+      "content_sha256": "5958810d29ecc07d13f4372a3dd112b28664d99d36ebdb433d3ea4b45937646d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_dc1cf57c40aced6d83ed",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_5a391cbf2dc3a64ccd56",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 4253
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "3eb0787cb14a9aa9586abf952d6d015911b70ad58be00e725f9e1b50ca245c5e",
+      "response_sha256": [
+        "5708914740b7e970e2eb9f72f7af51a508ef6afd945c368ff12341fb7e7324dc",
+        "a93f734ee6749466fc04d3906f468d804fcd42eb664cc25e828de1ef76252bf9"
+      ],
+      "content_sha256": "5a391cbf2dc3a64ccd56f5d11d2300dad6bb03a4cd13d414f07e98b98f5e5c2a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_8a0c082a34e35ce3a893",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_5c6b2faa7fc8974112fb",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 12580
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "9ddc62b7f31e45c14e0bb3c3be626a530552299dcc084188cb720f9b7ece5e02",
+      "response_sha256": [
+        "7c0439c20ebfe18920e986151302bfa18cfa8e7ab57e5d84a4c00eac19942692",
+        "3396d23df82dc0ee095c34164d14040253d6c2128a003422d14fae20b3646df1"
+      ],
+      "content_sha256": "5c6b2faa7fc8974112fb25b6521c6fd138ec6d5e06e84a74e34773461789f134",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_ceff3f9597ed11eabfa5",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_6555d85bb1bd12529527",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 1017
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "143406ca9d3592894edc25fc36e71850b1091001bc5b729d6b848db0f72b43f3",
+      "response_sha256": [
+        "79fdadb76e5a792b3d8718008d18f70bbd6c01e2f1013857b388418da992ab87",
+        "a1f820a77a347a8393d4914cc047805324f381e624afad7b353489807d5b40b4"
+      ],
+      "content_sha256": "6555d85bb1bd12529527e5ffc270b945da18e6c7d17c8f1ebfa80f18da88f595",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_c14d9c8ca39f6c0b1e77",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_67d65114950ce0dba60c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 382
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "992a39221c5b899b8e69b02d58dcd78dac5d45d46073dc04be8e29cbeca054ff",
+      "response_sha256": [
+        "59c4a9f9a50bd610ab2736e5b6a0e09d4bb0949c337c493131b28c61c7c352c6",
+        "2516b5cc6f050110e106124475d1ebb35e87d1a6228bcf8790f9fd8a474f9b51"
+      ],
+      "content_sha256": "67d65114950ce0dba60cb26d848081539651c9fd8561b01d2172c44ee2cc430e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_cdf9ef78bccd497847f9",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_6d8929999821cd258f62",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 5529
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "4e60f85b7682b44edbcbd882b642ac826ceaa9de2936a532eeeb65c58e2f85ec",
+      "response_sha256": [
+        "ada3d1e34dc2c2ad97cca50b88aa6ffd9f90a71469a434afdfabed6fdfce6ec5",
+        "e3f187c90c0d91a3e411a52b936cad1d7ebbde7d3d909a442cd08dabc7b69c8f"
+      ],
+      "content_sha256": "6d8929999821cd258f62108cd89cf1014b0f8a9374e06d641023a9ec2fd7947d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_75c7d7a6baa0c2b34990",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_79f0a02a72969db5482f",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 11152
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6ae5d49f895b1c92e4d4d4387a8b6ac1a3ed37aa9f8a6642bb20f2fc8d36a1f7",
+      "response_sha256": [
+        "61ee488c9ec2ef2d7614bcdac4d1d0826990c40aac2cb2413650e74ae8dc05f6",
+        "11838f2cb0ff9bb1b07a4a6b4f1178cd0d151db6b664da2368da12dc823b5947"
+      ],
+      "content_sha256": "79f0a02a72969db5482f3ea29accb33a1b73cb54c8040bf1aa27f0d6564dcbb3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_7b504c79a93734378a32",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_87018f92de9b7fab81aa",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 15214
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "953cb794d7f89a0412292df669fef544b1313d40e6780a5f7a7af21b8010edda",
+      "response_sha256": [
+        "c45a07c51b72a111737fb30afe4b0863c942b7ffe63af0289586b83325faf404",
+        "2e007214671ffa532a9a28874d8d7a877c43131ec5cb2af23a0e395227246623"
+      ],
+      "content_sha256": "87018f92de9b7fab81aab0af60ec3bcd3b3e36e2cc0aefe44cf61cdfe8bb6411",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_734677dbddf59ad99fd2",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_8b9b22104d8ba682f7d6",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 11620
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "7b8e68445d126b1d548b2ba204e0b54d2a428f5fd85729b6e1049059ca5ecfe7",
+      "response_sha256": [
+        "bbc69f864d4778e5af2113e4229aed7c5a46522985f9fe5d5d7c50eacbf0f8ab",
+        "e674c67c2e931224fe3f7457c375d4173101b44286c0843c3672f2182b1e07ed"
+      ],
+      "content_sha256": "8b9b22104d8ba682f7d643c7cba2da46228e92ea6facc88203f4bae43fa38c55",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_034a29c85473a98250bb",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_8be86e2afa179f558b05",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 9038
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "c945de838cd00be2de3572677067dbe18bb2ae4493aba31d6a617091e1970fca",
+      "response_sha256": [
+        "45049487cc4957b08b924b63e4ea1eb34c90cafb22fe1ac8e29871acdb692b7b",
+        "aaf5aa47025e6ccf25ea325830f072c3f0c016c4986687d1c1d6ebbdb7b883b8"
+      ],
+      "content_sha256": "8be86e2afa179f558b05c98e197e95bde821d940c2705e6d3baf229d8e2ee617",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_a0bd38617e0b469c907f",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_8e67ec2e7866695cd19c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 6393
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "233b522ded3d65f1425aaf9a3bd1f2627610b6404ef894fc8005afbe03f8e93a",
+      "response_sha256": [
+        "87071d02e64823c2edf07903223c20dba6c514420e0eb31401e02c2bdee66fb7",
+        "8b3299e62c4d64b57be3069d2f7579aedf6a0beb82b385b07bfc7fe34514a6d1"
+      ],
+      "content_sha256": "8e67ec2e7866695cd19cdee5f8ae30fbcf4269954080827583901f8c2a801233",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_a483995af2abfca9da20",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_911881976b908f66757d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 8425
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "b67a779428acabc7016e721c99ec116b39098f10306482cda2399a09ebb82766",
+      "response_sha256": [
+        "a711ed9cff9706616e515180646e41d6e4ca481969d6fe8b86b0db2ea052fe0d",
+        "b98ef4d000db07690012b757d04b1a2f36f395fccfb9b89099c058b63bebea34"
+      ],
+      "content_sha256": "911881976b908f66757df53cd69f598b5b358d1c6a93aff4988024fb23f74eb5",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_283576b41ba54e760597",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_94fe7169e04dbfc1ea86",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 13631
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6576abe14bdce0c450a0929e1c4b008e189a7a9dba6e322238f588aba8a29800",
+      "response_sha256": [
+        "3e589f80c8c5bdb465362a73ba5cfc3f8fcdcf1653070a23294c285c8412ecc0",
+        "0ab7af6c2b9c096245b1077cb053125ffa21ddb83e02bfccf4ebe2b9b50ac841"
+      ],
+      "content_sha256": "94fe7169e04dbfc1ea86b916080c8f92d0f50cacb5a7801cb09972780d2bf3e6",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_066f4d51b1b39186635c",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_9996c580cee5591f755a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 11122
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "5c13fcbb6c5edcef7b00800c756839acca0fba835011fa85e0752f6f39f37fd7",
+      "response_sha256": [
+        "17444e9d43d5da0c9dd98659dd6dd5f0f6d5ce1fa993b9de3a209427ca898f36",
+        "d284ffc5cf2351851f2e030904c72c45488d1680fe8caf11ff5bdccc6e8efab5"
+      ],
+      "content_sha256": "9996c580cee5591f755a5c8ec02bb7618425fa9d53bf833cc3019677ca4cb7cb",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_98eeb19c71d835ccfd05",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_9c3643b6b9ac9afb8440",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 25071
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "b1d01007f8c4d33d321c3b75f30c469d323efc0a23323a053cc0dbdff9b79bb2",
+      "response_sha256": [
+        "151cbda5ddd80c7f965ae6b7e1acc15251a2079a3718dbf33a4cb23ea113b836",
+        "0e448eeabb533e1608da4ff437c5339ed12bf5450b814ad1ab5ec51efe1db837"
+      ],
+      "content_sha256": "9c3643b6b9ac9afb8440ce131964d093e7c6fc5e62d69f3c29d5fcd8f1f4299d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_10219cb19772ab0489cf",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_9c901aa326cc008dcdfd",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 622
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "33d98b65ebf7e125a01da00e729d86c5052ddc981d7ae6e95643f7aca5d999ac",
+      "response_sha256": [
+        "b82ec39a2b6060e05f63b3f90d263b480331f5f409a3f0ad51adf0ca37fde5c8",
+        "3e5676154298a813d47353cbaff3acd119cb6fa52e60d3d14569b19019772d7a"
+      ],
+      "content_sha256": "9c901aa326cc008dcdfd9214c519d0a54c596628ecc8ced2b3179176f00a7b9e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_a46496ac02848e35c55f",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_a2014adcf103296f453c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 12515
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a6892ebaa42e7fb848a3667f2c94d42173872d4074f512572c016cf40a73226a",
+      "response_sha256": [
+        "021e1a17f891dbc72185d33933e386ee59c2ce4e6e923151d048e6ed781d109b",
+        "80a08b62b4d5096801897e74fee870c8a5c26a9f6b3f24a14a0afe0aadea4ad4"
+      ],
+      "content_sha256": "a2014adcf103296f453cf937b5c899d78932e5c3efc518e039210cf7c9ac7959",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_107ccd6a1149baaa1fc8",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_a2d78b23cf16021adcbb",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 22406
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "572fa4ef6c4f5dd047eb438d0c68f42978c74cc65a43ee682a9b983919ff9c9c",
+      "response_sha256": [
+        "4327f5f52842af74a380ea2039ccb7569ae624d4d5ff528501d7d65783da97ae",
+        "ac4617fb258ab91f476d4f9c20360499d3ce35771a1aaf14be97f21bce72f69e"
+      ],
+      "content_sha256": "a2d78b23cf16021adcbb422ef90663fb5afef18c82d1d4df777ed82b6740c242",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_78f02072d38b1f0b0b7c",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_a504d42a19103c8ff6d8",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 25074
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6c0b5bfd580765f47ea4849333bb548f2f20bfd159c7347fbde206fbcf81a810",
+      "response_sha256": [
+        "be16a09903e404812b4c6526f32201c2396e8b32fb6b83978105dcd186048248",
+        "6d0bc8516e448246d4a4ddb51fc51b150f97300d1607cbebfa9bbadf69f988f5"
+      ],
+      "content_sha256": "a504d42a19103c8ff6d84ab06ffbf23124720e6cca6afc8814015d309c77e6da",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_4dc164e823a713c4bd5a",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_a55d247fa592b95ce100",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 19592
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "d22a5a5d4c1264f79cc8ec34ce8e7174742395780a601e05e6238c471fd5cee7",
+      "response_sha256": [
+        "be83914fa90d782af964e14cb71c070338f6878c05abec2a8367f82ecf20fd92",
+        "9f2da448d00ce3a50c5226d9dbb5bf126cd24dd74695ec45bb37b18bdc99946a"
+      ],
+      "content_sha256": "a55d247fa592b95ce1000de5bd9bfedd44c1ac1f239937e44b04a52d7186746e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_29fdc7bcf6be0c965e2a",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_aadbc4f64c08fb12e0b0",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 19637
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "ae3bbe4f51ad77cad1e019fd75915a70ee1564af4b76f63b234d73edf8398637",
+      "response_sha256": [
+        "559880e70f27e63ff17d865eb4786b61d87c4bc59c07bf64fa102eaf64422628",
+        "7b9a955764088d8c0e594bb3256d22896e060c775deece3ddf75d1c76c7e3882"
+      ],
+      "content_sha256": "aadbc4f64c08fb12e0b0b97400986ff47d3aee6f3f4c04e439b8a161ee6c7b8f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_df10a70c6051aad229bf",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_b4a433b5d140a06e319d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 9581
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "39bbd3a6bd9ade939ae2766c211862ec3b76c076e63f57c71cd02191407b7f7b",
+      "response_sha256": [
+        "89ea8255fe27797531e8621f3e957a3d15721c6d91ebae5a7c76b6745ab6b60f",
+        "28d3def50bb5da873b542d5c1126250555e892c0a67a4660fa205963ed4a4289"
+      ],
+      "content_sha256": "b4a433b5d140a06e319db1a7f1aa50d1868c6d78d3e2f866cb96b1a0f8189b6d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_a5ce040ee3407481ba56",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_ba5a8c57275da343c511",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 27346
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "1b5be869b724576b5b585f416372c2e92abe7700fe85b0b67291c0bce4b42305",
+      "response_sha256": [
+        "4e0ca9862f6323f7ded7f4088116d6e48edac70f73302fd2669327a5a86be84f",
+        "28b14f5e87821a791eb039a7a25c7cbd949d297b131264bdec706807d622b430"
+      ],
+      "content_sha256": "ba5a8c57275da343c511f9ac4153903201403a64b3c8f9530ffeaeaba0f7a32d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_eb293233d30ea2ba2114",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_c5db912e40cff9c74649",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 13489
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "78416cefcbfea475cfcc573d58e78649c4ee2dd962f184d7eab7d116ec9e77bb",
+      "response_sha256": [
+        "10f938c820a8a7f64c06328df9197ad64a278a56ed4ffc35ef77c74ecd3c28f5",
+        "70e5990dcace74cb2cfd5da1a105d23e1344e190be9b0694285e7bc95f357eec"
+      ],
+      "content_sha256": "c5db912e40cff9c746495b58b12c96deb0e598d5a0919b73e65056d8d05a977e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_13e2e63e62ec8eb69bda",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_c6b975e3982430d86336",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 13640
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "e49dc0c6dedb3f4d9637170ec0e18dc8bd7da27d97c6511c87e56bc43665e727",
+      "response_sha256": [
+        "ad190f18fbfdf38398f8f0452d0f361c4ce222861ede0fa0ff0194eccfd29af8",
+        "fbd9661bf9239c2c960727752bc5fd723722ece9b9b6140a5760afedf78576c3"
+      ],
+      "content_sha256": "c6b975e3982430d863361086fa5dd0463e9df54d0956a3602b33577ec5b0834f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_01e3b1e4f742ea3c8c9b",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_cb094e2c1f03640677c2",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 13539
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "c8d59c18122a63fd49991a93ce36bb40c8db9476deb91f66ed38e730b68eae9a",
+      "response_sha256": [
+        "e04571c0493b114346c5ec4cb4cd9b9a4fc08971e96f8e670353a040288a808d",
+        "d42a7123f721469bbb692ae79a49128dd518c1a3308775aae7b1f02e019baa12"
+      ],
+      "content_sha256": "cb094e2c1f03640677c2f0dbed5158b2579caf79f5d0d295a6a85aea263adbf4",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_a6cd7262522118a717fc",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_d1652cb8f3fa81e2fd44",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 5504
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "2274de0e485f3ec65832c2537d35ce7fd59b9e4da1454d6bf2a6796c669f898c",
+      "response_sha256": [
+        "55c758d13e9b7f7641c40528f51bfbcdfd4416be3d1fa2514a202cc4355240d1",
+        "a01962720e66ccc53cdb3646a8a0656e388803032a2f91449f6956a221a1acac"
+      ],
+      "content_sha256": "d1652cb8f3fa81e2fd4462c2397a909a554f171be666b6b8823cb5c88b4d99e4",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_650cbc2a40bf14494338",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_d5e240206e98850518c7",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 15453
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "6f124a6e5f42e863e061f4b2323fbc1bdbfc2e3f0cfe12d3109903171b02b375",
+      "response_sha256": [
+        "19fb00248d360442867064dcae71f8e577ede6284c55c99ccf93897a579779db",
+        "0a85edf7a94eb0060959c30fffb0c75bba1ebb18611d4a50bcdbfcca72b9870c"
+      ],
+      "content_sha256": "d5e240206e98850518c7ec508d0c5224477d6146e4b151a9068d27148787d7b1",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_4b3e5ea38b6854231c0b",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_d96d25bc3e7121516a0a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 4896
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "81fe106643c3b7ccd38c774c8bb2132c052d7ae35b570e75968a5ce2f60b6a9a",
+      "response_sha256": [
+        "61d13155cbde6149dcbe3cd3cfdfc5cad0ce38e8ed6c9888c83929369ef373df",
+        "372e716804f8107a388a7ccc4c7d754af2f44499e1123db775281d910fbabaf6"
+      ],
+      "content_sha256": "d96d25bc3e7121516a0afbc85bf67a1c5e3b90c4637d07259d1ccafdab2a07ce",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_d40312e51cc13ea6dd37",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_e826cca061db36f209a6",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 17022
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "00168694f3df486339213dd9824383fa9c7a0fc6219f9a7827d2c7a5d4e15868",
+      "response_sha256": [
+        "b39efe740e19447bb2a230d122d2ba9c0beb52fac470a4a161f9d9ec432aed45",
+        "929478eea0ed608bf75844ed05586b4166820eef6efef7b02c1566c2b68fea7a"
+      ],
+      "content_sha256": "e826cca061db36f209a684027fcaec4c576918a5cd9af35bef809e047f112bd8",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_ed1929bc003249444b47",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_e97e1934982d6dadbe32",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 346
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "5d78eef1dc00cbde2cca610e1c578a87676d806063a28cfb1aaa8be77eacee2d",
+      "response_sha256": [
+        "8233b499c694734d1ab96a8be3a2ba88f7dc7ff326c727c2f6e04830d3246674",
+        "f0556e9f553453d8575d0d25ea7b9403fa38b85497cba7b439a4073e29a38e4e"
+      ],
+      "content_sha256": "e97e1934982d6dadbe32ec51b6106a4b251d7625e718109157e25ba522edc5ef",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_641d0eb0ca6d282d74e0",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_f4c6600b43029f3407e8",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 2719
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "265aa6fa5546d61bd6b5ba4d51ef93614be9dec11a3357e4094d2a7c666c8bdc",
+      "response_sha256": [
+        "f2dbef5e53d172f07d1555fe4aea043940ace501049dee8d222309200f5b3b38",
+        "b9d0349bf634ba4e8877beedeb25fdc80a92acb183db4943a41366d344378803"
+      ],
+      "content_sha256": "f4c6600b43029f3407e8ea701a09379d4e91b5545aa92b7a0a27e505f403634a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_88a8b7812f50f0722c64",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_fa28a76664eb63a44e6c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 20764
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "88f202ea1e00f2c3cb230bb6e7b7007be9ff2b1a7c646a893dd2c442782ee772",
+      "response_sha256": [
+        "75e61096e1dc40e820ab43661757ddbc7bc7efdef5a1321b8e7a083eed57d316",
+        "ac32cf4512142370d08e2f7f5726fa9d17951fdbf84a62ed493dc27d71fd7313"
+      ],
+      "content_sha256": "fa28a76664eb63a44e6c9191246548df95eef628636e89fc782feae4f33e049f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_1c826e25c556dd7f5cf2",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_fe971d924e91c45e8fc3",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 20772
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "8174d5d1f3a410cc778326f97d093f70b37eb220dabdef33e80254ddf3aa0727",
+      "response_sha256": [
+        "f55dc34a2822f0311d5aa3c26ea0914205d5bae951a0b7039f70447572fa7d20",
+        "bbfa69cb8ca5b9597b872274987b0d38a87b24faf1f7d97a0b4ca0bdeee985e6"
+      ],
+      "content_sha256": "fe971d924e91c45e8fc3f5a07cd600a73331cf140e6875f925ad4cf24244d939",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_c690582dfbcca3bf447b",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    },
+    {
+      "candidate_id": "p3fam_ff46a865989039d20782",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 24122
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "acd7bd91ce8d681721c38e35f609fa7cc88dc6b2cd6e9717aeb192c86a19ace9",
+      "response_sha256": [
+        "c51e128be38d329e5649e8947c685dbef501f8029bb39d6a322eef3e63360d36",
+        "416459060883cf157ec77edf0b77d6ae98dc8962d862a0a4c2d85704e91654d4"
+      ],
+      "content_sha256": "ff46a865989039d207823d35fac16037b9cf4263830d1cce1b37cf457020334a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "provisional_isolation_family_id": "p3iso_f7c53ec1d85e2027dac8",
+      "isolation_review_status": "pending_human_semantic_merge_review",
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_all_reviews"
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "candidate_count_60",
+      "status": "pass"
+    },
+    {
+      "check_id": "phase_2_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "confirmed_180_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "exact_normalized_prompt_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "token_3gram_jaccard_at_or_above_0_90_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "unique_candidate_content_and_provisional_isolation_ids",
+      "status": "pass"
+    },
+    {
+      "check_id": "raw_text_in_tracked_manifest",
+      "status": "pass"
+    },
+    {
+      "check_id": "human_review_pending",
+      "status": "pass"
+    },
+    {
+      "check_id": "semantic_isolation_merge_review_pending",
+      "status": "pass"
+    },
+    {
+      "check_id": "split_assignment_zero",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "The expansion is a bounded review tranche, not training or evaluation data. Existing confirmed reviews remain unchanged; provisional isolation IDs require human semantic merge review and no split exists until every unchanged 40/15/40 gate passes."
+}

@@ -1,0 +1,293 @@
+{
+  "claim_boundary": "The original 40/15/40 gate failed by one train family. After observing that result, the researcher explicitly amended the data-count standard to 39/15/40 and stopped further expansion. The amended count gate passes. A deterministic family-isolated 39/15/40 split, zero-blocker leakage audit, and unopened test-once, condition-blind review, and bounded train/dev selection contracts are frozen. Advance model/GPU notice was recorded, the fixed two-epoch QLoRA run completed, and all 90 condition-blind development candidates were generated without opening test. The 90 ratings were frozen before restricted unblinding; alpha 1 and QLoRA epoch 1 are locked by the preregistered rule, while QLoRA fails the dev quality margin. Under the single held-out opening, all 780 outputs and a condition-blind packet were generated for 40 families and 52 pairs. No human held-out ratings or outcome statistics exist yet. Post-generation automation accessed the restricted condition key and disclosed aggregate condition-level exact-match diagnostics before rating freeze; per-item mappings were not disclosed, but strict pre-rating nonaccess cannot be claimed. The user designated researcher_02 for the amended independent-human review route; the scoring guide, packet, blank 780-row sheet and user-confirmed compliance record are prepared without a personal-name or signature field. That record must not be described as a reviewer-signed attestation. The submitted 780 ratings were validated and frozen before this workflow accessed the condition key. Based on the user's provenance statement, AI preliminary judgments were auxiliary and researcher_02 reviewed and owns every final rating. The frozen nonconfirmatory analysis finds no credible target-specific steering improvement and a large harmful QLoRA effect. The single-rater design and prior preparation-side blinding deviation remain limitations. The Phase 3 bounded comparison is complete, while the confirmatory steering gate remains No-Go.",
+  "confirmatory_steering_gate": "no_go",
+  "current_candidate_assets": {
+    "cleaned_eval_pairs": {
+      "count": 24,
+      "human_annotated_count": 0,
+      "path": "data/post_training/boundary_preserving_cleaned_eval_pairs_v0_3.jsonl"
+    },
+    "cleaned_sft_candidates": {
+      "count": 2,
+      "human_approved_count": 0,
+      "minimum_required": 40,
+      "path": "data/post_training/boundary_preserving_cleaned_sft_candidates_v0_3.jsonl"
+    },
+    "phase_3_additional_tranche": {
+      "candidate_count": 30,
+      "completed_human_reviews": 30,
+      "completed_isolation_reviews": 30,
+      "path": "data/research_foundation/manifests/phase_3_additional_tranche_manifest_v0_1.json",
+      "review_acceptance_path": "results/summaries/phase_3_additional_tranche_review_acceptance_v0_1.json",
+      "status": "review_complete_shortfall_3_pending_user_authorized_small_supplement"
+    },
+    "phase_3_data_gate_amendment": {
+      "acceptance_path": "results/summaries/phase_3_data_gate_amendment_acceptance_v0_1.json",
+      "additional_candidate_expansion_allowed": false,
+      "amended_39_15_40_passed": true,
+      "original_40_15_40_passed": false,
+      "path": "configs/research/phase_3_data_gate_amendment_v0_1.json",
+      "split_created_at_amendment_time": false
+    },
+    "phase_3_expansion_candidates": {
+      "completed_human_reviews": 60,
+      "count": 60,
+      "path": "data/research_foundation/manifests/phase_3_expansion_candidate_manifest_v0_1.json",
+      "review_acceptance_path": "results/summaries/phase_3_expansion_and_isolation_review_acceptance_v0_1.json",
+      "status": "expansion_generated_pending_human_review_and_semantic_isolation_review_no_split"
+    },
+    "phase_3_family_candidates": {
+      "completed_human_reviews": 180,
+      "count": 180,
+      "family_allocation_ready": false,
+      "family_component_count": 1,
+      "identity_upper_bound_train_after_heldout": 21,
+      "isolation_options_audit_path": "results/summaries/phase_3_family_isolation_options_audit_v0_1.json",
+      "isolation_options_status": "no_go_current_180_for_40_15_40_disjoint_split",
+      "path": "data/research_foundation/manifests/phase_3_family_candidate_manifest_v0_1.json",
+      "review_acceptance_path": "results/summaries/phase_3_family_review_acceptance_v0_1.json",
+      "split_assignments": 0,
+      "status": "generated_pending_human_review_no_split"
+    },
+    "phase_3_family_split": {
+      "development_families": 15,
+      "held_out_test_families": 40,
+      "leakage_audit_path": "results/summaries/phase_3_family_split_leakage_audit_v0_1.json",
+      "leakage_audit_status": "passed_family_isolated_39_15_40_split_no_model_execution",
+      "path": "data/research_foundation/manifests/phase_3_family_split_v0_1.json",
+      "status": "family_isolated_39_15_40_split_frozen",
+      "train_families": 39
+    },
+    "phase_3_final_isolation": {
+      "candidate_count": 240,
+      "disjoint_40_15_40_ready": false,
+      "final_family_count": 189,
+      "merged_component_count": 31,
+      "path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_1.json",
+      "qlora_train_shortfall": 11,
+      "status": "human_semantic_merge_review_complete_no_split"
+    },
+    "phase_3_final_isolation_v2": {
+      "candidate_count": 270,
+      "disjoint_40_15_40_ready": false,
+      "final_family_count": 198,
+      "merged_component_count": 41,
+      "path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_2.json",
+      "qlora_train_shortfall": 3,
+      "status": "additional_30_review_complete_no_split"
+    },
+    "phase_3_final_isolation_v3": {
+      "candidate_count": 282,
+      "disjoint_40_15_40_ready": false,
+      "final_family_count": 205,
+      "merged_component_count": 43,
+      "path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_3.json",
+      "qlora_train_shortfall": 1,
+      "status": "review_complete_40_15_40_blocked_shortfall_1_no_split"
+    },
+    "phase_3_held_out_results": {
+      "analysis_contract_path": "configs/research/phase_3_held_out_analysis_contract_v0_1.json",
+      "condition_comparisons": 14,
+      "primary_target_summary": {
+        "quality_bootstrap_95pct_ci": [
+          -0.075,
+          0.2
+        ],
+        "quality_family_mean_delta": 0.05,
+        "quality_noninferiority_passed": true,
+        "trait_bootstrap_95pct_ci": [
+          0.0,
+          0.075
+        ],
+        "trait_candidate_win_tie_loss": {
+          "loss": 0,
+          "tie": 51,
+          "win": 1
+        },
+        "trait_family_mean_delta": 0.025,
+        "trait_permutation_two_sided_p": 1.0
+      },
+      "results_path": "results/summaries/phase_3_held_out_results_v0_1.json",
+      "status": "complete_nonconfirmatory_held_out_analysis"
+    },
+    "phase_3_held_out_runtime": {
+      "blind_outputs": 780,
+      "condition_count": 15,
+      "condition_outputs": 780,
+      "execution_status": "held_out_candidates_complete_blinding_deviation_pending_user_decision",
+      "execution_summary_path": "results/summaries/phase_3_held_out_execution_v0_1.json",
+      "expected_output_count": 780,
+      "fresh_notice_and_user_authorization_required": true,
+      "human_annotations_completed": 0,
+      "notice_path": "results/summaries/phase_3_held_out_model_gpu_execution_notice_v0_1.json",
+      "notice_status": "issued_before_user_execution_authorization_and_before_test_opening",
+      "runtime_path": "configs/research/phase_3_held_out_runtime_v0_1.json",
+      "runtime_sha256": "6e6e8aa3695bb251c42f4908eabf5efd3e4df957fa7b2b199d283c3f48ae6e45",
+      "selected_qlora_checkpoint": "epoch_1",
+      "selected_qlora_quality_gate_passed": false,
+      "selected_target_alpha": 1.0,
+      "status": "frozen_after_train_dev_selection_before_test_opening",
+      "test_openings": 1
+    },
+    "phase_3_independent_review": {
+      "amendment_path": "configs/research/phase_3_independent_blind_review_amendment_v0_2.json",
+      "ratings_completed": 0,
+      "required_ratings": 780,
+      "reviewer_id": "independent_reviewer_01",
+      "route_status": "superseded_by_researcher_02_review_contract_v0_3",
+      "status": "frozen_after_blinding_deviation_before_any_human_rating"
+    },
+    "phase_3_pre_execution_contracts": {
+      "blind_review_contract_path": "configs/research/phase_3_blind_review_contract_v0_1.json",
+      "blind_review_contract_status": "frozen_before_condition_generation",
+      "future_selection_lock_created": false,
+      "selection_contract_path": "configs/research/phase_3_train_dev_selection_contract_v0_1.json",
+      "selection_contract_status": "frozen_before_training_or_development_generation"
+    },
+    "phase_3_provisional_isolation": {
+      "candidate_count": 240,
+      "completed_semantic_merge_reviews": 0,
+      "path": "data/research_foundation/manifests/phase_3_provisional_isolation_families_v0_1.json",
+      "provisional_component_count": 240,
+      "status": "provisional_components_pending_human_semantic_merge_review_no_split"
+    },
+    "phase_3_researcher_02_review": {
+      "compliance_source": "user_confirmed_in_chat_before_researcher_02_rating",
+      "condition_key_access_at_freeze": false,
+      "contract_path": "configs/research/phase_3_researcher_02_review_contract_v0_3.json",
+      "formal_annotations_sha256": "dab995641bde5421397bcb98b96809ad75c7ede13e3b71836c015088ae9e9ec3",
+      "ratings_completed": 780,
+      "required_ratings": 780,
+      "review_freeze_path": "data/research_foundation/manifests/phase_3_held_out_blind_review_freeze_v0_3.json",
+      "review_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_packet_v0_3.jsonl",
+      "review_sheet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_review_sheet_v0_3.csv",
+      "reviewer_id": "researcher_02",
+      "reviewer_signature_recorded": false,
+      "scoring_guide_path": "data/research_foundation/human_review/phase_3_held_out_scoring_guide_v0_3.md",
+      "status": "frozen_before_researcher_02_rating"
+    },
+    "phase_3_small_supplement": {
+      "candidate_count": 12,
+      "completed_human_reviews": 12,
+      "completed_isolation_reviews": 12,
+      "path": "data/research_foundation/manifests/phase_3_small_supplement_manifest_v0_1.json",
+      "review_acceptance_path": "results/summaries/phase_3_small_supplement_review_acceptance_v0_1.json",
+      "status": "reviews_complete_40_15_40_blocked_shortfall_1_no_split"
+    },
+    "phase_3_test_once": {
+      "contract_path": "configs/research/phase_3_test_once_contract_v0_1.json",
+      "contract_status": "frozen_before_model_or_test_execution",
+      "freeze_path": "data/research_foundation/manifests/phase_3_held_out_test_freeze_v0_1.json",
+      "freeze_status": "held_out_test_frozen_unopened_for_model_execution",
+      "model_execution_openings": 0
+    },
+    "phase_3_train_dev_execution": {
+      "development_condition_outputs": 90,
+      "execution_summary_path": "results/summaries/phase_3_train_dev_execution_v0_1.json",
+      "human_annotations_completed": 0,
+      "notice_path": "results/summaries/phase_3_model_gpu_execution_notice_v0_1.json",
+      "qlora_checkpoints": [
+        "epoch_1",
+        "epoch_2"
+      ],
+      "runtime_path": "configs/research/phase_3_train_dev_runtime_v0_1.json",
+      "status": "train_and_development_candidates_complete_pending_condition_blind_human_review"
+    },
+    "phase_3_train_dev_selection": {
+      "formal_annotation_rows": 90,
+      "held_out_test_model_openings": 0,
+      "quality_gate": {
+        "margin": -0.5,
+        "positive_result_required": false,
+        "qlora_passed": false,
+        "target_steering_passed": true
+      },
+      "review_freeze_path": "data/research_foundation/manifests/phase_3_development_blind_review_freeze_v0_1.json",
+      "selected_specification": {
+        "qlora_checkpoint_id": "epoch_1",
+        "qlora_condition_id": "qlora_epoch_1",
+        "target_steering_alpha": 1.0,
+        "target_steering_condition_id": "target_steering_alpha_1"
+      },
+      "selection_lock_path": "results/local_artifacts/research_foundation/phase_3/phase_3_train_dev_selection_lock_v0_1.json",
+      "selection_summary_path": "results/summaries/phase_3_train_dev_selection_v0_1.json"
+    },
+    "review_ready_items": {
+      "completed_human_reviews": 0,
+      "count": 24,
+      "path": "data/post_training/boundary_preserving_human_review_ready_v0_3.jsonl"
+    }
+  },
+  "execution_status": "phase_3_limited_nonconfirmatory_comparison_complete",
+  "gates": {
+    "blind_review_contract_ready": true,
+    "development_candidate_generation_complete": true,
+    "development_human_review_complete": true,
+    "family_isolated_data_count_gate_passed_under_amended_39_15_40": true,
+    "family_leakage_audit_passed": true,
+    "held_out_condition_generation_complete": true,
+    "held_out_human_review_frozen": true,
+    "held_out_model_gpu_notice_issued": true,
+    "held_out_nonconfirmatory_analysis_complete": true,
+    "held_out_runtime_frozen": true,
+    "human_review_ready": true,
+    "independent_review_amendment_frozen": true,
+    "model_gpu_notice_completed": true,
+    "new_development_ready": true,
+    "new_held_out_test_ready": true,
+    "new_qlora_training_data_ready": true,
+    "phase_2_acceptance_bound": true,
+    "protocol_schema_valid": true,
+    "qlora_training_complete": true,
+    "researcher_02_review_materials_ready": true,
+    "single_supported_axis_only": true,
+    "train_dev_runtime_ready": true,
+    "train_dev_selection_contract_ready": true,
+    "train_dev_selection_lock_frozen": true
+  },
+  "legacy_assets": {
+    "forbidden_sft": [
+      {
+        "path": "data/post_training/boundary_preserving_sft_v0_1.jsonl",
+        "phase_3_training_allowed": false,
+        "row_count": 10,
+        "sha256": "422f75796f66f9af512b45144cf8c8c9c9ebb95b00fecf0b5c5296f1bff5c363",
+        "template_phrase_hits": {
+          "if_you_want_i_can_help": 0,
+          "the_request_asks_me_to": 0
+        }
+      },
+      {
+        "path": "data/post_training/boundary_preserving_sft_v0_2.jsonl",
+        "phase_3_training_allowed": false,
+        "row_count": 84,
+        "sha256": "c7ff360c559da5ca119b9d3de50cb4c341ec10f0b5e0ffecc86cc0c102e29c01",
+        "template_phrase_hits": {
+          "if_you_want_i_can_help": 84,
+          "the_request_asks_me_to": 84
+        }
+      }
+    ],
+    "legacy_steering_config": {
+      "axes": [
+        "calm-agitated",
+        "cautious-impulsive",
+        "boundary-preserving-over-accommodating"
+      ],
+      "path": "configs/experiments/steering_qwen3_4b.phase_c_batch2.yaml",
+      "phase_3_evidence_reuse_allowed": false,
+      "unsupported_axes": [
+        "calm-agitated",
+        "cautious-impulsive"
+      ]
+    }
+  },
+  "model_or_gpu_run": true,
+  "next_required_block": "stop_or_separately_authorize_phase_4_external_validity_decision",
+  "phase_2_acceptance_sha256": "15ef2b967f550833a7f29e9d348cb61bece449392c9d5522f71910cd43a1259c",
+  "phase_3_completion_estimate": 1.0,
+  "protocol_path": "configs/research/phase_3_limited_fair_comparison_protocol_v0_1.json",
+  "protocol_sha256": "abb8cad4f28cd29456749fc315b56708c3a6dd0aff0d04ca8bb34887bb86dfcc",
+  "study_role": "limited_nonconfirmatory_fair_method_comparison",
+  "summary_version": "phase_3_readiness_audit_v0_1"
+}

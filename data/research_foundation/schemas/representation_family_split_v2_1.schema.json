@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/representation_family_split_v2_1.schema.json",
+  "title": "EmotionVector Representation-ready Family Split v2.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version", "dataset_version", "created_at", "random_seed", "status", "axis_scope",
+    "source_decision", "eligibility_rule", "allocation_strategy", "test_access_policy", "records",
+    "components", "checks", "audit", "counts", "claim_boundary"
+  ],
+  "properties": {
+    "manifest_version": {"const": "representation_family_split_v2_1"},
+    "dataset_version": {"const": "pku_boundary_representation_pairs_v0_1"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "random_seed": {"type": "integer"},
+    "status": {"const": "frozen_before_model_execution"},
+    "axis_scope": {"const": ["boundary-preserving-over-accommodating"]},
+    "source_decision": {"type": "object"},
+    "eligibility_rule": {"type": "object"},
+    "allocation_strategy": {"type": "object"},
+    "test_access_policy": {
+      "type": "object",
+      "required": ["frozen", "frozen_before_model_execution", "test_use", "allowed_uses_before_opening", "forbidden_uses_before_opening", "access_log_path"],
+      "properties": {
+        "frozen": {"const": true},
+        "frozen_before_model_execution": {"const": true},
+        "test_use": {"type": "string"},
+        "allowed_uses_before_opening": {"type": "array", "items": {"type": "string"}},
+        "forbidden_uses_before_opening": {"type": "array", "items": {"type": "string"}},
+        "access_log_path": {"type": "string"}
+      }
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "pair_id", "split", "dataset_id", "source_revision", "source_sample_id", "source_family_id",
+          "task_family_id", "scenario_family_id", "prompt_template_id", "semantic_cluster_id", "axis_id",
+          "contrast_status", "prompt_sha256", "pair_content_sha256", "responses"
+        ],
+        "properties": {
+          "pair_id": {"type": "string", "pattern": "^reprpair_[a-f0-9]{20}$"},
+          "split": {"enum": ["train", "dev", "test"]},
+          "dataset_id": {"const": "pku_safe_rlhf"},
+          "source_revision": {"type": "string"},
+          "source_sample_id": {"type": "string"},
+          "source_family_id": {"type": "string"},
+          "task_family_id": {"type": "string"},
+          "scenario_family_id": {"type": "string"},
+          "prompt_template_id": {"type": "string"},
+          "semantic_cluster_id": {"type": "string"},
+          "axis_id": {"const": "boundary-preserving-over-accommodating"},
+          "contrast_status": {"const": "valid_single_axis"},
+          "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "pair_content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "responses": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["sample_id", "response_id", "pole", "behavior", "content_sha256"],
+              "properties": {
+                "sample_id": {"type": "string"},
+                "response_id": {"enum": ["response_0", "response_1"]},
+                "pole": {"enum": ["boundary-preserving", "over-accommodating"]},
+                "behavior": {"type": "string"},
+                "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+              }
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "components": {"type": "array", "items": {"type": "object"}},
+    "checks": {"type": "array", "items": {"type": "object"}},
+    "audit": {"type": "object"},
+    "counts": {"type": "object"},
+    "claim_boundary": {"type": "string"}
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "claim_boundary": "The submitted scores were frozen before this workflow accessed the condition key. AI preliminary judgments are auxiliary only; based on the user's submission statement, researcher_02 reviewed and owns all 780 final ratings. This single-reviewer evidence does not establish inter-rater reliability or erase the earlier preparation-side blinding deviation.",
+  "condition_key_access_at_freeze": false,
+  "formal_annotations": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_annotations_v0_3.jsonl",
+    "row_count": 780,
+    "sha256": "dab995641bde5421397bcb98b96809ad75c7ede13e3b71836c015088ae9e9ec3",
+    "tracked": false
+  },
+  "freeze_version": "phase_3_held_out_blind_review_freeze_v0_3",
+  "frozen_at": "2026-08-05T15:11:35.666540+08:00",
+  "original_blind_packet": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_packet_v0_3.jsonl",
+    "sha256": "33ad00bc80ba757a6dd10722bba333fec0614a5ce261047632a4935d6cc46543"
+  },
+  "review_provenance": {
+    "ai_preliminary_judgment_role": "auxiliary_preannotation_not_independent_primary_evidence",
+    "basis": "user_reported_in_chat_at_submission",
+    "final_human_review_role": "researcher_02_reviewed_and_owns_all_780_final_ratings"
+  },
+  "reviewer_id": "researcher_02",
+  "source_review_summary": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_review_summary_v0_3.md",
+    "sha256": "b3e0dd8218ae8c4f81c516f119d1d256e77a51bad54e3c3b856357b600d82b22",
+    "tracked": false
+  },
+  "source_scored_csv": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_review_sheet_v0_3_scored.csv",
+    "row_count": 780,
+    "sha256": "2e24c73fe77103360dd4656d367b16a8c13f6c31a756bd32b87e11cde72ff969",
+    "tracked": false
+  },
+  "status": "frozen_before_condition_key_access",
+  "validation": {
+    "identity_or_text_mismatches": 0,
+    "invalid_or_missing_required_scores": 0,
+    "notes_required_and_present": 115,
+    "row_count": 780,
+    "schema_errors": 0,
+    "unique_blind_outputs": 780,
+    "unique_families": 40,
+    "unique_review_items": 52
+  }
+}

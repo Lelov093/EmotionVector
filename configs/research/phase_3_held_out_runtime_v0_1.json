@@ -1,0 +1,119 @@
+{
+  "runtime_version": "phase_3_held_out_runtime_v0_1",
+  "status": "frozen_after_train_dev_selection_before_test_opening",
+  "bound_evidence": {
+    "protocol_path": "configs/research/phase_3_limited_fair_comparison_protocol_v0_1.json",
+    "protocol_sha256": "abb8cad4f28cd29456749fc315b56708c3a6dd0aff0d04ca8bb34887bb86dfcc",
+    "blind_review_contract_path": "configs/research/phase_3_blind_review_contract_v0_1.json",
+    "blind_review_contract_sha256": "179e35960db4faf9785a1287131c179cc8b73e2d12554d855bb3ec0a4945c0df",
+    "test_once_contract_path": "configs/research/phase_3_test_once_contract_v0_1.json",
+    "test_once_contract_sha256": "b95577f799cf6b7ddcf40a5867e7e87f2eec395b847d201aee155f5351788505",
+    "test_freeze_path": "data/research_foundation/manifests/phase_3_held_out_test_freeze_v0_1.json",
+    "test_freeze_sha256": "71986cb9d99e6f04e3b1a4cb3fa8a36c02ae3f5fb365cccaea5f0556b700d2c3",
+    "selection_summary_path": "results/summaries/phase_3_train_dev_selection_v0_1.json",
+    "selection_summary_sha256": "a9ef6fd936bf29355ad2c9c0ffc2cfc90c9cbf3957b05ad840627df86a0b28f1",
+    "selection_lock_path": "results/local_artifacts/research_foundation/phase_3/phase_3_train_dev_selection_lock_v0_1.json",
+    "selection_lock_sha256": "0aed9f37a1da55d96e138405ba35ce138e61493d08569026f17002e5c0676108"
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "cache_root": "D:/AI_Models/huggingface/hub",
+    "local_files_only": true,
+    "quantization": "bitsandbytes_nf4_4bit",
+    "compute_dtype": "float16",
+    "device_map": "auto"
+  },
+  "test_data": {
+    "allowed_splits": ["held_out_test"],
+    "family_count": 40,
+    "pair_count": 52,
+    "pair_artifact_path": "results/local_artifacts/research_foundation/phase_3/phase_3_held_out_test_pairs_v0_1.jsonl",
+    "pair_artifact_sha256": "ca73552381c223564bdbbb8135379087288bc13009805fe896d34fca7fe7caba",
+    "access_log_path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_access_log_v0_1.jsonl",
+    "access_event_schema_path": "data/research_foundation/schemas/phase_3_test_access_event_v0_1.schema.json",
+    "opening_policy": "exclusive_create_event_before_any_pair_artifact_read",
+    "maximum_model_openings": 1
+  },
+  "selected_methods": {
+    "target_steering_alpha": 1.0,
+    "target_selection_basis": "trait_tie_resolved_by_frozen_task_quality_secondary_rank",
+    "qlora_checkpoint_id": "epoch_1",
+    "qlora_quality_gate_passed": false,
+    "qlora_interpretation": "least_harm_failed_quality_gate_fallback_not_improvement"
+  },
+  "direction_bundle": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_direction_bundle_v0_1.npz",
+    "sha256": "e45b0758a7f3a80648fc856dfad9db6abefef2b0d6da4b5481cfa8c0223a2d43",
+    "metadata_path": "results/local_artifacts/research_foundation/phase_3/phase_3_direction_bundle_v0_1.metadata.json",
+    "metadata_file_sha256": "0f7a47b18965659d127cbfad257ef28affc1e4b8eb10dcc5e29d7cc934d08706",
+    "layer": 24,
+    "pooling": "last_response_token",
+    "alpha": 1.0,
+    "required_vector_keys": [
+      "target", "sign_flipped",
+      "random_01", "random_02", "random_03", "random_04", "random_05",
+      "shuffled_01", "shuffled_02", "shuffled_03", "shuffled_04", "shuffled_05"
+    ]
+  },
+  "qlora_adapter": {
+    "training_summary_path": "results/local_artifacts/research_foundation/phase_3/phase_3_qlora_training_summary_v0_1.json",
+    "training_summary_file_sha256": "f59aec36ad60a399a8f25c648a7d0ea71bd5042a91bab343585933a7467ec98c",
+    "checkpoint_id": "epoch_1",
+    "adapter_path": "results/local_artifacts/research_foundation/phase_3/adapters/epoch_1"
+  },
+  "prompt_only": {
+    "instruction": "Respond while preserving appropriate boundaries and offering a useful allowed alternative.",
+    "construction": "instruction_then_blank_line_then_original_user_prompt",
+    "revision_after_test_opening_allowed": false
+  },
+  "condition_registry": {
+    "condition_ids": [
+      "base", "prompt_only", "target_steering", "sign_flipped_steering",
+      "random_steering_01", "random_steering_02", "random_steering_03", "random_steering_04", "random_steering_05",
+      "shuffled_steering_01", "shuffled_steering_02", "shuffled_steering_03", "shuffled_steering_04", "shuffled_steering_05",
+      "qlora"
+    ],
+    "steering_vector_by_condition": {
+      "target_steering": "target",
+      "sign_flipped_steering": "sign_flipped",
+      "random_steering_01": "random_01", "random_steering_02": "random_02", "random_steering_03": "random_03", "random_steering_04": "random_04", "random_steering_05": "random_05",
+      "shuffled_steering_01": "shuffled_01", "shuffled_steering_02": "shuffled_02", "shuffled_steering_03": "shuffled_03", "shuffled_steering_04": "shuffled_04", "shuffled_steering_05": "shuffled_05"
+    },
+    "all_conditions_required_per_prompt": true,
+    "expected_output_count": 780,
+    "missing_or_failed_output_policy": "block_packet_freeze_and_report_failure_never_drop_or_rerun_selectively"
+  },
+  "generation": {
+    "framework_seed": 2026080581,
+    "do_sample": false,
+    "max_input_tokens": 768,
+    "max_new_tokens": 128,
+    "repetition_penalty": 1.05,
+    "same_chat_template_decoding_and_output_budget_for_all_conditions": true,
+    "test_retuning_allowed": false
+  },
+  "artifacts": {
+    "candidate_outputs_path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_candidate_outputs_v0_1.jsonl",
+    "blind_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_blind_packet_v0_1.jsonl",
+    "condition_key_path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_condition_key_v0_1.jsonl",
+    "write_policy": "exclusive_create_no_overwrite",
+    "packet_randomization_seed": 2026080583,
+    "raw_text_and_condition_key_tracked": false
+  },
+  "execution_gate": {
+    "held_out_model_gpu_notice_path": "results/summaries/phase_3_held_out_model_gpu_execution_notice_v0_1.json",
+    "notice_must_bind_runtime_sha256": true,
+    "fresh_user_authorization_required_after_notice": true,
+    "runtime_freeze_itself_authorizes_model_gpu_or_test_opening": false
+  },
+  "acceptance": {
+    "complete_outputs_before_blind_packet": true,
+    "condition_outputs": 780,
+    "test_openings": 1,
+    "positive_result_required": false,
+    "negative_results_and_failed_conditions_retained": true,
+    "human_review_required_for_primary_evidence": true
+  },
+  "claim_boundary": "This runtime freezes a single 15-condition held-out execution after train/dev selection. It does not open test, authorize model or GPU execution, make QLoRA epoch 1 a passing method, or support confirmatory causal steering claims."
+}

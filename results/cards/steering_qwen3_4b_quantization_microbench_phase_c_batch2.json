@@ -1,0 +1,161 @@
+{
+  "run_id": "steering_qwen3_4b_quantization_microbench_phase_c_batch2",
+  "experiment_id": "steering_qwen3_4b.quantization_microbench.phase_c_batch2",
+  "created_at": "2026-07-04T05:45:39.250043+00:00",
+  "git_commit": "6e6831871699e013c1768b3f350b7f9e28cae6c3",
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "axis": [
+    "cautious-impulsive"
+  ],
+  "layers": [
+    24
+  ],
+  "conditions": [
+    "no-steering",
+    "activation-steering"
+  ],
+  "runtimes": {
+    "fp16_auto_offload": {
+      "load_success": true,
+      "generation_success": true,
+      "hook_success": true,
+      "cuda_available": true,
+      "runtime_mode": {
+        "runtime_id": "fp16_auto_offload",
+        "quantization": "none"
+      },
+      "experiment_type": "fp16_vector_to_fp16_runtime",
+      "vram_before": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 0.0,
+        "memory_reserved_gb": 0.0
+      },
+      "artifact_path": "results\\local_artifacts\\steering\\phase_c_batch2_quantization_microbench\\quantization_microbench_generations.jsonl",
+      "load_seconds": 24.9994,
+      "cpu_offload_detected": true,
+      "vram_after_load": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 5.9886,
+        "memory_reserved_gb": 5.9902
+      },
+      "generation_count": 4,
+      "generated_tokens": 160,
+      "generation_seconds": 58.1553,
+      "avg_seconds_per_generation": 14.5388,
+      "tokens_per_second": 2.7513,
+      "vram_after_generation": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 5.9965,
+        "memory_reserved_gb": 6.0215
+      },
+      "output_sanity": "non_empty_outputs_recorded",
+      "conclusion": "fallback"
+    },
+    "bnb_8bit": {
+      "load_success": true,
+      "generation_success": true,
+      "hook_success": true,
+      "cuda_available": true,
+      "runtime_mode": {
+        "runtime_id": "bnb_8bit",
+        "quantization": "8bit"
+      },
+      "experiment_type": "fp16_vector_to_quantized_runtime_transfer",
+      "vram_before": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 0.0079,
+        "memory_reserved_gb": 0.0195
+      },
+      "artifact_path": "results\\local_artifacts\\steering\\phase_c_batch2_quantization_microbench\\quantization_microbench_generations.jsonl",
+      "load_seconds": 23.4272,
+      "cpu_offload_detected": false,
+      "vram_after_load": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 4.1225,
+        "memory_reserved_gb": 4.4023
+      },
+      "generation_count": 4,
+      "generated_tokens": 160,
+      "generation_seconds": 38.2695,
+      "avg_seconds_per_generation": 9.5674,
+      "tokens_per_second": 4.1809,
+      "vram_after_generation": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 4.1236,
+        "memory_reserved_gb": 4.418
+      },
+      "output_sanity": "non_empty_outputs_recorded",
+      "conclusion": "use"
+    },
+    "bnb_4bit": {
+      "load_success": true,
+      "generation_success": true,
+      "hook_success": true,
+      "cuda_available": true,
+      "runtime_mode": {
+        "runtime_id": "bnb_4bit",
+        "quantization": "4bit"
+      },
+      "experiment_type": "fp16_vector_to_quantized_runtime_transfer",
+      "vram_before": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 0.0089,
+        "memory_reserved_gb": 0.0215
+      },
+      "artifact_path": "results\\local_artifacts\\steering\\phase_c_batch2_quantization_microbench\\quantization_microbench_generations.jsonl",
+      "load_seconds": 8.5859,
+      "cpu_offload_detected": false,
+      "vram_after_load": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 2.6696,
+        "memory_reserved_gb": 2.7266
+      },
+      "generation_count": 4,
+      "generated_tokens": 160,
+      "generation_seconds": 11.6861,
+      "avg_seconds_per_generation": 2.9215,
+      "tokens_per_second": 13.6914,
+      "vram_after_generation": {
+        "torch": "2.11.0+cu128",
+        "cuda_available": true,
+        "cuda_version": "12.8",
+        "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+        "memory_allocated_gb": 2.6696,
+        "memory_reserved_gb": 2.834
+      },
+      "output_sanity": "non_empty_outputs_recorded",
+      "conclusion": "use"
+    }
+  },
+  "selected_runtime": {
+    "runtime": "quantized",
+    "runtime_id": "bnb_4bit",
+    "reason": "load, hook, and generation succeeded"
+  },
+  "artifact_path": "results\\local_artifacts\\steering\\phase_c_batch2_quantization_microbench\\quantization_microbench_generations.jsonl",
+  "research_boundary": "Quantized runs use Phase B FP16 vectors as a transfer micro-benchmark; formal quantized-runtime evidence requires rebuilding vectors under that runtime."
+}

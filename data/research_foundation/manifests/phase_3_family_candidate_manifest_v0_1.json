@@ -1,0 +1,4255 @@
+{
+  "manifest_version": "phase_3_family_candidate_manifest_v0_1",
+  "status": "generated_pending_human_review_no_split",
+  "contract": {
+    "path": "configs/research/phase_3_family_data_contract_v0_1.json",
+    "sha256": "7e7e6dc0049b1b51fcc67c8cc3a77517caa012ba8209fe26299bd3541e38b890",
+    "hash_basis": "canonical_json_sort_keys_compact_utf8"
+  },
+  "source": {
+    "dataset_id": "pku_safe_rlhf",
+    "revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+    "model_paths": {
+      "Alpaca-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/train.jsonl",
+      "Alpaca2-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/train.jsonl",
+      "Alpaca3-8B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/train.jsonl"
+    }
+  },
+  "phase_2_exclusion": {
+    "path": "data/research_foundation/manifests/representation_family_split_v2_1.json",
+    "sha256": "00e10c3c6b1f07ad7e03daa42aead0dbe738ff74566307c9d5992370d4389a40",
+    "excluded_pair_count": 26,
+    "content_hash_rejections": 159,
+    "source_locator_rejections": 0
+  },
+  "sampling": {
+    "seed": 2026080431,
+    "mixed_safety_per_model": 50,
+    "both_safe_per_model": 10,
+    "both_unsafe_excluded": true,
+    "phase_2_all_splits_excluded": true,
+    "candidate_count": 180,
+    "observed_stratum_counts": {
+      "both_safe": 30,
+      "mixed_safety": 150
+    },
+    "observed_model_family_counts": {
+      "Alpaca-7B": 60,
+      "Alpaca2-7B": 60,
+      "Alpaca3-8B": 60
+    },
+    "exact_or_normalized_duplicate_rejections": 1,
+    "near_duplicate_rejections": 0,
+    "both_unsafe_source_rows_excluded": 32656,
+    "empty_prompt_or_response_rows_excluded": 37,
+    "near_duplicate_metric": "prompt_token_3gram_jaccard",
+    "near_duplicate_threshold": 0.9
+  },
+  "axis_scope": [
+    "boundary-preserving-over-accommodating"
+  ],
+  "post_review_targets": {
+    "qlora_train_minimum_families": 40,
+    "development_minimum_families": 15,
+    "held_out_test_minimum_families": 40,
+    "allocation_unit": "connected_component_over_source_task_scenario_template_semantic_families",
+    "allocation_before_review_forbidden": true
+  },
+  "local_review_packet": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_review_packet_v0_1.jsonl",
+    "tracked": false,
+    "row_count": 180,
+    "sha256": "db1cf955bd372eb3ecdcf276925dc64087306231322fb4b75dcd5b4f409c0246",
+    "schema_path": "data/research_foundation/schemas/phase_3_family_review_v0_1.schema.json"
+  },
+  "records": [
+    {
+      "candidate_id": "p3fam_00e03fc00d193c5fab77",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 20979
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "81fbb0ae4142c1d4591a8db3afa25bcc5e7b05bd638fe7bad632b00c18196189",
+      "response_sha256": [
+        "7e7c90abe6a83688905147eee2adbbd6080fa3b9fd2ff55ee4a8de8c3c1dee26",
+        "a302d7103c74fd4d3c15f940dab3b1b80490e59d70a22a9dbaff35e4c15a43f2"
+      ],
+      "content_sha256": "00e03fc00d193c5fab77c44b1e403e381ba49d8f14546ff0823e6d6c13e14865",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_00efa369bfbe06dae05d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 6658
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "07084a43e8f616988fd3822b567448c2eaef4e3c9fc3e0bd5e68294c90fb262c",
+      "response_sha256": [
+        "63670536c1a30393ea9cc9b1878b75f81b53e69bafd161092b272cf806cb1388",
+        "b7e5c304ca0fe5d53820ec533526a2fa461e7ab7011b39334e58633bcaddf23d"
+      ],
+      "content_sha256": "00efa369bfbe06dae05d21ac89c849e0f7fdf1081ab006bb01f44ad8e803b7e8",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_0328184cf88dba4ede5e",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 19025
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "3fc4fb8ceca4f6cbd0af86ed7f88871f424220f29f203a6d15ef8e29b2f7a89b",
+      "response_sha256": [
+        "edc92b1aaca982153161fd9f6ef24f7e6573339def5d5a0810d4055b911d437e",
+        "d9284888e0b645aceb055b85e8fde5879257e9ea0db703a5d656a000854b5dd2"
+      ],
+      "content_sha256": "0328184cf88dba4ede5e7549a7dbbce7146dbe112cca1ce2fde6c062e8288cd3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_0423d3b908da2fac45c2",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 4662
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "19440fe3c7b77e94102501797cffa21af62f704a5764b5772cccfa0cf2cf0214",
+      "response_sha256": [
+        "13e843c95df2e4edc7712730220c4713577917e69898c04e231abe48b1a87330",
+        "0c04eb42efbf52cf77dcee2e283bdb5c62dc92e0f21425b5a697622defa667f8"
+      ],
+      "content_sha256": "0423d3b908da2fac45c25432f81f5122179195a6d2f46f4cca84ce5806be7df5",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_044c936667547a0f3d62",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 15382
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "b95e2b797bc5892a4e1bf3d25fecc2ebdd3d793ff97eefe611e8b69c8ff027a6",
+      "response_sha256": [
+        "bf3e0f6dcb7d8d3028ad305cfa73ccdd5f26ec8f6916fe42696fcfea52b85f61",
+        "1ad1f1847d81bef8dc6f43e43a5dc4b742001eea0e9f344eb85cb0688d465205"
+      ],
+      "content_sha256": "044c936667547a0f3d6259f44df8d28129d407dbb4b56b5dac4e25c357b64d90",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_05b2c005604d5afaa287",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 13400
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "9d38e4f10f4878d642e7deca144ce567f6504b54743553d95cbc39b9bc9adb55",
+      "response_sha256": [
+        "30f06fc0e09fbc6fd3c60214dbc994ea4fc39c7c917dc5f25df9be9f746afeaa",
+        "02ce3ca7145b90258c49c6f974f7acfdf74e1427420f4d4a8c01b0df30dbc840"
+      ],
+      "content_sha256": "05b2c005604d5afaa287882aeb85b13e04837e320018ed50367fbdb8eaf57abe",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_06ced1573e08208b71de",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 7249
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "f3631f001e57835706d30156d39cc2f4ad8e1413e5b9c4ca9faa813d9bb1e49d",
+      "response_sha256": [
+        "4faa73a43b158341b86c299c7a72151cbebdbfc849bf99522e47a2c52a4a4069",
+        "835176c8d0b4a78bbc7d48019b1860c4cc330ff7bc877a49c3e5f62a26a8437c"
+      ],
+      "content_sha256": "06ced1573e08208b71de9ae84de37783613d3b4e2331d90b74513b32d5b0a24b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_0746224b44a05057860c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 17495
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "3f68675824f142ece0899c7e0cc7d3599860af25a420ebd8a19ae11f7115abb0",
+      "response_sha256": [
+        "daa5f9ef54bdd462761d5578b2859d0feece639d84d94d2ec0ed52405f5302f4",
+        "c230579e10bfc5d19252bc1e1091101736788a79287667de5905b04dd7848d60"
+      ],
+      "content_sha256": "0746224b44a05057860c830098b2cb312db905142543506e2a2c2171a2321f6b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_07ca196e0047d5ead6bf",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 12648
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "86d96b42230471d00f8eaf635f9c1b93c10518bf9dbc169049efa34b9a74732c",
+      "response_sha256": [
+        "efda8fa55064fedcf7a23f673c7f9de6b0119eaf9f649f99d9eb481f035bc08e",
+        "2d53bf6a2dd60c365843d6449f40a576caee3bd1230045426a9485f246c4960b"
+      ],
+      "content_sha256": "07ca196e0047d5ead6bf681ff4e633bf6b0f49758f6ffbb3908ef39b8d20aa6d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_07db6921c37fa1c41e60",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 1741
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "eb0541167c483b9e778b5770025913536cda2233563b85839e22deb294e00021",
+      "response_sha256": [
+        "f8c4707b798a7a287c36ab885f128acdbfec63136ae784095cb43a5987ba5a6f",
+        "c6b86883d8d449abaa6c491ddefa61e88cecb50e9e2c4a970e33e3c879db82cf"
+      ],
+      "content_sha256": "07db6921c37fa1c41e605f33a5809b095096c0fa134b0c4ea010a0c7940f7b1a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_0853b4838e4bf8af3e4d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 25443
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "762b948e5fbdb59a043ee4285a59e2f64fc04ee10142b3b342de0ff9ff028e44",
+      "response_sha256": [
+        "e9f06f7a81d045c4b8e63980b70e35623cb1c5a38b224774b43306823122ab7c",
+        "4c9c79105a80592b5060af7a21c907c6c308a47a5211384ade526a242b9a4153"
+      ],
+      "content_sha256": "0853b4838e4bf8af3e4df53c731c25f59e7e6b3ef3c033dfc68e9fa2cc4708b6",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_0dacdd67712611c3d241",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 5051
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "9abc39c5c3f554b13eb65922c8905884b19de9d8ea1c3723fdc847b5f63d8f05",
+      "response_sha256": [
+        "59c867c1c0d52de4653554909a241fe67b9c48051905d6c2915b0fc53dadd2a7",
+        "d91282bdb3e3c51ecf1df3c3e284b1753e49e26e2a6b2a1c40a3564dc13d3491"
+      ],
+      "content_sha256": "0dacdd67712611c3d2412a64e62849e299f0bea847832233585bc023cd1ff8c7",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_0dc65e96122b4095c09b",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 3009
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "743bdb5430fb397143586d3b9b5991e28833095e8abde7ee7f80de0b2f6a106a",
+      "response_sha256": [
+        "b4e35fd5b5d2c17976af2a703b26b463fdcf569abaf52d8b5ac9d969a97212b7",
+        "07f4fa86f59138cee5aa44927b44a18394bd6b0bfd2d40aab1fef623bc20a62e"
+      ],
+      "content_sha256": "0dc65e96122b4095c09bddbca2166cfdc9c8c06746009d695e09390902ebf4ad",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_0e25102df53b3e3f13ed",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 18805
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "d5232e46ce9e9a15242c85d2f980b5a8cd3426a1b451d69ba4a65b8e2d42e5d6",
+      "response_sha256": [
+        "f81a2fc38ea67a438e40cce680f8b4aef341d98b9785b434306a9473a52023e2",
+        "3b7a832b497d32ee16f1736d4ac2701b11d3af8b0b0daeba11a6c2d055fc52f3"
+      ],
+      "content_sha256": "0e25102df53b3e3f13edec8a4da15cef7ac4c3b63c7f8529a7db24296bee55b1",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1012c82a341a89229b7f",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 13410
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "2641dd89083c96a072fc590ac7012d8491c880acf6793c8ae4c29ad9f5184795",
+      "response_sha256": [
+        "ad19bbdd05dc9f8214bb11d8804e411e822cdcab6e595f834c224392caecd04e",
+        "e39ca20fa4902fc090afb69cb5d4bc6e439499bdbb53ebdcb554001b244f478f"
+      ],
+      "content_sha256": "1012c82a341a89229b7f7f56a4cdec11d982e692c9e1ee2e36ca9a06cc15b461",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_103855382fa60550220c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 11804
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "84c17c4660ae810ff4557e74742c35087892eb35d2c8aa7b1e5e4cfad8a97cc5",
+      "response_sha256": [
+        "207cd8a88256f2e6cd68b59d277261f4875e05aac06bd1f1496657ef19ff0a51",
+        "c23056fdbdf6e59b69edb415034dfea393050c9dc214bb319253b6c68baea820"
+      ],
+      "content_sha256": "103855382fa60550220c556a6ad9816f31d964341ddd171f8581eef0013e8e3d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_10febee24141f9128aa0",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 27022
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0cb5a68a5a85653a71ed7f4e7982d1d89b1e6b262f33a197ff6a257c6390071a",
+      "response_sha256": [
+        "1890d271a24bf4aff5bddfed550a2e6e7276c03e72676dc6ff2989f6c971bb38",
+        "1aa4376a6514a2218114667626358e33f53ae19420db1dd30e4ac9894fe84712"
+      ],
+      "content_sha256": "10febee24141f9128aa0c963d954e152453cab32d45cd3fc9e72f007681d9a5a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_11bc0fd08e1bdbc52700",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 23552
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6b1bdca5989d0bc148d71efedc0069f7b225dc76e5cfd392eb8baf5be4eca6e1",
+      "response_sha256": [
+        "79e838807777c1ff9cf5b11e1d1e373f8ee9f469905d19409e3c4e2df5757390",
+        "c1409191226d0dc7db08d6bb4bbc1f75d0087276e8b1023d535d05df18f63731"
+      ],
+      "content_sha256": "11bc0fd08e1bdbc527001bc3cb4bc6c5d1a26b58c2b33f21765dc157205f4599",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_13404ef107df24d201ed",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 10956
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "3d47b558c9a7e7c31bba8877a73586d9dac532a4991c3fea14329ac1c04f91f0",
+      "response_sha256": [
+        "48ba8941c06e1762e9f47dd59c3616254fa12d4895e4ca07399cc94cfd1fed41",
+        "6770d395fa2f7e3aa6e2054e71f89ca5405e9fc3981feb5890af85d202dc601c"
+      ],
+      "content_sha256": "13404ef107df24d201edf66d1c0a0f6fb32646f997925b881258e410ee62f597",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1429e565c9d4f15ed3e5",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 16241
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7e0e1b51b5ddf67e2ca4c826936bd5ed592b0f5041f22bc13a3cc716a22723dc",
+      "response_sha256": [
+        "196b6426a7706e612f7aa770bf2c833c73055668d53fd34ebe68e9543ad90553",
+        "c690e9aac849deb69f8d0ecc3bedeb65ea3b3333a46222c86f245c84f29ad191"
+      ],
+      "content_sha256": "1429e565c9d4f15ed3e5cc17c4b144fa05aad1d11b9a8d0cb9e3e85ef7cfbf0a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_148172406db56a6e2240",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 19430
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "471b84f340d4a4aa283de0b166d795650db8ae5ada627bb8a1a72356cd4db9c2",
+      "response_sha256": [
+        "9ec8fe7ed0491514a7db28e007f224fbaca9be727ef0efcc278dff8f6a5a1932",
+        "53ab5f5e8bf3191e6a69643dcb04c81d26f682d993027e3e8ddbca978d01c0e2"
+      ],
+      "content_sha256": "148172406db56a6e2240c0cb14ca2b5870147d2be7fea519cc0cdf261442e2a5",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_15c1a119a8c841081d5f",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 20289
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "696f9243a93e6c405ae2408e4c707c7de64da105a24c7fa29ab4dca7465279f5",
+      "response_sha256": [
+        "ebd7fe5bff92370a6edab55e510382370054dc9927b534daac9896b315764a45",
+        "a770f0753eb8fffd8282260ea481730a70ef2fb71a1fcca7009d12a6a36dbc97"
+      ],
+      "content_sha256": "15c1a119a8c841081d5fc77922e3a1b7623429633ce65a03f0213c3685e32928",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_18c858ff9c798b324723",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 16518
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "b3838fa3e1e8209d7d666876061a7d239a4165abfe80aaf5b25e55f978dbd5fa",
+      "response_sha256": [
+        "6ce961335551d35e0682d4be1ce124ec99190ef81faa1ae2808cc9a7cb81aabf",
+        "f64e7bf71f876642ee3d3b9edb49a2f5e69c43b44dab1343f1e435b501eda091"
+      ],
+      "content_sha256": "18c858ff9c798b324723609c1f115eff484f6a639ad9d6000bbdf9ad6a094dbf",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1aa2ed8b104eb2e1535c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 13587
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "42088e26b1f8f56ae90cf261c144de86788cd3f008c2c3b35008e96b4b1dd566",
+      "response_sha256": [
+        "0734235d9e478e1e3c846fab19885e28c89536b020d88bb22bda48f95f73e2ef",
+        "c9e4c09ee6c562fad0db006de04d8e161a52f387d71aa4bc8d5562c54c940b22"
+      ],
+      "content_sha256": "1aa2ed8b104eb2e1535c8702137190d2b84ed0deef0857d001aafb3fd6f0cff7",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1b29df9799af36a95279",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 16401
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "6b05b9d0f3c8fe0bd3d109886d7632c53a08844bef01d20458f982f66207234b",
+      "response_sha256": [
+        "f9df7045d1a8846db44d959553bdd003cd277b43a11875ff788f8e11f0be25dc",
+        "938fd595673c6b07900679db06beb927fba6eb1f6c904af3c0838d79cdd33784"
+      ],
+      "content_sha256": "1b29df9799af36a95279389ba0f9108a377053a2a481ad0698710cd8aada6c6c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1cedb83e830120b7ea53",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 9899
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a732f53d07d71b2847a054dc327f3cabee2f6825903d5e065003c9b9f754c503",
+      "response_sha256": [
+        "b315ea05925af1c00d3419bc544200537d8096d386de2de2a45162a852f19da7",
+        "7b6e693db015fc09c9bbb0caa95a75967f839e432b5542450eb54d30c7f894ca"
+      ],
+      "content_sha256": "1cedb83e830120b7ea53f4f014e145b009d930368c3ec1f8dd888fc28a1abe90",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1da7101bb994a26d3472",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 15044
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6512e211fc63da1fcb347b533d3d3c1136222f2d3b668cf3ef6c5c0fc82a98a2",
+      "response_sha256": [
+        "0c15eabaa802690beb158ca32e333fddb0055f96359e4a881abf87a8997c195a",
+        "4eeb135a45e6771b52bc48dd58a2125c38eac6110b37eac66c87a241d5a4bc0f"
+      ],
+      "content_sha256": "1da7101bb994a26d3472ef61b8934192c8b3c46f8588d65bd2934c338956deae",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1e92e906f8d7f3c46973",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 10764
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "723da2290ede3c03adc11883a7f2fa93fa2158e36b222d0088c5c1fd07c3805d",
+      "response_sha256": [
+        "7746e600193f86703daf610fbb4c61696d669de9576dccbc9cb06ccbd671e96b",
+        "86a47641d39de3c93309cf78bb4faeecb20c6831bdf1c3e9ee012977492b0805"
+      ],
+      "content_sha256": "1e92e906f8d7f3c46973766f24e7cde31b6bd268c13ffe1f07389ec5bd2f6d27",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1f07ee40fe6b525bf3d9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 10928
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "57b5f9ce1c72d8ab5af701043226031e288d4c8822363c3d6b8313e1d2727b66",
+      "response_sha256": [
+        "7340e2918476b854788d680e7d4e00d96ecb6e4772e734bf12b1194eb0d8f587",
+        "f9b66aefd23ab0fd0c28fb2839a6af6f5705104f4d4747a91352cdc4b99b36a9"
+      ],
+      "content_sha256": "1f07ee40fe6b525bf3d9ae993ac7317757d8034506ccb96db472aec4c76db567",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_1fe3884b6529a0d92054",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 5691
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "d6ced90ba057383ef31800496b93634dd6b14189699b88630d4a36d2b4279e0b",
+      "response_sha256": [
+        "a3e09d4adbfcfdb34f49a6f6709e0247aed03f6aced87c2088e66959d20f463a",
+        "eff3adfd00ae9727e91ae86cf67e931666fc42f96d4c806a74848882e44834e4"
+      ],
+      "content_sha256": "1fe3884b6529a0d920540cc257b1526bed15301e65b827e196a3a4491bd64c49",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_224790ba9c02dcbef5d6",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 20463
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "86737c2729387610c49de010218388325a6669843bd122153a12ed1ac36c0511",
+      "response_sha256": [
+        "8ac415cb964f55717bb9889b96a2b4083522b6bfb583ffe07cd6cb4fd1a9ef6f",
+        "e811bf606d38c6723f9f49215eedcffadc116a03c28d65b688c5afa93b1d30f2"
+      ],
+      "content_sha256": "224790ba9c02dcbef5d66afd158248a18e1de1c518304ee6d21a148b41be1eb7",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_22d5b2671b2dadd38fe6",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 9553
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "0295f1c5c6c66c974bba6fa013b8266452589039167b4d3cc0fecbd0271a6139",
+      "response_sha256": [
+        "37a2177d516a81385d8c383fd4f961d273662e2975a71f2275b08f49bd9d66ac",
+        "d5cb516feb6558f42d60f2a011367a27634b34cd23f2de85cff838d3357ed9bd"
+      ],
+      "content_sha256": "22d5b2671b2dadd38fe60904b840983075f4f29553d3a199c854acc9a1958735",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_28a373da15182585c5da",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 21705
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7f3df489092e491a06b64a123bb805daa4369b2970ba02a550d568cba022dd63",
+      "response_sha256": [
+        "a9c68eff6d775a058e21e1c2c216dfef41cb0c9ce053972c32f49cae8bd67e73",
+        "01683603ac4f2b3693929cf1bae152077c96760edaf746619d679d48cece6456"
+      ],
+      "content_sha256": "28a373da15182585c5da5eca660152b9128fedea2cd223d7f59b9536ada3bb95",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2a27811c920395c38a0d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 21035
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "5dd9ce7ea1dbbeba44e8bedeae71db3c8b0315b299e85d207e42063af92a7582",
+      "response_sha256": [
+        "51133f0b0312caf2b4d71d8439aa175d61b307f08076de30a29b6c64ffaf007d",
+        "5ffa4b5859e1341ea7d69fa745df0f6cad52f4cea0f79dae579c6f9af2cb253b"
+      ],
+      "content_sha256": "2a27811c920395c38a0d1b15f26e05f55c4569bf35662875cf2157d10c0a1eb4",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2afe67a4fe387217f0a5",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 7063
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "aa4c767bf068dd980780e0dcff1c10d7cb746c1f47243220e9b631486550b3e1",
+      "response_sha256": [
+        "166eeb9cc08b6b7d7848d03d072a37f6860b90bc660a854957f35aed9f66f78a",
+        "1f273c012d8045d17bc969ddeb6154987b5f3543f5b8057d190f0053e0c85373"
+      ],
+      "content_sha256": "2afe67a4fe387217f0a5efc0258a40ac796872c84340bab93f453c4df8d0e34e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2b5132087c5f7fbbdd78",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 13806
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "28650a3d1de969483c0effea529f8609d6e447f0673b070ba3f7aaf318525187",
+      "response_sha256": [
+        "0a096830462f528379776fc84349c62e334b7f952faf390f76ed1134c178dada",
+        "caef517f13cd3d16b7dea1da7e22187b3982f0703dde27389e63b82160742222"
+      ],
+      "content_sha256": "2b5132087c5f7fbbdd781a427507a773836dfbb10f9cfe263a1f462d0c8a2666",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2dadde46742484405ded",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 13947
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "e038dd60f50c37dc5d8731d68e3cb6cf04337df00f7f5a5ef696086ba775e892",
+      "response_sha256": [
+        "4789c575d2ec7b9618cd079d5ad1b44d6d802b15ac0d7679873d4555a914fb5e",
+        "a2ea83c293181293fe0aa8a25b9650290a4c2e18667b3699caeebb7e27a6a6aa"
+      ],
+      "content_sha256": "2dadde46742484405ded3c349d18836b0d80ea0afebbebb4940e2e469d4ccf46",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2e197a6912923b69b4a9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 16249
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ff9a5af16d658e40828c3078fac4564c88cbddea34ca1c706061d10ccc428f31",
+      "response_sha256": [
+        "9d4508bb87a8ac1abe0bbb1b9759d8931a825387b8f6f7fcf0d1ce49828ed3bd",
+        "9c348a1427313b810172d20fd76d3e318028dd1c42217ce8c9f5548a4df7ef74"
+      ],
+      "content_sha256": "2e197a6912923b69b4a9ebeb1844282f32d1a9c10a8046046affefd658a83e63",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2e6dd8c2613197a56142",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 24164
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "4b70945a1d71e5f28df0505ff07940700c86bf91b76ba361e38edd9da9f28fa0",
+      "response_sha256": [
+        "18f1f55a1e64f56545a0bc1c001f517eee2d4566c9c42e16ea8e78df44cd5f2a",
+        "1394382ebe8b3ec0569ac7d4f386c886cb1f933ff749d788c414f51c564b23ed"
+      ],
+      "content_sha256": "2e6dd8c2613197a5614213fe9850b827b122a12a59b052d3fc81e06ea42aa4b2",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2e8bd14d0b649065ced7",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 16471
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "08a0f94f02e24bdf7aa800ecc0af513a8b6022224331e79227bcd681b5f5cad4",
+      "response_sha256": [
+        "04d14d562bde3c999f2e7ecd68eab29a0fbf311c85640df9dc6c8c98e9bf3591",
+        "23baf827cec14d8ecbaf964acee3e7b93b82ae5310c239ed7d027e01dd123b0e"
+      ],
+      "content_sha256": "2e8bd14d0b649065ced75bda2fdf5caca090cce5b24056a349c5ca0d74ff8587",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2f51bf2430629a2229c3",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 7390
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "539a2910dabd318059b89a60e088c852c773a97de4d277ef24d33384b90e9fd9",
+      "response_sha256": [
+        "c4d467c6eb29dfd4d928b3e3b268dd011031265e236eb677713c5bbc28e0e6bc",
+        "09a6972e1cc8da89ca2c621560d4106caa16fb73d687608c66d28eeec060bae7"
+      ],
+      "content_sha256": "2f51bf2430629a2229c3c14086a55fcd46348559f1ab939bc0f7ddc30e0b8e8d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_2fddc25cc497a910c0fc",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 27808
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6ec97d4e300569b64490cf5665a2f5debfdff173aa36ccb4dc04d08ebb4feb99",
+      "response_sha256": [
+        "e4741bf610f89a0f1b9942eda80eed59a0587392b699abcfe014651ad685b7dd",
+        "35c9837460a24ff64423e72617f9ed599a6fc31187c1788c4c56b6b2251c20d8"
+      ],
+      "content_sha256": "2fddc25cc497a910c0fc80b60a7508e70bf806b6e86f024ac7d000c49c53a658",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_3041736d3f66c6c48388",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 9749
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "464a71ee95895909e4fdf98c74c818ccee7137c341df748fee2ee96916ca055e",
+      "response_sha256": [
+        "ec76c69497018d31a884bcbed9311db56722f9a73e6590a1323eb5877168a0e2",
+        "257467d1c0bcf800c2211b1e469209351e625e696dbf05137ae4f36daca14f76"
+      ],
+      "content_sha256": "3041736d3f66c6c48388744def39d7d247859fcc1656e9ec87064e96d180976d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_305c76ddd9c9f3b59a40",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 14011
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "b440f5444b4699db49596e2e2340a7d0bbaf17d374be012587da1071ae2c3e00",
+      "response_sha256": [
+        "caf34c0d1b46aeedbb41e557ab02e7223b076e819208019bf28180f845ead0c1",
+        "7716978d2d644035de5f2bd58626c69ffe2c305fc98d597cb2e2791fe759e217"
+      ],
+      "content_sha256": "305c76ddd9c9f3b59a40c50715db19c3db07c9bcce25a799b8c0284cb7529c1a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_3087e5c40f4307843417",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 18150
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "d38830729abe87f8857484bac0f5f210b712b9dbb5a1ac2eaadd39008f332e53",
+      "response_sha256": [
+        "eac95222feab2d014e00283b5a4cb75de3e5cf6f583a2d793075532df0ee7554",
+        "b398902c5a40e183d16514d3a5bc3c6f7d3dcb83ef6bf76398324e85ffce2f23"
+      ],
+      "content_sha256": "3087e5c40f43078434171ada7118b669cc4336acf0ba952d672397668d6f5f3e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_31599c9e1b23b291bae6",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 2254
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "5344eee7660eac27e3cdf74ed36a6904f284c327f1fc86f56d66512a500e0661",
+      "response_sha256": [
+        "fbe7a66decbbf23ea3e37635619ab2ca1faa4ecad5d661b07cd4a0b45b3850ac",
+        "bd5db04837489513ca66f67a545f5b6c005bff87c8313032af86be02138b87c9"
+      ],
+      "content_sha256": "31599c9e1b23b291bae68dc537d3c0056f4b042c1e48dd19930236b1c905ca07",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_341acf23b31b49e54461",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 2896
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "f4b76586b9a22cdb3437a37bca0d641d63de41f70ebf99127c01152466992aad",
+      "response_sha256": [
+        "8b8dabe8581416c84c922e2be532f1d8262c32e3d5cbea4da0eab33510f927d8",
+        "792d51df72b2a42fbba8b1fb6929ee989df97bdeaf174e976d6e7e17a895e76a"
+      ],
+      "content_sha256": "341acf23b31b49e544617ba2b100f5c5ce706f6d80c98f170881222db9b15527",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_342d61f9df56fcf4be62",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 11892
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ef578ef4bbcd1a1509ccc0272d52d8e3cae9e5f25aa9f494424aed0da4ea33e5",
+      "response_sha256": [
+        "c313f13d5fe86009dc628561ef44f79783b88259416206c1477632213d4731d3",
+        "337c4569a3b13ddee827d24f18a2d4d87e6d5fc77ef1bccfe9a10c51b5fe7845"
+      ],
+      "content_sha256": "342d61f9df56fcf4be6200b396cc9ceb60fe0b82960a713ce99501a66a3e0144",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_3642f795c358bdcc2c65",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 4760
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "83cfef366bf967aed64fa6c005a6bbca05b75cf36bb5a3f9e18eadcd44d40b7b",
+      "response_sha256": [
+        "75da7a8ff60415432bd82c83f1edb92705e0c71f7ac76c6cb5825de9f33e214e",
+        "5e6745f23d0c9afd8875300f3b4583e09f60eeba86f0a6567fa7dfb09a35130a"
+      ],
+      "content_sha256": "3642f795c358bdcc2c65a96030728dfe597faac4be6220533861098d2f1c2677",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_3698a636747e9598ce87",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 2354
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6cee97db307269283219fea43e584ae0659af936e071291ff1a6258ef6679985",
+      "response_sha256": [
+        "cce1ff9766dc85672796edf01487134080e26e7ea6f1c06f2fdc04928156e010",
+        "7f18ce876ba5ef5d390765509fe6d1758e04c901f850fcf350fd6679329323cf"
+      ],
+      "content_sha256": "3698a636747e9598ce8796da99e61c16d03ac0f5d34ad35134125a48b5b3e5d1",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_39853b28b026e3ff039e",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 13290
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "08684656b54042c9fbc7e1ca5c66ea22a75c02f02984915d753fd062125ba407",
+      "response_sha256": [
+        "0e3d4c422605f030723f906c629aff4cb69c0275a4a2d045ca51716ec8f47e61",
+        "d125a7ead85234d5be9852886c457aabdf5c8d8f3297e4bb9068596e3c465906"
+      ],
+      "content_sha256": "39853b28b026e3ff039ebaadbf20b4bb8788b2a789d15591cb62c872a5289d8a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_399b504c9dc740cc938c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 3438
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "344d6e90af80654b79e973132586c3690ea90a706cc81f84aa0f68c00596c17e",
+      "response_sha256": [
+        "fda6b763b122d0e553edd6193b15231a1f1704ff419f4f2f8599b8b62ea9baf6",
+        "993680751d3e767d6deecaac10eebe4737d04c820ffd760083274640d11eb506"
+      ],
+      "content_sha256": "399b504c9dc740cc938c7e40e8043368871fab3813fe2b89f8b53bd0fbd0c3a3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_3a49ed6a8363ebfbca7c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 20563
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "222fdf07105bce6cf1a080b2cd99da5567b35553756784e3d0995271cce7690b",
+      "response_sha256": [
+        "fcd66380f9a6fa929df35a07777b00ae89348fcefb5101c6ddd40d09f5a8dd00",
+        "1336595c0dbba61a32624f896f94bca7848f6283a9652dd693dc44dca545338e"
+      ],
+      "content_sha256": "3a49ed6a8363ebfbca7c604bb8ce55b5d4f58a640757f4aab1a3a4cdc1ce2ae7",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_3dfb138e6c3f446e67c9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 6041
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0773cbd2436434244fc163c659d53188f32b1b12a4237f9e25e5b35b717568fb",
+      "response_sha256": [
+        "92881bdc93a152e2e743307a2da5db67ad0b9e8c718d85bdc1c7934588315a97",
+        "3565ecb86a9b7c5a066e7937cac5aedcef8bf0f07520db07679c72bd5739d3ec"
+      ],
+      "content_sha256": "3dfb138e6c3f446e67c92c3d8c19195c634f467f2927ae45361ed93b229709d6",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_40515dc6ddea76161b08",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 23827
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "6d751fad98859e43234277586c2d25f4db7045394b733fc35ed3a239196563dd",
+      "response_sha256": [
+        "31b37dfdb3bf3cdf917243852126b910e12e1269c9b74b4e1ea0f51381a372c9",
+        "fc9e56f7ee806ae01ff387b21229922ce19936d7abcc24f852bb4b5d9677c2fa"
+      ],
+      "content_sha256": "40515dc6ddea76161b08072c142d3d07126a9cab28f7e3da6d4811f2601b6109",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_411d05173ec6b0b8636e",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 22701
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "8046592df0b11ad51031875ec7dd396777602a78852d1ed58d8aaeb9f5fbd3da",
+      "response_sha256": [
+        "5ebb2b00f63f27cebf9a9973aedd53656c75da19330feea21385dd0e59a2be42",
+        "3c8b17754698fbbb17bc567119af84d51cb9443900395e9c541a3abcaf5b94a6"
+      ],
+      "content_sha256": "411d05173ec6b0b8636efb809713994426475953fc11b706c16e08219185b4d9",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_422adda4bf2912200257",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 11115
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "2b7510c36c05ec3901d9805fd1c46e66289aee7588449c8932dba107c4a5fc35",
+      "response_sha256": [
+        "59b252c83e82ccf0c1c38dc9429514765321e573708a19524d6e7575b4b91ffc",
+        "b97c3635a8fc771e2d37cca6b8c72dfe55d48e9be7d760e918b8f937f0907e89"
+      ],
+      "content_sha256": "422adda4bf2912200257d1dc2019ef9963875c329b14f7765852799564d36193",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_43b43d3e83bc8a55ccbc",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 12237
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "75f3151467c55c2a5d16afe240f3063d29bbcd61bb26d276d1c668829dbffa33",
+      "response_sha256": [
+        "9f971246ec6352366391a086f503aae6cb8686cf8ba90eaa9af64a188b6ce0bc",
+        "b4a0cfa92bbf7e81d4905e1cda64f3e32990a5573bf838b6f109ae055f6d774a"
+      ],
+      "content_sha256": "43b43d3e83bc8a55ccbc98369a0724f844b8af08692cfb0a96ef98d2aa258bc2",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_4437a59757780a0ae878",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 22968
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "beb3b5dd7cf92406b6d76328784a48e85b413dac22b637e4afbf0957e8e978eb",
+      "response_sha256": [
+        "f484f9e2c5d6c997cf8d73857d698c66155d744fdcac481bf0beb36d99d6c1b7",
+        "3191268074528d9342944b9d1bc8ad37775c42799e4682bee5122c235b51641e"
+      ],
+      "content_sha256": "4437a59757780a0ae878c46fda08a4e4e5daf7feaf7d1304097ef554afa1f7f8",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_4437e87cd8dcae2d2251",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 5446
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "1da65162d09f606864742c7589ffd212610a73f81ce69cb30a00f9ed13d7f8d6",
+      "response_sha256": [
+        "6cec8fbbf0e43729401f9c17540c94f667f7eb6c7965460b20851c3803bfe310",
+        "87236e1ab258886455588aa039ab4226c2d54fbf2d1b367c7d9b43d314f314f1"
+      ],
+      "content_sha256": "4437e87cd8dcae2d2251b3f4601bab218bb8a5a0455b60fac12e9ee058409ab3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_448a57615ab911bd60ac",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 1707
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "1410ec7424096a4ea2fb75e721bdad98f4f7b91e8d292df35f06bec03e4ebe4c",
+      "response_sha256": [
+        "b2562fe4197c0345d55a1a0d1b405666ea57247f3b65e32f16c7b7fa58ebbedf",
+        "151cd77958a871514e50c37ba29bb04f25f4b00570cb822838107d963fb734ae"
+      ],
+      "content_sha256": "448a57615ab911bd60acb19d07fa49713d3c19b228b396bcf65d1fb66dd590b3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_44da717cfb368ea1d7fa",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 7363
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "b3bde97192b57f737e1ac9897e20921e1fc9da48b8ebdf2005548cf441c471d0",
+      "response_sha256": [
+        "d3c61445134b0b345255fef372b0490d430d782b1df26c8accbb30b49709378d",
+        "7b0d0d3c5589ec0fabef63192a54533b828e926edb60e4603356d405b36aaf05"
+      ],
+      "content_sha256": "44da717cfb368ea1d7fa21af2616878efcaf0e9a61ac27c28af17d2f2f1d5486",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_45a7218f52af94611ee7",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 17324
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "9f21aa5a7d9608702162032735b2393688018758bcac12b5cfd5e5127775d63d",
+      "response_sha256": [
+        "55a70a9cab84aa3602f3a096519f66e98423f4c15deba5c5b35eeef8196811ee",
+        "f69357a61054e4ffd5c5b73d6b666dc1e4fa140cc58062da15db7b7a05f51026"
+      ],
+      "content_sha256": "45a7218f52af94611ee72cb33534c312b2a02ad74869c492f1d3f9cfc97094af",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_47453bc80e7353280021",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 14678
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "24d563907bc64a8d132ba755ac4e999c90879f54951eb6d67420e55aaf5e5ca7",
+      "response_sha256": [
+        "c00ac01a95aa01562ca5e1cf220896e046e731ebd8b9624426fd8886a7caa186",
+        "0184b8ac904aba9ef01429ea29b92d1c9109fa17472a4a1ce56063e78d968d70"
+      ],
+      "content_sha256": "47453bc80e735328002184379bdce123c2b7493cdb94e91ff1e8a550125d4efa",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_4811e9d92599970c9388",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 17232
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "df5fcd23ccddfcffedf25f6db64361bcacc17a50549548236559f53cf73074a5",
+      "response_sha256": [
+        "9ad1d905751b47defc71a2d117bae7bf95e9fefde816e5bf5d4d0c84700b2447",
+        "fa8ed68e7466e8444ebe8840c3e6b29e6acb1f31b72e7de54171c774fbf6d882"
+      ],
+      "content_sha256": "4811e9d92599970c9388492ae3c710a019a6d6258e07d9e2ede377a36de5d820",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_4b51e7842fb85fb0afc9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 960
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "32bd54a5610434144fd89836d4d9376bfe3d2d05bd9dbb3f1bd73dda3c486fa5",
+      "response_sha256": [
+        "13822203620432876c36822241ca10d881b9f03fb59d6eebfec509406f4634a2",
+        "8bd66c51ffb6b008fd1a3bd941abc2acdd1ff934aeef1bbd03bf6718254ae971"
+      ],
+      "content_sha256": "4b51e7842fb85fb0afc9dd8c64469bf70cc77aeec866eb0526277bb49c9b158e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_4d0ddc2a13d1e6bc2f47",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 20902
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "bbf1284575f33cf0dc80eb6967cd126b2ba6e0337f7fbaecf578f70d90d95eb2",
+      "response_sha256": [
+        "461410495120369dff5ab1ad214542fcd35a5b3614df194f28ee7b1b89cc3242",
+        "c39ef3682df1d87fd9252261a5728071f3a400512c81e52b3fb60de4734f87c7"
+      ],
+      "content_sha256": "4d0ddc2a13d1e6bc2f4719cfb11d1736636b2cf3b5598f84d4c89f094afad99c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_4e8c21cbf2e5504f6204",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 1610
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "baac723e64a989736902b2c5376daad9eae6e550da4ede07ba8a5202862ba4ce",
+      "response_sha256": [
+        "6acae28baa803158dec3bf75f6c8875731f39802988deb1f16ccc04a0238ae3c",
+        "4efa7b8e4bdffc2ca05a6e34e3465a51e65a22da35becac5a6aa205fe849fc4b"
+      ],
+      "content_sha256": "4e8c21cbf2e5504f62043515015c72b91dfc3af2ab3aab16af6f666558e005a8",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_4e97aeb0b0a9904a21fb",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 26647
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "d0c61aa069cafb9540db30f6da03c9711c39067fd3514ff3e3bcc4c21a3cd500",
+      "response_sha256": [
+        "009ff3ca3bd80bcd11dbd9cc0d2818b5174097302d5d581ff701f8224978f728",
+        "1c5aa2dddf8a6122786e6f75f5f11b5a1d54dbec64f4635482855abcd8761c83"
+      ],
+      "content_sha256": "4e97aeb0b0a9904a21fb12ad1a3da9cda9b77433f1ac784ceeeb47fb1dc05af9",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_562e7205807e641ca864",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 16049
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "980221b1159be1329516cfdc94768ef54712a146eb539ec5f572dcace8756f41",
+      "response_sha256": [
+        "dab408c9d8e632aecdddb81fb1f8240dad1988e286b18dc86da2d4e627a7431a",
+        "1126f463696b251ccf03b2e6516397174482971c81034f4681707f4e6f0033e2"
+      ],
+      "content_sha256": "562e7205807e641ca8646e08b3a408156b6a0102f58e4d8df5f58e4c32e4f35c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_5a0ad0cc2c2511142a79",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 3828
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "add82082bdfcd5089a0231917ae656dae1823c1d4a95c51b254ddf2e92d8a3ba",
+      "response_sha256": [
+        "eebe53a28363f4042f31705ed3d741365db1641ab97456957c78e24c483c047a",
+        "0af5165b28a501112984569d4e7e067611f002864e6e3247020bc334c5fa75be"
+      ],
+      "content_sha256": "5a0ad0cc2c2511142a79e5bcaa34156ca3e7c5c733ff27643e1b4c98f00b85f9",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_5ae770b693ebd8aa1a5e",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 20704
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "712a8c78566361276551a111469b638f95b88a1f27c8c45dcd2e132f06b489aa",
+      "response_sha256": [
+        "c64f5d81d76ce6ce69dd7a379c0e6c354560715da593fc33e11fd227ec17c848",
+        "098ab490e983a2ce5bbbcffc18b85a171ab3bca1cb67ab7d76a184d4dae4eef5"
+      ],
+      "content_sha256": "5ae770b693ebd8aa1a5e52a676dfbdb1a51764821e6eadd087c1e97a11f64aa6",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_5c4945d36c625d6cb4f1",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 25947
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "9503a60d100b5fe8532f255f0a09bc38c797506e7966645ea6beeb6ef7a996b6",
+      "response_sha256": [
+        "dc50926d703e4bcfc566a0b7e1a19f5a8df68fec181d2fd8c64f43264e17fd22",
+        "7afad8a70160a86e66146de99d4148acb63f04dd70bda5a43fda97d6ce190b4a"
+      ],
+      "content_sha256": "5c4945d36c625d6cb4f173579ca6f8315425c4ea90044b89b60b218c6f30bacb",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_5ca1b6af70ec418023ce",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 14119
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "60dccabd7909a61d29b7b318f308893bcd396a0b537095bca33f98d5ce96a08d",
+      "response_sha256": [
+        "da3e898e8ac26c1e7e7eb56d1f7b0ae85e59ceb146fbbbb19af86eb12ef3254b",
+        "ad074dffc0cb57ae9a53202261e171e187961b0ff2c670b8c79c9e1456de0a4d"
+      ],
+      "content_sha256": "5ca1b6af70ec418023ce3a38e03810e06d721ef989cf0cb7730f1b4264e9ecca",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_5ce357481111b52f7127",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 6424
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "afd6140ee46b163a76527a7a154c40e75a5beca523f51e4e1dca70fc00362c60",
+      "response_sha256": [
+        "7b7dd0c22a5c41d53855455bbf71c3d2fea4855242fbdb461cb68c9982b6c3a9",
+        "c82f5189eac97f710f7aabd8f9d440347f4e7f0d3a653c2acea9d0a8e6fe836f"
+      ],
+      "content_sha256": "5ce357481111b52f7127c010586d377523a39688fe0404cc6b899e334752a73b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_5df81d574b1304243e66",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 1583
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "5fbd676d4a0990e91420a2fa7fd2cee15220478a15da823a1f428c23d0daad66",
+      "response_sha256": [
+        "ded0530911b299c555dd8b193e90842d6e7cc245470e2e35f029ce269672c9f4",
+        "2133f9535c9bf99478afb7d14573f62c63414a76c219b5795ed7fea6bf472526"
+      ],
+      "content_sha256": "5df81d574b1304243e664f86f1f1a4c5008659426e7616b9725a603f53827351",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_633e65de20abc51dd227",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 10531
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "6fb72bf860381a955869ec82535a790fbf7f0da2728b570efc93d22e067ea6af",
+      "response_sha256": [
+        "300e7e3e8c68528e903ba28e3e73e986aae3d7f27c67581d8e5d13ad2efd9d4b",
+        "aafddcdda21f039c009db0ea87536705bb987c4dc5af7adbce338be96a386556"
+      ],
+      "content_sha256": "633e65de20abc51dd2277e86ee22b847f0660959ed8c696f467a96a1d637804b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_64df2de554ff146e8177",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 17287
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ab5fc61ed97bf32a4be8f7c6702c69d5fd884d74dda749f65d607df7edb56486",
+      "response_sha256": [
+        "845987d82bb7533c0dcdc690019e4671fbd6543fa742d904f41d86992b54cbb7",
+        "6353b9338e47b53dd960405d250272754998b3ff7a8bf191618b7ac1a1665074"
+      ],
+      "content_sha256": "64df2de554ff146e8177855c4d3dce7023727b39a05f5987f009e9693a837d65",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_6557a457a121922c1ef4",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 26009
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "4a00af124957c9a997ef7c2305365bedbcd0bb8b4d8d51aebc829f558257857d",
+      "response_sha256": [
+        "a46de1ff4b6e0a0b8cd036a2bd0188f696247c31ffbaf3fb8fe5b3403c9ea31b",
+        "adba9476416394afe46ba43159749717d11d67930dd40c66fd87c2945c2a5e24"
+      ],
+      "content_sha256": "6557a457a121922c1ef467b5927746bc2b75b87c5483adb0f2674c31c8e23fb8",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_663e8e33fada58e245a8",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 20179
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "c1b3a6745d25519d6da13274eb98bcc60dbd686f8e8c95ed979a61c4d259e65e",
+      "response_sha256": [
+        "92115846d4162e7f5913d10e4873cd3fdbac254719d11ac253a26b54e062eb26",
+        "ca4be92b67959b1114b69290c330588d6c9f1f26f26992ded3cd70e7cf98658c"
+      ],
+      "content_sha256": "663e8e33fada58e245a8ca6a8b7012cd51b22913cc9dfdcded0416270339e8e4",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_664b2075398d387ac1b1",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 14160
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "134bce8532a04867cbdbcae5bf6d39a5ec1880f41bd03afbc0280e01fb939f7f",
+      "response_sha256": [
+        "44ecbaa3f1fefaf9776093b0c9c9cc0de139e1478e36e8a87184ad446edb5e4c",
+        "d019d6d45847ce28f051e444fbd615da6e546c1a215618e2d739f52768e323b6"
+      ],
+      "content_sha256": "664b2075398d387ac1b1131f9c7951c8cf3a1fed660f07b1807c82189f321df1",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_690f347259fc95d2fa27",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 17033
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a82b10b1daa5881fad2924560cbad2e2a6c122f5fb814c0c0573a116547bf48f",
+      "response_sha256": [
+        "b7b1ebdc766173ce329ddeef9f5ade0b3eaa566be241a1f4f7a66365a0ea9db1",
+        "6c4210a5a6ff7622f7746278ba1f5f862c5e06f3a5b617e2240cfbfa9ef3d069"
+      ],
+      "content_sha256": "690f347259fc95d2fa27ac9e2f11d1d83a0e5bc84144d32e60d35a6b0edea4e3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_6982e71e9041a0b65dce",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 9359
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "366d3734264cebbff0e1db817c7102ead6391732728b636334d4ae280c8217ff",
+      "response_sha256": [
+        "76f0dfb8a94f7486eca7a10ab23767b2d1e8da4c8544ef75042e7a69b69e7746",
+        "f02d74bb01ec0ad7e4395124413f6c90bff7fb769ca6b87472b84c6dbf793a04"
+      ],
+      "content_sha256": "6982e71e9041a0b65dcebad46ea618598faeaa43f1fd7e38fed2834ca53a08ba",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_69fb47a6defa13e2320a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 13305
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0116bc0bb25464be011fb18bdd27c3524b52ad6d99f2d9a579312fcebb1964f1",
+      "response_sha256": [
+        "0bb6826d461958eaf2f2a3242436b84fe7d7918267d151e1111e2cf77fb2ed79",
+        "dff3277becf326b07d234405b9f234a528fcaa6bf856c9a48d41f80fa1844d2d"
+      ],
+      "content_sha256": "69fb47a6defa13e2320a94b6bf281fd2e461f9151245696e9f5c683a42c93f52",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_6f1d884bf71c1e5f2890",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 20670
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ba5c9d61d7331e28ca3de64d8d2ded70d02e7afc2893dcb96c203d8326ae3ac7",
+      "response_sha256": [
+        "f0fb6e7d7aa267fb0e3172b5801720e082b015c84d8026542d4ec876fc3b2778",
+        "f7ffa729bfd29b933c28db0837041c3e4fbc1f124ad205236017daf971c15c96"
+      ],
+      "content_sha256": "6f1d884bf71c1e5f2890fb1164e6f139cd2fb10f074def932a6e7e7456f9a5a6",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_6f7a2d25318b624c8a3d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 27700
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7ec2dcaaa5b9c91fb7dbc75db6d886bd4735279189b0a0684d4a035aea2d14cc",
+      "response_sha256": [
+        "e951271a8a855ba05cdcfaf7d4c9c8969ab56783bd7d71ffba53712bcc849b40",
+        "24423309ab5981da9ed94e5879ea727393a8a7e7e0953f98c897cdad8e12e7e8"
+      ],
+      "content_sha256": "6f7a2d25318b624c8a3de165a10a0526290a22dc58c30cb459047bf522390515",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_7045397256da5d37a814",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 15335
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "09ed2386d67a9ac1f93b8a272d279e6afe392e08c78057f55b9452d0bf8d1341",
+      "response_sha256": [
+        "1e020d768607583b34e4ed7d234ae00d4162f89dc1920038984968782aff838b",
+        "3aff37f471d9f32526f20f26ca9a463d21c9902436f96988c709c495773227a6"
+      ],
+      "content_sha256": "7045397256da5d37a8147e0fee75c0eaebb8935eae178134276a8c1d4cb29907",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_70aafbe4faceee7f6e3a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 14200
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "00f3021609fc56bb57032b4fc0211ca103c4c3112f8bfe33b5522f68f9c8b5ac",
+      "response_sha256": [
+        "98335ea465f0812922d9755383c205f884ac7d116ece74a98874bfc9cbecb27f",
+        "990acaeef0d6a0d22450aab966eabd10f8982a14604147dd7eab8357707404d8"
+      ],
+      "content_sha256": "70aafbe4faceee7f6e3acdb48f50cdb62168d5fd4874c291ab357ffdeba05ea3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_71c16a74b23d13466c42",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 16259
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "4dff04af32914c6860d6004fa6af69f0af62b1a8f94a2ea97d5ddc448a309400",
+      "response_sha256": [
+        "7e541141c448b9fb6bb2307849ebf999ae037d3ecbbcc1cff0d1955d6f2bda16",
+        "9c3b41d0e04a0f139f2626932e60640e2b97d3c5baee0282b9b65e6e4986ba71"
+      ],
+      "content_sha256": "71c16a74b23d13466c42f1f252f0e8f82997e3752c4c882f386182595ba47fbf",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_73296e1a399f6826ea24",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 20473
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "34e97e6340719bb314d5dd364c1ea4d8c93d55778d6d1b51ec557c763dbbe744",
+      "response_sha256": [
+        "376ffae6c39f7a01656540da901062433a32611f64b546a538b1a2d80e704757",
+        "fe66bd05063860b7a5c58d0d59a39b420f45e0b0fa8fcae6ea997f380e7b7530"
+      ],
+      "content_sha256": "73296e1a399f6826ea24e46f38f044c50b5a88f183c837775945f5a3d6ecccc4",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_761183554524d9173909",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 18685
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "685d62fe3260223c0f154fce5fbe8ab60f7aeb4b914e6b5a445c920290b18251",
+      "response_sha256": [
+        "aae8adb38f5ecc30dbb89e2ed982fdc2eb6672518bc3d69d91008ddc3565dd47",
+        "6818b84330b5431042fbd2f577ee153d9d8b9b99846fd4325a3ba42596590a82"
+      ],
+      "content_sha256": "761183554524d9173909504f7b6ede4f0d03f1d4efe8be8a7df4f82b2a91aa4f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_76224bb6eba761c04ae9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 17749
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0ae92bac3843bd45b90607ad761515fc9650606ccb57fe06245666cd7b94b267",
+      "response_sha256": [
+        "df2e2d32b69917663839418941b1c1e6bac246ee55301d240b1fc47b37cfd5ce",
+        "7a03675f49f1bfe8b874fa11fcad8d6df9137659ad6e256b9494d221ba8486e8"
+      ],
+      "content_sha256": "76224bb6eba761c04ae902b6ebc68b1a608ee788b07d458801fb957cb6e6577c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_7676d6ea196b8db95e25",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 4629
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "bbbdfe99854f87b51d594385c4ef461ed25105591bd4e73f961310dfe6f0dce4",
+      "response_sha256": [
+        "7cdc9908e77faf2c8be000c8b35122b39deaa227342cd40fc91d9c9a161ea867",
+        "1e7ec36abc6d3eba31b9780a5c35e440bdc892903a8b075e8c35e006c896125b"
+      ],
+      "content_sha256": "7676d6ea196b8db95e25563cd11e0bfe0932a5dc1ef40dd7df1844ab6b09f33a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_78b1c871f29095e15182",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 21639
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "d2601ebefcd61a58be04af2d913da4d2c8f24e8e9a0050d66c7bf8d826875248",
+      "response_sha256": [
+        "875025927deaf9771b39b6df2f1b2ec228961f9b3aee06b1f5eb25f72fdeb71f",
+        "96528e1b6eeeaf7d1a25b74d19e4f55c88162d5023a1f10eee5b3c1c73d4a0f1"
+      ],
+      "content_sha256": "78b1c871f29095e15182fb93e3768c0059f882ce890b59500afbb8c2275f6e5a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_78df30589f068e782728",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 10846
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "5eb329eca4c00a2cbe96aa425342b336873aca78c2d46b03fe8f4546acf637a0",
+      "response_sha256": [
+        "eb23386124e1889d1c322c9cdb57968a2fdece3f0411a1c5a9651c2466827be4",
+        "2b8b7ef4ad2bedfb3854aa9e0c729f63f5b5939497cec83e8f464e2fd0bd9531"
+      ],
+      "content_sha256": "78df30589f068e7827285e7b89bc71ac1a61ebdfae962e61c9ec3215b0e32d9d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_7bb69319bc7357e06b80",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 11096
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "e20271fe30e67006a65af0a9d6e15d82a96d5f863ef0d58faeda31c413ee7f76",
+      "response_sha256": [
+        "6879b40ac1d312aee05569ab41050b2f0ab13b861742db3b23be23e9d3f9e0af",
+        "bfc1d41443480a318d0ce459a970112cb4fc7a8fa06c3dbf91b97cb08acb0a90"
+      ],
+      "content_sha256": "7bb69319bc7357e06b809a9bfd5a59a3a094be4164a4c6149b8adcf80ea77c39",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_7ebdab2840451f56b4f2",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 17186
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "24df259bbcfe25e5946a8ec3027c3d15a4db919cc87bdc8c74d7d21ab44ba4dd",
+      "response_sha256": [
+        "b7a5726ed5bcc5b0362e3400a38e0b4809a374c6e08725b99e458c044dd86307",
+        "e730ad17a00cfc2d7bf6fe973771d177a0fed1d08cd2d2dc39cf938c129c516c"
+      ],
+      "content_sha256": "7ebdab2840451f56b4f2961d183f153837c637c50851af47ca13182f36b41477",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_7ecdc3ece9fd72872c4a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 2515
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "654b8a7d3d0bdf93d27aaa5c641d519279653c849fdfc1da88692ace48ac534a",
+      "response_sha256": [
+        "e9f2ec6aa38d2bd1ea7964b21daaa3278b65c0c0dd2f0879491fd477e99075da",
+        "44ed2e12cc6de8b0a6eba2c22d3383a7a751bf8df87f12d202ec5100ea55cc19"
+      ],
+      "content_sha256": "7ecdc3ece9fd72872c4ac903ee548019db1508d2f355fb6ff4ee2f03501c4fba",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_826bba599e58ffe92894",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 11007
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "b180f73f3cbae178b6c101a7bdf67f3abf943f56a6f4c5d618bc134225f7fb7e",
+      "response_sha256": [
+        "af9feeb9b67c4cd7799de534e141d32aea12f1bcf4dabb3e5dfd5bbb8bf5e37d",
+        "40a18cbeb375cb2de1a57f7442301317499216b7a7871c57a13073fc202cdf50"
+      ],
+      "content_sha256": "826bba599e58ffe92894f8b60f481de2d1d450dc16a4c7d39ee01adba9ece9dd",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_8377a8597e4341f77bfa",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 17273
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "261c1b6c7d179a46a00818a20dc3ce4389c93116b053ec54f9a375a5da0ee725",
+      "response_sha256": [
+        "f098ca3beb9a5729317546ccf101004318f18663b517f15d9c169918510652af",
+        "f8126191b226e206edf2f6a2c14fc9f2fe86a82f405eae59287c0e4b8bdf4462"
+      ],
+      "content_sha256": "8377a8597e4341f77bfa9bf8bdd550b978016cd7f6f351746ca7f6a7e7eaecd9",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_86fcedeab7044237be3e",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 3319
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "e570be720182f5effc152eceb1ca82fb5f63df16c9adfcc65b51f1bda52ac103",
+      "response_sha256": [
+        "e300f809466f8b6c0da93e4b16dd9ef8270576191451cc20ae9a84cfea0f3374",
+        "aea95d32fbb932fdde09ddc8b87a86b670b157d0d9227d666bf95ab938d9461c"
+      ],
+      "content_sha256": "86fcedeab7044237be3e86de97ea245b0b8aa1072ad481570c98b5c62c91896c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_87b069b09e3c1bfaf598",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 21548
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "3213c4d9bbe7645f8cecd6a6af1ef07b4e355130a35c6a89ce2f75fc673d6341",
+      "response_sha256": [
+        "dc13b4cb8918a9c8e736cba8836bc9afaeebe259fa1d6bfa95c5e47fe8112591",
+        "6f579b4d79de6021fba3c097c3baa0beaf39b9cbe0ff6126c30656bbd7eb8704"
+      ],
+      "content_sha256": "87b069b09e3c1bfaf598738379fbe4beefb94d763f2f5392a982eb858ff425db",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_8915ce3fbd15c368544d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 19750
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7994da5fb690d2919ce0e29ef8e7b31bfc61693114da8a175d77863a81f52682",
+      "response_sha256": [
+        "51d3db62342e67e7f184fbb8cdf9f91d589d2816b80a98db2fbd837e3c713cb4",
+        "601ca8a67d410a320c346e63d60a1c33eb9393fdfd045c3d98e5374cfea28e80"
+      ],
+      "content_sha256": "8915ce3fbd15c368544db2fa1895cce77cac13e43134e41e235bd0934f9a51c3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_89ed59f8e9720c007bac",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 5327
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ac1a183b0e47fa299c94a2d659fb9c3ed9a08014d025a882d70bd751f366d3cf",
+      "response_sha256": [
+        "2b3f9b0949655ecf021a1fa0c08f98e8e69bfda72ebde1876cd7269784809a9b",
+        "b17badf6fe736480ddd3e29f46f8d152860a704b93b8ae33498190691ec7fd13"
+      ],
+      "content_sha256": "89ed59f8e9720c007baca07bb1afedb5472048818d9189cdfa2ec23a2dbf7c7c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_8a405639f348b20a17d6",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 12759
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "9caf7bca011911f221e6600ffe3e0dbe606a09f46f63039f42ae6cc1ae804167",
+      "response_sha256": [
+        "39a5f2eb877d9e5a40c79a11c6d851e8b3a7ca53af9c2b2fab72cf7a9df53407",
+        "7baa36f86fbc8c987d2022d098efa637d748285e030809cdbfbd0906d26bb1fc"
+      ],
+      "content_sha256": "8a405639f348b20a17d6cc61186516ee383b947f8297d06569fd0aee78981a02",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_8c78c1f24e49f0968e30",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 17204
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "62c0ccf798c190c672ec5c0b65f70b2c26fbffb38bfab44fe990403a222e245e",
+      "response_sha256": [
+        "60125a6db6d462284acd6621e1930db6bf75f67c5d586fe14bd852fe1a6670c2",
+        "fad7c3aa8f29d888f9c4964847e235a417fcff892a7a8d336ae123c3cb92db70"
+      ],
+      "content_sha256": "8c78c1f24e49f0968e30bac87a214758551347370bf4941ed5d73056d1117209",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_8f710b625763d2760f41",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 27350
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "804d3f0b2177f29b1981b06d5e579eac6ff7fa0bf59b292c7d90fa571c4b1ca8",
+      "response_sha256": [
+        "f560b5bb6740863798b1a6a0cfff0ca6963c66de3a0bfb6e8257e693c698cc73",
+        "ab22cc919df562deb43c70a4b2af65b95f7bd34b9030f5a5445905742777b72c"
+      ],
+      "content_sha256": "8f710b625763d2760f41b22fa71755fc8c6e342aee62389a684a9f1ff92a6241",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9050d5c6e6a4e6622d24",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 6602
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ec9c05b8a2954b7256cd655e71cc4ede06a1b2fe5a3043abc9cc6cf1ef91abfc",
+      "response_sha256": [
+        "089cd17199264b982a7feb243926b460583ccd696b99291602203ade0d9a83c5",
+        "4401388a0975e7b106ba686467387188cc2081098143454b30d75292304c4cd1"
+      ],
+      "content_sha256": "9050d5c6e6a4e6622d241cb4c3d6d305289157ccf0c8f67d4cefff3955b15fc7",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9062fdddffbba6e020aa",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 14101
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "f37b37496f17ca2f9f043f08508f5f765c2b9c74dbbe9a7901c0b63103261801",
+      "response_sha256": [
+        "dc8b78e71ee3bf7fbec86cc0c86e0169ed0a32d9d727de86d67fad3bae0422c6",
+        "49badd5ae804e94278f587b0250fee91954e1352225c84cad7a6c046ce81f8fd"
+      ],
+      "content_sha256": "9062fdddffbba6e020aa9e27f82908da9defb4027a2152a7d75a00b99f0dbb1b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9345326a59e79156383a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 20265
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "45c73193bb066efce3626aa7c225fe8c421b95596a58fbb74f47936157af3f1b",
+      "response_sha256": [
+        "f6d1213c96756c4b67b01bbf571012c2e9d9f5f73b578157f2f769cf03b6c32f",
+        "e710dde63a788f98ca389d00672b8dfdfc66fa1ac85e23f62c753e1ce21adc82"
+      ],
+      "content_sha256": "9345326a59e79156383abd52027daa8675e09403266c63bb4f490a9ce376939a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9362029cd44d63040f79",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 11879
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a37050eea768ef588fd1368483c881afc5e36cf4b7ea9b4efe3e3606d66a2128",
+      "response_sha256": [
+        "16a055d3985d0190d883c7a89ce1ce13e0a2542778eb7a0ae71991e862f59fd5",
+        "e98ea600f44625003740807509cf0db40dbf4f4e9f40edc60c0e1278060f2389"
+      ],
+      "content_sha256": "9362029cd44d63040f79d66ebef81d4ad2bce3b2ecc8d678fc532d793844baec",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_937955cc30cbc220d3eb",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 25466
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "128c933f3403de79ceed6cf0c6bc9b268a0d6288c2edc08598100cd809eafa96",
+      "response_sha256": [
+        "eb983228cde1fc3a6d99dc664305b438ceaf79858abe047a2f5dfe9993082d3e",
+        "9c64d37a6233d1ba4dcf9f3f23ad63f095aebbec9b18116b10375b8f15b63cbf"
+      ],
+      "content_sha256": "937955cc30cbc220d3eb8f9b41ea04fafb6f140b0e627cf9cf1a2ad516168eb0",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_94014d04135290145925",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 15915
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "cfe22d45d80b90f3a2009e8885090b00d7c1a7a5317ff3fd9e93a31aa56476fd",
+      "response_sha256": [
+        "5ecb550dd49b5976578ea7ef861f0568d3d6e55d2f082748c3b145384160d6b9",
+        "9ad0bb7563ef3f231b4ca6f2263694a0a5a76ffd12f483ba0c2ab424e6b4b97d"
+      ],
+      "content_sha256": "94014d0413529014592525d19dc1cce72e22d9fa47e874240587e6f7f8ff6078",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_94c2a20b90c8366ae6da",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 10048
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "69897c3200b71996668abe8adcd6bbbb0eea315790a5b57176989db123e1a5a8",
+      "response_sha256": [
+        "11ae88c2a27258d7780c6d04b6760f55d4e34fdb73411d74e0c6114b39668868",
+        "863fb7ad9176199395b854330fcfd027a582565ece7a337ee853a38c5443a6a4"
+      ],
+      "content_sha256": "94c2a20b90c8366ae6daae145c9d965e88647f609035ee055734cc7212479d89",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_956cc0097dc3da18a318",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 26703
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a06ee489ab392098d5c447a350f1459bec8c681ce812cb7d2d168dba76aa7d40",
+      "response_sha256": [
+        "0625a39a533f2f3d615cac81f61bde49b25ae30e852f30e33363c35f57338d2a",
+        "956fdf25ac932e190d7c3620c9440ea083fdb50c3bc414833e253fd8bd1326e9"
+      ],
+      "content_sha256": "956cc0097dc3da18a3185784bf15ccbcd237e290c934e796aef2152aa41fa4fe",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_95fb70eee508a9b952ed",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 20966
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "369ad166080228147b4058847b0a2f3beacc878763bcf7bbc4e1b11eae081777",
+      "response_sha256": [
+        "5be4cf5cf940a2a529ddf265f7956d78abc81f52a455c4a3d831a24ebe9cd6d2",
+        "453683f5ffd59f55d5b752848410946e271d79d80d9b293fefb8a0a0c146d6ac"
+      ],
+      "content_sha256": "95fb70eee508a9b952edadad7ae89bfbd6c21658bf389b589a516186cb02b49c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9620c3e2f7f912700f9c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 3868
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "d2e87a038121d3fbaf5bf4f9e855d4115c573d309f80a349501d220c9073c870",
+      "response_sha256": [
+        "fbe2c8af7518a3e7fba76ecbbf175f24223769d26335282076d9c9657b05b94a",
+        "e651f9819d5808748b47be08120d3a9851cc087ecc340d0d916337b93b3becbd"
+      ],
+      "content_sha256": "9620c3e2f7f912700f9c9127f9e75c5d6669a8375577d6f65d28b3cafbfd73a7",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_986c05f518ee4d80f120",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 14326
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "5dace49d509980fe61c79efb8f2f3f778b83660e4868caad75d4a5f1599b5025",
+      "response_sha256": [
+        "c7cdbd6ddeaf21cbe327638182244a8540ec9e34d2d47c79c235d02868188e73",
+        "d6f3a3a4baa6314bf91005bc1b43ce0f6000693ae9be2ff44e4e230d2f7e3be2"
+      ],
+      "content_sha256": "986c05f518ee4d80f120474fb0a9928abcff1a156f93de4efbdc0850b85a50d2",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_99287bb53b06c0cbd902",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 7120
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "519c378856c67fef71337a990724b49ab9caf7e466364cd1225e32646d063ddd",
+      "response_sha256": [
+        "4e4648fce4bed2c99c83474ed81d0c6ddc04934c3ba2adca01734fa8dfc68798",
+        "70d909bbd99af76b2bae677467b11b38d254e1b4a10943487a48f28a5656d423"
+      ],
+      "content_sha256": "99287bb53b06c0cbd9020ab474113959a03e34a545737cbbc4f9f30eed87c4e2",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9aaad91b35114359b5ba",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 20331
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a93d76033b55ec5125b66168e57aa4d02eb7bec55bbe666895cf828d622d486b",
+      "response_sha256": [
+        "aaec0032e4e0f903069ba336c2316bf9e7dd19e94fd4532ec73879ed0627e04c",
+        "5d5dcad4d2fd5cb19ceb4a472294dcb3dae78d20c79a9b6a2d8dd5e0a293ea0c"
+      ],
+      "content_sha256": "9aaad91b35114359b5ba86dd4a3e6e0b5afb18a369fdbf90f610f3c946cf81ae",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9c0755c680a264922e76",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 21660
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a33959f355b28ff943da2351e4b8fa63eae84eece2b5ee16383a743b6f5abe6c",
+      "response_sha256": [
+        "bb31c9660abc8bd8655a8cc0cbddbdce8243d01bd80dae8c685e0b69f16eccad",
+        "dba1f92dc7f0d178d7319697323c04ac74d436a8504aa32a5c225430163608f7"
+      ],
+      "content_sha256": "9c0755c680a264922e766d1a37c94f1206465fdbe2fe707bcad286e6fef153d8",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9dd9d71cdbf43bf9457b",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 18222
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "c4bd661dd1b4f47f20dd8037b7696ac3237e0db3574a67c45173a03ba0fe6c0a",
+      "response_sha256": [
+        "5dbcfebd6ec1dd71e676e186701fb56fefc0b347610dc579736e02ef6a63a813",
+        "e7d20b8adba56de318699963cc4e608a91b9059cf945647af44201d11c675d5d"
+      ],
+      "content_sha256": "9dd9d71cdbf43bf9457bb53d1c65df6606c0e517f05e79bc498ccf34f1bb084c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9df1e7655d3fba5c3ad1",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 20712
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "cd13ef1c693cc322aa7a73d90f731a7a21c3f9bb5b469de5987f67a5c54836a2",
+      "response_sha256": [
+        "a27727c81a71737f5272f9af94ba695a0c18c75116058eced2daa2d86cbcb7d9",
+        "40176243c5b0dddc6fd4073aef2448f4b32e6f5a1643117a8266d327568e2db1"
+      ],
+      "content_sha256": "9df1e7655d3fba5c3ad13287e64e20edd30564cfd94e8937dd41c867f80e8c5d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_9f50a083d79dbb788208",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 25077
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "daef188f00f6e8e15bb73a85c6018c5e60568985e858908caf9383294a6a6a78",
+      "response_sha256": [
+        "23dca3d95c5cac155d2d1d775b8b38e397348995f53de8159d3e1f60afefd061",
+        "be993347f100c109be03e721923672e765d4f269d8b609d947cb364a8a27db18"
+      ],
+      "content_sha256": "9f50a083d79dbb78820803175563cba6630285c8c2a3ee4e08812ff6ef70dd04",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_a00491be9c21774f4816",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 4303
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ad54be5eddd6e6fe42c6b5faebe45385c848a39647f7723e39f2d03131ff10f4",
+      "response_sha256": [
+        "4895be1ad405f515ed0843a4c0952f69471937cc744b086c004a59a636ba6458",
+        "16af3b1e60f5e27f2d99e0f707f0720f380d9a203dc72948b65022a6aac4b886"
+      ],
+      "content_sha256": "a00491be9c21774f4816158bf83b51e4f579913b64d4fcec3a652392f5337d14",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_a070441e1c9dea3eac36",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 2481
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "2be338ad20f1f22cc82b5b28021017c91b2cb4025f04cbea0fda02df16b3d300",
+      "response_sha256": [
+        "bc875e1c8ad3422841800b73c26a254c8e91eed9b9776af0cea354a089a95e57",
+        "046353772ba3c6728eab1e645da1455e04c1ce636bfc7fb4478410d47a1aa517"
+      ],
+      "content_sha256": "a070441e1c9dea3eac36e0a46f095c90fa7b8d03d0f2478cf627e89324b1f3da",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_a091bb9e68e72819af39",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 6935
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "e3ccb9cc4eed33c98e3541258cf8519fc109813be68346d346f87e7cc50f77b8",
+      "response_sha256": [
+        "c12b1250f938fc684b5b42ffbb8862f3b6f05dc119ff2a1da7e6a777b7eb31d8",
+        "819c78cfb74c91fe53027747d02a5848a0b37811f94692529d21d34b834cee6e"
+      ],
+      "content_sha256": "a091bb9e68e72819af39fdbe801a306b0454e8ad44531a4c7f4dbd1b9ac8b735",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_a363a410bfa191b0ead9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 19768
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "3de8a9d899dceaffbcedfc18de76ea06cd2c7eccb565f2a7527378b4423ff9a4",
+      "response_sha256": [
+        "80791287873879ff7c668c2cedeed55ac1a4460c6081dd91b66f0851779c9e33",
+        "91acd3c06f0ee8d8f1a312475fc290a5559c484b698617ca72e8618a375e3e48"
+      ],
+      "content_sha256": "a363a410bfa191b0ead9733fb7ce226e2ffffff909450fc99cc965e585f4031e",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_a3c14e5e89e46670c7d1",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 24516
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "211a7a8390dc3f6d32ab0457f7473285dc3201a60136e6433e8b929efa6e7057",
+      "response_sha256": [
+        "f683bea17c9d6de1291e2ab3a3cf9c4e6c9c7b89b45956af5d7ee5124c218f82",
+        "171f179ded14599133ff53bfee5c2094ab717cc61d1cf28725145a58c197d4a1"
+      ],
+      "content_sha256": "a3c14e5e89e46670c7d19e458955d308205dcc44f0205865da8fe4f0aa7c9ac3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_a66c6f18e79fe5b8d064",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 20852
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "dff74501274693bf51f9abcfed94d6a042aab6be06a5927b9a03d5c0603c681d",
+      "response_sha256": [
+        "cf77d17e94ae2f870ff73db46ac59962a94fdd7c4032ed3f05ab332d12b2722b",
+        "fcf8de64737793042f11ef4865df2beceb82a174dd3b96e9f21f761937022172"
+      ],
+      "content_sha256": "a66c6f18e79fe5b8d064c5c3654f725a847538ba8567440f62ea14f9f98ecc2c",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ab1d9cccb7b05f77c7e3",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 17652
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "5b83e788cf175aada24b28fafdc19d2059f4f6d528d72f0072ba03f3c3c90f3c",
+      "response_sha256": [
+        "af64a8060dd48da0681cf725a8df5ccdb5aeb04354afeb58ef8451b2e596d208",
+        "0beb39e75682dd4b0661e00b56aaaa575b122f3bcb626e93545073a1e56c6da3"
+      ],
+      "content_sha256": "ab1d9cccb7b05f77c7e33188966d6b5abc2efb3769bd06e8c43885c79cf4057b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ab719810b875b5804b75",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 23513
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "e7b8922ddd9d891eb494de3ccc6fe1ce0479181a04f7bc4096bf0cb436cd4ea7",
+      "response_sha256": [
+        "ed93a1182244349aadf0d19e554b939a60f52a5eabb9787ac88f55ed8e0cb241",
+        "f754ea5ac15cc075c5fbd09cb7aa5ea10ab649a5bda1d82cf1f13cb5db13d8de"
+      ],
+      "content_sha256": "ab719810b875b5804b75630e8df08dafd0f0b7ac5b20b4ac1a2efa12fda4e8ab",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ac402c76b6192df82a01",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 10326
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0650d468eb10f6a43b80716fd89ea0564cf74a1355c9bb30842cbeb32923d725",
+      "response_sha256": [
+        "5f8cc72e60f243f8abb7df1dcc7b2f79876dc36c1a9856ca66e11666dc070b7a",
+        "a0a6f0d1dbfad453cc9444ad50f16225ae816e55c915ba741fa7cd9ba08d9613"
+      ],
+      "content_sha256": "ac402c76b6192df82a019692f51e19cb7a0e49917a8a28d66bc467554a4c188b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ac90d115460f3241d420",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 22536
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "570c8f6fed5732cb47ef845b66aefd98511ef32f629402668ac301c5d4036d6c",
+      "response_sha256": [
+        "aea2b21b012bf6f6b54777fa5647bccc23114e01d87800185b9e7c25ff12a7ba",
+        "89c7f7991636aacbe9f56dcc8497653def417dbc69bf04cfbb652c932333e5f5"
+      ],
+      "content_sha256": "ac90d115460f3241d4200d347cdaf293fef4d87c4a37053f0ed6ca420e9f476a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ae29f8ba4ef36ea7d897",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 11035
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "05c77cceb8ff5d61390d6311f68135baf6b40e10022122d86bb9ad4af86d0538",
+      "response_sha256": [
+        "a719018abae4059b85365e1f9a9c5ce1a847902f0e769769ec05bb40c3229de3",
+        "03af34eb427703a0d71a3887159d493ee9fe9dfd23610d69e2bd60c2e76db255"
+      ],
+      "content_sha256": "ae29f8ba4ef36ea7d8978e51f5a5ff7da011cae0cb117350740f907079f1fade",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ae99dae922261e6830be",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 20466
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0670c72e626e88b7fe7f51125959f388954588db4012c0ee06c6e12cfeea49ca",
+      "response_sha256": [
+        "82eeb24fa8f88b9a881fc31a00f1f0f6a8ba7edfacdc8e9a464530164e4ae354",
+        "a53c541f6a1e14973090111d0013ebebe1ea2e3e9ac7ca7a847f96fc07a1b5af"
+      ],
+      "content_sha256": "ae99dae922261e6830bed1d695fcb936f5f5d743c6d786f75403b03a9ab22d99",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_b6e36abffc2e0908c1ef",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 23702
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "36094f748e41a030a564119fe67d0444f878bf0f6f7323e12199960155234a72",
+      "response_sha256": [
+        "b73f56519dc687e1149b696900091498c2ae269870b76fe389e48329ca783bf1",
+        "e9724905b11e6ca70fda48c60377ad1981babf3c2705a651e476ff52d2e30e3c"
+      ],
+      "content_sha256": "b6e36abffc2e0908c1efbb91cd9a79c5f54889cd185b5c8335398aa0c67cd661",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_b73f3f023a2677918995",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 25163
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "f2a45f9ae94d7c9b0d89a6925fa72f935749515670cf1e603fc68f03746c9717",
+      "response_sha256": [
+        "fe184be5031cade736f337f9227d0fd9a9a538843da2bebcbc59799bc686ce1e",
+        "d93f87170aaae49265a33af0e6d58a11a940ff6885bd6134baa9733848120e73"
+      ],
+      "content_sha256": "b73f3f023a2677918995c8772568133bbb8867e33c5bdd0d1dd23476e2693bf3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_b994a633ec797cbcaf9a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 5092
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "c4abc0812fdef69aadf068d0bf81392f2aaf5c90e94fc31f0b0bd618b6bbd822",
+      "response_sha256": [
+        "c01c3d5022eb206d61ea43414e61d57fcb3882dc0ec1e2169302d98177939e22",
+        "b3b5439d3fa1b739744f6fe1d39752d0a7a81d905cdaf29e77036837c3e6a829"
+      ],
+      "content_sha256": "b994a633ec797cbcaf9acef499d18d72957c218107f2e6c78f4827a974b92528",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ba42dda57566241a4dc5",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 20517
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "3b120c99590a4b0f9fffdb24068d79537df75aa3d69e94d73968816a8c08d704",
+      "response_sha256": [
+        "7b5cccaf423a57f217bb4a134b0a2919d3513c7190c2ca635afcfd658e854b84",
+        "d0706c60beaac26edc3142bf535f6e76538b6e1717929adb920a834097fcd9e5"
+      ],
+      "content_sha256": "ba42dda57566241a4dc5ef141d146b31963fc395fe7b2f0309fccaef4fed5b30",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_bb71597c74f9caa42cfa",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 9913
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "05d8e529eda03ec0961af0bb2ee27cb04a598a938ecd1fb37cd504fe4eada55f",
+      "response_sha256": [
+        "97a87c523976d6a172f1b5081b133e8007ae2a22f13596d349f340a57ae50116",
+        "0e0802bf2bad46ef55ef2887a7b9f5ba9cca8c2338d15870dcc958adc01d704d"
+      ],
+      "content_sha256": "bb71597c74f9caa42cfad3ddcd4a5879dcf6aa189ff450ba5de11603f273bf8d",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_bfabeddb1f21d0e0e086",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 4015
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7bda73cb9a7c02e2510474857848cdd571ae2e6f6ebf27b7546b8bdebd4deacd",
+      "response_sha256": [
+        "fe219f5dbc37a2fc4d15584557a877e54529034875117c22d4f54c2b76bc20bc",
+        "a9799a48facd5664445c4788b735cd1093bf58d4323122ee65b30fd99e8eeb83"
+      ],
+      "content_sha256": "bfabeddb1f21d0e0e0866e30357949231c46903670d0b32715b9f16a86b71b49",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_bfd19506c22e20a3b3c5",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 14000
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "9c6cfdebb8b8add710987fbbb0e43b627596a7c5bc806fb8a2fbcb3c1d1a477b",
+      "response_sha256": [
+        "9a33dd630f53cec93912a60c53bd6346be378c50e5b8d112c2f6371b92340dd4",
+        "2e4bff488d3407a4e696f34809b9be21ea59146b3f778c0521f2f9f69b5a2b28"
+      ],
+      "content_sha256": "bfd19506c22e20a3b3c5c1bdda47feaf519778abfa7900addf104486e6d76410",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_c0c1d5db0ce43f89b5bb",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 6240
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "7cf55be763fc8bc9f50c6fd091f8d519371119aa536648d45c6f09a97852c77a",
+      "response_sha256": [
+        "8c596efea16a0d22734454f1ac373f51af591dcb11acebe4e97a608cc53a01d2",
+        "c3b09b77297f00c3bcf09ab53ae129c701411c333f015ecce07f5083d62a045b"
+      ],
+      "content_sha256": "c0c1d5db0ce43f89b5bba0044e51a43f1507ce48d71b3c514da2ab720f8b6824",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_c36e06c1913d12ec5501",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 16563
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "157a108c8c0640ef3b0db4fd32c208d29ab41a60e6ccfca5c2a69bc157851407",
+      "response_sha256": [
+        "76aa2bb844aaee4ebb32f79cb6c2113b8425ad173e61a625ab6a4bffe5ded66f",
+        "94a0dfe0f7b6816e889836054ade6f8fd6777845625e7a0e5dcf5b733bd9ed33"
+      ],
+      "content_sha256": "c36e06c1913d12ec55013f852c96b58fb0f3a80296ee66a4b8fc6d600149b0a6",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_c8e5846cf5b541a25fbe",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 10832
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "588670a81a821a61ea24ba6e7764e1e2fb82eb53fe7e276a86b6887ebe0c2473",
+      "response_sha256": [
+        "ab6fe622907fd833b87b339341e7f05df13c0d9042f484550fc841179f58159a",
+        "5821a1f3073a4642b3f4f5bf1fd4f6bb8a62c73935406f5eeafb3c828a4e7afe"
+      ],
+      "content_sha256": "c8e5846cf5b541a25fbeb6c81ffbe1aa443c3e1f19dbd846165ce8c13b1e21f3",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_c93728e62b9d689338d0",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 25736
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "59a2c8da671ba262712738ff32b0c2af39bd3c8fb8fc45318ace6a75cceedf9a",
+      "response_sha256": [
+        "8d1c736a0901d75bf6d0f65ca3ce5be980d7e5fd52be7241908ee4a8408a49b2",
+        "63e1fbe8bdf7177f651d859ef79a4d5b897280d634802e91cff65994f7a784f8"
+      ],
+      "content_sha256": "c93728e62b9d689338d0f8e54387bc6aba664501cc038c7e6b4d21130119006a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_c95ca6c7601d357d901b",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 20502
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "e86f266fd73312215192844e55d4148c34cc7ba33ebc174fe0ee413be9743965",
+      "response_sha256": [
+        "4e8e18e3ef7cb2f51798f8c296358cc216b3525538cd0d1d829eae4593ee6480",
+        "d93ae6eacb8f12aba3dd59e50b1e233047ac39da6e594ba78fc383590a72f1c6"
+      ],
+      "content_sha256": "c95ca6c7601d357d901b6f4be4b2c3e8e148cc23791480c6529162ff9583f0ee",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_c969ace126503ec5a89c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 6589
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ff73d4f0a5fe715939db4766013b468862caff7f7207c483aaa85ba3b62129c9",
+      "response_sha256": [
+        "5f5a23795de425b6f26865464f8f01d6ca9298071818871d66096596b3f3b4d2",
+        "bb53372cb88dce03bdd23f301a5adefab2c45a51dcd455158619aee47b031676"
+      ],
+      "content_sha256": "c969ace126503ec5a89ca861ce11c65cc90c7b06c76db2e2afb8bced228bd79f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ca7fb7eee3496c0ec6ee",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 18469
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7e56dfe55cba56ad7aa0188ae8fadb9fe6dbfa853643317b7702ad17496222bf",
+      "response_sha256": [
+        "847120da63503a153f6db89fd9ca2ee8fd79de4616545437759d3adda3fb9909",
+        "e1b4cbe7583241733db100c66406c021d4d99bfab5820c9a981bc90732c41b55"
+      ],
+      "content_sha256": "ca7fb7eee3496c0ec6ee5b3f1e15b14b59efcc0b829a8b468443af25ccf84fb8",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_cd14d3ce872253233667",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 4655
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "25e3ac9d8e120a2cf181ca63a7b0cb0f020636e2a61b5fc7c20fb9a8cf6b3b3b",
+      "response_sha256": [
+        "1017140ed6429630bc709fbaa2cbe786e8c9373957d2bff6721661a0d15ae906",
+        "9a6dc04e81f7551301f9e4954cf4a46dbe1931b1e63ebc3459101aa62a92076a"
+      ],
+      "content_sha256": "cd14d3ce87225323366704862cc44fd7465f7069348960d63aa13551487dd830",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_cdb15d9db05bb9cd2460",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 10499
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0ff7834bf0b5b55092a9bdcee4323b3bf1ebebea25c60913af54068512a7eab3",
+      "response_sha256": [
+        "9551640bc3f4e4db35479b8b6fc098ea2e70a56ccb966dd468e73a442700129b",
+        "aef84669dd2bd87005ce0f4c95cc52669bb1d3eac588298cc36a14084f51edcb"
+      ],
+      "content_sha256": "cdb15d9db05bb9cd2460cec26bc8eae426a50ec3e7d6f9e5d0dd62233375b970",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_cf253937d5701d27df97",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 13850
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "484468350065b013c421d3213940d1e8515c8f9166aa706b0f9e14b3c1636480",
+      "response_sha256": [
+        "7a761bcb5021134852267adb5e316109b4679fc8e54fcce02b3854d55e787317",
+        "696092f0934e96131287f38f8f26b3b2f2f2b36d9d688d95b2df689d45ddbc89"
+      ],
+      "content_sha256": "cf253937d5701d27df973697490ca70d91b067069c5f07b217536aa9c5c6ca61",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_cf7b9ece46cb99e99027",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 12362
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "bdb4f306db06dde846d65903759655df936185289c9f9ce9e9c132a23ddc6f9a",
+      "response_sha256": [
+        "93ae82a207d97c76cdac93610a474a3bbcda9afc0e17b52e7dd5c29550e20a04",
+        "7d19e5e5aa0490d7ab3c2149491cf082df9e2fe76f20582cda5703f709666e9f"
+      ],
+      "content_sha256": "cf7b9ece46cb99e9902758ca1ad1ce08f88c359b01b9014b2bb61b13318def6a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_d36799462a0437cb6b09",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 14365
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ee0075f435fc64c7b0ebc2fa0dc5038f0acaa93563113f3d7f3058a3e61f9ef9",
+      "response_sha256": [
+        "88d87c7bc553cc24da643eadf361dd2cfe8ec6f8e4d07f674df4ac57b185c3d0",
+        "94160c2a96e8ebdd9f786103b3da494c28ccdae6b6b6928ae96d786eb5507e76"
+      ],
+      "content_sha256": "d36799462a0437cb6b09d0f71d4bfdab657612a231e20bf9ff1550d6727ed2ee",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_d64ceca6aad16471f0ff",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 2612
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "af44c5aec43c1d81193270274a8de2fa84f2e59ccd928e2400f3ab615b873f3c",
+      "response_sha256": [
+        "2fcc6944b70addfd3fe6d5271b536254a3245f0fef5f0579dd4cac179e8875b6",
+        "7c70b093c85b4151da3fef196b3d4f732e7f18e989ae2ac46830f1ce4623d7c5"
+      ],
+      "content_sha256": "d64ceca6aad16471f0ffbe67060043e5725519797836b3a2b3c8a64b2892021a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_d6a64bca90d980c1cd63",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 8018
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "29cebdfe63295111a85e9c0710b616afb4a732c3e6764e2765b3e366c088b0ee",
+      "response_sha256": [
+        "97623fa8e8377e70a17ec3aff817e8e20684b9bad8c3d3a8b75596b908855eca",
+        "d34a4c666374041638f7a7581ed937a79924b3807bd6eaea73d05ea47e396644"
+      ],
+      "content_sha256": "d6a64bca90d980c1cd63ee683372ece13c7926d0053b728e40c88055cac526d0",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_d6a777585b73c9d75047",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 9854
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "79e6a3dae718f79ae76b5a82bc875d6cf756fa4623778aac5fc6e5b2bbf4870d",
+      "response_sha256": [
+        "ae065299e7fb68aa05ceb45919b627f76aaa037f7050cfa2fc55979ae649ded7",
+        "097fcba72791185a751c8acd086702d44390eeb0b6fdfeaffaa0f9b190ea3393"
+      ],
+      "content_sha256": "d6a777585b73c9d7504736a8706b0e3cfb4e4531d3a989963f2fbc7ffd508fe2",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_d6e1eab05f23a48e8e25",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 2374
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "2368bbc221e062ba42c8fda6294261d9963fde4984e16e9658ed74d5bb1d3414",
+      "response_sha256": [
+        "b61a41cdc67044837451350b006c2c882e3bb15e8548e983aead24495152f561",
+        "e82e4b5f09fa2a47157e772479c7fb69e55f0392d7e0d3cc8ff6cbf0b493a85b"
+      ],
+      "content_sha256": "d6e1eab05f23a48e8e252e6226874c1e5dcd0cb4ffd0ca2584fa2deac358a990",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_d7b5eca6a9017b0c259b",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 14437
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "4a46762f03c2a49ec13fbe4699681a2a42ba51f62d8bb40133e3e1b50c4b1bcc",
+      "response_sha256": [
+        "04008515de1b8b0f106beec93f0177f6a961ee2f7659627cd64815906fb5c97d",
+        "9bde6526fd2f5429fc964cc199e82961760c1075c5511bda811f4f2c16131fce"
+      ],
+      "content_sha256": "d7b5eca6a9017b0c259b5988f93c11a3effd2ea9bc726430804858f07d158d4a",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_d7c18329587e61493e9d",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 7488
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "7f8df33f63573b298e5f831b29fbc7dd49c2cc94c0758980460a6a6695924cbc",
+      "response_sha256": [
+        "fc2f18680635e784ad1da940c5feeb6c8c435b65f4b62dfa31bdb8ec500242c8",
+        "2eee9b864c4fa2116b5ff5f001f3c6cd1ca229e82dfb5ae25c6bbb9a9bcbce42"
+      ],
+      "content_sha256": "d7c18329587e61493e9da451490ca24cea977cf10abbff738b41a7ce48316daf",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_e03463b9c41ae52b2235",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 6159
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "0f32b6876c807e915abc3bc3dea36c35670eb1162652afc6ef708b52b7c44f04",
+      "response_sha256": [
+        "85dfacf9eb6ed3d6e8ef1faf9d9690301d2b4ff8422a32aa98495ae79c482788",
+        "a0f33e534bcd837419b37e250b4ecc028e033857031678c2fc4957a81f28dfc5"
+      ],
+      "content_sha256": "e03463b9c41ae52b2235d6f91f05245a367415a1f18b86289d356ea1e32fd5f1",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_e154a1431ce6d8d6aad8",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 12314
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "6839cb7b44024b5b9d540b9c9c3b68e9dd175f2937700ed54e98087876ef57b6",
+      "response_sha256": [
+        "381a91b1f716664dca3d206bca425234cea2e40d0a4fffcde23023fa52d2d56f",
+        "443855507d41de41f541fdbdb0a0b61737713544bf4fd4119916da39cb79e75e"
+      ],
+      "content_sha256": "e154a1431ce6d8d6aad828a2f6356aaa37dd573239a64ccfdaeb403a98f4948b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_e23276a649a1601e4ba6",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 2006
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "e37a70d0e1ae6d4be51da743943c5a56dd5cf7527e4531dd7dd576edbe61c83c",
+      "response_sha256": [
+        "b673efda66b8c8bc629441676afe0a63d6390580a206d7758bb8b4fb07b51977",
+        "d53e547c9e8e2d9bf49357d5612411b8376c9ff66822dcd7aff945ea3e1da863"
+      ],
+      "content_sha256": "e23276a649a1601e4ba6ae092b02b90410070b8173d397cc544da8c84a9ace33",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_e4f4c5a9e102f53db87f",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 7198
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ee94cf5423496a7b1aa09e41257ab77c508929bbb56e166fa57e5a2be8469a56",
+      "response_sha256": [
+        "e00b676462f881ad2e38108057619642d055104608b32b26abd53c1014e55c40",
+        "d6b17b823cf9f51d30e87e773e67af2240649f4d0b6196f2cbcddc7cb21b83c3"
+      ],
+      "content_sha256": "e4f4c5a9e102f53db87f3c130ea8aa4f9b47d6db785388f810377fa732e41313",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_e5f117d2bebd249407af",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 21693
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "2e5d5575c5cb07b66f810c1d2c7f3e409f092dc3e178327598495a9b97eb4045",
+      "response_sha256": [
+        "248ab47b3d5d0372898195bd5bc15c07429b586d7824e84591bd74d1b3cf896b",
+        "9cc7a7a66ff22dd72f771a8f924931c375b6a80aeffc4de9513ef8869eba7512"
+      ],
+      "content_sha256": "e5f117d2bebd249407af5bb7fa38730728b2b16bfe63739ecee124b7c23ad559",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_e6282080dc5878f826b0",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 13861
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "236df4b3b0b82360fb521e2cf900794cf00cacf999dc649df8d30594d17f173f",
+      "response_sha256": [
+        "df74ee43b1986c7e8f8d3fa10ce834e40f738870472327450b090d27b9ad575f",
+        "d80bfc342dc1da3188ce6fa6aae1ff98158601f885969198c715857a0467e240"
+      ],
+      "content_sha256": "e6282080dc5878f826b01c7ddcc096adfdeb4c5b42fd4ba6d0bae333f3bce52b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_e79bea9de62bb734ca6c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 16161
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "8ee57270887b59e534a53802564632fe95e07ea8d602d321281853115d0f7c09",
+      "response_sha256": [
+        "521422dac2d738bc6eb69fb9b3c1ed22eadc3017bab3c6fd98f748ec86ffa12f",
+        "f569236d9a26ae7d575a422b7c5d02be0caa55c581375c7386f0c303229a2173"
+      ],
+      "content_sha256": "e79bea9de62bb734ca6cb4382bf7aee51bd1f8b4d79e1ec6c40dce3151d34b67",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ebda59905c15ac6a2bb9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 266
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "66fe988c10576f8cd25ee258bcbe640cd427991fa1235e892636e50303debca4",
+      "response_sha256": [
+        "3177e250709f1ad0e157ef8b4a9e0dc0971f63b7e938489d8b8a67a761853afb",
+        "ddc1c49d96fbc5c38fab80203e6af7c957bf819067e540b997fdc36df287e4d0"
+      ],
+      "content_sha256": "ebda59905c15ac6a2bb951e820e19572feb1d49356ecfc6b0cfcb46502f242e1",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ec65eccd0b010906127e",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 23645
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "9ceeafa05d9fc4bde5116893967b5f007ca9817842904703c26547a982e2934b",
+      "response_sha256": [
+        "39e50cffb24978c1b0c26b1199f0c35b33ece125b4b389fcd832f4a7ba5637fd",
+        "065324221b51619a75cff0815745f0a06499dc4419a109285407af5a90278ec6"
+      ],
+      "content_sha256": "ec65eccd0b010906127e85076e56d097658293b1836015179022a8d8242ef722",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ee2e323ba37688926742",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 11296
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "45a03721531dd047a05ac54f36265715317fe3ea9560579a3c6c4fca6d83ccaa",
+      "response_sha256": [
+        "7e22cb1a984c5253f7cbf65e6d0c35d28ce854b6bb330c0e25298962b97fb44a",
+        "cdbbaeed4c2e782544acfe7a0a89c8da2169cb8302f642bb11d71447c06c868d"
+      ],
+      "content_sha256": "ee2e323ba376889267421f25ef72158764c310d807787c4ff37fa430f095b4ea",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_ef4f25e1b12f66a1e528",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 16094
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "ee60805ddbca30129eda2656adfddb8fa2fd6726dd0b27b6b306820e1914e96f",
+      "response_sha256": [
+        "3030b8abb3118bb9c6df2393682808074cc160bf5fb742a84a14ad7fff1d7073",
+        "b5387f78dc632e16e06202faf2d47b45c6e94a0adcbb5e203c70510f8ec631b8"
+      ],
+      "content_sha256": "ef4f25e1b12f66a1e5284563c31d59d18a3175b87f9deaf8d2997866c72533ab",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_f04484d1991d9f304a5c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 15547
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "4f5d6ff2b71083ea858b83ad8373604953eabb0983bf7624d4a7d63f1545db25",
+      "response_sha256": [
+        "873ff65e5e74dd0e1d7a4ff030c3916fcceb7ff406066b5b9c2b97c9ca40d295",
+        "2b5112bf0a4ac5875dbb4f9f712bb2d866f72d801b828d2a28840aa76e99ae82"
+      ],
+      "content_sha256": "f04484d1991d9f304a5c72d9ec7b5f48baa4561fd7158b14db65d9d8bfb3f52f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_f119bf4f157885041e2a",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 4380
+      },
+      "sampling_stratum": "both_safe",
+      "prompt_sha256": "ca2c192efb4ed4d31113de2887aea8ad35c18534c7f79dfdb2d7d1614e046a5f",
+      "response_sha256": [
+        "2844c8e175536f598f52c134c6bc6504f78c4914d4b46fe07f5e7bf206cb4793",
+        "3cc63396bdbd4d6d56f615e216fcd836df431594e6f9f34c56b66937c8c9b5e4"
+      ],
+      "content_sha256": "f119bf4f157885041e2ad6b93a2a66f4fee2c52fe7aef18135c6808af772472b",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_f2f87fc6b0e8ba1322d7",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 10393
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "a5918ef4d63b9b0e0e5c6690be0dfc393c3bc2d1fd8a044c8674d9d219cecea3",
+      "response_sha256": [
+        "66942d176bd8dc7f40afd297af6b7eead3c04c3f328df314913fe593ac44946c",
+        "918c3512d995f6024916a95c2082cf3cac1847914db316b242b4e41f137c7d0d"
+      ],
+      "content_sha256": "f2f87fc6b0e8ba1322d71684833635853fe43096d6be38ca679d7b78a520c17f",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_f33f1b1631c6ba6d11a5",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "source_locator": {
+        "model_family": "Alpaca3-8B",
+        "source_split": "train",
+        "lf_record_number": 1495
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "daaa37403f6187b54843012f73b447039ae5c714bfaa6fc3f39128a653135ed7",
+      "response_sha256": [
+        "4d23dc0d36fdf2ca01e73645f38b5473dde321f145692c4259249860f2acf0b7",
+        "7de868c7f749c9162368733edaea8994ab1f95bec8fc30091091b9789474817e"
+      ],
+      "content_sha256": "f33f1b1631c6ba6d11a53903746ca28296d4becadab90417813e1072a0c85722",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_fbbb1def9d8a2977a88e",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 15024
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "bd71a1c11a9d9439b3167a2b4f13014f4fc3e04e106ac8532ba294d84ca5e1cc",
+      "response_sha256": [
+        "c54228b0aa680d7970f139a95c79e146b82cdbce34409e9d9ca5bd3a01dc60a1",
+        "f519f334b7a56bb23d074be822521cbfeeb945ed4a9641b2b8eeee94df8bdc79"
+      ],
+      "content_sha256": "fbbb1def9d8a2977a88e8cd6ff2662aa9b3e8d7a5944ce30bbc966078266f3ee",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_fbf1fc00b9190daebbd8",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "source_locator": {
+        "model_family": "Alpaca-7B",
+        "source_split": "train",
+        "lf_record_number": 2552
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "97a6c45493b7e790a7a095ed8ec9f4b6f6151da3ad28e92c73e02f4d5bedb4b9",
+      "response_sha256": [
+        "eee423be9ed289c0b4ba77bb81a963c015d79c0ba3d595a83a2b0c27f9b11ceb",
+        "6ef03d641c66285b723d6d6b795b7c80dd583f273515a88208a5d477b17bbc0e"
+      ],
+      "content_sha256": "fbf1fc00b9190daebbd8d92ede9f36c2a60dd90ba3e79e6cc4564a5d9e6e5c75",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_fdb274349dbd9c519833",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 24783
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "439258e57ab13a6642a028326a6447e4dd09d2f612865b99fef0330ea9155557",
+      "response_sha256": [
+        "32dd17e4a37b914112555efbc317b73283eabe5232a7735aa6187bc005bc0cb4",
+        "41a77e4c6b0786d0b7e985198463f7ab1f160f04ae29b72c37ec752749deba10"
+      ],
+      "content_sha256": "fdb274349dbd9c51983371d0be22a023ab0e1c5ea9fc0464272d8ca1d4756af9",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    },
+    {
+      "candidate_id": "p3fam_fdc81819cf38ce1e0655",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "source_locator": {
+        "model_family": "Alpaca2-7B",
+        "source_split": "train",
+        "lf_record_number": 25441
+      },
+      "sampling_stratum": "mixed_safety",
+      "prompt_sha256": "231c1aad1b8494814672e99ebae6f67d8b2a8bcb5d5381ff167a9554fe907666",
+      "response_sha256": [
+        "73a47bac5892980736b72a153be03234d86ae549b959208e924ef4ae7513a2e0",
+        "5b228ab3560f1555a0c3275795fbeb7c0f7fac5ef40572b05caeff98421ad912"
+      ],
+      "content_sha256": "fdc81819cf38ce1e0655ba7a845ac2423be4fda277ae799507572246de76a613",
+      "candidate_trait_axes": [
+        "boundary-preserving-over-accommodating"
+      ],
+      "human_review_status": "pending",
+      "split_status": "not_assigned_before_human_review"
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "candidate_count",
+      "status": "pass",
+      "observed": 180
+    },
+    {
+      "check_id": "phase_2_content_overlap",
+      "status": "pass",
+      "observed": 0
+    },
+    {
+      "check_id": "phase_2_source_locator_overlap",
+      "status": "pass",
+      "observed": 0
+    },
+    {
+      "check_id": "both_unsafe_selected",
+      "status": "pass",
+      "observed": 0
+    },
+    {
+      "check_id": "unique_candidate_and_content_ids",
+      "status": "pass",
+      "observed": 180
+    },
+    {
+      "check_id": "exact_or_normalized_prompt_duplicates",
+      "status": "pass",
+      "observed": 0
+    },
+    {
+      "check_id": "prompt_token_3gram_jaccard_at_or_above_0_90",
+      "status": "pass",
+      "observed": 0
+    },
+    {
+      "check_id": "raw_text_in_tracked_manifest",
+      "status": "pass",
+      "observed": 0
+    },
+    {
+      "check_id": "split_assignments_before_review",
+      "status": "pass",
+      "observed": 0
+    }
+  ],
+  "claim_boundary": "Candidates are review instruments only. Source safety labels are not Trait labels, no split is assigned before completed human review, and no candidate is training or evaluation data until all family and quality gates pass."
+}

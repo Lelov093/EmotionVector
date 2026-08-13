@@ -1,0 +1,119 @@
+{
+  "axes_included": [
+    "assertive-compliant",
+    "boundary-preserving-over-accommodating",
+    "calm-agitated",
+    "cautious-impulsive",
+    "empathetic-detached",
+    "stable-reactive"
+  ],
+  "counts": {
+    "dev": {
+      "by_axis": {
+        "assertive-compliant": 2,
+        "boundary-preserving-over-accommodating": 2,
+        "calm-agitated": 2,
+        "cautious-impulsive": 2,
+        "empathetic-detached": 2,
+        "stable-reactive": 2
+      },
+      "pairs": 12,
+      "samples": 24
+    },
+    "holdout": {
+      "by_axis": {},
+      "pairs": 0,
+      "samples": 0
+    },
+    "test": {
+      "by_axis": {
+        "assertive-compliant": 2,
+        "boundary-preserving-over-accommodating": 2,
+        "calm-agitated": 2,
+        "cautious-impulsive": 2,
+        "empathetic-detached": 2,
+        "stable-reactive": 2
+      },
+      "pairs": 12,
+      "samples": 24
+    },
+    "train": {
+      "by_axis": {
+        "assertive-compliant": 6,
+        "boundary-preserving-over-accommodating": 6,
+        "calm-agitated": 6,
+        "cautious-impulsive": 6,
+        "empathetic-detached": 6,
+        "stable-reactive": 6
+      },
+      "pairs": 36,
+      "samples": 72
+    }
+  },
+  "created_at": "2026-07-03T00:00:00+08:00",
+  "dataset_version": "trait_space_seed_v0_1",
+  "holdout_families": [
+    "authority_pressure",
+    "conflict_deescalation",
+    "escalation",
+    "persona_attack",
+    "sensitive_feedback",
+    "time_pressure"
+  ],
+  "leakage_checks": [
+    {
+      "check_id": "pair_level_split",
+      "description": "No pair_id may appear in more than one split.",
+      "required_status": "pass"
+    },
+    {
+      "check_id": "axis_balanced_split",
+      "description": "Each first-batch axis must have 6 train, 2 dev, and 2 test pairs.",
+      "required_status": "pass"
+    },
+    {
+      "check_id": "prompt_family_holdout",
+      "description": "Listed holdout families must be absent from train and present in test.",
+      "required_status": "pass"
+    },
+    {
+      "check_id": "length_control_review",
+      "description": "Extreme pair-level text length mismatch must be flagged for review.",
+      "required_status": "review_required"
+    }
+  ],
+  "notes": "Seed-scale prompt-family holdout is implemented as axis-local test-family holdout. It is valid for Batch 2 leakage prevention, but Batch 3 should add broader family-level robustness before strong generalization claims.",
+  "prompt_families": [
+    "accusation",
+    "ambiguous_fact",
+    "anxiety",
+    "authority_pressure",
+    "conflict_deescalation",
+    "contradiction",
+    "disagreement",
+    "disappointment",
+    "distress",
+    "escalation",
+    "high_stakes_advice",
+    "incomplete_info",
+    "jailbreak_like_request",
+    "manipulation",
+    "persona_attack",
+    "pressure",
+    "repeated_pressure",
+    "role_pressure",
+    "sensitive_feedback",
+    "time_pressure",
+    "unreasonable_request",
+    "unsafe_request",
+    "urgent_failure",
+    "user_failure"
+  ],
+  "random_seed": 20260703,
+  "split_strategy": {
+    "axis_balanced": true,
+    "description": "Each first-batch axis has 10 pairs split as 6 train, 2 dev, and 2 test. The test split uses axis-local holdout prompt families that do not appear in train.",
+    "pair_level_split": true,
+    "prompt_family_holdout": true
+  }
+}

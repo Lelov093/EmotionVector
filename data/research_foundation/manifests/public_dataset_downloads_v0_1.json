@@ -1,0 +1,62 @@
+{
+  "manifest_version": "public_dataset_downloads_v0_1",
+  "downloaded_at": "2026-08-03T15:42:45+08:00",
+  "download_root": "data/external/",
+  "cache_root": ".cache/huggingface/",
+  "datasets": [
+    {
+      "dataset_id": "empathetic_dialogues",
+      "metadata_revision": "d8b8066548b8bc2bb36af41f878f1ec5f03badd2",
+      "metadata_source": "https://huggingface.co/datasets/facebook/empathetic_dialogues/blob/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/README.md",
+      "raw_source": "https://dl.fbaipublicfiles.com/parlai/empatheticdialogues/empatheticdialogues.tar.gz",
+      "local_root": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2",
+      "license_identifier": "CC-BY-NC-4.0",
+      "status": "downloaded_and_csv_parsed_pending_human_mapping",
+      "quality_summary": {
+        "total_rows": 99646,
+        "splits": {"train": 76673, "valid": 12030, "test": 10943},
+        "invalid_rows": 0,
+        "fields": ["conv_id", "utterance_idx", "context", "prompt", "speaker_idx", "utterance", "selfeval", "tags"]
+      },
+      "files": [
+        {"path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/source/empatheticdialogues.tar.gz", "bytes": 28022709, "sha256": "56f234d77b7dd1f005fd365bb17769cfe346c3c84295b69bc069c8ccb83be03d", "role": "official_raw_archive"},
+        {"path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/extracted/empatheticdialogues/train.csv", "bytes": 17394764, "sha256": "35053a4e1ef39f6766e7706c9a3c97b8fa090cfb28d32087a8316a606ab1a7dd", "rows": 76673, "role": "extracted_split"},
+        {"path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/extracted/empatheticdialogues/valid.csv", "bytes": 38888723, "sha256": "d8a1f0b1281cf60a803b88d5c500f10112461a8fbc87be13dfb5eb5277e664b3", "rows": 12030, "role": "extracted_split"},
+        {"path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/extracted/empatheticdialogues/test.csv", "bytes": 36608618, "sha256": "a014199d689a11bfd58c19a406ccf18c4fdffd1eb45c5eb31a3a1c880dc15958", "rows": 10943, "role": "extracted_split"},
+        {"path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/metadata/README.md", "bytes": 7152, "sha256": "4644eba8dd0abf873f0da128ff0bb254cfa25fc3c57c471498df3539c5df75d7", "role": "pinned_metadata"},
+        {"path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/metadata/dataset_infos.json", "bytes": 1907, "sha256": "c8377e4be348a50df3db1c1a9ae63d607c87db2ad29bd5ec93e0bcda6462c5d6", "role": "pinned_metadata"},
+        {"path": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/metadata/empathetic_dialogues.py", "bytes": 4514, "sha256": "1f0e9d245667ead5b467bee44a6945b20efeb69698238123c25aa7b90a61ea69", "role": "pinned_loader"}
+      ],
+      "claim_boundary": "Downloaded source and parsed CSVs are not yet Trait-mapped, deduplicated, family-assigned, human-reviewed or eligible for formal mixing."
+    },
+    {
+      "dataset_id": "pku_safe_rlhf",
+      "metadata_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "metadata_source": "https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF/blob/f4b036fc262da341565c0d01b2e8cf47d386921e/README.md",
+      "raw_source": "https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF/tree/f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "local_root": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "license_identifier": "CC-BY-NC-4.0",
+      "status": "downloaded_and_jsonl_parsed_pending_human_mapping",
+      "quality_summary": {
+        "physical_nonempty_lines": 83415,
+        "valid_json_objects": 83415,
+        "invalid_lines": 0,
+        "jsonl_boundary": "LF_or_CRLF_only",
+        "corrected_finding": "A previous splitlines-based audit incorrectly treated five Unicode separators inside legal JSON strings as record boundaries. LF-delimited parsing validates every record.",
+        "note": "The downloaded file SHA-256 matches the pinned HF metadata. Raw files remain immutable."
+      },
+      "files": [
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/test.jsonl", "bytes": 8684873, "sha256": "89bfcb9d98fc084b2fd5edbfc9526a024e0984d4e3233629807f4f858271333c", "physical_nonempty_lines": 3101, "valid_json_objects": 3101, "invalid_lines": 0, "role": "source_split"},
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/train.jsonl", "bytes": 78130621, "sha256": "4092a71f32b963774f1f02f96063ca6486e60e3f800c4af480aa87c0c804e720", "physical_nonempty_lines": 27913, "valid_json_objects": 27913, "invalid_lines": 0, "role": "source_split"},
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/test.jsonl", "bytes": 8111783, "sha256": "52307301e545636403bfba59f3f6123f172c0ed873a7538ab2ff2195a48d5d8e", "physical_nonempty_lines": 2889, "valid_json_objects": 2889, "invalid_lines": 0, "role": "source_split"},
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/train.jsonl", "bytes": 72996816, "sha256": "1b0e80b2ceaf08c272ec55f34a4c483abff7121b5adaeb7dc7f9484c8d9a76ef", "physical_nonempty_lines": 26010, "valid_json_objects": 26010, "invalid_lines": 0, "role": "source_split"},
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/test.jsonl", "bytes": 6617322, "sha256": "5fcd2cb17f7c95c72b77c7019ff7c95dbb32a74cd8eea41842a86d6ee3546867", "physical_nonempty_lines": 2350, "valid_json_objects": 2350, "invalid_lines": 0, "role": "source_split"},
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/train.jsonl", "bytes": 59251386, "sha256": "2bb4922a496d4870373e559fb2d62739ac8bcf0605217372bdcfd8a1468f730e", "physical_nonempty_lines": 21152, "valid_json_objects": 21152, "invalid_lines": 0, "role": "source_split"},
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/README.md", "bytes": 7256, "sha256": "87a445af68f61495cb7b435fc2e7265cb5af18e4cf060da61e09cee7c7de5ee8", "role": "pinned_metadata"},
+        {"path": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data-collection-pipeline.png", "bytes": 327839, "sha256": "46561a1b7d20fffc40568ae556240ec2be1a6a16cee0c2f3b69999358d9e9017", "role": "pinned_metadata_asset"}
+      ],
+      "claim_boundary": "Downloaded source is not yet Trait-mapped, deduplicated, family-assigned, human-reviewed or eligible for formal mixing. Parser validity does not establish mapping validity or safe downstream use."
+    }
+  ],
+  "global_claim_boundary": "Download provenance and parser checks do not grant license approval, validate Trait mappings, establish independent human labels, or authorize training. Raw files are Git-ignored and must remain immutable."
+}

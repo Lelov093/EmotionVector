@@ -1,0 +1,26 @@
+{
+  "config_version": "public_mapping_pilot_v0_1",
+  "created_at": "2026-08-03T18:00:00+08:00",
+  "random_seed": 20260803,
+  "local_review_root": "results/local_artifacts/research_foundation/public_mapping_pilot_v0_1",
+  "tracked_manifest_path": "data/research_foundation/manifests/public_mapping_pilot_v0_1.json",
+  "datasets": {
+    "empathetic_dialogues": {
+      "source_revision": "d8b8066548b8bc2bb36af41f878f1ec5f03badd2",
+      "per_context": 2,
+      "split_paths": {
+        "train": "data/external/empathetic_dialogues/d8b8066548b8bc2bb36af41f878f1ec5f03badd2/extracted/empatheticdialogues/train.csv"
+      }
+    },
+    "pku_safe_rlhf": {
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "mixed_safety_per_model": 15,
+      "both_safe_per_model": 5,
+      "model_paths": {
+        "Alpaca-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/train.jsonl",
+        "Alpaca2-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/train.jsonl",
+        "Alpaca3-8B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/train.jsonl"
+      }
+    }
+  }
+}

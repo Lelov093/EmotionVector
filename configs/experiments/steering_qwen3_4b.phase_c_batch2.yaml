@@ -1,0 +1,81 @@
+experiment_id: steering_qwen3_4b.phase_c_batch2
+run_id: steering_qwen3_4b_phase_c_batch2_v0_1
+module: activation_steering
+model_config: configs/models/qwen3_4b_instruct_2507.yaml
+runtime_mode:
+  runtime_id: bnb_4bit
+  quantization: 4bit
+  experiment_type: fp16_vector_to_quantized_runtime_transfer
+vector_registry: results/summaries/vector_registry.jsonl
+vector_run_id: representation_atlas_main_qwen3_4b_v0_1
+vector_artifact: results/local_artifacts/representation_atlas/main_qwen3_4b/representation_atlas_main_qwen3_4b_v0_1/vectors.pt
+dataset_version: trait_space_seed_v0_1
+dataset_path: data/trait_space/curated/trait_space_seed_v0_1.jsonl
+split_manifest: data/trait_space/splits/trait_space_seed_v0_1_split_manifest.json
+axes:
+  - calm-agitated
+  - cautious-impulsive
+  - boundary-preserving-over-accommodating
+layers: [24]
+pooling_modes: [last_token]
+vector_methods: [difference_of_means]
+alpha_values: [-5, -3, 0, 3, 5]
+conditions:
+  - no-steering
+  - activation-steering
+  - prompt-only
+  - random-vector
+  - shuffled-vector
+deduplicate_baselines: true
+condition_matrix:
+  no-steering:
+    alphas: [0]
+    uses_activation_hook: false
+  activation-steering:
+    alphas: [-5, -3, 3, 5]
+    uses_activation_hook: true
+  prompt-only:
+    alphas: [0]
+    uses_activation_hook: false
+  random-vector:
+    alphas: [3]
+    uses_activation_hook: true
+  shuffled-vector:
+    alphas: [3]
+    uses_activation_hook: true
+prompt_set:
+  path: data/trait_space/steering_prompts/phase_c_batch1_steering_prompts.jsonl
+  min_prompts_per_axis: 6
+generation_config:
+  max_new_tokens: 48
+  do_sample: false
+  generation_seed: 20260704
+evaluator_config:
+  trait_expression_judge: rule_based_rubric_v0
+  side_effect_evaluator: heuristic_side_effects_v0
+  pairwise_helper: targeted_activation_vs_baselines_v1
+  bootstrap_iterations: 1000
+  anti_circularity: "Do not use steering-vector projection as a behavioral score."
+side_effect_metrics:
+  - length
+  - repetition
+  - refusal_behavior
+  - boundary_preservation
+  - sycophancy_risk
+  - response_usefulness
+local_artifact_dir: results/local_artifacts/steering/phase_c_batch2_qwen3_4b
+tracked_outputs:
+  result_card_json: results/cards/steering_qwen3_4b_phase_c_batch2.json
+  result_card_md: results/cards/steering_qwen3_4b_phase_c_batch2.md
+  summary_json: results/summaries/steering_phase_c_batch2_summary.json
+  sampled_cases_jsonl: results/cards/steering_phase_c_batch2_cases.jsonl
+  pairwise_records_jsonl: results/cards/steering_phase_c_batch2_pairwise_records.jsonl
+  failure_taxonomy_json: results/cards/steering_phase_c_batch2_failure_taxonomy.json
+  failure_taxonomy_md: results/cards/steering_phase_c_batch2_failure_taxonomy.md
+conclusion: "Batch 2 targeted refinement completed with baseline deduplication, paired deltas, bootstrap CIs, and failure taxonomy. Evidence remains preliminary and does not prove stable trait control."
+non_goals:
+  - no quantized-runtime formal evidence claim
+  - no LoRA or QLoRA training
+  - no 7B or 8B run
+  - no dashboard changes
+  - no large raw generation logs in git

@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/result_card.schema.json",
+  "title": "EmotionVector Result Card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "experiment_id",
+    "git_commit",
+    "model_id",
+    "model_role",
+    "dataset_version",
+    "axis_ids",
+    "layers",
+    "vector_method",
+    "metrics",
+    "confidence_intervals",
+    "evaluator_version",
+    "artifacts",
+    "limitations",
+    "failure_cases",
+    "created_at",
+    "reproducibility_metadata"
+  ],
+  "properties": {
+    "run_id": { "type": "string" },
+    "experiment_id": { "type": "string" },
+    "git_commit": { "type": "string" },
+    "model_id": { "type": "string" },
+    "model_role": {
+      "type": "string",
+      "enum": ["regression", "main", "fallback", "cross_scale_validation"]
+    },
+    "dataset_version": { "type": "string" },
+    "axis_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "layers": {
+      "type": "array",
+      "items": { "type": "integer" }
+    },
+    "vector_method": { "type": "string" },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "confidence_intervals": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "evaluator_version": { "type": "string" },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tracked", "local_only"],
+      "properties": {
+        "tracked": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "local_only": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["kind", "pointer"],
+            "properties": {
+              "kind": { "type": "string" },
+              "pointer": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "failure_cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["case_id", "summary", "artifact_pointer"],
+        "properties": {
+          "case_id": { "type": "string" },
+          "summary": { "type": "string" },
+          "artifact_pointer": { "type": "string" },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reproducibility_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["config_path", "seed", "hardware_note", "dependency_snapshot"],
+      "properties": {
+        "config_path": { "type": "string" },
+        "seed": { "type": "integer" },
+        "hardware_note": { "type": "string" },
+        "dependency_snapshot": { "type": "string" },
+        "local_cache_note": { "type": "string" }
+      }
+    }
+  }
+}

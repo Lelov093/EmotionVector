@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Trait Eval Human Review Annotation v0.1",
+  "type": "object",
+  "required": [
+    "review_item_id",
+    "eval_id",
+    "axis_id",
+    "user_prompt",
+    "outputs",
+    "heuristic_scores",
+    "external_judge",
+    "human_review"
+  ],
+  "properties": {
+    "review_item_id": {
+      "type": "string"
+    },
+    "eval_id": {
+      "type": "string"
+    },
+    "axis_id": {
+      "type": "string"
+    },
+    "user_prompt": {
+      "type": "string"
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "heuristic_scores": {
+      "type": "object"
+    },
+    "external_judge": {
+      "type": "object"
+    },
+    "human_review": {
+      "type": "object",
+      "required": [
+        "preferred_output",
+        "trait_expression_score",
+        "response_quality_score",
+        "side_effect_score",
+        "usefulness_score",
+        "notes",
+        "reviewer",
+        "reviewed_at"
+      ],
+      "properties": {
+        "preferred_output": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trait_expression_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 3
+        },
+        "response_quality_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 3
+        },
+        "side_effect_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 3
+        },
+        "usefulness_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 3
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

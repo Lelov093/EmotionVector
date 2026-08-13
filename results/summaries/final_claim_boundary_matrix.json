@@ -1,0 +1,109 @@
+{
+  "created_for": "sanitized research release",
+  "claims": [
+    {
+      "claim_candidate": "12-axis trait space was designed",
+      "status": "supported",
+      "evidence": "data/trait_space/axis_registry.yaml; data/evaluation/trait_eval_12axis_v0_1.jsonl",
+      "limitation": "Design is broader than executed atlas.",
+      "allowed_wording": "Designed a 12-axis Trait Space V1 for affective/control/style traits.",
+      "forbidden_wording": "Completed full 12-axis controllability evidence."
+    },
+    {
+      "claim_candidate": "Representation atlas was built",
+      "status": "supported_with_scope",
+      "evidence": "results/cards/representation_atlas_main_qwen3_4b_v0_1.json",
+      "limitation": "Main run covers 6 high-priority axes on curated seed data.",
+      "allowed_wording": "Built a Qwen3-4B representation atlas slice for 6 high-priority axes.",
+      "forbidden_wording": "Fully mapped all 12 trait axes across models."
+    },
+    {
+      "claim_candidate": "Activation steering was evaluated",
+      "status": "supported",
+      "evidence": "results/cards/steering_qwen3_4b_phase_c_batch2.json",
+      "limitation": "Effects were mixed and baseline-sensitive.",
+      "allowed_wording": "Evaluated activation steering against prompt-only, random, and shuffled controls.",
+      "forbidden_wording": "Steering reliably controls model personality."
+    },
+    {
+      "claim_candidate": "Prompt-only baseline is strong",
+      "status": "supported",
+      "evidence": "results/summaries/phase_e_batch2_heuristic_eval_summary.json",
+      "limitation": "Not proof that prompting solves control.",
+      "allowed_wording": "Prompt-only was a strong baseline in several evaluated axes.",
+      "forbidden_wording": "Prompt-only solves trait control."
+    },
+    {
+      "claim_candidate": "QLoRA post-training pipeline works",
+      "status": "supported",
+      "evidence": "results/cards/post_training_boundary_preserving_phase_d_batch2.json",
+      "limitation": "Single boundary axis with synthetic artifact risk.",
+      "allowed_wording": "Implemented and evaluated a Qwen3-4B 4-bit QLoRA boundary-control baseline.",
+      "forbidden_wording": "QLoRA broadly dominates steering and prompt-only."
+    },
+    {
+      "claim_candidate": "Boundary-preserving adapter improved over pilot",
+      "status": "supported",
+      "evidence": "results/cards/post_training_boundary_preserving_phase_d_batch3.md",
+      "limitation": "Prompt-only remained competitive.",
+      "allowed_wording": "Batch 2 boundary adapter improved over Batch 1 pilot under sampled evidence.",
+      "forbidden_wording": "The adapter is production-grade safety control."
+    },
+    {
+      "claim_candidate": "Steering is mixed",
+      "status": "supported",
+      "evidence": "results/cards/steering_qwen3_4b_phase_c_batch2.json; results/summaries/phase_3_held_out_results_v0_1.json",
+      "limitation": "Depends on evaluator and sample.",
+      "allowed_wording": "Steering evidence was mixed and did not stably beat baselines.",
+      "forbidden_wording": "Steering failed completely in all cases."
+    },
+    {
+      "claim_candidate": "12-axis controllability is proven",
+      "status": "unsupported",
+      "evidence": "No sufficient evidence.",
+      "limitation": "Selected steering only partial; no independent human study.",
+      "allowed_wording": "12-axis evaluation foundation exists.",
+      "forbidden_wording": "12-axis controllability is proven."
+    },
+    {
+      "claim_candidate": "AI preannotation with user secondary review exists",
+      "status": "supported",
+      "evidence": "data/evaluation/human_review/phase_e_review_subset_ai_preannotated_v0_1.jsonl",
+      "limitation": "Not independent human labeling.",
+      "allowed_wording": "Created AI preannotations and recorded user secondary review acceptance.",
+      "forbidden_wording": "Completed independent human annotation."
+    },
+    {
+      "claim_candidate": "Independent human annotation exists",
+      "status": "unsupported",
+      "evidence": "No independent label study.",
+      "limitation": "User review was broad acceptance, not from-scratch annotation.",
+      "allowed_wording": "Independent human annotation remains future work.",
+      "forbidden_wording": "Human-verified benchmark."
+    },
+    {
+      "claim_candidate": "External judge can replace humans",
+      "status": "unsupported",
+      "evidence": "Judge disagreement in Phase C/E.",
+      "limitation": "Judge useful but not ground truth.",
+      "allowed_wording": "External judge was used for calibration and triage.",
+      "forbidden_wording": "External judge replaces human evaluation."
+    },
+    {
+      "claim_candidate": "Production-grade safety/personality control exists",
+      "status": "unsupported",
+      "evidence": "No production validation.",
+      "limitation": "Prototype-scale research evidence.",
+      "allowed_wording": "Research prototype for controllability/evaluation.",
+      "forbidden_wording": "Production-grade personality/safety control system."
+    },
+    {
+      "claim_candidate": "Project is a credible LLM controllability/evaluation research prototype",
+      "status": "supported",
+      "evidence": "Phase A-E artifacts.",
+      "limitation": "Prototype, not final benchmark.",
+      "allowed_wording": "A credible research prototype for LLM trait representation, controllability baselines, and evaluation.",
+      "forbidden_wording": "A mature platform that solves LLM trait control."
+    }
+  ]
+}

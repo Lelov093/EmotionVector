@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_expansion_candidate_manifest_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Expansion Candidate Manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "status", "contract", "sampling", "isolation_policy", "local_review_packet", "records", "checks", "claim_boundary"],
+  "properties": {
+    "manifest_version": {"const": "phase_3_expansion_candidate_manifest_v0_1"},
+    "status": {"const": "expansion_generated_pending_human_review_and_semantic_isolation_review_no_split"},
+    "contract": {"type": "object"},
+    "sampling": {"type": "object"},
+    "isolation_policy": {"type": "object"},
+    "local_review_packet": {"type": "object"},
+    "records": {
+      "type": "array", "minItems": 60, "maxItems": 60,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "dataset_id", "source_revision", "source_family_id", "source_locator", "sampling_stratum", "prompt_sha256", "response_sha256", "content_sha256", "candidate_trait_axes", "provisional_isolation_family_id", "isolation_review_status", "human_review_status", "split_status"],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"},
+          "dataset_id": {"const": "pku_safe_rlhf"},
+          "source_revision": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+          "source_family_id": {"type": "string"},
+          "source_locator": {"type": "object"},
+          "sampling_stratum": {"enum": ["mixed_safety", "both_safe"]},
+          "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "response_sha256": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+          "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "candidate_trait_axes": {"const": ["boundary-preserving-over-accommodating"]},
+          "provisional_isolation_family_id": {"type": "string", "pattern": "^p3iso_[a-f0-9]{20}$"},
+          "isolation_review_status": {"const": "pending_human_semantic_merge_review"},
+          "human_review_status": {"const": "pending"},
+          "split_status": {"const": "not_assigned_before_all_reviews"}
+        }
+      }
+    },
+    "checks": {"type": "array", "minItems": 8, "items": {"type": "object"}},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

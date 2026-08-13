@@ -1,0 +1,67 @@
+{
+  "schema_version": "phase_1_research_credibility_acceptance_v0_1",
+  "evaluated_at": "2026-08-03T23:28:55+08:00",
+  "scope": "stage_1_data_and_independent_evaluation_foundation",
+  "decision": "not_accepted_for_stage_2_entry",
+  "authorized_stage_1_work_status": "completed_with_failed_predeclared_gates",
+  "stage_2_entry": false,
+  "criteria": [
+    {
+      "criterion_id": "provenance_license_version_traceability",
+      "status": "partial_not_passed",
+      "evidence": "Both public pilots use pinned source revisions and content hashes, but both licenses remain marked provisional_noncommercial_restriction_requires_human_approval and no formal dataset has been approved or frozen.",
+      "required_action": "Record an explicit non-commercial research-use license decision before any formal inclusion."
+    },
+    {
+      "criterion_id": "family_isolation_and_near_duplicate_control",
+      "status": "passed_for_candidate",
+      "evidence": "The 112-response candidate passes exact, normalized, token-3gram, source-sample, task, scenario, template and semantic cross-split checks.",
+      "limitation": "source_family_id overlaps across splits and is not a supported generalization claim."
+    },
+    {
+      "criterion_id": "independent_test_frozen_and_unused_for_tuning",
+      "status": "not_passed",
+      "evidence": "The candidate manifest records frozen=false; dev and test cover only boundary-preserving-over-accommodating.",
+      "required_action": "Do not call the current 17-record test candidate an independent frozen test set."
+    },
+    {
+      "criterion_id": "single_researcher_two_round_rubric_stability",
+      "status": "numeric_pass_protocol_not_passed",
+      "evidence": "Trait exact agreement is 1.0 and QWK is 1.0 across 30 paired outputs, but the elapsed washout was 1.141 hours rather than the preregistered minimum 7 days.",
+      "required_action": "Treat Round 2 only as accelerated repeatability evidence."
+    },
+    {
+      "criterion_id": "automatic_evaluators_auxiliary_only",
+      "status": "passed",
+      "evidence": "Calibration against Round 1 shows Trait heuristic Spearman=-0.301625 and QWK=-0.100592. LLM Judge task-preference agreement is 0.75 on only 4 human non-ties. Both are restricted to auxiliary uses."
+    },
+    {
+      "criterion_id": "legacy_sft_sources_retired",
+      "status": "passed",
+      "evidence": "boundary_preserving_sft_v0_1/v0_2 remain prohibited as new formal training sources."
+    }
+  ],
+  "blocking_gates": [
+    "explicit license-use approval is not recorded for formal inclusion",
+    "independent held-out test set is not frozen",
+    "preregistered minimum seven-day washout was not met"
+  ],
+  "automatic_evaluator_decision": {
+    "heuristic": "triage_and_sensitivity_only",
+    "llm_judge": "exploratory_pairwise_aid_only",
+    "human_replacement_allowed": false,
+    "model_selection_sole_signal_allowed": false
+  },
+  "evidence": {
+    "repository_commit_before_calibration": "54818bca89d709a052e32e03fcb12a3f969a72a2",
+    "family_split_candidate_path": "results/summaries/public_mapping_family_split_v2_candidate.json",
+    "family_split_candidate_sha256": "065ba15cd8721269ac8bf16cf736022cac3fecaf13e7c0bf33747a592e41dabb",
+    "leakage_audit_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json",
+    "leakage_audit_sha256": "b1f4b2f11b27a5a49eb7ddad76f7c87bed038ca012437c5dc2287f262222c2d3",
+    "blind_retest_path": "results/summaries/blind_review_retest_stability_v0_2.json",
+    "blind_retest_sha256": "40e1d82c571807974519740870f02253724155deea48a29e925889297dd9d362",
+    "automatic_evaluator_calibration_path": "results/summaries/automatic_evaluator_calibration_v0_1.json",
+    "automatic_evaluator_calibration_sha256": "224f799b4d86dbc84d36252ca23b63deb275809eba7ea9457e32a31a80b0baff"
+  },
+  "claim_boundary": "Stage 1 produced an auditable eligibility pilot, candidate family-isolated allocation, single-researcher accelerated repeatability evidence and evaluator calibration. It does not establish a frozen independent benchmark, inter-rater reliability, Trait gold labels, representation existence, causal steering efficacy or method superiority."
+}

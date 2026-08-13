@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_train_dev_execution_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Train/Dev Execution Summary v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary_version", "status", "runtime", "notice", "training", "development_generation", "blind_review", "test_boundary", "artifacts", "claim_boundary"],
+  "properties": {
+    "summary_version": {"const": "phase_3_train_dev_execution_v0_1"},
+    "status": {"const": "train_and_development_candidates_complete_pending_condition_blind_human_review"},
+    "runtime": {"type": "object"},
+    "notice": {"type": "object"},
+    "training": {"type": "object"},
+    "development_generation": {"type": "object"},
+    "blind_review": {"type": "object"},
+    "test_boundary": {"type": "object"},
+    "artifacts": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

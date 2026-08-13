@@ -1,0 +1,24 @@
+model_id: Qwen/Qwen2.5-1.5B-Instruct
+role: regression
+local_cache_policy:
+  user_local_model_root_note: "D:\\AI_Models"
+  user_local_hf_hub_note: "D:\\AI_Models\\huggingface\\hub"
+  portable_required_path: false
+  loader_should_support: [HF_HOME, TRANSFORMERS_CACHE, cache_dir, local_files_only]
+recommended_dtype: fp16
+quantization_mode: none
+device_map_strategy: auto_single_gpu
+default_context_length: 512
+default_max_new_tokens: 96
+batch_size_policy: "1-4 for scoring; 1 for generation or hidden-state extraction"
+hidden_state_policy: "Allowed for regression/debug only; save large tensors local-only."
+local_files_only_policy: "Prefer true when model exists in local cache; never download during validation-only runs."
+artifact_policy: "No model weights, cache, hidden states, vectors, or large logs in git."
+known_risks:
+  - Prototype-scale results do not transfer directly to larger models.
+  - Should not be used as the main research evidence.
+acceptance_use:
+  - Runner sanity checks
+  - Schema validation
+  - Hook compatibility regression
+  - Reproducing Phase 0 legacy results

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_small_supplement_manifest_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Small Supplement Manifest v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["manifest_version", "status", "contract", "sampling", "isolation_policy", "local_review_packet", "local_isolation_review_packet", "records", "checks", "claim_boundary"],
+  "properties": {
+    "manifest_version": {"const": "phase_3_small_supplement_manifest_v0_1"},
+    "status": {"const": "supplemental_12_pending_full_and_isolation_human_review_no_split"},
+    "contract": {"type": "object"}, "sampling": {"type": "object"}, "isolation_policy": {"type": "object"},
+    "local_review_packet": {"type": "object"}, "local_isolation_review_packet": {"type": "object"},
+    "records": {
+      "type": "array", "minItems": 12, "maxItems": 12,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "dataset_id", "source_revision", "source_family_id", "source_locator", "sampling_stratum", "prompt_sha256", "response_sha256", "content_sha256", "candidate_trait_axes", "provisional_isolation_family_id", "human_review_status", "isolation_review_status", "split_status"],
+        "properties": {
+          "candidate_id": {"type": "string"}, "dataset_id": {"const": "pku_safe_rlhf"}, "source_revision": {"type": "string"},
+          "source_family_id": {"type": "string"}, "source_locator": {"type": "object"}, "sampling_stratum": {"enum": ["mixed_safety", "both_safe"]},
+          "prompt_sha256": {"type": "string"}, "response_sha256": {"type": "array", "minItems": 2, "maxItems": 2}, "content_sha256": {"type": "string"},
+          "candidate_trait_axes": {"const": ["boundary-preserving-over-accommodating"]}, "provisional_isolation_family_id": {"type": "string"},
+          "human_review_status": {"const": "pending"}, "isolation_review_status": {"const": "pending_human_semantic_merge_review"},
+          "split_status": {"const": "not_assigned_before_all_reviews"}
+        }
+      }
+    },
+    "checks": {"type": "array", "minItems": 10}, "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

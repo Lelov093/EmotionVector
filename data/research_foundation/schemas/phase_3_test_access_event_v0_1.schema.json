@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_test_access_event_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Test Access Event v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_version", "opened_at", "authorization_reference", "runtime_sha256", "test_freeze_sha256", "selection_lock_sha256", "notice_path", "notice_sha256", "model_opening_number", "claim_boundary"],
+  "properties": {
+    "event_version": {"const": "phase_3_test_access_event_v0_1"},
+    "opened_at": {"type": "string", "format": "date-time"},
+    "authorization_reference": {"type": "string", "minLength": 1},
+    "runtime_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "test_freeze_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "selection_lock_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "notice_path": {"type": "string", "minLength": 1},
+    "notice_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "model_opening_number": {"const": 1},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

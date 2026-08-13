@@ -1,0 +1,139 @@
+{
+  "audit_version": "phase_3_family_isolation_options_audit_v0_1",
+  "claim_boundary": "This CPU-only structural audit compares allocation feasibility. It does not change confirmed reviews, revise the frozen isolation contract, create a split, run semantic embeddings, or authorize model work.",
+  "conclusion": {
+    "frozen_contract_component_count": 1,
+    "identity_upper_bound_evaluation_components": 64,
+    "identity_upper_bound_overlap_components": 62,
+    "identity_upper_bound_qlora_components": 74,
+    "maximum_train_after_heldout_reservation": 21,
+    "minimum_additional_isolated_qlora_only_components_if_other_yields_hold": 19,
+    "ownership_field_relaxation_alone_sufficient": false
+  },
+  "frozen_targets": {
+    "development_minimum_families": 15,
+    "held_out_test_minimum_families": 40,
+    "qlora_train_minimum_families": 40,
+    "required_disjoint_family_components": 95
+  },
+  "observed_role_yield": {
+    "evaluation_eligible_pairs": 64,
+    "qlora_eligible_pairs": 74,
+    "qlora_eligible_responses": 85
+  },
+  "options": [
+    {
+      "both_role_components": 1,
+      "component_count": 1,
+      "evaluation_eligible_components": 1,
+      "evaluation_only_components": 0,
+      "largest_component_rows": 180,
+      "maximum_qlora_train_components_after_reserving_15_dev_and_40_test": 0,
+      "meets_40_15_40_disjoint_gate": false,
+      "option_id": "frozen_five_field_component",
+      "ownership_fields": [
+        "source_family_id",
+        "task_family_id",
+        "scenario_family_id",
+        "prompt_template_id",
+        "semantic_cluster_id"
+      ],
+      "qlora_eligible_components": 1,
+      "qlora_only_components": 0,
+      "role": "current_frozen_contract"
+    },
+    {
+      "both_role_components": 1,
+      "component_count": 1,
+      "evaluation_eligible_components": 1,
+      "evaluation_only_components": 0,
+      "largest_component_rows": 180,
+      "maximum_qlora_train_components_after_reserving_15_dev_and_40_test": 0,
+      "meets_40_15_40_disjoint_gate": false,
+      "option_id": "scenario_semantic_template_component",
+      "ownership_fields": [
+        "scenario_family_id",
+        "semantic_cluster_id",
+        "prompt_template_id"
+      ],
+      "qlora_eligible_components": 1,
+      "qlora_only_components": 0,
+      "role": "diagnostic_only"
+    },
+    {
+      "both_role_components": 19,
+      "component_count": 29,
+      "evaluation_eligible_components": 19,
+      "evaluation_only_components": 0,
+      "largest_component_rows": 22,
+      "maximum_qlora_train_components_after_reserving_15_dev_and_40_test": 0,
+      "meets_40_15_40_disjoint_gate": false,
+      "option_id": "scenario_semantic_component",
+      "ownership_fields": [
+        "scenario_family_id",
+        "semantic_cluster_id"
+      ],
+      "qlora_eligible_components": 20,
+      "qlora_only_components": 1,
+      "role": "diagnostic_only"
+    },
+    {
+      "both_role_components": 19,
+      "component_count": 29,
+      "evaluation_eligible_components": 19,
+      "evaluation_only_components": 0,
+      "largest_component_rows": 22,
+      "maximum_qlora_train_components_after_reserving_15_dev_and_40_test": 0,
+      "meets_40_15_40_disjoint_gate": false,
+      "option_id": "semantic_component",
+      "ownership_fields": [
+        "semantic_cluster_id"
+      ],
+      "qlora_eligible_components": 20,
+      "qlora_only_components": 1,
+      "role": "diagnostic_only"
+    },
+    {
+      "both_role_components": 4,
+      "component_count": 6,
+      "evaluation_eligible_components": 4,
+      "evaluation_only_components": 0,
+      "largest_component_rows": 65,
+      "maximum_qlora_train_components_after_reserving_15_dev_and_40_test": 0,
+      "meets_40_15_40_disjoint_gate": false,
+      "option_id": "prompt_template_component",
+      "ownership_fields": [
+        "prompt_template_id"
+      ],
+      "qlora_eligible_components": 4,
+      "qlora_only_components": 0,
+      "role": "diagnostic_only"
+    },
+    {
+      "both_role_components": 62,
+      "component_count": 180,
+      "evaluation_eligible_components": 64,
+      "evaluation_only_components": 2,
+      "largest_component_rows": 1,
+      "maximum_qlora_train_components_after_reserving_15_dev_and_40_test": 21,
+      "meets_40_15_40_disjoint_gate": false,
+      "option_id": "candidate_identity_upper_bound",
+      "ownership_fields": [],
+      "qlora_eligible_components": 74,
+      "qlora_only_components": 12,
+      "role": "structural_upper_bound_not_a_family_contract"
+    }
+  ],
+  "recommendation": {
+    "decision": "do_not_freeze_split_from_current_180",
+    "minimum_expansion_note": "Even candidate identity gives only 21 QLoRA-train components after reserving 55 evaluation components; at least 19 additional isolated QLoRA-only eligible components are mathematically required, and a larger candidate tranche is needed because review yield is below 100%.",
+    "preferred_route": "Preserve the confirmed review, define a new granular isolation_family_id from prompt-intent and exact/normalized/near-duplicate connectivity, retain source/task/scenario/template/semantic fields as provenance or stratification controls, and review an additional targeted candidate tranche.",
+    "requires_user_approval": true
+  },
+  "review_acceptance": {
+    "formal_review_sha256": "5f1d4ec13572a3c6e6a196e28015bba7d392671400477a11be07d2146bb6ece2",
+    "path": "results/summaries/phase_3_family_review_acceptance_v0_1.json",
+    "row_count": 180
+  },
+  "status": "no_go_current_180_for_40_15_40_disjoint_split"
+}

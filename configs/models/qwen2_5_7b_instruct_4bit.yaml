@@ -1,0 +1,25 @@
+model_id: Qwen/Qwen2.5-7B-Instruct
+role: cross_scale_validation
+local_cache_policy:
+  user_local_model_root_note: "D:\\AI_Models"
+  user_local_hf_hub_note: "D:\\AI_Models\\huggingface\\hub"
+  portable_required_path: false
+  loader_should_support: [HF_HOME, TRANSFORMERS_CACHE, cache_dir, local_files_only]
+recommended_dtype: quantized
+quantization_mode: 4bit
+device_map_strategy: auto_with_cpu_offload_if_needed
+default_context_length: 512
+default_max_new_tokens: 96
+batch_size_policy: "1 only."
+hidden_state_policy: "Selected layers only; selected axes only; no full 12-axis matrix."
+local_files_only_policy: "Required for planned validation unless user explicitly permits download."
+artifact_policy: "No weights/cache/hidden states/logs in git; selected result cards only."
+known_risks:
+  - Windows 4-bit dependency support can be fragile.
+  - Hidden-state extraction and hooks may be slower or memory constrained.
+  - Not suitable for full local Phase B matrix.
+acceptance_use:
+  - 3-4 core axis representation separability
+  - selected layer scan
+  - steering alpha sweep with prompt-only/random/shuffled baselines
+  - independent evaluator and failure analysis

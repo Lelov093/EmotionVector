@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-07-04T17:46:49.638040+00:00",
+  "item_count": 36,
+  "axes_covered": [
+    "analytical-intuitive",
+    "assertive-compliant",
+    "boundary-preserving-over-accommodating",
+    "calm-agitated",
+    "cautious-impulsive",
+    "concise-expressive",
+    "confident-uncertain",
+    "empathetic-detached",
+    "reflective-impulsively-answering",
+    "stable-reactive",
+    "supportive-critical",
+    "warm-cold"
+  ],
+  "ai_preannotation_status": {
+    "pre_labeled": 36
+  },
+  "user_secondary_review_status": "secondary_review_broadly_accepted",
+  "correction_level": "minor_or_none",
+  "human_annotation_type": "ai_preannotation_with_user_secondary_review",
+  "independent_human_annotation": false,
+  "human_verified_from_scratch": false,
+  "user_secondary_reviewed": true,
+  "notes": "User reported the AI preannotations were basically accepted. This is secondary review acceptance, not independent from-scratch human annotation."
+}

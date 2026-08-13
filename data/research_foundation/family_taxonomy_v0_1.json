@@ -1,0 +1,41 @@
+{
+  "taxonomy_version": "family_taxonomy_v0_1",
+  "status": "approved_for_pilot_pending_sample_assignments",
+  "approved_at": "2026-08-03T00:00:00+08:00",
+  "approval_scope": "Definitions and assignment rules approved; no machine-proposed sample assignment is thereby human-verified.",
+  "hierarchy": [
+    "source_family_id",
+    "task_family_id",
+    "scenario_family_id",
+    "prompt_template_id",
+    "semantic_cluster_id"
+  ],
+  "definitions": {
+    "source_family_id": "Common upstream dataset, seed, authoring campaign, or deterministic generation lineage.",
+    "task_family_id": "The underlying user goal or capability being exercised, independent of wording and surface scenario.",
+    "scenario_family_id": "A shared situation, actors, stakes, constraints, and resolution structure.",
+    "prompt_template_id": "A shared lexical/syntactic generation template, including paraphrased slot-filled variants.",
+    "semantic_cluster_id": "A deduplication cluster assigned from semantic similarity plus human verification."
+  },
+  "assignment_rules": [
+    "Allocate splits at the union of all five family identifiers, never at sample ID alone.",
+    "Existing prompt_family is a legacy hint and must not be copied blindly into task_family_id.",
+    "Existing scenario_id is an instance identifier and must not be treated automatically as scenario_family_id.",
+    "Machine-proposed family labels remain pending until a human reviews ambiguous and high-impact clusters.",
+    "All members of a semantic or template cluster must remain in one split or be excluded."
+  ],
+  "current_field_mapping": {
+    "prompt_family": "legacy_hint_only",
+    "scenario_id": "instance_id_only",
+    "pair_id": "contrast_or_training_pair_only",
+    "derived_from": "partial_lineage_hint",
+    "generator_model": "partial_source_family_hint"
+  },
+  "unresolved_human_tasks": [
+    "Review machine-proposed task-family assignments for the representative axes.",
+    "Review template clusters and distinguish generic instructions from true shared templates.",
+    "Adjudicate semantic clusters near split boundaries.",
+    "Approve public-dataset-to-Trait mappings before samples enter a formal set."
+  ],
+  "claim_boundary": "This taxonomy defines allocation units but does not assign or validate any current sample family."
+}

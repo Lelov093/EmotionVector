@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_family_split_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Family Split v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["manifest_version", "status", "contract", "counts", "local_artifacts", "records", "checks", "claim_boundary"],
+  "properties": {
+    "manifest_version": {"const": "phase_3_family_split_v0_1"},
+    "status": {"const": "family_isolated_39_15_40_split_frozen"},
+    "contract": {"type": "object"}, "counts": {"type": "object"}, "local_artifacts": {"type": "object"},
+    "records": {
+      "type": "array", "minItems": 205, "maxItems": 205,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["final_isolation_family_id", "candidate_ids", "component_size", "evaluation_eligible_candidate_ids", "qlora_eligible_response_ids", "source_model_families", "cohorts", "split"],
+        "properties": {
+          "final_isolation_family_id": {"type": "string", "pattern": "^p3iso_[a-f0-9]{20}$"},
+          "candidate_ids": {"type": "array", "minItems": 1, "uniqueItems": true},
+          "component_size": {"type": "integer", "minimum": 1},
+          "evaluation_eligible_candidate_ids": {"type": "array", "uniqueItems": true},
+          "qlora_eligible_response_ids": {"type": "array", "uniqueItems": true},
+          "source_model_families": {"type": "array", "minItems": 1, "uniqueItems": true},
+          "cohorts": {"type": "array", "minItems": 1, "uniqueItems": true},
+          "split": {"enum": ["train", "development", "held_out_test", "not_selected_ineligible"]}
+        }
+      }
+    },
+    "checks": {"type": "array", "minItems": 10}, "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

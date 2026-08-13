@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_train_dev_runtime_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Train/Dev Runtime v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["runtime_version", "status", "bound_contracts", "model", "data", "direction_source", "qlora", "development_generation", "claim_boundary"],
+  "properties": {
+    "runtime_version": {"const": "phase_3_train_dev_runtime_v0_1"},
+    "status": {"const": "frozen_before_first_phase_3_model_run"},
+    "bound_contracts": {"type": "object"},
+    "model": {
+      "type": "object",
+      "properties": {
+        "model_id": {"const": "Qwen/Qwen3-4B-Instruct-2507"},
+        "revision": {"const": "cdbee75f17c01a7cc42f958dc650907174af0554"},
+        "cache_root": {"type": "string", "minLength": 1},
+        "local_files_only": {"const": true},
+        "quantization": {"const": "bitsandbytes_nf4_4bit"},
+        "compute_dtype": {"const": "float16"},
+        "device_map": {"const": "auto"}
+      },
+      "required": ["model_id", "revision", "cache_root", "local_files_only", "quantization", "compute_dtype", "device_map"],
+      "additionalProperties": false
+    },
+    "data": {"type": "object"},
+    "direction_source": {"type": "object"},
+    "qlora": {"type": "object"},
+    "development_generation": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

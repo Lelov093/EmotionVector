@@ -1,0 +1,101 @@
+{
+  "artifacts": {
+    "blind_packet": {
+      "bytes": 60129,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_blind_packet_v0_1.jsonl",
+      "sha256": "be355bda2af3923be6ad03ca2902e021cd15e42922cd27526a36c0324474e08a",
+      "tracked": false
+    },
+    "development_outputs": {
+      "bytes": 90740,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_candidate_outputs_v0_1.jsonl",
+      "sha256": "e723b68d2148adada6c78596d1d2054ff4d172a3bd9a66863a70185649b335f7",
+      "tracked": false
+    },
+    "direction_bundle": {
+      "bytes": 115603,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_direction_bundle_v0_1.npz",
+      "sha256": "e45b0758a7f3a80648fc856dfad9db6abefef2b0d6da4b5481cfa8c0223a2d43",
+      "tracked": false
+    },
+    "direction_metadata": {
+      "bytes": 801,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_direction_bundle_v0_1.metadata.json",
+      "sha256": "0f7a47b18965659d127cbfad257ef28affc1e4b8eb10dcc5e29d7cc934d08706",
+      "tracked": false
+    },
+    "restricted_condition_key": {
+      "bytes": 19098,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_condition_key_v0_1.jsonl",
+      "sha256": "05e4c14b828875a12d8ec56ce33b9be171c07f1d49e27ed420b9c56cf56c2126",
+      "tracked": false
+    },
+    "training_summary": {
+      "bytes": 4727,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_qlora_training_summary_v0_1.json",
+      "sha256": "f59aec36ad60a399a8f25c648a7d0ea71bd5042a91bab343585933a7467ec98c",
+      "tracked": false
+    }
+  },
+  "blind_review": {
+    "blind_outputs": 90,
+    "condition_key_tracked": false,
+    "human_annotations_completed": 0,
+    "packet_items": 18,
+    "unique_blind_ids": 90
+  },
+  "claim_boundary": "QLoRA training and development candidate generation completed as bounded pipeline evidence. No checkpoint or alpha is selected, human outcome evidence is pending, test remains unopened, and causal or superiority claims are unsupported.",
+  "development_generation": {
+    "automatic_quality_or_trait_scores_computed": false,
+    "condition_counts": {
+      "base": 18,
+      "qlora_epoch_1": 18,
+      "qlora_epoch_2": 18,
+      "target_steering_alpha_1": 18,
+      "target_steering_alpha_3": 18
+    },
+    "condition_outputs": 90,
+    "cross_condition_exact_match_counts": {
+      "base|target_steering_alpha_1": 11,
+      "base|target_steering_alpha_3": 3,
+      "target_steering_alpha_1|target_steering_alpha_3": 3
+    },
+    "development_families": 15,
+    "development_pairs": 18,
+    "exact_duplicate_groups": 11,
+    "prompts_with_cross_condition_exact_match": 11,
+    "unique_output_hashes": 76
+  },
+  "notice": {
+    "notified_at": "2026-08-04T23:03:54.8908912+08:00",
+    "path": "results/summaries/phase_3_model_gpu_execution_notice_v0_1.json",
+    "sha256": "366722966877e8b8f1ae37d2892b28b6f65f4b4ac166f91c0cae452dd547d0c5"
+  },
+  "runtime": {
+    "path": "configs/research/phase_3_train_dev_runtime_v0_1.json",
+    "sha256": "e64a7d375dfb1a29082d096271323e9128e98fef68e7c1a5eb4125e65f2d1a1e"
+  },
+  "status": "train_and_development_candidates_complete_pending_condition_blind_human_review",
+  "summary_version": "phase_3_train_dev_execution_v0_1",
+  "test_boundary": {
+    "held_out_test_access_log_exists": false,
+    "held_out_test_model_openings": 0,
+    "phase_2_opened_test_reused": false
+  },
+  "training": {
+    "checkpoint_ids": [
+      "epoch_1",
+      "epoch_2"
+    ],
+    "elapsed_seconds": 67.7047700999974,
+    "mean_loss_by_checkpoint": {
+      "epoch_1": 2.01232423048753,
+      "epoch_2": 1.4236430369890654
+    },
+    "peak_allocated_bytes": 4451169280,
+    "peak_reserved_bytes": 4800380928,
+    "quality_selected": false,
+    "train_families": 39,
+    "train_rows": 65
+  }
+}

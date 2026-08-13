@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_blind_review_contract_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Blind Review Contract v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "status", "bound_evidence", "review_design", "condition_registry", "rubric", "auxiliary_evaluators", "artifacts", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_blind_review_contract_v0_1"},
+    "status": {"const": "frozen_before_condition_generation"},
+    "bound_evidence": {"type": "object"},
+    "review_design": {
+      "type": "object",
+      "required": ["reviewer_id", "review_rounds", "blinding_level", "historical_retest_protocol_is_not_a_phase_3_gate", "packet_randomization_seed", "blind_ids_encode_condition", "condition_key_gitignored", "unblinding_allowed_after_all_required_ratings_frozen"],
+      "properties": {
+        "reviewer_id": {"const": "researcher_01"},
+        "review_rounds": {"const": 1},
+        "blinding_level": {"const": "condition_blind_single_researcher"},
+        "historical_retest_protocol_is_not_a_phase_3_gate": {"const": true},
+        "packet_randomization_seed": {"type": "integer"},
+        "blind_ids_encode_condition": {"const": false},
+        "condition_key_gitignored": {"const": true},
+        "unblinding_allowed_after_all_required_ratings_frozen": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "condition_registry": {
+      "type": "object",
+      "required": ["fixed_condition_instances", "all_instances_required_per_prompt", "missing_or_failed_output_policy", "same_prompt_model_decoding_and_output_budget_required"],
+      "properties": {
+        "fixed_condition_instances": {"type": "array", "minItems": 15, "maxItems": 15, "uniqueItems": true, "items": {"type": "string"}},
+        "all_instances_required_per_prompt": {"const": true},
+        "missing_or_failed_output_policy": {"const": "block_packet_freeze_and_report_failure_never_silently_drop"},
+        "same_prompt_model_decoding_and_output_budget_required": {"const": true}
+      },
+      "additionalProperties": false
+    },
+    "rubric": {"type": "object"},
+    "auxiliary_evaluators": {"type": "object"},
+    "artifacts": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

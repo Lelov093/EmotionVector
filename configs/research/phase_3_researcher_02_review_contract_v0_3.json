@@ -1,0 +1,32 @@
+{
+  "contract_version": "phase_3_researcher_02_review_contract_v0_3",
+  "status": "frozen_before_researcher_02_rating",
+  "supersedes_review_route": "phase_3_independent_blind_review_amendment_v0_2",
+  "reviewer": {
+    "reviewer_id": "researcher_02",
+    "human_review_required": true,
+    "researcher_01_eligible": false,
+    "automated_agent_eligible": false
+  },
+  "compliance_record_policy": {
+    "source": "user_confirmed_in_chat_before_researcher_02_rating",
+    "reviewer_id_only_no_personal_name_or_signature": true,
+    "all_required_independence_checks_marked_compliant": true,
+    "must_not_be_described_as_reviewer_signed_attestation": true
+  },
+  "scoring": {
+    "guide_path": "data/research_foundation/human_review/phase_3_held_out_scoring_guide_v0_3.md",
+    "required_rows": 780,
+    "rubric_dimensions_unchanged": true,
+    "partial_completion_allowed": false,
+    "condition_key_access_before_rating_freeze_allowed": false
+  },
+  "artifacts": {
+    "source_packet": "results/local_artifacts/research_foundation/phase_3/phase_3_test_blind_packet_v0_1.jsonl",
+    "review_packet": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_packet_v0_3.jsonl",
+    "review_sheet": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_review_sheet_v0_3.csv",
+    "compliance_record": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_compliance_record_v0_3.json",
+    "formal_annotations": "results/local_artifacts/research_foundation/phase_3/phase_3_researcher_02_test_blind_annotations_v0_3.jsonl"
+  },
+  "claim_boundary": "The user designated researcher_02 and confirmed the listed independence checks as compliant without a personal-name or signature field. This is a user-confirmed compliance record, not a reviewer-signed attestation, and it does not erase the earlier preparation-side blinding deviation."
+}

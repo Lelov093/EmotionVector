@@ -1,0 +1,3938 @@
+{
+  "checks": [
+    {
+      "check_id": "all_205_isolation_families_covered",
+      "status": "pass"
+    },
+    {
+      "check_id": "assigned_family_counts_39_15_40",
+      "status": "pass"
+    },
+    {
+      "check_id": "split_family_sets_disjoint",
+      "status": "pass"
+    },
+    {
+      "check_id": "train_family_qlora_eligibility",
+      "status": "pass"
+    },
+    {
+      "check_id": "development_family_pair_eligibility",
+      "status": "pass"
+    },
+    {
+      "check_id": "test_family_pair_eligibility",
+      "status": "pass"
+    },
+    {
+      "check_id": "same_axis_not_opposite_excluded_from_eval",
+      "status": "pass"
+    },
+    {
+      "check_id": "one_split_per_isolation_family",
+      "status": "pass"
+    },
+    {
+      "check_id": "raw_text_absent_from_tracked_manifest",
+      "status": "pass"
+    },
+    {
+      "check_id": "local_artifact_hashes_recorded",
+      "status": "pass"
+    },
+    {
+      "check_id": "allocation_deterministic_and_label_content_blind",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "This tracked manifest freezes family ownership and local raw artifact hashes under the amended 39/15/40 standard. It is data infrastructure, not model or causal steering evidence.",
+  "contract": {
+    "path": "configs/research/phase_3_family_split_contract_v0_1.json",
+    "sha256": "12bc354c446a79436afcb41cde121b6007f34e2c99cfa53d1caca2e45f8aaaba"
+  },
+  "counts": {
+    "assigned_families": 94,
+    "development_families": 15,
+    "development_pair_rows": 18,
+    "held_out_test_families": 40,
+    "held_out_test_pair_rows": 52,
+    "not_selected_ineligible_families": 111,
+    "total_isolation_families": 205,
+    "train_families": 39,
+    "train_response_rows": 65
+  },
+  "local_artifacts": {
+    "development": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_pairs_v0_1.jsonl",
+      "row_count": 18,
+      "sha256": "435f60fdac44869e39404327ffa151266782b27186e33f87a9782bc214ab03e3",
+      "tracked": false
+    },
+    "held_out_test": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_held_out_test_pairs_v0_1.jsonl",
+      "row_count": 52,
+      "sha256": "ca73552381c223564bdbbb8135379087288bc13009805fe896d34fca7fe7caba",
+      "tracked": false
+    },
+    "train": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_qlora_train_v0_1.jsonl",
+      "row_count": 65,
+      "sha256": "e6d3bbfbfda3f026dcacf20e1babcf9d2ffbb1442638ebdbb9dcb6925953bb56",
+      "tracked": false
+    }
+  },
+  "manifest_version": "phase_3_family_split_v0_1",
+  "records": [
+    {
+      "candidate_ids": [
+        "p3fam_8b9b22104d8ba682f7d6"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_034a29c85473a98250bb",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_3dfb138e6c3f446e67c9",
+        "p3fam_49d53fb735a364e86912"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_3dfb138e6c3f446e67c9"
+      ],
+      "final_isolation_family_id": "p3iso_049a26e512ed4aa8a030",
+      "qlora_eligible_response_ids": [
+        "p3fam_3dfb138e6c3f446e67c9:response_1",
+        "p3fam_49d53fb735a364e86912:response_0",
+        "p3fam_49d53fb735a364e86912:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_05b2c005604d5afaa287",
+        "p3fam_ae29f8ba4ef36ea7d897"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_0509ff6bc967ebaa10f8",
+      "qlora_eligible_response_ids": [
+        "p3fam_ae29f8ba4ef36ea7d897:response_0",
+        "p3fam_ae29f8ba4ef36ea7d897:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_94fe7169e04dbfc1ea86"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_066f4d51b1b39186635c",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d6a64bca90d980c1cd63"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_0a359a570e3ad9b37716",
+      "qlora_eligible_response_ids": [
+        "p3fam_d6a64bca90d980c1cd63:response_0",
+        "p3fam_d6a64bca90d980c1cd63:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_164706c1a1f8b1025055"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_0d5e3d26ffb8f3fb4d7e",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_a2014adcf103296f453c"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_a2014adcf103296f453c"
+      ],
+      "final_isolation_family_id": "p3iso_107ccd6a1149baaa1fc8",
+      "qlora_eligible_response_ids": [
+        "p3fam_a2014adcf103296f453c:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2fddc25cc497a910c0fc"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_10aa0a7a0ecda9ff57e7",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_562e7205807e641ca864"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_562e7205807e641ca864"
+      ],
+      "final_isolation_family_id": "p3iso_10c670e0b24f2f020b21",
+      "qlora_eligible_response_ids": [
+        "p3fam_562e7205807e641ca864:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4e8c21cbf2e5504f6204"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_4e8c21cbf2e5504f6204"
+      ],
+      "final_isolation_family_id": "p3iso_10ed46cce3b9909d079f",
+      "qlora_eligible_response_ids": [
+        "p3fam_4e8c21cbf2e5504f6204:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_034e5d823c7d9198981a"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_034e5d823c7d9198981a"
+      ],
+      "final_isolation_family_id": "p3iso_127cd134d5bed9ed750c",
+      "qlora_eligible_response_ids": [
+        "p3fam_034e5d823c7d9198981a:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4437e87cd8dcae2d2251",
+        "p3fam_9c3643b6b9ac9afb8440"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_9c3643b6b9ac9afb8440"
+      ],
+      "final_isolation_family_id": "p3iso_145d226c350f378f0681",
+      "qlora_eligible_response_ids": [
+        "p3fam_9c3643b6b9ac9afb8440:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_6982e71e9041a0b65dce"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_1469a077b2487ffe7ae2",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_6f7a2d25318b624c8a3d",
+        "p3fam_e9d5d83b74afcdc4ddaa"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_e9d5d83b74afcdc4ddaa"
+      ],
+      "final_isolation_family_id": "p3iso_14766037b0a8be1a07c8",
+      "qlora_eligible_response_ids": [
+        "p3fam_e9d5d83b74afcdc4ddaa:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_86fcedeab7044237be3e"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_86fcedeab7044237be3e"
+      ],
+      "final_isolation_family_id": "p3iso_14c14412c3c9cc85b2d0",
+      "qlora_eligible_response_ids": [
+        "p3fam_86fcedeab7044237be3e:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_94c2a20b90c8366ae6da"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_14f866f4ca4803a5cc1c",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_31671d37b3562971f4bd",
+        "p3fam_bfd19506c22e20a3b3c5",
+        "p3fam_f3d1667642cee0cab83a"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 3,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_f3d1667642cee0cab83a"
+      ],
+      "final_isolation_family_id": "p3iso_150be6578bcba26956bc",
+      "qlora_eligible_response_ids": [
+        "p3fam_f3d1667642cee0cab83a:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_5df81d574b1304243e66"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_5df81d574b1304243e66"
+      ],
+      "final_isolation_family_id": "p3iso_1856ff31bd81808c60de",
+      "qlora_eligible_response_ids": [
+        "p3fam_5df81d574b1304243e66:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_70aafbe4faceee7f6e3a"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_1af31ecb817e35e21603",
+      "qlora_eligible_response_ids": [
+        "p3fam_70aafbe4faceee7f6e3a:response_0",
+        "p3fam_70aafbe4faceee7f6e3a:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_ac90d115460f3241d420"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_1b194cc71ad40a75b59e",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_08289a711e920065a765",
+        "p3fam_7045397256da5d37a814"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_08289a711e920065a765",
+        "p3fam_7045397256da5d37a814"
+      ],
+      "final_isolation_family_id": "p3iso_1baebb44f339457b1f89",
+      "qlora_eligible_response_ids": [
+        "p3fam_08289a711e920065a765:response_0",
+        "p3fam_7045397256da5d37a814:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_fa28a76664eb63a44e6c"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_1c826e25c556dd7f5cf2",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2e6dd8c2613197a56142"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_1cd2d7bd8090142c8950",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_c969ace126503ec5a89c"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_1ce5e8170aeb1fc9874e",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_a66c6f18e79fe5b8d064"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_1dfdd979f0c8f45c8b9f",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_e5f117d2bebd249407af"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_e5f117d2bebd249407af"
+      ],
+      "final_isolation_family_id": "p3iso_1f46072e343c4a90bbfb",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2afe67a4fe387217f0a5",
+        "p3fam_6c8c9ae4a4a9a6f5bcfc"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_21e8b8a94ae8813096c7",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d36799462a0437cb6b09"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_2651417759af4af26cc6",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_911881976b908f66757d"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_283576b41ba54e760597",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1dcbc83f42c3c11e1fb4"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_287ad346bf0d6f4dbbc1",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1e92e906f8d7f3c46973"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1e92e906f8d7f3c46973"
+      ],
+      "final_isolation_family_id": "p3iso_28b357325a742ee363f5",
+      "qlora_eligible_response_ids": [
+        "p3fam_1e92e906f8d7f3c46973:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_64df2de554ff146e8177"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_64df2de554ff146e8177"
+      ],
+      "final_isolation_family_id": "p3iso_29ff7c39b9f99af0dae0",
+      "qlora_eligible_response_ids": [
+        "p3fam_64df2de554ff146e8177:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_6ae5062f50005c30d6cc"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_2a2baf0ca8c2ffc35fd6",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0dc65e96122b4095c09b"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_2b791ec45c82394be4ce",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_356e2e4bc5551989606b"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_2ba6f0789f06948eba23",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_cf253937d5701d27df97"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_2bff081582afb035cc5d",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_e23276a649a1601e4ba6"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_e23276a649a1601e4ba6"
+      ],
+      "final_isolation_family_id": "p3iso_2ca92486894eef1db193",
+      "qlora_eligible_response_ids": [
+        "p3fam_e23276a649a1601e4ba6:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2a27811c920395c38a0d",
+        "p3fam_4437a59757780a0ae878",
+        "p3fam_5883badf35e15091ebef",
+        "p3fam_7ebdab2840451f56b4f2",
+        "p3fam_95fb70eee508a9b952ed",
+        "p3fam_c95ca6c7601d357d901b",
+        "p3fam_d678743d7045a7e07d08"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 7,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_4437a59757780a0ae878",
+        "p3fam_5883badf35e15091ebef",
+        "p3fam_7ebdab2840451f56b4f2",
+        "p3fam_c95ca6c7601d357d901b"
+      ],
+      "final_isolation_family_id": "p3iso_2cbb2c735a8d20ff4900",
+      "qlora_eligible_response_ids": [
+        "p3fam_4437a59757780a0ae878:response_0",
+        "p3fam_5883badf35e15091ebef:response_1",
+        "p3fam_7ebdab2840451f56b4f2:response_1",
+        "p3fam_c95ca6c7601d357d901b:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_73bc0caffea9c4d56bd6"
+      ],
+      "cohorts": [
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_2d6171fbc0c05999fb27",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_8377a8597e4341f77bfa"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_2e672806e4672c8b518e",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0d595c4e0a6b48a94053",
+        "p3fam_0deeb2c94b0da9133e72",
+        "p3fam_337abafd8d630ac14122"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 3,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_0d595c4e0a6b48a94053",
+        "p3fam_0deeb2c94b0da9133e72"
+      ],
+      "final_isolation_family_id": "p3iso_2eb760b78fc2246baf98",
+      "qlora_eligible_response_ids": [
+        "p3fam_0d595c4e0a6b48a94053:response_0",
+        "p3fam_0deeb2c94b0da9133e72:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_10febee24141f9128aa0"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_33cd623ccf0ba2e746d7",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_224790ba9c02dcbef5d6"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_224790ba9c02dcbef5d6"
+      ],
+      "final_isolation_family_id": "p3iso_34bcb9177afb50787e0d",
+      "qlora_eligible_response_ids": [
+        "p3fam_224790ba9c02dcbef5d6:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_28a373da15182585c5da",
+        "p3fam_31fdf9ddb353e2fa8640",
+        "p3fam_71c16a74b23d13466c42",
+        "p3fam_e7331e10f677795c3c1c",
+        "p3fam_fe971d924e91c45e8fc3"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 5,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_71c16a74b23d13466c42",
+        "p3fam_fe971d924e91c45e8fc3"
+      ],
+      "final_isolation_family_id": "p3iso_385932001fe49e9df3a8",
+      "qlora_eligible_response_ids": [
+        "p3fam_71c16a74b23d13466c42:response_0",
+        "p3fam_fe971d924e91c45e8fc3:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_3188dabc7a046def3de2",
+        "p3fam_6555d85bb1bd12529527"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_3188dabc7a046def3de2",
+        "p3fam_6555d85bb1bd12529527"
+      ],
+      "final_isolation_family_id": "p3iso_38854a94fec7316b6d3a",
+      "qlora_eligible_response_ids": [
+        "p3fam_3188dabc7a046def3de2:response_1",
+        "p3fam_6555d85bb1bd12529527:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_6f1d884bf71c1e5f2890"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_3babd3eef0076d900cae",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_07ca196e0047d5ead6bf"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_3bcf16e3342730f0a3ac",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9dad96f1473b4fee5c2f"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_3dfcbf18e44a963025a3",
+      "qlora_eligible_response_ids": [
+        "p3fam_9dad96f1473b4fee5c2f:response_0",
+        "p3fam_9dad96f1473b4fee5c2f:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_5ca1b6af70ec418023ce"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_3ec2830f8241a3b47bb4",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1fe3884b6529a0d92054",
+        "p3fam_ab7652320ac761eaf218"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1fe3884b6529a0d92054"
+      ],
+      "final_isolation_family_id": "p3iso_3fa757d1a53d86101432",
+      "qlora_eligible_response_ids": [
+        "p3fam_1fe3884b6529a0d92054:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_40515dc6ddea76161b08"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_40aad23b0c69d91de488",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_3a49ed6a8363ebfbca7c"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_42bbb3cd3446e4f46faa",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4864c31bfc36d9fa910c"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_4864c31bfc36d9fa910c"
+      ],
+      "final_isolation_family_id": "p3iso_44c570e2c98e208af5b0",
+      "qlora_eligible_response_ids": [
+        "p3fam_4864c31bfc36d9fa910c:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_3698a636747e9598ce87"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_47afbf37344205378186",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d5e240206e98850518c7"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_4b3e5ea38b6854231c0b",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_b73f3f023a2677918995"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_4b40de5e8dd8675461ac",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_183f739565c1cb6f738e",
+        "p3fam_43b43d3e83bc8a55ccbc"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_4cf384e01a1c08f19a1a",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_69fb47a6defa13e2320a"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_4d01b1cd033b68c5b65b",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1134cb00d225094b7fc0"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_4d1ffc93754588bc2dcf",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_b994a633ec797cbcaf9a"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_b994a633ec797cbcaf9a"
+      ],
+      "final_isolation_family_id": "p3iso_4dbd3493c4e9551f35a8",
+      "qlora_eligible_response_ids": [
+        "p3fam_b994a633ec797cbcaf9a:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_a504d42a19103c8ff6d8"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_a504d42a19103c8ff6d8"
+      ],
+      "final_isolation_family_id": "p3iso_4dc164e823a713c4bd5a",
+      "qlora_eligible_response_ids": [
+        "p3fam_a504d42a19103c8ff6d8:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1429e565c9d4f15ed3e5",
+        "p3fam_ae99dae922261e6830be",
+        "p3fam_ca7fb7eee3496c0ec6ee",
+        "p3fam_faa48b8ecb8ef00e4a0d"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 4,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_50f2b4c4cb6ad21c0623",
+      "qlora_eligible_response_ids": [
+        "p3fam_ca7fb7eee3496c0ec6ee:response_0",
+        "p3fam_ca7fb7eee3496c0ec6ee:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_00e03fc00d193c5fab77"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_00e03fc00d193c5fab77"
+      ],
+      "final_isolation_family_id": "p3iso_515994bb872d70eaae06",
+      "qlora_eligible_response_ids": [
+        "p3fam_00e03fc00d193c5fab77:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_341acf23b31b49e54461"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_341acf23b31b49e54461"
+      ],
+      "final_isolation_family_id": "p3iso_5738bc68e0b99044b928",
+      "qlora_eligible_response_ids": [
+        "p3fam_341acf23b31b49e54461:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_c0c1d5db0ce43f89b5bb"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_59054affddb4788b97dd",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_633e65de20abc51dd227"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_59dd17d13b921dcbe391",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0aea17b3347152a19405",
+        "p3fam_4d0ddc2a13d1e6bc2f47"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_0aea17b3347152a19405"
+      ],
+      "final_isolation_family_id": "p3iso_5b703959e795fd179ca7",
+      "qlora_eligible_response_ids": [
+        "p3fam_0aea17b3347152a19405:response_0",
+        "p3fam_4d0ddc2a13d1e6bc2f47:response_0",
+        "p3fam_4d0ddc2a13d1e6bc2f47:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9c0755c680a264922e76"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_5bd2aef901e3ac3ef38d",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d7b5eca6a9017b0c259b"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_d7b5eca6a9017b0c259b"
+      ],
+      "final_isolation_family_id": "p3iso_5d3fc3452d967bb7e939",
+      "qlora_eligible_response_ids": [
+        "p3fam_d7b5eca6a9017b0c259b:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_fdb274349dbd9c519833"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_5e14ce4f152c763688df",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_78df30589f068e782728"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_5fec118e66f7a3784167",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1b29df9799af36a95279"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_61086de5486fe00d88e3",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2e197a6912923b69b4a9"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_615c9c39a653081247b0",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4857ec36db74e961625e"
+      ],
+      "cohorts": [
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_6175b05484a15a079e56",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_76224bb6eba761c04ae9",
+        "p3fam_fdc81819cf38ce1e0655"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_fdc81819cf38ce1e0655"
+      ],
+      "final_isolation_family_id": "p3iso_63efdd6d688f5a8b8546",
+      "qlora_eligible_response_ids": [
+        "p3fam_fdc81819cf38ce1e0655:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_e97e1934982d6dadbe32"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_641d0eb0ca6d282d74e0",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_bfabeddb1f21d0e0e086"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_648d212920b8108d6207",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d1652cb8f3fa81e2fd44"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_d1652cb8f3fa81e2fd44"
+      ],
+      "final_isolation_family_id": "p3iso_650cbc2a40bf14494338",
+      "qlora_eligible_response_ids": [
+        "p3fam_d1652cb8f3fa81e2fd44:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_663e8e33fada58e245a8"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_665d2502c99c8c3a85a1",
+      "qlora_eligible_response_ids": [
+        "p3fam_663e8e33fada58e245a8:response_0",
+        "p3fam_663e8e33fada58e245a8:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0605be27c23a8e48620c"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_67b9068118f34693259c",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_46e268c96caef8ed5420"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_46e268c96caef8ed5420"
+      ],
+      "final_isolation_family_id": "p3iso_68ec26c39bbd91e41628",
+      "qlora_eligible_response_ids": [
+        "p3fam_46e268c96caef8ed5420:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_07db6921c37fa1c41e60",
+        "p3fam_4e97aeb0b0a9904a21fb",
+        "p3fam_c5db912e40cff9c74649",
+        "p3fam_d8695d4f265201d5d8a9"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 4,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_d8695d4f265201d5d8a9"
+      ],
+      "final_isolation_family_id": "p3iso_69140bfb228c6063fb6b",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0e25102df53b3e3f13ed"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_0e25102df53b3e3f13ed"
+      ],
+      "final_isolation_family_id": "p3iso_69f73d0ad81f649a07e3",
+      "qlora_eligible_response_ids": [
+        "p3fam_0e25102df53b3e3f13ed:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1012c82a341a89229b7f",
+        "p3fam_2028365a7b91a9ecc01f",
+        "p3fam_3041736d3f66c6c48388",
+        "p3fam_342d61f9df56fcf4be62",
+        "p3fam_8915ce3fbd15c368544d",
+        "p3fam_e2f509d15a7481fa76ab",
+        "p3fam_f2f87fc6b0e8ba1322d7"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 7,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_2028365a7b91a9ecc01f",
+        "p3fam_3041736d3f66c6c48388",
+        "p3fam_342d61f9df56fcf4be62",
+        "p3fam_8915ce3fbd15c368544d",
+        "p3fam_f2f87fc6b0e8ba1322d7"
+      ],
+      "final_isolation_family_id": "p3iso_6b4fdbf6ce85d15102e4",
+      "qlora_eligible_response_ids": [
+        "p3fam_2028365a7b91a9ecc01f:response_0",
+        "p3fam_3041736d3f66c6c48388:response_0",
+        "p3fam_8915ce3fbd15c368544d:response_0",
+        "p3fam_e2f509d15a7481fa76ab:response_0",
+        "p3fam_e2f509d15a7481fa76ab:response_1",
+        "p3fam_f2f87fc6b0e8ba1322d7:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_c93728e62b9d689338d0"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_6cf78e4620cb64c8769f",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_99287bb53b06c0cbd902"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_6d63973c135f0799e1fb",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1feede7fee39564bf381"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1feede7fee39564bf381"
+      ],
+      "final_isolation_family_id": "p3iso_6e7840fdc1c229a22a31",
+      "qlora_eligible_response_ids": [
+        "p3fam_1feede7fee39564bf381:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0423d3b908da2fac45c2"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_700a7f1549c1851a5e11",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_ee2e323ba37688926742"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_70e45c9e3a63635f2252",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_87018f92de9b7fab81aa"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_734677dbddf59ad99fd2",
+      "qlora_eligible_response_ids": [
+        "p3fam_87018f92de9b7fab81aa:response_0",
+        "p3fam_87018f92de9b7fab81aa:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_46bb6f7d659a5a609708"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_46bb6f7d659a5a609708"
+      ],
+      "final_isolation_family_id": "p3iso_74f985de750abeb40199",
+      "qlora_eligible_response_ids": [
+        "p3fam_46bb6f7d659a5a609708:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_e24bbe117513dbaa97e1"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_750ce8a7e90746a6c5ec",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_6d8929999821cd258f62"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_75c7d7a6baa0c2b34990",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9f50a083d79dbb788208"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_9f50a083d79dbb788208"
+      ],
+      "final_isolation_family_id": "p3iso_79510e73411f2ce144de",
+      "qlora_eligible_response_ids": [
+        "p3fam_9f50a083d79dbb788208:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_e03463b9c41ae52b2235"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_e03463b9c41ae52b2235"
+      ],
+      "final_isolation_family_id": "p3iso_7dd29e8bc398512f7340",
+      "qlora_eligible_response_ids": [
+        "p3fam_e03463b9c41ae52b2235:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_7ecdc3ece9fd72872c4a"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_7df958b19ae0143205fc",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0746224b44a05057860c"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_82b3254c1b1c73d57c26",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0853b4838e4bf8af3e4d"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_0853b4838e4bf8af3e4d"
+      ],
+      "final_isolation_family_id": "p3iso_837ff46b36b3e7b5a2a6",
+      "qlora_eligible_response_ids": [
+        "p3fam_0853b4838e4bf8af3e4d:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_cf7b9ece46cb99e99027"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_cf7b9ece46cb99e99027"
+      ],
+      "final_isolation_family_id": "p3iso_83cd273eb2e2a7b15817",
+      "qlora_eligible_response_ids": [
+        "p3fam_cf7b9ece46cb99e99027:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4200b73bb16e936c0533",
+        "p3fam_7bb69319bc7357e06b80",
+        "p3fam_ac41c3ebd5b3d0e88043"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 3,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_4200b73bb16e936c0533",
+        "p3fam_7bb69319bc7357e06b80"
+      ],
+      "final_isolation_family_id": "p3iso_844793d508335036bc31",
+      "qlora_eligible_response_ids": [
+        "p3fam_4200b73bb16e936c0533:response_0",
+        "p3fam_7bb69319bc7357e06b80:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d64ceca6aad16471f0ff"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_84718289e2c0ac2b4d54",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4811e9d92599970c9388"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_86368ceee3cf43304dea",
+      "qlora_eligible_response_ids": [
+        "p3fam_4811e9d92599970c9388:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4fcc38986a9dff168b1c"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_86727a5aaf1e8524007c",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_aadbc4f64c08fb12e0b0",
+        "p3fam_c8e5846cf5b541a25fbe"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_aadbc4f64c08fb12e0b0",
+        "p3fam_c8e5846cf5b541a25fbe"
+      ],
+      "final_isolation_family_id": "p3iso_86aebed3f5784b771cd7",
+      "qlora_eligible_response_ids": [
+        "p3fam_aadbc4f64c08fb12e0b0:response_1",
+        "p3fam_c8e5846cf5b541a25fbe:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1378d054194378bea7ec"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1378d054194378bea7ec"
+      ],
+      "final_isolation_family_id": "p3iso_878f97b17edd794c9ff0",
+      "qlora_eligible_response_ids": [
+        "p3fam_1378d054194378bea7ec:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0328184cf88dba4ede5e"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_8795da7b87838117599b",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_f4c6600b43029f3407e8"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_88a8b7812f50f0722c64",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_5a0ad0cc2c2511142a79"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_89ad0374a5e87fdd7ca9",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_5a391cbf2dc3a64ccd56"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_8a0c082a34e35ce3a893",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_342a65c3743aa9488f91"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_342a65c3743aa9488f91"
+      ],
+      "final_isolation_family_id": "p3iso_8bffe0020ed2a0fd8df8",
+      "qlora_eligible_response_ids": [
+        "p3fam_342a65c3743aa9488f91:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_11bc0fd08e1bdbc52700"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_11bc0fd08e1bdbc52700"
+      ],
+      "final_isolation_family_id": "p3iso_8c22e66e3c8a0397a496",
+      "qlora_eligible_response_ids": [
+        "p3fam_11bc0fd08e1bdbc52700:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_a3c14e5e89e46670c7d1"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_a3c14e5e89e46670c7d1"
+      ],
+      "final_isolation_family_id": "p3iso_8c86967fa2ba0e09936d",
+      "qlora_eligible_response_ids": [
+        "p3fam_a3c14e5e89e46670c7d1:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_18c858ff9c798b324723"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_18c858ff9c798b324723"
+      ],
+      "final_isolation_family_id": "p3iso_8d90889bd587102c90c3",
+      "qlora_eligible_response_ids": [
+        "p3fam_18c858ff9c798b324723:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_b6e36abffc2e0908c1ef"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_b6e36abffc2e0908c1ef"
+      ],
+      "final_isolation_family_id": "p3iso_8ee52329c3c754c31bac",
+      "qlora_eligible_response_ids": [
+        "p3fam_b6e36abffc2e0908c1ef:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_a070441e1c9dea3eac36"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_a070441e1c9dea3eac36"
+      ],
+      "final_isolation_family_id": "p3iso_90002c2be97b167217b7",
+      "qlora_eligible_response_ids": [
+        "p3fam_a070441e1c9dea3eac36:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_e154a1431ce6d8d6aad8"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_92fdde0e9985d41d3e9d",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_39853b28b026e3ff039e"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_39853b28b026e3ff039e"
+      ],
+      "final_isolation_family_id": "p3iso_933668429dafab5651f4",
+      "qlora_eligible_response_ids": [
+        "p3fam_39853b28b026e3ff039e:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0de36905e0236d843e97",
+        "p3fam_2f51bf2430629a2229c3",
+        "p3fam_a2d78b23cf16021adcbb"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 3,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_a2d78b23cf16021adcbb"
+      ],
+      "final_isolation_family_id": "p3iso_933c94779cc7c3001f36",
+      "qlora_eligible_response_ids": [
+        "p3fam_0de36905e0236d843e97:response_0",
+        "p3fam_0de36905e0236d843e97:response_1",
+        "p3fam_2f51bf2430629a2229c3:response_0",
+        "p3fam_2f51bf2430629a2229c3:response_1",
+        "p3fam_a2d78b23cf16021adcbb:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_325c139d5275fdbd95e0"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_942659fc6615c2488e44",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_5ce357481111b52f7127",
+        "p3fam_c36e06c1913d12ec5501"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_5ce357481111b52f7127"
+      ],
+      "final_isolation_family_id": "p3iso_954c500835bd67e7734d",
+      "qlora_eligible_response_ids": [
+        "p3fam_5ce357481111b52f7127:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9996c580cee5591f755a"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_98eeb19c71d835ccfd05",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_ba5a8c57275da343c511",
+        "p3fam_e79bea9de62bb734ca6c"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_ba5a8c57275da343c511"
+      ],
+      "final_isolation_family_id": "p3iso_993d858164eb9336e315",
+      "qlora_eligible_response_ids": [
+        "p3fam_ba5a8c57275da343c511:response_1",
+        "p3fam_e79bea9de62bb734ca6c:response_0",
+        "p3fam_e79bea9de62bb734ca6c:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2dadde46742484405ded"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_9a7221610e74d68411a2",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_937955cc30cbc220d3eb"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_9c0fbaa3316dc8844d36",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9df1e7655d3fba5c3ad1"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_9c4942016ca40fe74bb0",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_8be86e2afa179f558b05",
+        "p3fam_9362029cd44d63040f79"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_8be86e2afa179f558b05",
+        "p3fam_9362029cd44d63040f79"
+      ],
+      "final_isolation_family_id": "p3iso_9eb0d22f6828745d5d6b",
+      "qlora_eligible_response_ids": [
+        "p3fam_8be86e2afa179f558b05:response_1",
+        "p3fam_9362029cd44d63040f79:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1aa2ed8b104eb2e1535c",
+        "p3fam_c6b975e3982430d86336"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1aa2ed8b104eb2e1535c",
+        "p3fam_c6b975e3982430d86336"
+      ],
+      "final_isolation_family_id": "p3iso_9f04d516ac895eaa006b",
+      "qlora_eligible_response_ids": [
+        "p3fam_1aa2ed8b104eb2e1535c:response_0",
+        "p3fam_c6b975e3982430d86336:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d6e1eab05f23a48e8e25"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a0fc2a05c127fba4aae0",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_148172406db56a6e2240"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a17fb580293b7f4ba72e",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_15c1a119a8c841081d5f"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a2dc4d0e5c39c4a9c7a8",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9c901aa326cc008dcdfd"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a46496ac02848e35c55f",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_8e67ec2e7866695cd19c"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a483995af2abfca9da20",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_b4a433b5d140a06e319d"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a5ce040ee3407481ba56",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_13404ef107df24d201ed",
+        "p3fam_143a32aae10396907c53",
+        "p3fam_31599c9e1b23b291bae6",
+        "p3fam_4b50a12d406f889e4ee8",
+        "p3fam_7bd45efb09c5930b571d",
+        "p3fam_bb71597c74f9caa42cfa",
+        "p3fam_cd14d3ce872253233667"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 7,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_31599c9e1b23b291bae6"
+      ],
+      "final_isolation_family_id": "p3iso_a64de53ababb4aa21070",
+      "qlora_eligible_response_ids": [
+        "p3fam_31599c9e1b23b291bae6:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0ceddae4f9d10e595982"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_0ceddae4f9d10e595982"
+      ],
+      "final_isolation_family_id": "p3iso_a6b1ac762ff5e899ef47",
+      "qlora_eligible_response_ids": [
+        "p3fam_0ceddae4f9d10e595982:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_cb094e2c1f03640677c2"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a6cd7262522118a717fc",
+      "qlora_eligible_response_ids": [
+        "p3fam_cb094e2c1f03640677c2:response_0",
+        "p3fam_cb094e2c1f03640677c2:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_0dacdd67712611c3d241"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a72a745bf0be599f43e6",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_411d05173ec6b0b8636e",
+        "p3fam_5ae770b693ebd8aa1a5e"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_5ae770b693ebd8aa1a5e"
+      ],
+      "final_isolation_family_id": "p3iso_a8324b37fefb0636ee17",
+      "qlora_eligible_response_ids": [
+        "p3fam_5ae770b693ebd8aa1a5e:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_06ced1573e08208b71de",
+        "p3fam_690f347259fc95d2fa27"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a8c8cbbe2abcbb002f51",
+      "qlora_eligible_response_ids": [
+        "p3fam_06ced1573e08208b71de:response_0",
+        "p3fam_06ced1573e08208b71de:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_3a2bb3b006d1d7c625e5"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_a9a87f16d71853811694",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_73296e1a399f6826ea24"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_ab5f807c4b47be185f1f",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_399b504c9dc740cc938c"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_399b504c9dc740cc938c"
+      ],
+      "final_isolation_family_id": "p3iso_abd04468bad150fdbbc0",
+      "qlora_eligible_response_ids": [
+        "p3fam_399b504c9dc740cc938c:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_94014d04135290145925"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_ad086f1f864f54bb0c06",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2b5132087c5f7fbbdd78"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_2b5132087c5f7fbbdd78"
+      ],
+      "final_isolation_family_id": "p3iso_ae66cd815bac7c4aaa48",
+      "qlora_eligible_response_ids": [
+        "p3fam_2b5132087c5f7fbbdd78:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_47453bc80e7353280021",
+        "p3fam_9050d5c6e6a4e6622d24",
+        "p3fam_e826cca061db36f209a6"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 3,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_afe4f4f37a6be92cfd5b",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_3924c4b1f1d73e6eb32f",
+        "p3fam_d6a777585b73c9d75047"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_b28b940e19b06b9abdd7",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_31d323f3debb30ee0199"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_b36f1c8c371b16eef945",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1543821f7dde7955a94e",
+        "p3fam_ac402c76b6192df82a01"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1543821f7dde7955a94e"
+      ],
+      "final_isolation_family_id": "p3iso_b4950d97ce212dad4d86",
+      "qlora_eligible_response_ids": [
+        "p3fam_1543821f7dde7955a94e:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1da7101bb994a26d3472",
+        "p3fam_664b2075398d387ac1b1"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_b6c1bff251f9af35c1fe",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_103855382fa60550220c"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_b7127f602b1e26afd7b1",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_422adda4bf2912200257"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_b7827010ad0a9c4681df",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_00efa369bfbe06dae05d"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_ba5e8c21edbf773c4403",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_2e8bd14d0b649065ced7"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_2e8bd14d0b649065ced7"
+      ],
+      "final_isolation_family_id": "p3iso_ba6c9a964998fdea7811",
+      "qlora_eligible_response_ids": [
+        "p3fam_2e8bd14d0b649065ced7:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_d7c18329587e61493e9d",
+        "p3fam_e6282080dc5878f826b0"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_d7c18329587e61493e9d",
+        "p3fam_e6282080dc5878f826b0"
+      ],
+      "final_isolation_family_id": "p3iso_bb18481a9f76c35b1496",
+      "qlora_eligible_response_ids": [
+        "p3fam_d7c18329587e61493e9d:response_0",
+        "p3fam_e6282080dc5878f826b0:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_229ae52766592cc99f14"
+      ],
+      "cohorts": [
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_bbaeb1963615b1877150",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_761183554524d9173909"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_bbd22fb91255ed05b48b",
+      "qlora_eligible_response_ids": [
+        "p3fam_761183554524d9173909:response_0",
+        "p3fam_761183554524d9173909:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_5c4945d36c625d6cb4f1"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_bbfd97e58e0563a21983",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1cdde4bbdb72b2ec4e94",
+        "p3fam_1f07ee40fe6b525bf3d9"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1cdde4bbdb72b2ec4e94",
+        "p3fam_1f07ee40fe6b525bf3d9"
+      ],
+      "final_isolation_family_id": "p3iso_be7898429c8d63b639d3",
+      "qlora_eligible_response_ids": [
+        "p3fam_1cdde4bbdb72b2ec4e94:response_0",
+        "p3fam_1f07ee40fe6b525bf3d9:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_89ed59f8e9720c007bac"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_c1a38133ffe0cc520d1c",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_79f0a02a72969db5482f",
+        "p3fam_d96d25bc3e7121516a0a"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_79f0a02a72969db5482f",
+        "p3fam_d96d25bc3e7121516a0a"
+      ],
+      "final_isolation_family_id": "p3iso_c3456138cbcc13ca2e16",
+      "qlora_eligible_response_ids": [
+        "p3fam_79f0a02a72969db5482f:response_0",
+        "p3fam_d96d25bc3e7121516a0a:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_ab1d9cccb7b05f77c7e3"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_c3939463464cd27855c8",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9620c3e2f7f912700f9c"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_c439298adc4b2d44680f",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_db4fffb20b77f2166c94"
+      ],
+      "cohorts": [
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_c47d082d2e3d943482c6",
+      "qlora_eligible_response_ids": [
+        "p3fam_db4fffb20b77f2166c94:response_0",
+        "p3fam_db4fffb20b77f2166c94:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_ebda59905c15ac6a2bb9"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_c7641ac982ffae1ca105",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_183c0598adc55d046566",
+        "p3fam_a091bb9e68e72819af39"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_183c0598adc55d046566",
+        "p3fam_a091bb9e68e72819af39"
+      ],
+      "final_isolation_family_id": "p3iso_c783316e83899f4c573b",
+      "qlora_eligible_response_ids": [
+        "p3fam_183c0598adc55d046566:response_1",
+        "p3fam_a091bb9e68e72819af39:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_826bba599e58ffe92894"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_c93f0d89e9d74b54b16d",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1a0cdc733fd3a2df839d"
+      ],
+      "cohorts": [
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_cb15a27d11aba161ee12",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_cdb15d9db05bb9cd2460"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_cdb15d9db05bb9cd2460"
+      ],
+      "final_isolation_family_id": "p3iso_cd90f1ab60de87946058",
+      "qlora_eligible_response_ids": [
+        "p3fam_cdb15d9db05bb9cd2460:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_67d65114950ce0dba60c"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_cdf9ef78bccd497847f9",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_956cc0097dc3da18a318"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_956cc0097dc3da18a318"
+      ],
+      "final_isolation_family_id": "p3iso_ce8fbae6c585b7d35235",
+      "qlora_eligible_response_ids": [
+        "p3fam_956cc0097dc3da18a318:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9345326a59e79156383a"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_cfed5f0683abb954446d",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_f04484d1991d9f304a5c"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_d11906a987ce7dbc4636",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_fbf1fc00b9190daebbd8"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_d53d836a51df1f407520",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9dd9d71cdbf43bf9457b",
+        "p3fam_a55d247fa592b95ce100",
+        "p3fam_ec65eccd0b010906127e"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 3,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_d76029e9f62d1aadec61",
+      "qlora_eligible_response_ids": [
+        "p3fam_a55d247fa592b95ce100:response_0",
+        "p3fam_a55d247fa592b95ce100:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_31ed17745b20ae476745",
+        "p3fam_87b069b09e3c1bfaf598",
+        "p3fam_ab719810b875b5804b75",
+        "p3fam_ba42dda57566241a4dc5",
+        "p3fam_c614b083c94cfa58a370"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180",
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 5,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_ab719810b875b5804b75"
+      ],
+      "final_isolation_family_id": "p3iso_d9a2b32ba793966f671c",
+      "qlora_eligible_response_ids": [
+        "p3fam_ab719810b875b5804b75:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca2-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_e4f4c5a9e102f53db87f"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_db6a18d7b569a9cfb666",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_9062fdddffbba6e020aa"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_9062fdddffbba6e020aa"
+      ],
+      "final_isolation_family_id": "p3iso_dc09a4d85e7e490f4e0e",
+      "qlora_eligible_response_ids": [
+        "p3fam_9062fdddffbba6e020aa:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_5958810d29ecc07d13f4"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_dc1cf57c40aced6d83ed",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_8f710b625763d2760f41"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_ded1cf81daf73107c2cc",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_465ae9bea918094f7ca2",
+        "p3fam_9aaad91b35114359b5ba"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_9aaad91b35114359b5ba"
+      ],
+      "final_isolation_family_id": "p3iso_dfad5708f79935fe30d5",
+      "qlora_eligible_response_ids": [
+        "p3fam_9aaad91b35114359b5ba:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_f33f1b1631c6ba6d11a5"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_f33f1b1631c6ba6d11a5"
+      ],
+      "final_isolation_family_id": "p3iso_e32dedfecab18956d435",
+      "qlora_eligible_response_ids": [
+        "p3fam_f33f1b1631c6ba6d11a5:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_165b0e60bc8c243d740b"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_e3ddd78a31a89c308e4f",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_ef4f25e1b12f66a1e528"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_e3f855115eca87bb5e24",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_c5104f6553292a13dc2a"
+      ],
+      "cohorts": [
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_e5680a2311a23a571c42",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_4b51e7842fb85fb0afc9",
+        "p3fam_5c6b2faa7fc8974112fb"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "expansion_60"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_4b51e7842fb85fb0afc9",
+        "p3fam_5c6b2faa7fc8974112fb"
+      ],
+      "final_isolation_family_id": "p3iso_e605b297b5eaa458742f",
+      "qlora_eligible_response_ids": [
+        "p3fam_4b51e7842fb85fb0afc9:response_0",
+        "p3fam_5c6b2faa7fc8974112fb:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_3087e5c40f4307843417",
+        "p3fam_3642f795c358bdcc2c65",
+        "p3fam_448a57615ab911bd60ac",
+        "p3fam_45a7218f52af94611ee7",
+        "p3fam_a00491be9c21774f4816"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 5,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_3642f795c358bdcc2c65",
+        "p3fam_448a57615ab911bd60ac"
+      ],
+      "final_isolation_family_id": "p3iso_e6cb1bb3ccbe05727d22",
+      "qlora_eligible_response_ids": [
+        "p3fam_3642f795c358bdcc2c65:response_1",
+        "p3fam_448a57615ab911bd60ac:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_f119bf4f157885041e2a"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_e746683e4b06d383693c",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_22d5b2671b2dadd38fe6"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_e7dfaa882be75f15efe1",
+      "qlora_eligible_response_ids": [
+        "p3fam_22d5b2671b2dadd38fe6:response_0",
+        "p3fam_22d5b2671b2dadd38fe6:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_cf678b0a4bb3377be63e"
+      ],
+      "cohorts": [
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_ea550fc969d6a0c95076",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_305c76ddd9c9f3b59a40"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_eae76f1d9f666efbf4c9",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_fbbb1def9d8a2977a88e"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_fbbb1def9d8a2977a88e"
+      ],
+      "final_isolation_family_id": "p3iso_ed736e351f8f1115c36f",
+      "qlora_eligible_response_ids": [
+        "p3fam_fbbb1def9d8a2977a88e:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "train"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_8a405639f348b20a17d6"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_eeb2dbcbdb220feeb0db",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_78b1c871f29095e15182"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_78b1c871f29095e15182"
+      ],
+      "final_isolation_family_id": "p3iso_eee5ef6179ff31084514",
+      "qlora_eligible_response_ids": [
+        "p3fam_78b1c871f29095e15182:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_437d6e250a067adf7b40"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_f2a2844fb75a2452d73a",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_8c78c1f24e49f0968e30"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_f40f5ceddf8c08ec61d2",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_6557a457a121922c1ef4"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_f5c1f9a06e8afbe3a53d",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_04b83a41278d1e7a3d87"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_04b83a41278d1e7a3d87"
+      ],
+      "final_isolation_family_id": "p3iso_f65f625ccbc72086e785",
+      "qlora_eligible_response_ids": [
+        "p3fam_04b83a41278d1e7a3d87:response_0"
+      ],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_b2368414de0baf1e19e7"
+      ],
+      "cohorts": [
+        "additional_30_v0_3"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_f70b753248bfb30a0e78",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_ff46a865989039d20782"
+      ],
+      "cohorts": [
+        "expansion_60"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_f7c53ec1d85e2027dac8",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca2-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_7676d6ea196b8db95e25"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_7676d6ea196b8db95e25"
+      ],
+      "final_isolation_family_id": "p3iso_f8407699894d6766bbd4",
+      "qlora_eligible_response_ids": [
+        "p3fam_7676d6ea196b8db95e25:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_986c05f518ee4d80f120"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_f94f79e17ee44f8574e0",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_1cedb83e830120b7ea53",
+        "p3fam_5c18882a85a86a98c4d3"
+      ],
+      "cohorts": [
+        "confirmed_180",
+        "supplemental_12_v0_4"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_1cedb83e830120b7ea53",
+        "p3fam_5c18882a85a86a98c4d3"
+      ],
+      "final_isolation_family_id": "p3iso_fb1e04ada15520b4e7a3",
+      "qlora_eligible_response_ids": [
+        "p3fam_1cedb83e830120b7ea53:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "development"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_a363a410bfa191b0ead9"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_fce678ef25ffd1aa95cd",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_44da717cfb368ea1d7fa"
+      ],
+      "cohorts": [
+        "confirmed_180"
+      ],
+      "component_size": 1,
+      "evaluation_eligible_candidate_ids": [],
+      "final_isolation_family_id": "p3iso_fcf90c5e97b035c1d3c6",
+      "qlora_eligible_response_ids": [],
+      "source_model_families": [
+        "Alpaca-7B"
+      ],
+      "split": "not_selected_ineligible"
+    },
+    {
+      "candidate_ids": [
+        "p3fam_044c936667547a0f3d62",
+        "p3fam_8e100a4c1a784c2a59db"
+      ],
+      "cohorts": [
+        "additional_30_v0_3",
+        "confirmed_180"
+      ],
+      "component_size": 2,
+      "evaluation_eligible_candidate_ids": [
+        "p3fam_044c936667547a0f3d62"
+      ],
+      "final_isolation_family_id": "p3iso_fe4f99ba50ee580bf48d",
+      "qlora_eligible_response_ids": [
+        "p3fam_044c936667547a0f3d62:response_1"
+      ],
+      "source_model_families": [
+        "Alpaca-7B",
+        "Alpaca3-8B"
+      ],
+      "split": "held_out_test"
+    }
+  ],
+  "status": "family_isolated_39_15_40_split_frozen"
+}

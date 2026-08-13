@@ -1,0 +1,72 @@
+{
+  "runtime_version": "phase_3_train_dev_runtime_v0_1",
+  "status": "frozen_before_first_phase_3_model_run",
+  "bound_contracts": {
+    "blind_review_path": "configs/research/phase_3_blind_review_contract_v0_1.json",
+    "blind_review_sha256": "179e35960db4faf9785a1287131c179cc8b73e2d12554d855bb3ec0a4945c0df",
+    "selection_path": "configs/research/phase_3_train_dev_selection_contract_v0_1.json",
+    "selection_sha256": "cbecee232e9cd1d5b06c6f446797a1e291da4fa4f0c06c1ea38c71d04ce0287b"
+  },
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "cache_root": "D:/AI_Models/huggingface/hub",
+    "local_files_only": true,
+    "quantization": "bitsandbytes_nf4_4bit",
+    "compute_dtype": "float16",
+    "device_map": "auto"
+  },
+  "data": {
+    "split_manifest_path": "data/research_foundation/manifests/phase_3_family_split_v0_1.json",
+    "split_manifest_sha256": "a76ba5500ff35247a1831ab06887b0bf7eee1b0cb0b7c309d479f3a61a05a417",
+    "train_path": "results/local_artifacts/research_foundation/phase_3/phase_3_qlora_train_v0_1.jsonl",
+    "train_sha256": "e6d3bbfbfda3f026dcacf20e1babcf9d2ffbb1442638ebdbb9dcb6925953bb56",
+    "development_path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_pairs_v0_1.jsonl",
+    "development_sha256": "435f60fdac44869e39404327ffa151266782b27186e33f87a9782bc214ab03e3",
+    "allowed_splits": ["train", "development"],
+    "test_access_forbidden": true
+  },
+  "direction_source": {
+    "selection_lock_path": "results/local_artifacts/research_foundation/atlas_v2/selection_lock_v0_1.json",
+    "selection_lock_file_sha256": "0eac50b7052180aa98fe74e80bc803e4ff6ed4cd626da550af8b87abbab7dbda",
+    "activation_metadata_path": "results/local_artifacts/research_foundation/atlas_v2/train_dev_layer_24_last_response_token.metadata.json",
+    "activation_metadata_file_sha256": "c9bc6ca014d735700fe404c33b85f1d68f4e844de03ba96d36f969d6c97587b4",
+    "activation_array_path": "results/local_artifacts/research_foundation/atlas_v2/train_dev_layer_24_last_response_token.npz",
+    "activation_array_file_sha256": "ca595ec466de549f876c6fde750b0cfea4438268d26e61c3e72e58efa3e52515",
+    "positive_pole": "boundary-preserving",
+    "negative_pole": "over-accommodating",
+    "layer": 24,
+    "pooling": "last_response_token",
+    "random_seeds": [2026080501, 2026080502, 2026080503, 2026080504, 2026080505],
+    "shuffled_label_seeds": [2026080511, 2026080512, 2026080513, 2026080514, 2026080515],
+    "output_path": "results/local_artifacts/research_foundation/phase_3/phase_3_direction_bundle_v0_1.npz",
+    "metadata_path": "results/local_artifacts/research_foundation/phase_3/phase_3_direction_bundle_v0_1.metadata.json"
+  },
+  "qlora": {
+    "seed": 2026080481,
+    "epochs": 2,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 0.0002,
+    "max_sequence_tokens": 384,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+    "checkpoint_ids": ["epoch_1", "epoch_2"],
+    "adapter_root": "results/local_artifacts/research_foundation/phase_3/adapters",
+    "training_summary_path": "results/local_artifacts/research_foundation/phase_3/phase_3_qlora_training_summary_v0_1.json"
+  },
+  "development_generation": {
+    "candidate_condition_ids": ["base", "target_steering_alpha_1", "target_steering_alpha_3", "qlora_epoch_1", "qlora_epoch_2"],
+    "alpha_by_condition": {"target_steering_alpha_1": 1.0, "target_steering_alpha_3": 3.0},
+    "do_sample": false,
+    "max_input_tokens": 768,
+    "max_new_tokens": 128,
+    "repetition_penalty": 1.05,
+    "output_path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_candidate_outputs_v0_1.jsonl",
+    "blind_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_blind_packet_v0_1.jsonl",
+    "condition_key_path": "results/local_artifacts/research_foundation/phase_3/phase_3_development_condition_key_v0_1.jsonl"
+  },
+  "claim_boundary": "This runtime is restricted to Phase 3 train/development preparation and execution. It forbids held-out test access, does not authorize a positive-result search, and cannot establish causal steering."
+}

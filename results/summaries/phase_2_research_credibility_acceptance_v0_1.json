@@ -1,0 +1,68 @@
+{
+  "acceptance_version": "phase_2_research_credibility_acceptance_v0_1",
+  "accepted_at": "2026-08-04T18:28:55+08:00",
+  "phase_2_scope_status": "accepted_complete_with_exploratory_result",
+  "representation_evidence_status": "exploratory_pilot_signal_not_confirmatory",
+  "phase_3_confirmatory_steering_gate": "no_go",
+  "axis_id": "boundary-preserving-over-accommodating",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+  },
+  "frozen_test": {
+    "pair_count": 7,
+    "response_count": 14,
+    "independent_family_cluster_count": 2,
+    "single_opening_completed": true,
+    "reuse_for_selection_or_tuning_forbidden": true
+  },
+  "primary_results": {
+    "cohens_dz": 1.015477533064969,
+    "cohens_dz_ci_95": [0.9056321678376499, 1.9756404952641493],
+    "auroc": 0.8571428571428572,
+    "balanced_accuracy": 0.8571428571428572,
+    "pairwise_accuracy": 0.8571428571428571,
+    "exact_cluster_sign_flip_p": 0.5
+  },
+  "acceptance_checks": [
+    {
+      "check": "frozen_data_and_single_opening_integrity",
+      "status": "pass",
+      "evidence": "Selection was locked on train/dev; one access event preceded the unique test-only artifact."
+    },
+    {
+      "check": "required_metrics_and_uncertainty_reported",
+      "status": "pass",
+      "evidence": "Effect size, bootstrap CI, AUROC, balanced accuracy, pairwise accuracy and structure-preserving permutation are retained."
+    },
+    {
+      "check": "null_control_and_probe_registry_complete",
+      "status": "pass_with_limitations",
+      "evidence": "All frozen nulls, controls and probes were run; the unrelated control is template-dominated and the control plan was post-target-metrics."
+    },
+    {
+      "check": "confirmatory_family_scale_and_inference",
+      "status": "fail",
+      "evidence": "Seven test pairs form only two independent family clusters; the exact permutation p-value is 0.5."
+    },
+    {
+      "check": "causal_steering_evidence",
+      "status": "not_tested",
+      "evidence": "No activation intervention or behavioral steering experiment was performed in Phase 2."
+    }
+  ],
+  "decision_basis": [
+    "Phase completion is measured against the authorized Phase 2 pilot scope, not against a desired positive finding.",
+    "The held-out directional results are consistent across the target, orthogonalized direction and linear probes.",
+    "Bootstrap uncertainty cannot replace the low-resolution family-cluster permutation result.",
+    "The post-target-metrics control timing prevents describing the gate as confirmatory preregistration.",
+    "Representation evidence does not authorize a causal steering claim."
+  ],
+  "recommended_next_step": {
+    "action": "build_and_freeze_an_independent_family_rich_replication_set_before_reconsidering_confirmatory_steering",
+    "minimum_target": "Use the existing plan target of at least 40 held-out test families, with power and family allocation frozen before model access.",
+    "forbidden_shortcut": "Do not reuse the opened seven-pair test for selection, tuning, new hypotheses or Phase 3 method ranking.",
+    "model_or_gpu_required_for_next_step": false
+  },
+  "claim_boundary": "Phase 2 is complete as an auditable exploratory single-axis representation pilot. It does not pass the gate for confirmatory causal steering, personality control, cross-axis inference or cross-model generalization."
+}

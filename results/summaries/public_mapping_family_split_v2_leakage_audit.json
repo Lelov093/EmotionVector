@@ -1,0 +1,135 @@
+{
+  "schema_version": "public_mapping_family_leakage_audit_v0_1",
+  "created_at": "2026-08-03T23:13:59+08:00",
+  "candidate_count": 112,
+  "checks": [
+    {
+      "check_id": "exact_content_hash_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "normalized_content_hash_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "token_3gram_near_duplicate_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "source_sample_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "task_family_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "scenario_family_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "prompt_template_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "semantic_cluster_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "source_family_id_cross_split",
+      "status": "human_review_required",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "axis_coverage_all_splits",
+      "status": "human_review_required",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    }
+  ],
+  "exact_cross_split_groups": [],
+  "normalized_cross_split_groups": [],
+  "near_duplicate_threshold": {
+    "metric": "token_3gram_jaccard",
+    "threshold": 0.9
+  },
+  "near_duplicate_cross_split_pairs": [],
+  "source_sample_cross_split": {},
+  "family_overlaps": {
+    "source_family_id": {
+      "pku_safe_rlhf_f4b036fc_alpaca2_7b": [
+        "dev",
+        "test",
+        "train"
+      ],
+      "pku_safe_rlhf_f4b036fc_alpaca3_8b": [
+        "dev",
+        "train"
+      ],
+      "pku_safe_rlhf_f4b036fc_alpaca_7b": [
+        "dev",
+        "test",
+        "train"
+      ]
+    },
+    "task_family_id": {},
+    "scenario_family_id": {},
+    "prompt_template_id": {},
+    "semantic_cluster_id": {}
+  },
+  "axis_counts_by_split": {
+    "train": {
+      "boundary-preserving-over-accommodating": 40,
+      "empathetic-detached": 9,
+      "supportive-critical": 11,
+      "warm-cold": 19
+    },
+    "dev": {
+      "boundary-preserving-over-accommodating": 16
+    },
+    "test": {
+      "boundary-preserving-over-accommodating": 17
+    }
+  },
+  "pole_counts_by_split": {
+    "train": {
+      "boundary-preserving-over-accommodating::boundary-preserving": 20,
+      "boundary-preserving-over-accommodating::over-accommodating": 20,
+      "empathetic-detached::detached": 1,
+      "empathetic-detached::empathetic": 8,
+      "supportive-critical::critical": 1,
+      "supportive-critical::supportive": 10,
+      "warm-cold::cold": 1,
+      "warm-cold::warm": 18
+    },
+    "dev": {
+      "boundary-preserving-over-accommodating::boundary-preserving": 3,
+      "boundary-preserving-over-accommodating::over-accommodating": 13
+    },
+    "test": {
+      "boundary-preserving-over-accommodating::boundary-preserving": 8,
+      "boundary-preserving-over-accommodating::over-accommodating": 9
+    }
+  },
+  "missing_axes_by_split": {
+    "train": [],
+    "dev": [
+      "empathetic-detached",
+      "supportive-critical",
+      "warm-cold"
+    ],
+    "test": [
+      "empathetic-detached",
+      "supportive-critical",
+      "warm-cold"
+    ]
+  },
+  "content_policy": "Raw prompts and responses were hashed in memory and are not emitted."
+}

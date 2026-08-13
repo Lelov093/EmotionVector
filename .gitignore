@@ -1,0 +1,67 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# data and results — keep JSONL source data, exclude binaries
+data/external/
+.cache/huggingface/
+data/raw/*.pt
+data/raw/*.bin
+data/raw/*.safetensors
+*.npy
+*.npz
+results/vectors/
+results/logs/
+results/local_artifacts/
+results/hidden_states/
+*.pt
+*.bin
+*.safetensors
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.backup
+
+# frontend
+frontend/node_modules/
+frontend/dist/
+
+# caches
+.cache/
+huggingface/
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+.claude/
+
+# internal development and unpublished design references
+.agents/
+Prototypes/
+CLAUDE.md
+CHANGELOG.md
+backend/
+frontend/
+docs/
+report/
+results/summary/
+main.py
+scripts/generate_summary_jsons.py
+
+# Only lightweight research cards and aggregate summaries are releaseable.
+# Raw/local result trees remain excluded above.

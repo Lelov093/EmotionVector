@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_train_dev_selection_lock_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Train/Dev Selection Lock v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["selection_lock_version", "locked_at", "runtime", "human_review_freeze", "formal_annotations", "restricted_condition_key", "selection_source", "candidate_results", "candidate_results_sha256", "all_candidates_reported", "selected_specification", "quality_gate", "test_opening_status", "claim_boundary"],
+  "properties": {
+    "selection_lock_version": {"const": "phase_3_train_dev_selection_lock_v0_1"},
+    "locked_at": {"type": "string", "format": "date-time"},
+    "runtime": {"type": "object"},
+    "human_review_freeze": {"type": "object"},
+    "formal_annotations": {"type": "object"},
+    "restricted_condition_key": {"type": "object"},
+    "selection_source": {"const": "condition_blind_human_development_ratings_only"},
+    "candidate_results": {"type": "array", "minItems": 4, "maxItems": 4},
+    "candidate_results_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "all_candidates_reported": {"const": true},
+    "selected_specification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_steering_alpha", "target_steering_condition_id", "qlora_checkpoint_id", "qlora_condition_id"],
+      "properties": {
+        "target_steering_alpha": {"enum": [1.0, 3.0]},
+        "target_steering_condition_id": {"enum": ["target_steering_alpha_1", "target_steering_alpha_3"]},
+        "qlora_checkpoint_id": {"enum": ["epoch_1", "epoch_2"]},
+        "qlora_condition_id": {"enum": ["qlora_epoch_1", "qlora_epoch_2"]}
+      }
+    },
+    "quality_gate": {"type": "object"},
+    "test_opening_status": {"const": "locked_not_opened"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,4 @@
+jsonschema==4.26.0
+numpy==2.4.4
+PyYAML==6.0.3
+scikit-learn==1.8.0

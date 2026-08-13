@@ -1,0 +1,61 @@
+experiment_id: post_training_qwen3_4b_boundary_preserving.phase_d_batch2
+run_id: post_training_boundary_preserving_phase_d_batch2
+model_id: Qwen/Qwen3-4B-Instruct-2507
+cache_dir: D:\AI_Models\huggingface\hub
+local_files_only: true
+axis_id: boundary-preserving-over-accommodating
+target_pole: boundary-preserving
+source_dataset: data/trait_space/curated/trait_space_seed_v0_1.jsonl
+split_manifest: data/trait_space/splits/trait_space_seed_v0_1_split_manifest.json
+axis_registry: data/trait_space/axis_registry.yaml
+sft_dataset: data/post_training/boundary_preserving_sft_v0_2.jsonl
+sft_dataset_card: data/post_training/boundary_preserving_sft_v0_2.card.md
+eval_pairs: data/post_training/boundary_preserving_eval_pairs_v0_2.jsonl
+preference_candidates: data/post_training/boundary_preserving_preference_candidates_v0_2.jsonl
+adapter_output_root: results/local_artifacts/post_training/adapters/qwen3_4b_4bit/boundary_preserving
+local_artifact_dir: results/local_artifacts/post_training/phase_d_batch2
+batch1_training_summary: results/local_artifacts/post_training/phase_d_batch1/training_summary.json
+runtime:
+  quantization: 4bit
+  compute_dtype: fp16
+candidates:
+  - candidate_id: candidate_a_r8_s60
+    max_steps: 60
+    learning_rate: 0.0002
+    max_seq_length: 384
+    gradient_accumulation_steps: 2
+    lora_rank: 8
+    lora_alpha: 16
+    lora_dropout: 0.05
+    target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  - candidate_id: candidate_b_r8_s120
+    max_steps: 120
+    learning_rate: 0.0002
+    max_seq_length: 384
+    gradient_accumulation_steps: 2
+    lora_rank: 8
+    lora_alpha: 16
+    lora_dropout: 0.05
+    target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+evaluation:
+  max_new_tokens: 80
+  max_eval_prompts: 24
+  dev_selection_prompts: 6
+  activation_vector_artifact: results/local_artifacts/representation_atlas/main_qwen3_4b/representation_atlas_main_qwen3_4b_v0_1/vectors.pt
+  activation_layer: 24
+  activation_alpha: 3
+  judge_sample_size: 30
+tracked_outputs:
+  result_card_json: results/cards/post_training_boundary_preserving_phase_d_batch2.json
+  result_card_md: results/cards/post_training_boundary_preserving_phase_d_batch2.md
+  summary_json: results/summaries/post_training_phase_d_batch2_summary.json
+  pairwise_records_jsonl: results/cards/post_training_phase_d_batch2_pairwise_records.jsonl
+  failure_cases_jsonl: results/cards/post_training_phase_d_batch2_failure_cases.jsonl
+  judge_results_jsonl: results/cards/post_training_phase_d_batch2_judge_results.jsonl
+  judge_summary_json: results/summaries/post_training_phase_d_batch2_judge_summary.json
+  judge_report_md: results/cards/post_training_phase_d_batch2_judge_report.md
+non_goals:
+  - no stable trait-control claim
+  - no 7B or 8B training
+  - no dashboard or frontend work
+  - no negative-pole records as SFT targets

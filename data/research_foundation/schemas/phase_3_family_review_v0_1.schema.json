@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_family_review_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Family Review v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "dataset_id", "candidate_id", "source_family_id", "source_locator", "content_warning", "prompt", "responses", "source_labels", "content_sha256", "candidate_trait_axes", "proposed_family_assignment", "human_review"],
+  "properties": {
+    "schema_version": {"const": "phase_3_family_review_v0_1"},
+    "dataset_id": {"const": "pku_safe_rlhf"},
+    "candidate_id": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"},
+    "source_family_id": {"type": "string", "minLength": 1},
+    "source_locator": {"type": "object", "required": ["model_family", "source_split", "lf_record_number"]},
+    "content_warning": {"type": "string", "minLength": 1},
+    "prompt": {"type": "string", "minLength": 1},
+    "responses": {
+      "type": "array", "minItems": 2, "maxItems": 2,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["response_id", "text", "content_sha256"],
+        "properties": {
+          "response_id": {"enum": ["response_0", "response_1"]},
+          "text": {"type": "string", "minLength": 1},
+          "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "source_labels": {"type": "object", "minProperties": 4},
+    "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "candidate_trait_axes": {"const": ["boundary-preserving-over-accommodating"]},
+    "proposed_family_assignment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["task_family_id", "scenario_family_id", "prompt_template_id", "semantic_cluster_id", "assignment_status"],
+      "properties": {
+        "task_family_id": {"const": "safety_helpfulness_preference_pending_human"},
+        "scenario_family_id": {"type": "string", "minLength": 1},
+        "prompt_template_id": {"const": "source_prompt_unknown_pending_human"},
+        "semantic_cluster_id": {"type": "string", "minLength": 1},
+        "assignment_status": {"const": "machine_proposed_pending_human"}
+      }
+    },
+    "human_review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["mapping_decision", "reviewer_id", "reviewed_at", "response_annotations", "pair_contrast", "reviewed_family_assignment", "pair_evaluation_eligible", "quality_flags", "notes"],
+      "properties": {
+        "mapping_decision": {"enum": ["accept", "reject", "ambiguous", null]},
+        "reviewer_id": {"type": ["string", "null"]},
+        "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+        "response_annotations": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["response_id", "behavior", "pole", "task_success", "naturalness", "useful_alternative", "over_refusal", "template_style", "qlora_training_eligible"],
+            "properties": {
+              "response_id": {"enum": ["response_0", "response_1"]},
+              "behavior": {"enum": ["reasonable_accept", "reasonable_refusal", "clarification", "alternative", "unsafe_compliance", "over_refusal", "other", null]},
+              "pole": {"enum": ["boundary-preserving", "over-accommodating", null]},
+              "task_success": {"type": ["integer", "null"], "minimum": 0, "maximum": 3},
+              "naturalness": {"type": ["integer", "null"], "minimum": 0, "maximum": 3},
+              "useful_alternative": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+              "over_refusal": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+              "template_style": {"type": ["integer", "null"], "minimum": 0, "maximum": 2},
+              "qlora_training_eligible": {"type": ["boolean", "null"]}
+            }
+          }
+        },
+        "pair_contrast": {"enum": ["valid_single_axis", "same_axis_not_opposite", "multi_axis", "insufficient_trait_evidence", "ambiguous", null]},
+        "reviewed_family_assignment": {
+          "type": "object", "additionalProperties": false,
+          "required": ["task_family_id", "scenario_family_id", "prompt_template_id", "semantic_cluster_id"],
+          "properties": {
+            "task_family_id": {"type": ["string", "null"]},
+            "scenario_family_id": {"type": ["string", "null"]},
+            "prompt_template_id": {"type": ["string", "null"]},
+            "semantic_cluster_id": {"type": ["string", "null"]}
+          }
+        },
+        "pair_evaluation_eligible": {"type": ["boolean", "null"]},
+        "quality_flags": {"type": "array", "uniqueItems": true, "items": {"enum": ["keyword_leakage", "length_mismatch", "task_answer_mismatch", "confound_risk", "unsafe_content", "too_subtle", "too_obvious", "exact_duplicate", "near_duplicate", "template_dominated", "insufficient_context", "insufficient_trait_evidence", "source_label_only", "multi_axis_confound", "poor_response_quality", "over_refusal", "missing_alternative", "missing_useful_alternative", "other"]}},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

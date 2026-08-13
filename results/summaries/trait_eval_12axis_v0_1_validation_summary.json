@@ -1,0 +1,79 @@
+{
+  "dataset_rows": 120,
+  "axis_count": 12,
+  "split_counts": {
+    "dev": 48,
+    "test": 72
+  },
+  "source_counts": {
+    "curated_by_codex_from_axis_registry": 120
+  },
+  "prompt_family_count_by_axis": {
+    "analytical-intuitive": 4,
+    "assertive-compliant": 4,
+    "boundary-preserving-over-accommodating": 4,
+    "calm-agitated": 4,
+    "cautious-impulsive": 4,
+    "concise-expressive": 4,
+    "confident-uncertain": 4,
+    "empathetic-detached": 5,
+    "reflective-impulsively-answering": 4,
+    "stable-reactive": 4,
+    "supportive-critical": 4,
+    "warm-cold": 4
+  },
+  "counts_by_axis_split": {
+    "analytical-intuitive": {
+      "dev": 4,
+      "test": 6
+    },
+    "assertive-compliant": {
+      "dev": 4,
+      "test": 6
+    },
+    "boundary-preserving-over-accommodating": {
+      "dev": 4,
+      "test": 6
+    },
+    "calm-agitated": {
+      "dev": 4,
+      "test": 6
+    },
+    "cautious-impulsive": {
+      "dev": 4,
+      "test": 6
+    },
+    "concise-expressive": {
+      "dev": 4,
+      "test": 6
+    },
+    "confident-uncertain": {
+      "dev": 4,
+      "test": 6
+    },
+    "empathetic-detached": {
+      "dev": 4,
+      "test": 6
+    },
+    "reflective-impulsively-answering": {
+      "dev": 4,
+      "test": 6
+    },
+    "stable-reactive": {
+      "dev": 4,
+      "test": 6
+    },
+    "supportive-critical": {
+      "dev": 4,
+      "test": 6
+    },
+    "warm-cold": {
+      "dev": 4,
+      "test": 6
+    }
+  },
+  "human_annotated_true_count": 0,
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

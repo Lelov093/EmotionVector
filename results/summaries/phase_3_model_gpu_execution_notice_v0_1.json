@@ -1,0 +1,34 @@
+{
+  "notice_version": "phase_3_model_gpu_execution_notice_v0_1",
+  "notified_at": "2026-08-04T23:03:54.8908912+08:00",
+  "authorization_basis": "user_approved_next_step_on_2026_08_04_with_standing_requirement_for_advance_notice",
+  "runtime_path": "configs/research/phase_3_train_dev_runtime_v0_1.json",
+  "runtime_sha256": "e64a7d375dfb1a29082d096271323e9128e98fef68e7c1a5eb4125e65f2d1a1e",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "local_files_only": true,
+    "quantization": "bitsandbytes_nf4_4bit"
+  },
+  "observed_hardware": {
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "total_memory_mib": 8188,
+    "free_memory_mib_at_notice": 6349,
+    "driver_version": "595.79"
+  },
+  "planned_execution": {
+    "qlora": "65 responses from 39 train families, one fixed run, two epochs, epoch_1 and epoch_2 checkpoints",
+    "development": "18 paired candidates from 15 families, five preselection conditions, 90 outputs",
+    "estimated_training_minutes": [20, 60],
+    "estimated_development_generation_minutes": [15, 40],
+    "external_llm_api_planned": false,
+    "automatic_judge_planned": false
+  },
+  "hard_boundaries": {
+    "phase_3_held_out_test_opening_allowed": false,
+    "phase_2_opened_test_reuse_allowed": false,
+    "hyperparameter_sweep_allowed": false,
+    "positive_result_required": false
+  },
+  "claim_boundary": "This notice records planned model/GPU use before execution. It is not evidence that training ran, that any method worked, or that held-out test was opened."
+}

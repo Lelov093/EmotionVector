@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/atlas_v2_test_runtime_v0_1.schema.json",
+  "title": "EmotionVector Atlas v2 Frozen Test Runtime v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["runtime_version", "status", "model", "execution", "input_contract", "representation_specification", "artifact_policy", "analysis", "claim_boundary"],
+  "properties": {
+    "runtime_version": {"const": "atlas_v2_test_runtime_v0_1"},
+    "status": {"const": "frozen_after_selection_before_test_opening"},
+    "model": {
+      "type": "object", "additionalProperties": false,
+      "required": ["model_id", "revision", "cache_root", "load_dtype", "quantization"],
+      "properties": {
+        "model_id": {"const": "Qwen/Qwen3-4B-Instruct-2507"},
+        "revision": {"const": "cdbee75f17c01a7cc42f958dc650907174af0554"},
+        "cache_root": {"type": "string", "minLength": 1},
+        "load_dtype": {"const": "bfloat16"},
+        "quantization": {"const": "bitsandbytes_int8"}
+      }
+    },
+    "execution": {
+      "type": "object", "additionalProperties": false,
+      "required": ["axis_id", "allowed_splits", "batch_size", "local_files_only", "device_map", "max_sequence_tokens", "test_openings"],
+      "properties": {
+        "axis_id": {"const": "boundary-preserving-over-accommodating"},
+        "allowed_splits": {"const": ["test"]},
+        "batch_size": {"const": 1},
+        "local_files_only": {"const": true},
+        "device_map": {"const": "auto"},
+        "max_sequence_tokens": {"const": 768},
+        "test_openings": {"const": 1}
+      }
+    },
+    "input_contract": {"type": "object"},
+    "representation_specification": {
+      "const": {"layer": 24, "pooling": "last_response_token", "dimension": 2560, "array_dtype": "float32"}
+    },
+    "artifact_policy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["array_path", "metadata_path", "raw_text_persistence", "overwrite"],
+      "properties": {
+        "array_path": {"const": "results/local_artifacts/research_foundation/atlas_v2/test_layer_24_last_response_token.npz"},
+        "metadata_path": {"const": "results/local_artifacts/research_foundation/atlas_v2/test_layer_24_last_response_token.metadata.json"},
+        "raw_text_persistence": {"const": "forbidden"},
+        "overwrite": {"const": "forbidden"}
+      }
+    },
+    "analysis": {
+      "const": {"seed": 20260804, "bootstrap_iterations": 5000, "permutation_iterations": 10000}
+    },
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

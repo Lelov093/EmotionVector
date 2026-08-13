@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/atlas_v2_activation_artifact_v0_1.schema.json",
+  "title": "EmotionVector Atlas v2 Activation Artifact Metadata v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_version", "created_at", "dataset", "analysis_plan", "runtime_config", "model",
+    "representation_spec", "splits", "records", "array_artifact", "claim_boundary"
+  ],
+  "properties": {
+    "artifact_version": {"const": "atlas_v2_activation_artifact_v0_1"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["manifest_path", "manifest_sha256"],
+      "properties": {
+        "manifest_path": {"const": "data/research_foundation/manifests/representation_family_split_v2_1.json"},
+        "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "analysis_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"const": "configs/research/representation_atlas_v2_analysis_plan_v0_1.json"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "runtime_config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"enum": [
+          "configs/research/representation_atlas_v2_runtime_v0_1.json",
+          "configs/research/representation_atlas_v2_test_runtime_v0_1.json"
+        ]},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_id", "revision", "dtype", "quantization"],
+      "properties": {
+        "model_id": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "minLength": 1},
+        "dtype": {"type": "string", "minLength": 1},
+        "quantization": {"type": ["string", "null"]}
+      }
+    },
+    "representation_spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["layer", "pooling", "dimension", "array_dtype"],
+      "properties": {
+        "layer": {"type": "integer", "minimum": 0},
+        "pooling": {"type": "string", "minLength": 1},
+        "dimension": {"type": "integer", "minimum": 2},
+        "array_dtype": {"enum": ["float16", "float32", "float64"]}
+      }
+    },
+    "splits": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["train", "dev", "test"]}
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sample_id", "pair_id", "split", "pole", "row_index"],
+        "properties": {
+          "sample_id": {"type": "string", "minLength": 1},
+          "pair_id": {"type": "string", "pattern": "^reprpair_[a-f0-9]{20}$"},
+          "split": {"enum": ["train", "dev", "test"]},
+          "pole": {"enum": ["boundary-preserving", "over-accommodating"]},
+          "row_index": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "array_artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "format", "embedding_key"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^results/local_artifacts/"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "format": {"const": "npz"},
+        "embedding_key": {"const": "embeddings"}
+      }
+    },
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

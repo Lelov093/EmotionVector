@@ -1,0 +1,23 @@
+model_id: Qwen/Qwen2.5-3B-Instruct
+role: fallback
+local_cache_policy:
+  user_local_model_root_note: "D:\\AI_Models"
+  user_local_hf_hub_note: "D:\\AI_Models\\huggingface\\hub"
+  portable_required_path: false
+  loader_should_support: [HF_HOME, TRANSFORMERS_CACHE, cache_dir, local_files_only]
+recommended_dtype: fp16
+quantization_mode: none_or_8bit_if_needed
+device_map_strategy: auto_single_gpu
+default_context_length: 768
+default_max_new_tokens: 128
+batch_size_policy: "1 for hidden-state extraction and generation."
+hidden_state_policy: "Use when Qwen3-4B is blocked; same artifact safety as main model."
+local_files_only_policy: "Prefer true after local cache is populated."
+artifact_policy: "No large tensors/logs in git; result cards only."
+known_risks:
+  - Fallback model may not match Qwen3 behavior.
+  - Claims must label it as fallback evidence.
+acceptance_use:
+  - Fallback Representation Atlas
+  - Fallback steering validation
+  - Dependency-risk mitigation

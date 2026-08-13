@@ -1,0 +1,54 @@
+{
+  "contract_version": "phase_3_isolation_and_expansion_contract_v0_2",
+  "status": "frozen_before_expansion_human_review",
+  "review_acceptance_path": "results/summaries/phase_3_family_review_acceptance_v0_1.json",
+  "review_acceptance_sha256": "eb9b7ef5d85cff4e31b808e7494ca434e4788264fb7ac129a926af485cf1fbe9",
+  "isolation_audit_path": "results/summaries/phase_3_family_isolation_options_audit_v0_1.json",
+  "isolation_audit_sha256": "a6f4d6e9e26be27a3f16aec28f66c6d0d2733d36a7c4c5165c33b84990accc47",
+  "preceding_data_contract_path": "configs/research/phase_3_family_data_contract_v0_1.json",
+  "preceding_data_contract_sha256": "7e7e6dc0049b1b51fcc67c8cc3a77517caa012ba8209fe26299bd3541e38b890",
+  "source": {
+    "dataset_id": "pku_safe_rlhf",
+    "revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+    "model_paths": {
+      "Alpaca-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/train.jsonl",
+      "Alpaca2-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/train.jsonl",
+      "Alpaca3-8B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/train.jsonl"
+    }
+  },
+  "isolation_policy": {
+    "strict_split_ownership_field": "isolation_family_id",
+    "provisional_construction": "connected_component_over_exact_normalized_prompt_and_token_3gram_jaccard_at_or_above_0_90",
+    "provisional_status": "pending_human_semantic_merge_review",
+    "human_semantic_merge_review_required_before_split": true,
+    "broad_stratification_fields": [
+      "source_family_id",
+      "task_family_id",
+      "scenario_family_id",
+      "prompt_template_id",
+      "semantic_cluster_id"
+    ],
+    "broad_fields_are_automatic_union_keys": false,
+    "exact_normalized_and_near_duplicate_cross_split_forbidden": true
+  },
+  "expansion_sampling": {
+    "seed": 2026080447,
+    "mixed_safety_per_model": 15,
+    "both_safe_per_model": 5,
+    "candidate_count": 60,
+    "exclude_phase_2_all_splits": true,
+    "exclude_confirmed_phase_3_180": true,
+    "positive_yield_required": false
+  },
+  "unchanged_post_review_targets": {
+    "qlora_train_minimum_families": 40,
+    "development_minimum_families": 15,
+    "held_out_test_minimum_families": 40,
+    "allocation_before_all_reviews_and_isolation_merge_forbidden": true
+  },
+  "review_schema_path": "data/research_foundation/schemas/phase_3_family_review_v0_1.schema.json",
+  "manifest_schema_path": "data/research_foundation/schemas/phase_3_expansion_candidate_manifest_v0_1.schema.json",
+  "tracked_manifest_path": "data/research_foundation/manifests/phase_3_expansion_candidate_manifest_v0_1.json",
+  "local_review_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_expansion_review_packet_v0_1.jsonl",
+  "claim_boundary": "The expansion is a bounded review tranche, not training or evaluation data. Existing confirmed reviews remain unchanged; provisional isolation IDs require human semantic merge review and no split exists until every unchanged 40/15/40 gate passes."
+}

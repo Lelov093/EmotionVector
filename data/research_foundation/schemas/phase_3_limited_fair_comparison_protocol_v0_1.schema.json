@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_limited_fair_comparison_protocol_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Limited Fair Comparison Protocol v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version", "status", "authorization", "evidence_basis", "research_scope",
+    "model", "conditions", "comparison_invariants", "data_gates", "steering_policy",
+    "evaluation", "execution_gates", "acceptance", "non_goals", "claim_boundary"
+  ],
+  "properties": {
+    "protocol_version": {"const": "phase_3_limited_fair_comparison_protocol_v0_1"},
+    "status": {"const": "frozen_protocol_data_readiness_only"},
+    "authorization": {
+      "type": "object", "additionalProperties": false,
+      "required": ["phase_3_entry_approved", "current_block", "model_gpu_notice_required"],
+      "properties": {
+        "phase_3_entry_approved": {"const": true},
+        "current_block": {"const": "protocol_and_data_readiness_no_model_execution"},
+        "model_gpu_notice_required": {"const": true}
+      }
+    },
+    "evidence_basis": {
+      "type": "object", "additionalProperties": false,
+      "required": ["phase_2_acceptance_path", "phase_2_acceptance_sha256", "confirmatory_steering_gate"],
+      "properties": {
+        "phase_2_acceptance_path": {"const": "results/summaries/phase_2_research_credibility_acceptance_v0_1.json"},
+        "phase_2_acceptance_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "confirmatory_steering_gate": {"const": "no_go"}
+      }
+    },
+    "research_scope": {
+      "type": "object", "additionalProperties": false,
+      "required": ["axis_ids", "study_role", "representation_vs_causality"],
+      "properties": {
+        "axis_ids": {"const": ["boundary-preserving-over-accommodating"]},
+        "study_role": {"const": "limited_nonconfirmatory_fair_method_comparison"},
+        "representation_vs_causality": {"const": "phase_2_representation_signal_does_not_establish_causal_steering"}
+      }
+    },
+    "model": {
+      "type": "object", "additionalProperties": false,
+      "required": ["model_id", "revision", "runtime_equivalence_required"],
+      "properties": {
+        "model_id": {"const": "Qwen/Qwen3-4B-Instruct-2507"},
+        "revision": {"const": "cdbee75f17c01a7cc42f958dc650907174af0554"},
+        "runtime_equivalence_required": {"const": true}
+      }
+    },
+    "conditions": {
+      "type": "array", "uniqueItems": true,
+      "const": ["base", "prompt_only", "target_steering", "sign_flipped_steering", "random_steering", "shuffled_steering", "qlora"]
+    },
+    "comparison_invariants": {
+      "type": "object", "additionalProperties": false,
+      "required": ["same_model_revision", "same_prompt_rows", "same_decoding", "same_output_budget", "paired_outputs", "condition_blind_human_review"],
+      "properties": {
+        "same_model_revision": {"const": true},
+        "same_prompt_rows": {"const": true},
+        "same_decoding": {"const": true},
+        "same_output_budget": {"const": true},
+        "paired_outputs": {"const": true},
+        "condition_blind_human_review": {"const": true}
+      }
+    },
+    "data_gates": {
+      "type": "object", "additionalProperties": false,
+      "required": ["legacy_sft_forbidden", "qlora_train", "development", "held_out_test", "leakage_checks"],
+      "properties": {
+        "legacy_sft_forbidden": {"const": ["data/post_training/boundary_preserving_sft_v0_1.jsonl", "data/post_training/boundary_preserving_sft_v0_2.jsonl"]},
+        "qlora_train": {"type": "object"},
+        "development": {"type": "object"},
+        "held_out_test": {"type": "object"},
+        "leakage_checks": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "steering_policy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["layer", "pooling", "direction_source", "alpha_candidates", "alpha_selection_split", "test_retuning_forbidden", "random_draws", "shuffled_draws"],
+      "properties": {
+        "layer": {"const": 24},
+        "pooling": {"const": "last_response_token"},
+        "direction_source": {"const": "phase_2_train_only_difference_of_means"},
+        "alpha_candidates": {"const": [1.0, 3.0]},
+        "alpha_selection_split": {"const": "new_development_only"},
+        "test_retuning_forbidden": {"const": true},
+        "random_draws": {"type": "integer", "minimum": 3},
+        "shuffled_draws": {"type": "integer", "minimum": 3}
+      }
+    },
+    "evaluation": {"type": "object"},
+    "execution_gates": {"type": "array", "minItems": 5, "items": {"type": "object"}},
+    "acceptance": {"type": "object"},
+    "non_goals": {"type": "array", "minItems": 6, "items": {"type": "string"}},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

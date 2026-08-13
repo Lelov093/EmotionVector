@@ -1,0 +1,98 @@
+{
+  "access": {
+    "event_count": 1,
+    "event_created_before_pair_read": true,
+    "model_opening_number": 1
+  },
+  "artifacts": {
+    "access_log": {
+      "bytes": 824,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_access_log_v0_1.jsonl",
+      "sha256": "ec9502f375858102c7d9c541b409982b57c4b1818dfb87d50160c1f9fec26b8c",
+      "tracked": false
+    },
+    "blind_packet": {
+      "bytes": 555120,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_blind_packet_v0_1.jsonl",
+      "sha256": "e785177e518ab871158fee70e8f47f2630a7fd97825aea6740aef85a8c861c62",
+      "tracked": false
+    },
+    "candidate_outputs": {
+      "bytes": 856467,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_candidate_outputs_v0_1.jsonl",
+      "sha256": "0f338633dd7463eef76d84652dd35905b663edf1c7699d67210aa70f16697902",
+      "tracked": false
+    }
+  },
+  "blind_review": {
+    "blind_outputs": 780,
+    "condition_identity_fields_present": false,
+    "condition_level_exact_match_diagnostics_disclosed_before_rating_freeze": true,
+    "human_annotations_completed": 0,
+    "packet_items": 52,
+    "per_item_condition_mapping_exposed_to_human_reviewer": false,
+    "restricted_condition_key_artifact_exists": true,
+    "restricted_condition_key_was_programmatically_read_before_rating_freeze": true,
+    "strict_pre_rating_nonaccess_claim_available": false,
+    "unique_blind_ids": 780
+  },
+  "claim_boundary": "The single held-out opening generated a complete 15-condition packet, but post-generation automation accessed the restricted key and disclosed aggregate condition-level exact-match diagnostics before human rating freeze. Per-item mappings were not disclosed and outputs remain unscored, but strict preregistered pre-rating nonaccess cannot be claimed; user direction is required before evaluation continues.",
+  "execution": {
+    "environment": ".venv/Scripts/python.exe",
+    "external_llm_or_judge_run": false,
+    "first_output_completed_at": "2026-08-05T04:24:06.889329+00:00",
+    "generation_seconds_sum": 5334.666895300008,
+    "last_output_completed_at": "2026-08-05T05:52:49.538578+00:00",
+    "model_or_gpu_run": true,
+    "operational_recovery": {
+      "continued_under_same_access_event": true,
+      "initial_launch_timed_out_before_any_output_artifact": true,
+      "runtime_or_condition_change": false
+    },
+    "training_run": false
+  },
+  "generation": {
+    "automatic_quality_or_trait_scores_computed": false,
+    "candidates_with_any_exact_cross_condition_match": 52,
+    "condition_count": 15,
+    "condition_counts": {
+      "base": 52,
+      "prompt_only": 52,
+      "qlora": 52,
+      "random_steering_01": 52,
+      "random_steering_02": 52,
+      "random_steering_03": 52,
+      "random_steering_04": 52,
+      "random_steering_05": 52,
+      "shuffled_steering_01": 52,
+      "shuffled_steering_02": 52,
+      "shuffled_steering_03": 52,
+      "shuffled_steering_04": 52,
+      "shuffled_steering_05": 52,
+      "sign_flipped_steering": 52,
+      "target_steering": 52
+    },
+    "condition_outputs": 780,
+    "held_out_families": 40,
+    "held_out_pairs": 52,
+    "selected_exact_match_diagnostics": {
+      "base_vs_prompt_only": 0,
+      "base_vs_qlora": 0,
+      "base_vs_target": 27,
+      "target_vs_sign_flipped": 13
+    },
+    "unique_output_hashes": 334
+  },
+  "runtime": {
+    "path": "configs/research/phase_3_held_out_runtime_v0_1.json",
+    "sha256": "6e6e8aa3695bb251c42f4908eabf5efd3e4df957fa7b2b199d283c3f48ae6e45"
+  },
+  "status": "held_out_candidates_complete_blinding_deviation_pending_user_decision",
+  "summary_version": "phase_3_held_out_execution_v0_1",
+  "test_boundary": {
+    "all_conditions_complete_before_packet": true,
+    "qlora_epoch_1_remains_failed_quality_gate_fallback": true,
+    "test_openings": 1,
+    "test_retuning_or_selective_rerun": false
+  }
+}

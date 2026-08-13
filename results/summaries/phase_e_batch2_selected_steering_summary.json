@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-07-04T14:02:05.704634+00:00",
+  "experiment_id": "trait_eval_generation_qwen3_4b.phase_e_batch2",
+  "requested_axes": [
+    "calm-agitated",
+    "empathetic-detached",
+    "assertive-compliant",
+    "boundary-preserving-over-accommodating",
+    "cautious-impulsive",
+    "stable-reactive"
+  ],
+  "generation_count": 36,
+  "axis_counts": {
+    "calm-agitated": 6,
+    "empathetic-detached": 6,
+    "assertive-compliant": 6,
+    "boundary-preserving-over-accommodating": 6,
+    "cautious-impulsive": 6,
+    "stable-reactive": 6
+  },
+  "skipped": [],
+  "steering_metadata": {
+    "layer": 24,
+    "alpha": 3,
+    "pooling": "last_token",
+    "vector_method": "difference_of_means",
+    "vector_artifact": "results/local_artifacts/representation_atlas/main_qwen3_4b/representation_atlas_main_qwen3_4b_v0_1/vectors.pt"
+  },
+  "claim_boundary": "Selected steering slice only; not full 12-axis steering."
+}

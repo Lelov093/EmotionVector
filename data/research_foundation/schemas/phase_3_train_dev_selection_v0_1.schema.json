@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_train_dev_selection_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Train/Dev Selection Summary v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary_version", "status", "locked_at", "review_freeze_path", "review_freeze_sha256", "selection_lock_path", "selection_lock_sha256", "candidate_results", "selected_specification", "quality_gate", "held_out_test_model_openings", "claim_boundary"],
+  "properties": {
+    "summary_version": {"const": "phase_3_train_dev_selection_v0_1"},
+    "status": {"const": "train_dev_selection_locked_test_unopened"},
+    "locked_at": {"type": "string", "format": "date-time"},
+    "review_freeze_path": {"const": "data/research_foundation/manifests/phase_3_development_blind_review_freeze_v0_1.json"},
+    "review_freeze_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "selection_lock_path": {"const": "results/local_artifacts/research_foundation/phase_3/phase_3_train_dev_selection_lock_v0_1.json"},
+    "selection_lock_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "candidate_results": {"type": "array", "minItems": 4, "maxItems": 4},
+    "selected_specification": {"type": "object"},
+    "quality_gate": {"type": "object"},
+    "held_out_test_model_openings": {"const": 0},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

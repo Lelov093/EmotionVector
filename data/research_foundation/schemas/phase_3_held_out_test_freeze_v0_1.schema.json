@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_held_out_test_freeze_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Held-out Test Freeze v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["freeze_version", "status", "split_manifest", "test_family_ids", "test_family_ids_sha256", "test_candidate_ids", "test_candidate_ids_sha256", "local_test_artifact", "access_state", "checks", "claim_boundary"],
+  "properties": {
+    "freeze_version": {"const": "phase_3_held_out_test_freeze_v0_1"},
+    "status": {"const": "held_out_test_frozen_unopened_for_model_execution"},
+    "split_manifest": {"type": "object"},
+    "test_family_ids": {"type": "array", "minItems": 40, "maxItems": 40, "uniqueItems": true},
+    "test_family_ids_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "test_candidate_ids": {"type": "array", "minItems": 40, "uniqueItems": true},
+    "test_candidate_ids_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "local_test_artifact": {"type": "object"}, "access_state": {"type": "object"},
+    "checks": {"type": "array", "minItems": 6}, "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

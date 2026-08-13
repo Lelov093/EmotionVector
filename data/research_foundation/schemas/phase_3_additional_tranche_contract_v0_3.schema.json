@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_additional_tranche_contract_v0_3.schema.json",
+  "title": "EmotionVector Phase 3 Additional Tranche Contract v0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "status", "preceding_contract_path", "preceding_contract_sha256", "review_acceptance_path", "review_acceptance_sha256", "final_isolation_manifest_path", "final_isolation_manifest_sha256", "source", "sampling", "isolation_extension_policy", "unchanged_targets", "review_schema_path", "manifest_schema_path", "isolation_review_schema_path", "tracked_manifest_path", "local_review_packet_path", "local_isolation_review_packet_path", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_additional_tranche_contract_v0_3"},
+    "status": {"const": "frozen_before_additional_tranche_human_review"},
+    "preceding_contract_path": {"type": "string"},
+    "preceding_contract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "review_acceptance_path": {"type": "string"},
+    "review_acceptance_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "final_isolation_manifest_path": {"type": "string"},
+    "final_isolation_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "source": {"type": "object"},
+    "sampling": {
+      "type": "object",
+      "required": ["seed", "mixed_safety_per_model", "both_safe_per_model", "candidate_count", "exclude_phase_2_all_splits", "exclude_reviewed_phase_3_240", "positive_yield_required"],
+      "properties": {
+        "candidate_count": {"const": 30},
+        "positive_yield_required": {"const": false}
+      }
+    },
+    "isolation_extension_policy": {
+      "type": "object",
+      "required": ["strict_split_ownership_field", "compare_against_existing_candidate_count", "compare_against_existing_final_family_count", "exact_normalized_and_token_3gram_jaccard_at_or_above_0_90_excluded_before_review", "human_semantic_merge_review_required", "transitive_merge_with_existing_and_new_candidates_required"],
+      "properties": {
+        "strict_split_ownership_field": {"const": "isolation_family_id"},
+        "compare_against_existing_candidate_count": {"const": 240},
+        "compare_against_existing_final_family_count": {"const": 189},
+        "exact_normalized_and_token_3gram_jaccard_at_or_above_0_90_excluded_before_review": {"const": true},
+        "human_semantic_merge_review_required": {"const": true},
+        "transitive_merge_with_existing_and_new_candidates_required": {"const": true}
+      }
+    },
+    "unchanged_targets": {"type": "object"},
+    "review_schema_path": {"type": "string"},
+    "manifest_schema_path": {"type": "string"},
+    "isolation_review_schema_path": {"type": "string"},
+    "tracked_manifest_path": {"type": "string"},
+    "local_review_packet_path": {"type": "string"},
+    "local_isolation_review_packet_path": {"type": "string"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

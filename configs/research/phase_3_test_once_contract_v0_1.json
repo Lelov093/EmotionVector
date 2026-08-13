@@ -1,0 +1,37 @@
+{
+  "access_policy": {
+    "access_log_path": "results/local_artifacts/research_foundation/phase_3/phase_3_test_access_log_v0_1.jsonl",
+    "condition_outputs_must_be_complete_before_unblinding": true,
+    "exclusive_create_access_log": true,
+    "opening_requires_frozen_train_dev_selection_lock": true,
+    "opening_requires_model_gpu_execution_notice": true,
+    "single_model_test_opening": true
+  },
+  "claim_boundary": "This contract guards a future single model-test opening. Creating it does not open the test, authorize model/GPU use, or supply confirmatory causal evidence.",
+  "contract_version": "phase_3_test_once_contract_v0_1",
+  "forbidden_uses": [
+    "alpha_selection",
+    "qlora_checkpoint_selection",
+    "prompt_revision",
+    "method_ranking_before_final_evaluation",
+    "test_retuning",
+    "selective_condition_omission",
+    "phase_2_opened_test_reuse"
+  ],
+  "required_preconditions": [
+    "family_split_leakage_audit_passed",
+    "blind_review_contract_frozen",
+    "all_method_conditions_frozen",
+    "train_dev_selection_lock_frozen",
+    "user_notified_before_model_or_gpu_execution"
+  ],
+  "split_manifest": {
+    "path": "data/research_foundation/manifests/phase_3_family_split_v0_1.json",
+    "sha256": "a76ba5500ff35247a1831ab06887b0bf7eee1b0cb0b7c309d479f3a61a05a417"
+  },
+  "status": "frozen_before_model_or_test_execution",
+  "test_freeze": {
+    "path": "data/research_foundation/manifests/phase_3_held_out_test_freeze_v0_1.json",
+    "sha256": "71986cb9d99e6f04e3b1a4cb3fa8a36c02ae3f5fb365cccaea5f0556b700d2c3"
+  }
+}

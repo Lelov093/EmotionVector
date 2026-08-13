@@ -1,0 +1,174 @@
+{
+  "schema_version": "blind_review_retest_stability_v0_2",
+  "generated_at": "2026-08-03T23:04:45+08:00",
+  "analysis_scope": "single_researcher_condition_blind_round_1_round_2_retest",
+  "reviewer_id": "researcher_01",
+  "paired_outputs": 30,
+  "review_items_per_round": 12,
+  "dimensions": [
+    {
+      "dimension": "trait_score",
+      "paired_n": 30,
+      "exact_agreement": 1.0,
+      "exact_agreement_count": 30,
+      "disagreement_count": 0,
+      "quadratic_weighted_kappa": 1.0,
+      "kappa_n": 30
+    },
+    {
+      "dimension": "task_quality_score",
+      "paired_n": 30,
+      "exact_agreement": 0.933333,
+      "exact_agreement_count": 28,
+      "disagreement_count": 2,
+      "quadratic_weighted_kappa": 0.971989,
+      "kappa_n": 30
+    },
+    {
+      "dimension": "naturalness_score",
+      "paired_n": 30,
+      "exact_agreement": 0.966667,
+      "exact_agreement_count": 29,
+      "disagreement_count": 1,
+      "quadratic_weighted_kappa": 0.97561,
+      "kappa_n": 30
+    },
+    {
+      "dimension": "alternative_quality",
+      "paired_n": 30,
+      "exact_agreement": 0.966667,
+      "exact_agreement_count": 29,
+      "disagreement_count": 1,
+      "quadratic_weighted_kappa": 0.857143,
+      "kappa_n": 21
+    },
+    {
+      "dimension": "repetition",
+      "paired_n": 30,
+      "exact_agreement": 0.933333,
+      "exact_agreement_count": 28,
+      "disagreement_count": 2,
+      "quadratic_weighted_kappa": 0.866667,
+      "kappa_n": 30
+    },
+    {
+      "dimension": "confidence",
+      "paired_n": 30,
+      "exact_agreement": 1.0,
+      "exact_agreement_count": 30,
+      "disagreement_count": 0,
+      "quadratic_weighted_kappa": null,
+      "kappa_n": 30
+    },
+    {
+      "dimension": "refusal_appropriateness",
+      "paired_n": 30,
+      "exact_agreement": 1.0,
+      "exact_agreement_count": 30,
+      "disagreement_count": 0,
+      "quadratic_weighted_kappa": null,
+      "kappa_n": 0
+    },
+    {
+      "dimension": "over_refusal",
+      "paired_n": 30,
+      "exact_agreement": 1.0,
+      "exact_agreement_count": 30,
+      "disagreement_count": 0,
+      "quadratic_weighted_kappa": null,
+      "kappa_n": 0
+    },
+    {
+      "dimension": "sycophancy",
+      "paired_n": 30,
+      "exact_agreement": 1.0,
+      "exact_agreement_count": 30,
+      "disagreement_count": 0,
+      "quadratic_weighted_kappa": null,
+      "kappa_n": 0
+    },
+    {
+      "dimension": "verbosity_side_effect",
+      "paired_n": 30,
+      "exact_agreement": 0.7,
+      "exact_agreement_count": 21,
+      "disagreement_count": 9,
+      "quadratic_weighted_kappa": null,
+      "kappa_n": 0
+    },
+    {
+      "dimension": "other_side_effects",
+      "paired_n": 30,
+      "exact_agreement": 0.333333,
+      "exact_agreement_count": 10,
+      "disagreement_count": 20,
+      "quadratic_weighted_kappa": null,
+      "kappa_n": 0
+    }
+  ],
+  "supplementary": {
+    "notes_exact_agreement": {
+      "dimension": "notes",
+      "paired_n": 30,
+      "exact_agreement": 0.0,
+      "exact_agreement_count": 0,
+      "disagreement_count": 30,
+      "quadratic_weighted_kappa": null,
+      "kappa_n": 0,
+      "role": "supplementary_free_text_not_a_scoring_dimension"
+    }
+  },
+  "trait_stability_gate": {
+    "exact_agreement_threshold": 0.7,
+    "quadratic_weighted_kappa_threshold": 0.67,
+    "exact_agreement_pass": true,
+    "quadratic_weighted_kappa_pass": true,
+    "numeric_gate_pass": true,
+    "protocol_compliant": false,
+    "status": "passes_numeric_thresholds_but_not_protocol_compliant"
+  },
+  "protocol_deviation": {
+    "type": "shortened_washout",
+    "original_minimum_days": 7,
+    "elapsed_hours_from_round_1_review": 1.141,
+    "user_authorized": true,
+    "impact": "Round 2 is an accelerated within-reviewer repeatability check and cannot support the protocol-v0.2 claim of test-retest stability after a minimum seven-day washout."
+  },
+  "evidence": {
+    "round_1_annotation_path": "results/local_artifacts/research_foundation/blind_review_pilot_v0_2_round_1_annotations.jsonl",
+    "round_1_annotation_sha256": "476c6e66a95a8edb70ef7691bcee83d29140d52427283203d44b5e34bbbc9b7f",
+    "round_1_expected_sha256": "476c6e66a95a8edb70ef7691bcee83d29140d52427283203d44b5e34bbbc9b7f",
+    "round_2_annotation_path": "results/local_artifacts/research_foundation/blind_review_pilot_v0_2_round_2_annotations.jsonl",
+    "round_2_annotation_sha256": "be066dcee201288e40d71ec02931506ae31eb92cbf63ab5e196598177f0a0582",
+    "round_2_expected_sha256": "be066dcee201288e40d71ec02931506ae31eb92cbf63ab5e196598177f0a0582",
+    "restricted_condition_key_path": "results/local_artifacts/research_foundation/blind_review_pilot_condition_key_v0_2.jsonl",
+    "restricted_condition_key_sha256": "6869f52a232e05e689603d9a718a9e77e71af03496f9d91fa222951f46e2605e",
+    "restricted_fields_emitted": false,
+    "disagreement_artifact_path": "results/local_artifacts/research_foundation/blind_review_retest_disagreements_v0_2.jsonl"
+  },
+  "disagreement_counts": {
+    "task_quality_score": 2,
+    "naturalness_score": 1,
+    "alternative_quality": 1,
+    "repetition": 2,
+    "verbosity_side_effect": 9,
+    "other_side_effects": 20,
+    "notes": 30
+  },
+  "interpretation": {
+    "direct_evidence": [
+      "Trait ratings match exactly for all 30 paired outputs and meet the predeclared numeric thresholds.",
+      "Verbosity-side-effect exact agreement is 70.0%, and other-side-effects exact agreement is 33.3%."
+    ],
+    "reasonable_inference": [
+      "The very short interval may have increased score carryover or recall, so perfect Trait agreement may overestimate repeatability under the intended washout.",
+      "Free-text other-side-effect labels are not sufficiently standardized for exact-agreement use in their current form."
+    ],
+    "not_verified": [
+      "Protocol-compliant seven-day test-retest stability.",
+      "Inter-rater reliability or independent external validity.",
+      "Any method-level Trait-control advantage."
+    ]
+  },
+  "claim_boundary": "This diagnostic measures accelerated within-reviewer repeatability on 30 reused outputs. It is not inter-rater agreement, independent external validation, a protocol-compliant seven-day test-retest estimate, method comparison, or evidence of Trait control."
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_isolation_and_expansion_contract_v0_2.schema.json",
+  "title": "EmotionVector Phase 3 Isolation and Expansion Contract v0.2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "status", "review_acceptance_path", "review_acceptance_sha256", "isolation_audit_path", "isolation_audit_sha256", "preceding_data_contract_path", "preceding_data_contract_sha256", "source", "isolation_policy", "expansion_sampling", "unchanged_post_review_targets", "review_schema_path", "manifest_schema_path", "tracked_manifest_path", "local_review_packet_path", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_isolation_and_expansion_contract_v0_2"},
+    "status": {"const": "frozen_before_expansion_human_review"},
+    "review_acceptance_path": {"type": "string"},
+    "review_acceptance_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "isolation_audit_path": {"type": "string"},
+    "isolation_audit_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "preceding_data_contract_path": {"type": "string"},
+    "preceding_data_contract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "source": {"type": "object"},
+    "isolation_policy": {
+      "type": "object",
+      "required": ["strict_split_ownership_field", "provisional_construction", "provisional_status", "human_semantic_merge_review_required_before_split", "broad_stratification_fields", "broad_fields_are_automatic_union_keys", "exact_normalized_and_near_duplicate_cross_split_forbidden"],
+      "properties": {
+        "strict_split_ownership_field": {"const": "isolation_family_id"},
+        "provisional_construction": {"type": "string"},
+        "provisional_status": {"const": "pending_human_semantic_merge_review"},
+        "human_semantic_merge_review_required_before_split": {"const": true},
+        "broad_stratification_fields": {"const": ["source_family_id", "task_family_id", "scenario_family_id", "prompt_template_id", "semantic_cluster_id"]},
+        "broad_fields_are_automatic_union_keys": {"const": false},
+        "exact_normalized_and_near_duplicate_cross_split_forbidden": {"const": true}
+      }
+    },
+    "expansion_sampling": {
+      "type": "object",
+      "properties": {
+        "candidate_count": {"const": 60},
+        "positive_yield_required": {"const": false}
+      },
+      "required": ["seed", "mixed_safety_per_model", "both_safe_per_model", "candidate_count", "exclude_phase_2_all_splits", "exclude_confirmed_phase_3_180", "positive_yield_required"]
+    },
+    "unchanged_post_review_targets": {"type": "object"},
+    "review_schema_path": {"type": "string"},
+    "manifest_schema_path": {"type": "string"},
+    "tracked_manifest_path": {"type": "string"},
+    "local_review_packet_path": {"type": "string"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

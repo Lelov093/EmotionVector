@@ -1,0 +1,137 @@
+{
+  "manifest_version": "current_dataset_provenance_v0_1",
+  "created_at": "2026-08-03T00:00:00+08:00",
+  "entries": [
+    {
+      "dataset_id": "trait_space_seed_v0_1",
+      "path": "data/trait_space/curated/trait_space_seed_v0_1.jsonl",
+      "version": "v0.1",
+      "sha256": "93a32975e3c5f8fb4d2292e946948640bbc6f162ef7eb9d67f882e10cdbabca2",
+      "row_count": 120,
+      "origin": "Project-internal Codex-curated contrastive responses",
+      "upstream_sources": ["data/trait_space/axis_registry.yaml"],
+      "construction": "Sixty contrastive pairs over six axes; initially authored by Codex without independent human annotation.",
+      "license": {
+        "identifier": "project-internal",
+        "review_status": "verified_internal",
+        "source_url": null,
+        "restrictions": ["Do not describe as independently human-written or human-validated."]
+      },
+      "annotation": {
+        "status": "none",
+        "independent_human_annotators": 0,
+        "notes": "The annotator field names Codex as initial curator; no independent human review exists."
+      },
+      "intended_use": ["historical audit", "candidate-pool review", "template/confound analysis"],
+      "prohibited_use": ["gold benchmark", "publication-scale confirmation", "proof of general trait representation"],
+      "disposition": "historical_candidate",
+      "verified_at": "2026-08-03T00:00:00+08:00",
+      "evidence_level": "direct"
+    },
+    {
+      "dataset_id": "trait_eval_12axis_v0_1",
+      "path": "data/evaluation/trait_eval_12axis_v0_1.jsonl",
+      "version": "v0.1",
+      "sha256": "1f91046c51839f4a91304871cc235bb83f62e7643ea2442c40a583d971be0cbb",
+      "row_count": 120,
+      "origin": "Project-internal prompts curated by Codex from the axis registry",
+      "upstream_sources": ["data/trait_space/axis_registry.yaml"],
+      "construction": "Ten prompts per axis across twelve axes; dev/test only; no independent human annotation.",
+      "license": {
+        "identifier": "project-internal",
+        "review_status": "verified_internal",
+        "source_url": null,
+        "restrictions": ["Do not describe as an independent or publication-scale evaluation set."]
+      },
+      "annotation": {
+        "status": "none",
+        "independent_human_annotators": 0,
+        "notes": "Every row has human_annotated=false."
+      },
+      "intended_use": ["historical evaluation audit", "candidate-pool review", "rubric pilot sampling"],
+      "prohibited_use": ["frozen independent test set", "automatic evaluator gold labels"],
+      "disposition": "historical_candidate",
+      "verified_at": "2026-08-03T00:00:00+08:00",
+      "evidence_level": "direct"
+    },
+    {
+      "dataset_id": "boundary_preserving_sft_v0_1",
+      "path": "data/post_training/boundary_preserving_sft_v0_1.jsonl",
+      "version": "v0.1",
+      "sha256": "422f75796f66f9af512b45144cf8c8c9c9ebb95b00fecf0b5c5296f1bff5c363",
+      "row_count": 10,
+      "origin": "Formatting conversion from positive-pole internal trait seed samples",
+      "upstream_sources": ["data/trait_space/curated/trait_space_seed_v0_1.jsonl"],
+      "construction": "Ten single-axis instruction-response records preserving legacy pair-level splits.",
+      "license": {
+        "identifier": "project-internal",
+        "review_status": "verified_internal",
+        "source_url": null,
+        "restrictions": ["Historical experiment trace only."]
+      },
+      "annotation": {
+        "status": "none",
+        "independent_human_annotators": 0,
+        "notes": "Derived from non-independently-reviewed seed data."
+      },
+      "intended_use": ["historical audit", "QLoRA pipeline regression fixture"],
+      "prohibited_use": ["new formal training", "evidence of post-training generalization"],
+      "disposition": "retired",
+      "verified_at": "2026-08-03T00:00:00+08:00",
+      "evidence_level": "direct"
+    },
+    {
+      "dataset_id": "boundary_preserving_sft_v0_2",
+      "path": "data/post_training/boundary_preserving_sft_v0_2.jsonl",
+      "version": "v0.2",
+      "sha256": "c7ff360c559da5ca119b9d3de50cb4c341ec10f0b5e0ffecc86cc0c102e29c01",
+      "row_count": 84,
+      "origin": "Deterministic task-family expansion from project-internal trait seed samples",
+      "upstream_sources": ["data/trait_space/curated/trait_space_seed_v0_1.jsonl"],
+      "construction": "Synthetic single-axis SFT records generated from ten upstream seed sources with fixed response templates.",
+      "license": {
+        "identifier": "project-internal",
+        "review_status": "verified_internal",
+        "source_url": null,
+        "restrictions": ["Historical experiment trace only."]
+      },
+      "annotation": {
+        "status": "none",
+        "independent_human_annotators": 0,
+        "notes": "Every row has human_annotated=false."
+      },
+      "intended_use": ["historical template/leakage audit", "QLoRA pipeline regression fixture"],
+      "prohibited_use": ["new formal training", "clean post-training dataset claim", "independent test evaluation"],
+      "disposition": "retired",
+      "verified_at": "2026-08-03T00:00:00+08:00",
+      "evidence_level": "direct"
+    },
+    {
+      "dataset_id": "phase_e_review_subset_ai_preannotated_v0_1",
+      "path": "data/evaluation/human_review/phase_e_review_subset_ai_preannotated_v0_1.jsonl",
+      "version": "v0.1",
+      "sha256": "17c6a99354ef0c115d4a924694b4353b739eaf85114677aca29d09f930158af3",
+      "row_count": 36,
+      "origin": "AI preannotation plus non-independent secondary user review",
+      "upstream_sources": ["data/evaluation/trait_eval_12axis_v0_1.jsonl", "Phase E model outputs"],
+      "construction": "Thirty-six review items containing visible outputs, heuristic scores, external Judge data and AI preannotations.",
+      "license": {
+        "identifier": "project-internal",
+        "review_status": "verified_internal",
+        "source_url": null,
+        "restrictions": ["Do not call independent human annotation or blinded evaluation."]
+      },
+      "annotation": {
+        "status": "secondary_review",
+        "independent_human_annotators": 0,
+        "notes": "The card explicitly records independent_human_annotation=false and human_verified_from_scratch=false."
+      },
+      "intended_use": ["evaluator disagreement analysis", "rubric migration pilot"],
+      "prohibited_use": ["human gold labels", "blind evaluation evidence", "inter-annotator agreement"],
+      "disposition": "auxiliary_only",
+      "verified_at": "2026-08-03T00:00:00+08:00",
+      "evidence_level": "direct"
+    }
+  ],
+  "claim_boundary": "This manifest records current tracked artifacts and their restrictions. It does not certify scientific validity, independent annotation, family-isolated splits, or suitability for new training."
+}

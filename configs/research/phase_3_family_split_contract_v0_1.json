@@ -1,0 +1,54 @@
+{
+  "contract_version": "phase_3_family_split_contract_v0_1",
+  "status": "frozen_before_split_construction",
+  "seed": 2026080473,
+  "bound_evidence": {
+    "data_gate_amendment_path": "configs/research/phase_3_data_gate_amendment_v0_1.json",
+    "data_gate_amendment_sha256": "4cdc4d78864df8ec9f7bf919c180f9a05c3e6b7b48e0f3a3205a4b7de6ca5b0e",
+    "data_gate_acceptance_path": "results/summaries/phase_3_data_gate_amendment_acceptance_v0_1.json",
+    "data_gate_acceptance_sha256": "23d82c56908ab6f282e5f676f6e1d3e6f394eb3a14b2f54291dee772b04f25cf",
+    "final_isolation_manifest_path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_3.json",
+    "final_isolation_manifest_sha256": "21b6c89cce6c13b00a371d44ce18e7389d2edaffb5457b6bd7dc642c76d76fdc"
+  },
+  "targets": {
+    "qlora_train_families": 39,
+    "development_families": 15,
+    "held_out_test_families": 40
+  },
+  "allocation_policy": {
+    "strict_ownership_field": "final_isolation_family_id",
+    "evaluation_only_families_reserved_before_dual_role_families": true,
+    "evaluation_reservation_count": 55,
+    "dual_role_reservation_rank": "sha256(seed, reserve_eval, family_id)",
+    "development_test_rank": "sha256(seed, eval_split, family_id)",
+    "held_out_test_takes_first_ranked_40": true,
+    "remaining_reserved_evaluation_families_become_development": true,
+    "remaining_qlora_eligible_families_become_train": true,
+    "positive_result_or_label_content_used_for_allocation": false
+  },
+  "eligibility_policy": {
+    "train_requires_at_least_one_human_confirmed_qlora_eligible_response": true,
+    "development_and_test_require_at_least_one_valid_single_axis_paired_evaluation_candidate": true,
+    "same_axis_not_opposite_forbidden_from_development_and_test": true,
+    "all_candidates_in_one_isolation_family_share_one_split": true
+  },
+  "leakage_policy": {
+    "phase_2_overlap_forbidden": true,
+    "candidate_content_prompt_and_response_hash_overlap_forbidden": true,
+    "normalized_prompt_overlap_forbidden": true,
+    "cross_split_prompt_token_3gram_jaccard_threshold": 0.9,
+    "human_semantic_isolation_closure_required": true,
+    "broad_reviewed_family_fields_are_reported_stratifiers_not_split_ownership": true
+  },
+  "outputs": {
+    "tracked_split_manifest": "data/research_foundation/manifests/phase_3_family_split_v0_1.json",
+    "tracked_test_freeze": "data/research_foundation/manifests/phase_3_held_out_test_freeze_v0_1.json",
+    "tracked_test_once_contract": "configs/research/phase_3_test_once_contract_v0_1.json",
+    "tracked_leakage_audit": "results/summaries/phase_3_family_split_leakage_audit_v0_1.json",
+    "local_train_rows": "results/local_artifacts/research_foundation/phase_3/phase_3_qlora_train_v0_1.jsonl",
+    "local_development_pairs": "results/local_artifacts/research_foundation/phase_3/phase_3_development_pairs_v0_1.jsonl",
+    "local_held_out_test_pairs": "results/local_artifacts/research_foundation/phase_3/phase_3_held_out_test_pairs_v0_1.jsonl",
+    "local_test_access_log": "results/local_artifacts/research_foundation/phase_3/phase_3_test_access_log_v0_1.jsonl"
+  },
+  "claim_boundary": "This contract deterministically allocates the user-amended 39/15/40 family counts and freezes test access. It does not execute a model, establish causal steering, or convert the original 40/15/40 result into a pass."
+}

@@ -1,0 +1,40 @@
+{
+  "contract_version": "phase_3_family_data_contract_v0_1",
+  "status": "frozen_before_candidate_generation",
+  "protocol_path": "configs/research/phase_3_limited_fair_comparison_protocol_v0_1.json",
+  "protocol_sha256": "abb8cad4f28cd29456749fc315b56708c3a6dd0aff0d04ca8bb34887bb86dfcc",
+  "source_use_decision_path": "data/research_foundation/manifests/public_dataset_use_decisions_v0_1.json",
+  "source_use_decision_sha256": "13208cf6dad8a8e4bbcf6459dc137b4e66533884bb2c45e1de2d02b9ef72c176",
+  "phase_2_exclusion_manifest_path": "data/research_foundation/manifests/representation_family_split_v2_1.json",
+  "phase_2_exclusion_manifest_sha256": "00e10c3c6b1f07ad7e03daa42aead0dbe738ff74566307c9d5992370d4389a40",
+  "source": {
+    "dataset_id": "pku_safe_rlhf",
+    "revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+    "model_paths": {
+      "Alpaca-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/train.jsonl",
+      "Alpaca2-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/train.jsonl",
+      "Alpaca3-8B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/train.jsonl"
+    }
+  },
+  "sampling": {
+    "seed": 2026080431,
+    "mixed_safety_per_model": 50,
+    "both_safe_per_model": 10,
+    "both_unsafe_excluded": true,
+    "phase_2_all_splits_excluded": true,
+    "candidate_count": 180
+  },
+  "axis_scope": ["boundary-preserving-over-accommodating"],
+  "post_review_targets": {
+    "qlora_train_minimum_families": 40,
+    "development_minimum_families": 15,
+    "held_out_test_minimum_families": 40,
+    "allocation_unit": "connected_component_over_source_task_scenario_template_semantic_families",
+    "allocation_before_review_forbidden": true
+  },
+  "review_schema_path": "data/research_foundation/schemas/phase_3_family_review_v0_1.schema.json",
+  "manifest_schema_path": "data/research_foundation/schemas/phase_3_family_candidate_manifest_v0_1.schema.json",
+  "tracked_manifest_path": "data/research_foundation/manifests/phase_3_family_candidate_manifest_v0_1.json",
+  "local_review_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_review_packet_v0_1.jsonl",
+  "claim_boundary": "Candidates are review instruments only. Source safety labels are not Trait labels, no split is assigned before completed human review, and no candidate is training or evaluation data until all family and quality gates pass."
+}

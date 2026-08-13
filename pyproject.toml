@@ -1,0 +1,52 @@
+[project]
+name = "emotionvector"
+version = "0.1.0"
+description = "Research prototype for LLM trait representations, activation steering, post-training baselines, and evaluation credibility"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = "Apache-2.0"
+authors = [
+    { name = "Lelov", email = "311008182+Lelov093@users.noreply.github.com" },
+]
+dependencies = [
+    "accelerate>=1.13.0",
+    "bitsandbytes>=0.49.2",
+    "datasets>=4.8.5",
+    "huggingface-hub>=1.14.0",
+    "jsonschema>=4.26.0",
+    "matplotlib>=3.10.9",
+    "nnsight>=0.7.0",
+    "numpy>=2.4.4",
+    "pandas>=3.0.3",
+    "peft>=0.19.1",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+    "safetensors>=0.7.0",
+    "scikit-learn>=1.8.0",
+    "sentencepiece>=0.2.1",
+    "torch==2.11.0+cu128",
+    "torchaudio==2.11.0+cu128",
+    "torchvision==0.26.0+cu128",
+    "tqdm>=4.67.3",
+    "transformers>=5.8.1",
+    "trl>=1.7.1",
+]
+
+[tool.uv]
+environments = ["sys_platform == 'win32'"]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'win32'" },
+]
+torchvision = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'win32'" },
+]
+torchaudio = [
+    { index = "pytorch-cu128", marker = "sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

@@ -1,0 +1,1064 @@
+{
+  "manifest_version": "representation_family_split_v2_1",
+  "dataset_version": "pku_boundary_representation_pairs_v0_1",
+  "created_at": "2026-08-04T00:00:00+08:00",
+  "random_seed": 20260804,
+  "status": "frozen_before_model_execution",
+  "axis_scope": [
+    "boundary-preserving-over-accommodating"
+  ],
+  "source_decision": {
+    "path": "data/research_foundation/manifests/public_dataset_use_decisions_v0_1.json",
+    "sha256": "13208cf6dad8a8e4bbcf6459dc137b4e66533884bb2c45e1de2d02b9ef72c176",
+    "hash_basis": "canonical_json_sort_keys_compact_utf8",
+    "required_status": "approved_noncommercial_research_use"
+  },
+  "eligibility_rule": {
+    "dataset_id": "pku_safe_rlhf",
+    "mapping_decision": "accept",
+    "contrast_status": "valid_single_axis",
+    "axis_id": "boundary-preserving-over-accommodating",
+    "required_poles": [
+      "boundary-preserving",
+      "over-accommodating"
+    ],
+    "excluded_as_contrast": [
+      "same_axis_not_opposite",
+      "insufficient_trait_evidence",
+      "ambiguous",
+      "multi_axis"
+    ]
+  },
+  "allocation_strategy": {
+    "unit": "opposite_pole_source_pair",
+    "connected_component_fields": [
+      "task_family_id",
+      "scenario_family_id",
+      "prompt_template_id",
+      "semantic_cluster_id"
+    ],
+    "target_ratios": {
+      "train": 0.5,
+      "dev": 0.25,
+      "test": 0.25
+    },
+    "minimum_dev_pairs": 5,
+    "minimum_test_pairs": 5,
+    "component_count": 4,
+    "source_family_policy": "source revision is preserved but model-family values may cross splits; the dataset does not support source-family generalization claims"
+  },
+  "test_access_policy": {
+    "frozen": true,
+    "frozen_before_model_execution": true,
+    "test_use": "single confirmatory opening after train/dev selection is locked",
+    "allowed_uses_before_opening": [
+      "schema validation",
+      "hash verification",
+      "count-only audit"
+    ],
+    "forbidden_uses_before_opening": [
+      "layer selection",
+      "pooling selection",
+      "direction selection",
+      "threshold selection",
+      "probe hyperparameter selection",
+      "rubric revision"
+    ],
+    "access_log_path": "results/local_artifacts/research_foundation/representation_test_access_log_v0_1.jsonl"
+  },
+  "records": [
+    {
+      "pair_id": "reprpair_03faf806bc2da6cffd9b",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_11b7ed3115150342",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "dd7277e00414d38967607f341ab5c45a8a59b3e26a5b61ab9ed188e612f4fcaf",
+      "pair_content_sha256": "11b7ed3115150342e46762064d26de8290cb3696ee7b7b806746f3c1b8e48222",
+      "responses": [
+        {
+          "sample_id": "pkumap_11b7ed3115150342__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "3216fb4845d8da6a3b8be2b39cf0dbe4efb6784ec64bcf74183f7b43c9216be0"
+        },
+        {
+          "sample_id": "pkumap_11b7ed3115150342__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "17144a970727fff3f211734ddf74b39eb3beb60255b83e2a94694b2ca2936b7e"
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "pair_id": "reprpair_0933310eb29d1d48f09f",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_ff71e5bf8ec6d44f",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "2a390941025004178a35494066c61681753eb776a5971c7f44ad8cee78ad331e",
+      "pair_content_sha256": "ff71e5bf8ec6d44fd9ec4304c1602abf3ecfc5badd22cb9a8e0fb13c74e1e0b5",
+      "responses": [
+        {
+          "sample_id": "pkumap_ff71e5bf8ec6d44f__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "cfd31e77b6a67032eaa765aeeb3126f8c25549dc973f37b12e1e5f6e59ff46f0"
+        },
+        {
+          "sample_id": "pkumap_ff71e5bf8ec6d44f__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "912e06f7b6c1d3cae69c8e8123e3805debd4bdc93a72ee13f4228d6707fa3f10"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_0f1754bbad6168d41ea3",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_5e8dadd000057297",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "84768e82b4fba8d9093dc10cfe1c7e443adf04572e03270a8fbdcfb9cb8e320e",
+      "pair_content_sha256": "5e8dadd000057297512a6215ad3376b440cad3dbd8f2020d3fc33ad24747e41a",
+      "responses": [
+        {
+          "sample_id": "pkumap_5e8dadd000057297__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "1dbebf4595cf11af4edb8a8730a136c9d2c96fe3b91b478095a63a4c50151d54"
+        },
+        {
+          "sample_id": "pkumap_5e8dadd000057297__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "9c68ad9cfbe86f82bb8a7ebde582b1c16149502d35dea240caeffe5fe853c7a7"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_10aa3d7b5ecd4eeefded",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_b734d3e0ddb61cd5",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "99a43b7af0cc216c9156335954c9b2c63b2732270d0afa02985e406b181e404a",
+      "pair_content_sha256": "b734d3e0ddb61cd5448821cc86081e5aa6879df7ff2b5ad51738e2ad18962d35",
+      "responses": [
+        {
+          "sample_id": "pkumap_b734d3e0ddb61cd5__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "86b997fe204308f461d3d2675b395197457f62d7d739ab61f0d30049d98f8336"
+        },
+        {
+          "sample_id": "pkumap_b734d3e0ddb61cd5__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "4ee862f85e51bbf88a337600c86b50d68ea3d05dee2c4a9cc0d5c478bce46053"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_2820c65a503e88dca0be",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_5ebbfed0284cfabd",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "2305b7cd6c6b27dd8c2bb205b3b0a513edc4360828b6bc6e10bd9c5d1d367bd1",
+      "pair_content_sha256": "5ebbfed0284cfabdbbd26263ca53123872b2a13b40542f3584f5d960f7a8934f",
+      "responses": [
+        {
+          "sample_id": "pkumap_5ebbfed0284cfabd__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "f8144e76fa7e187183a242bbffc6f375358d2b48f81f98839bc5bb834c89fe97"
+        },
+        {
+          "sample_id": "pkumap_5ebbfed0284cfabd__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "5101ee1e0b166b8474ac2bc6bfef44818bf0e6dbaae7e9713791f3960e20bbe1"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_2fdc1ba06ce8cf23ccf8",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_ef6cbb2867506dcc",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "c9609c880a0db9fac1f6e4dcb29f907d748f846afcd6f7be36f36fcde261e3c9",
+      "pair_content_sha256": "ef6cbb2867506dcce732b9d70606a56329f4ac7b0131fd172e41b2e15b3bfaf6",
+      "responses": [
+        {
+          "sample_id": "pkumap_ef6cbb2867506dcc__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "07295e761411b41b666add498d1ec2cfcd58f9b6c5a0eba573b28fe41cc92c59"
+        },
+        {
+          "sample_id": "pkumap_ef6cbb2867506dcc__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "2cf383c209308d13e8f10de2961e52804d0159c9410da4e8e3e29cb12d00f691"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_3afef1d6ba0ce8b5965c",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_9038633c50682304",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "a927a3cf962fd01dcb1325543f7480c27073e84dec53368b8f2468067bb01af9",
+      "pair_content_sha256": "9038633c5068230453804d2209e64f498f66ed6bf0df8774e9c54b5dee4765d5",
+      "responses": [
+        {
+          "sample_id": "pkumap_9038633c50682304__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "6c0083009c1e8b4efacc432908e44edd1d3eec675ed742824b2496b8efdff54b"
+        },
+        {
+          "sample_id": "pkumap_9038633c50682304__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "026fe64bc8daaa686cb25bf4e291977e0db3ac5bb0625cef0942f297d54ce9ba"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_3e29df03d0ad7a1afc53",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_5abf45a065266730",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "e9b1e83c6e1fcdea29e8d58fccc057d45f00cfba18bc9d32db8bb6e9ff4d5fe7",
+      "pair_content_sha256": "5abf45a065266730ce31523cb47577ee7ea22f1839f12d789482085684552063",
+      "responses": [
+        {
+          "sample_id": "pkumap_5abf45a065266730__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "0214bc2277d6b034baefde9503c6b2239c9f1a9e03d20daac89e0313223304a3"
+        },
+        {
+          "sample_id": "pkumap_5abf45a065266730__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "7d20ffde395ebf122e02c4b10e85ef1cbf510bb79cafa7d406c4145f5fde3c38"
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "pair_id": "reprpair_4d08c6fc1c77728e3cc0",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_d458e3a908f0a71e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "8b7ac4a2ff7874a357eda59824c7eb0a67c933b50c7f48085b012eb2e740142d",
+      "pair_content_sha256": "d458e3a908f0a71ee12757b0ac1b4094612174c593d2c50eb4aeb67f0b777485",
+      "responses": [
+        {
+          "sample_id": "pkumap_d458e3a908f0a71e__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "cc40a77e2bd198157cc94a0f387b9ac7bf915d4bf405cc01cec427e15eed1a36"
+        },
+        {
+          "sample_id": "pkumap_d458e3a908f0a71e__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "17e59f7431c02e0d9af5c8989971eb83856a6e487664329a1cfd5e7935b67076"
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "pair_id": "reprpair_57c90dd4efa83bf22496",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_07513833c864808e",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "fee1e0df238fe9ce3fd0863149810d7ec6bac22650aa19e857258067673b303a",
+      "pair_content_sha256": "07513833c864808e7c34259ee9c8407553c3ec774e67d5ba3d1094a0f75903e8",
+      "responses": [
+        {
+          "sample_id": "pkumap_07513833c864808e__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "0207b1e98d6042ab648db891b107af1334d70052f1110ee690bef1978ac59390"
+        },
+        {
+          "sample_id": "pkumap_07513833c864808e__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "a4d250cd40822a188fc47c919353622ab4102ee66f1192277cb519ccaacd6aec"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_64c296661e6e58b7b2cf",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_9639b4f257c02462",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "4d11ada47a22ac865cde7c3b624a4a8837281109782be08dfecc4599f8de7d8d",
+      "pair_content_sha256": "9639b4f257c024621f6b2b5c48c0efffa84eff6fe1c06ce4e8cf79923d093594",
+      "responses": [
+        {
+          "sample_id": "pkumap_9639b4f257c02462__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "50279b8ab84600d1643cc18b3b0326888236c273335da62a23c9d30e2461bb3b"
+        },
+        {
+          "sample_id": "pkumap_9639b4f257c02462__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "afb08d837958e3b3abe71e2cd6a7435a87e23434f06ecfe39783da230243a59c"
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "pair_id": "reprpair_6512eec2e92d68f1c8e3",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_d672b053415785ac",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "567bac5a162771a0acf2955193134708e37682c8c1f0e2b5b330bcfad0753500",
+      "pair_content_sha256": "d672b053415785acfc60598004de39362138c06a66f5a3a89687b600df1a7ce4",
+      "responses": [
+        {
+          "sample_id": "pkumap_d672b053415785ac__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "fd4bffda789f15606f01bc0d9f09d1366ee2c9e3981c97064d4ba779da816766"
+        },
+        {
+          "sample_id": "pkumap_d672b053415785ac__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "9499f84d9da7e7ec71a7c148b411c0e0a305232ff618a9611a5d133372bdaca5"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_6c7b9d29e1c183035a58",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_67c971e2b79b2dbc",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "animal_harm_and_welfare",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "animal_harm_enablement",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "a6e3206ea43e0f8cca174958af342261f2d3be449970967cedd4eae085b5ec7a",
+      "pair_content_sha256": "67c971e2b79b2dbcbd658866c06653ed2b75774f47ea12b5f29dfe8c2b28f441",
+      "responses": [
+        {
+          "sample_id": "pkumap_67c971e2b79b2dbc__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "14569b98c93196559ef983641808b2db1da03fdacf1fae8fb936abc7e278274d"
+        },
+        {
+          "sample_id": "pkumap_67c971e2b79b2dbc__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "5db5418c9289bfd2d39d09f41f76edc9a29ad890e0eb3efcbf0bc4fb047c5c0f"
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "pair_id": "reprpair_6ceab372097c4d1fdb41",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_1b78334ba4a0b0bd",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "d0bc9d44fc55a01a9372521b85774b43cf23c12786d5fcde62ff779d590ad19f",
+      "pair_content_sha256": "1b78334ba4a0b0bd78e6505ff86b74a8ae37306aa259ad1a7a17e60bb14b21f4",
+      "responses": [
+        {
+          "sample_id": "pkumap_1b78334ba4a0b0bd__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "d9c434ae2a37689f66b4f53fc97acae340891dc1c52e53e78904ea6065cea35c"
+        },
+        {
+          "sample_id": "pkumap_1b78334ba4a0b0bd__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "c9d71c3c5fb260ac69bcf8a2268d695c6d38b3151fb1b0b462e04d7c96391417"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_88305cf3a539400b01e7",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_e13161765b3142f6",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "ec801d54d234120635d258cada3b383b5b741df112311ffe558064a842e8e7c4",
+      "pair_content_sha256": "e13161765b3142f6a38c1cfdcb66d8f4c7b427eece94a6d1d7ee8d1ea321c5ba",
+      "responses": [
+        {
+          "sample_id": "pkumap_e13161765b3142f6__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "8fb78128c346718f2c290b6bfd2594419df13d8c63d41b2ef3ac38f1a57bd211"
+        },
+        {
+          "sample_id": "pkumap_e13161765b3142f6__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "d68d6d1ea32463d45e375513f6fb70062c7808ebb9e9bb5298a8fc38e2f13798"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_8d68d63b0126172318e9",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_39cee834f76f8a06",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "3a47d9afed94a59bed62a6efceb3450bbd804f0c37b236448f8bfd45b7a7f9ce",
+      "pair_content_sha256": "39cee834f76f8a06266cbc3a47ba83fbf7821f25b48133b884f713790a70d3be",
+      "responses": [
+        {
+          "sample_id": "pkumap_39cee834f76f8a06__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "5450a6fb32ecb2101ed64cd528c4d53b61978ee133c69a2c3ae36ac548291004"
+        },
+        {
+          "sample_id": "pkumap_39cee834f76f8a06__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "521faad601af96e3c69e423ca7b096d157e68006e70e5df6b50c82dbcb6bc688"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_91d55168af8ec7a7896f",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_a8a45b6bbdbfab36",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "animal_harm_and_welfare",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "animal_harm_enablement",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "cfc87497a74336954234f764baaaba8108b1c73ae9db8cc9e4169cc773aa2e8b",
+      "pair_content_sha256": "a8a45b6bbdbfab3609b56a73adfb6a6cf6202eec15f96dd153aa352ee78b2139",
+      "responses": [
+        {
+          "sample_id": "pkumap_a8a45b6bbdbfab36__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "eb7ab6cb33668e6e43cfa84c53011df0f13e700080561abbfee313854d2302b6"
+        },
+        {
+          "sample_id": "pkumap_a8a45b6bbdbfab36__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "c9c518259be2dc60024a6cf56a1c02946b25eca4aa66e227b935a6823cea3547"
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "pair_id": "reprpair_946b817b17f9d8b20f03",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_67ae1de3ae89bed3",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "99677844249db72f5bcd15329a6e2f5503b2b35fe5f2d80fc8741fa793a013ca",
+      "pair_content_sha256": "67ae1de3ae89bed3e888beb7cdea1930d21251c18af94e5ccc4f3322602f2f77",
+      "responses": [
+        {
+          "sample_id": "pkumap_67ae1de3ae89bed3__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "c4ef871357adc67eb44119000c647a2442d8d0e330bd5e81c2b4e0d44967deb4"
+        },
+        {
+          "sample_id": "pkumap_67ae1de3ae89bed3__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "1cdb148f1dbede2295f6081492b38f4ab3ebfa56b8c9b557c291dfc11ba72a2d"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_b6074ab92cc57507d448",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_ab6e87716f608287",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "9a09ed938693de0c1466e2d966eda94c71ab60c3b6c842320d1f271a3a99ffb3",
+      "pair_content_sha256": "ab6e87716f60828745beb9438b90e86538dded45d63a86c4b754297dc71c4ad3",
+      "responses": [
+        {
+          "sample_id": "pkumap_ab6e87716f608287__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "b69a9324ed9ed8bbb6c526ad6d0bd9d5053a9039687d55e79678b3f4aac8de5c"
+        },
+        {
+          "sample_id": "pkumap_ab6e87716f608287__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "1a350f09795405de5110b65256db4128dbdf777f7b2c829fb3d4b899ad9859c6"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_c0139b0b1d038f0cd471",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_2b21d79ce5b821d5",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "523a6de9b449215e7680e0c510541cd410c9a9392fd3c8a4080b3540d5febbd8",
+      "pair_content_sha256": "2b21d79ce5b821d574d4e62d4f5b9014dfd576cea910b0bd5f39555526b244a2",
+      "responses": [
+        {
+          "sample_id": "pkumap_2b21d79ce5b821d5__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "b984e8de2733e8de3c1b82d7ad4b82067e49867b99c92fe1581cb0400d4cdad1"
+        },
+        {
+          "sample_id": "pkumap_2b21d79ce5b821d5__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "10dd330015c64158f44456d4e279d8f9c4420b90747342049a4eaf104549820b"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_d8b188b282cef91ffa07",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_1c2e503039c59818",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "f0a1e292a6d85b0884f8ff1d47425390b8ab4e146dab04355e578e882a61ae3f",
+      "pair_content_sha256": "1c2e503039c598187aeaeffc13304a3845dede75fdb22cb20f26d57587813b75",
+      "responses": [
+        {
+          "sample_id": "pkumap_1c2e503039c59818__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "4e1507eb4ac754c91bffe46141e36dc58909da601423bac696ad70c067f59782"
+        },
+        {
+          "sample_id": "pkumap_1c2e503039c59818__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "f52c9b4249a8977ba4a0bf43ce9bd57af77f4741f19096a15b02b7f7bf6ebecd"
+        }
+      ],
+      "split": "dev"
+    },
+    {
+      "pair_id": "reprpair_e12df2d5f724d08dddec",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_2df45143906304e5",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "ac43160e332fd1af0df0adc01e9ed9219760ed68179c0f2ccadcb34a3359a70d",
+      "pair_content_sha256": "2df45143906304e54d10de9d034dc596421c1cc4f981da7569af2b1137e48114",
+      "responses": [
+        {
+          "sample_id": "pkumap_2df45143906304e5__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "bbb320f36cbb0f2df5bbaf75c32b51258e162788fc07a79f69817d2106ee803e"
+        },
+        {
+          "sample_id": "pkumap_2df45143906304e5__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "b482c8cfac74f5ec9c61f15db95311f72b81384db0ad219af411106388671743"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_e31ce6ccaac1ba1ac7aa",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_6fd75c4c5e1b8841",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "relationship_safety_response",
+      "scenario_family_id": "coercion_and_relationship_abuse",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "coercive_manipulation",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "a3b1a116d07b0cd9135fba419e32febbb19783d5f4c370e86fac82872c532c0c",
+      "pair_content_sha256": "6fd75c4c5e1b8841f502afe37b0df07003de31b79f9e9d482c6aae36da0bc5b9",
+      "responses": [
+        {
+          "sample_id": "pkumap_6fd75c4c5e1b8841__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "3df8145437a53be37c36f4288ad3d3632b815b58019e72a1a5fecdcc3a004937"
+        },
+        {
+          "sample_id": "pkumap_6fd75c4c5e1b8841__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "alternative",
+          "content_sha256": "7deeef3d53aef9eea842ca8897ced011b6b651ea891326710b60f8cf732ec0e0"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_e34cc77ef09c1b15dc41",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_47a58a0d681e8f5a",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "8c40ddcf31de892162d7b4ae26f36e72a4d495cf61973157fa24ccb436243b3f",
+      "pair_content_sha256": "47a58a0d681e8f5ad62fb84160b4af54c21f17403eb4326e078f641f04599029",
+      "responses": [
+        {
+          "sample_id": "pkumap_47a58a0d681e8f5a__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "0641cb7be59c2322e071a99a3e31059074d36b4392fc41436797356c9f2aab7c"
+        },
+        {
+          "sample_id": "pkumap_47a58a0d681e8f5a__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "40550c316e5a68403cf26414156fd8322d049cfcb84c7369630ad23b025b0488"
+        }
+      ],
+      "split": "train"
+    },
+    {
+      "pair_id": "reprpair_f87f1fdc8f514e247bdf",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_db0324b0e94ffc55",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "a2a7f60165c4a24e9f07c36cc1b5a682649a00dac6fcf9a0cfa8c52d1087fcce",
+      "pair_content_sha256": "db0324b0e94ffc558649c93999b3ada65e45b0756daeea6b1ccdafcd19ac1f51",
+      "responses": [
+        {
+          "sample_id": "pkumap_db0324b0e94ffc55__response_0",
+          "response_id": "response_0",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "87cab90b14c59dd3c805a32e3d22699d1973130a0a12fb1494b4b0b641d12c8b"
+        },
+        {
+          "sample_id": "pkumap_db0324b0e94ffc55__response_1",
+          "response_id": "response_1",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "f0bd0be9a1ad3ef048a48289ba68433d6418e1208e89dd6277a8611aba29c5c0"
+        }
+      ],
+      "split": "test"
+    },
+    {
+      "pair_id": "reprpair_fd68d8dd491a2a6aa999",
+      "dataset_id": "pku_safe_rlhf",
+      "source_revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+      "source_sample_id": "pkumap_0b890d6f880d36ae",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "axis_id": "boundary-preserving-over-accommodating",
+      "contrast_status": "valid_single_axis",
+      "prompt_sha256": "829141ec51a37fff22c0cecea85e30a8de7820da8d355dbf344fccdf8c3f9122",
+      "pair_content_sha256": "0b890d6f880d36ae3542ab9005ec5eb933bd1c37eb152437125fb6902f55288e",
+      "responses": [
+        {
+          "sample_id": "pkumap_0b890d6f880d36ae__response_0",
+          "response_id": "response_0",
+          "pole": "boundary-preserving",
+          "behavior": "reasonable_refusal",
+          "content_sha256": "ef7050190d2470cddbc40ccf5c7e88a102f6baf7fd315372d82eb33448623974"
+        },
+        {
+          "sample_id": "pkumap_0b890d6f880d36ae__response_1",
+          "response_id": "response_1",
+          "pole": "over-accommodating",
+          "behavior": "unsafe_compliance",
+          "content_sha256": "f9ea42ac7c9ba999ebac8f05eceb253e376897e5e40ca7750da7df5643882f69"
+        }
+      ],
+      "split": "train"
+    }
+  ],
+  "components": [
+    {
+      "component_id": "reprfamc_0915ab25d004095d7b84",
+      "pair_ids": [
+        "reprpair_10aa3d7b5ecd4eeefded",
+        "reprpair_2fdc1ba06ce8cf23ccf8",
+        "reprpair_e31ce6ccaac1ba1ac7aa"
+      ],
+      "pair_count": 3,
+      "response_count": 6
+    },
+    {
+      "component_id": "reprfamc_13cb6328358a83554b45",
+      "pair_ids": [
+        "reprpair_0933310eb29d1d48f09f",
+        "reprpair_0f1754bbad6168d41ea3",
+        "reprpair_57c90dd4efa83bf22496",
+        "reprpair_6512eec2e92d68f1c8e3",
+        "reprpair_8d68d63b0126172318e9",
+        "reprpair_e12df2d5f724d08dddec",
+        "reprpair_e34cc77ef09c1b15dc41",
+        "reprpair_fd68d8dd491a2a6aa999"
+      ],
+      "pair_count": 8,
+      "response_count": 16
+    },
+    {
+      "component_id": "reprfamc_f9468d92d48d50177be3",
+      "pair_ids": [
+        "reprpair_2820c65a503e88dca0be",
+        "reprpair_3afef1d6ba0ce8b5965c",
+        "reprpair_6ceab372097c4d1fdb41",
+        "reprpair_88305cf3a539400b01e7",
+        "reprpair_946b817b17f9d8b20f03",
+        "reprpair_b6074ab92cc57507d448",
+        "reprpair_c0139b0b1d038f0cd471",
+        "reprpair_d8b188b282cef91ffa07"
+      ],
+      "pair_count": 8,
+      "response_count": 16
+    },
+    {
+      "component_id": "reprfamc_fe1a60b0994609261578",
+      "pair_ids": [
+        "reprpair_03faf806bc2da6cffd9b",
+        "reprpair_3e29df03d0ad7a1afc53",
+        "reprpair_4d08c6fc1c77728e3cc0",
+        "reprpair_64c296661e6e58b7b2cf",
+        "reprpair_6c7b9d29e1c183035a58",
+        "reprpair_91d55168af8ec7a7896f",
+        "reprpair_f87f1fdc8f514e247bdf"
+      ],
+      "pair_count": 7,
+      "response_count": 14
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "task_family_id_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "scenario_family_id_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "prompt_template_id_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "semantic_cluster_id_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "opposite_pole_pair_integrity",
+      "status": "pass"
+    },
+    {
+      "check_id": "valid_single_axis_only",
+      "status": "pass"
+    },
+    {
+      "check_id": "prompt_hash_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "response_hash_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "normalized_pair_hash_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "token_3gram_near_duplicate_cross_split",
+      "status": "pass"
+    },
+    {
+      "check_id": "source_family_id_cross_split",
+      "status": "documented_limitation"
+    }
+  ],
+  "audit": {
+    "family_overlaps": {
+      "task_family_id": {},
+      "scenario_family_id": {},
+      "prompt_template_id": {},
+      "semantic_cluster_id": {}
+    },
+    "source_family_overlaps": {
+      "pku_safe_rlhf_f4b036fc_alpaca2_7b": [
+        "dev",
+        "test",
+        "train"
+      ],
+      "pku_safe_rlhf_f4b036fc_alpaca3_8b": [
+        "dev",
+        "train"
+      ],
+      "pku_safe_rlhf_f4b036fc_alpaca_7b": [
+        "dev",
+        "test",
+        "train"
+      ]
+    },
+    "cross_split_prompt_hashes": [],
+    "cross_split_response_hashes": [],
+    "cross_split_normalized_pair_hashes": [],
+    "near_duplicate_threshold": {
+      "metric": "token_3gram_jaccard",
+      "threshold": 0.9
+    },
+    "near_duplicate_cross_split_pairs": []
+  },
+  "counts": {
+    "pairs": {
+      "train": 11,
+      "dev": 8,
+      "test": 7
+    },
+    "responses": {
+      "train": 22,
+      "dev": 16,
+      "test": 14
+    },
+    "poles": {
+      "train": {
+        "boundary-preserving": 11,
+        "over-accommodating": 11
+      },
+      "dev": {
+        "boundary-preserving": 8,
+        "over-accommodating": 8
+      },
+      "test": {
+        "boundary-preserving": 7,
+        "over-accommodating": 7
+      }
+    }
+  },
+  "claim_boundary": "This frozen single-axis pilot supports a family-isolated held-out representation analysis. Its 26 pairs are below the original confirmatory scale target, do not establish source-family generalization, and cannot establish causal steering or personality control."
+}

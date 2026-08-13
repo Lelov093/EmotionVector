@@ -1,0 +1,57 @@
+{
+  "candidate_results": [
+    {
+      "condition_id": "target_steering_alpha_1",
+      "development_families": 15,
+      "family_mean_task_quality_difference_over_base": 0.03333333333333333,
+      "family_mean_trait_expression_gain_over_base": 0.0,
+      "quality_gate_passed": true,
+      "quality_margin": -0.5
+    },
+    {
+      "condition_id": "target_steering_alpha_3",
+      "development_families": 15,
+      "family_mean_task_quality_difference_over_base": 0.0,
+      "family_mean_trait_expression_gain_over_base": 0.0,
+      "quality_gate_passed": true,
+      "quality_margin": -0.5
+    },
+    {
+      "condition_id": "qlora_epoch_1",
+      "development_families": 15,
+      "family_mean_task_quality_difference_over_base": -0.6,
+      "family_mean_trait_expression_gain_over_base": -0.5,
+      "quality_gate_passed": false,
+      "quality_margin": -0.5
+    },
+    {
+      "condition_id": "qlora_epoch_2",
+      "development_families": 15,
+      "family_mean_task_quality_difference_over_base": -1.4666666666666666,
+      "family_mean_trait_expression_gain_over_base": -2.033333333333333,
+      "quality_gate_passed": false,
+      "quality_margin": -0.5
+    }
+  ],
+  "claim_boundary": "This lock records train/dev-only selection after ratings were frozen. It does not open held-out test or establish causal steering, method superiority, or independent human validation.",
+  "held_out_test_model_openings": 0,
+  "locked_at": "2026-08-04T23:57:51.238667+08:00",
+  "quality_gate": {
+    "margin": -0.5,
+    "positive_result_required": false,
+    "qlora_passed": false,
+    "target_steering_passed": true
+  },
+  "review_freeze_path": "data/research_foundation/manifests/phase_3_development_blind_review_freeze_v0_1.json",
+  "review_freeze_sha256": "b8800f8a0147c4a9dc6bd3b80e3e005d7a50b6fb310b9f5896fdb3dfd15a5a22",
+  "selected_specification": {
+    "qlora_checkpoint_id": "epoch_1",
+    "qlora_condition_id": "qlora_epoch_1",
+    "target_steering_alpha": 1.0,
+    "target_steering_condition_id": "target_steering_alpha_1"
+  },
+  "selection_lock_path": "results/local_artifacts/research_foundation/phase_3/phase_3_train_dev_selection_lock_v0_1.json",
+  "selection_lock_sha256": "0aed9f37a1da55d96e138405ba35ce138e61493d08569026f17002e5c0676108",
+  "status": "train_dev_selection_locked_test_unopened",
+  "summary_version": "phase_3_train_dev_selection_v0_1"
+}

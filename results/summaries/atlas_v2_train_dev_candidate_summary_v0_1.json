@@ -1,0 +1,416 @@
+{
+  "all_candidates_reported": true,
+  "analysis_plan_sha256": "a5fd967977d3d037000511137f1d3b72325d4710b5409456b74723e3d2235d9d",
+  "candidate_count": 8,
+  "candidates": [
+    {
+      "activation_metadata_sha256": "eb1cef619e5570f550d5a9f69aa0d69bdacf89a576c623e5176be6687ca2a81d",
+      "candidate_id": "layer_8::last_response_token",
+      "dev_auroc": 0.671875,
+      "dev_balanced_accuracy": 0.4375,
+      "dev_effect_size": 0.37513967399685044,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 0.052969289301251,
+        "upper": 1.283061550095774
+      },
+      "dev_pairwise_accuracy": 0.75,
+      "direction_equivalence_cosine": 1.0000000000000002,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.52421875,
+          "null_sd": 0.1674040960471256,
+          "target_percentile": 0.75,
+          "target_value": 0.671875,
+          "two_sided_empirical_p": 0.2857142857142857
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.48671875,
+          "null_sd": 0.10367861268660196,
+          "target_percentile": 1.0,
+          "target_value": 0.671875,
+          "two_sided_empirical_p": 0.047619047619047616
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 0.8404144843889032,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.11484375000000002,
+        "auroc_empirical_p": 0.14285714285714285,
+        "balanced_accuracy_delta": 0.16249999999999998,
+        "balanced_accuracy_empirical_p": 0.09523809523809523
+      }
+    },
+    {
+      "activation_metadata_sha256": "5550dad0e62bcbd36ab675857dd1d972d8975d1c3940902fc7f314fb046986de",
+      "candidate_id": "layer_8::mean_response_tokens",
+      "dev_auroc": 0.765625,
+      "dev_balanced_accuracy": 0.625,
+      "dev_effect_size": 1.042711141755876,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 0.7370684242659491,
+        "upper": 4.279501940630314
+      },
+      "dev_pairwise_accuracy": 0.875,
+      "direction_equivalence_cosine": 1.0,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.4953125,
+          "null_sd": 0.1357525776386081,
+          "target_percentile": 0.95,
+          "target_value": 0.765625,
+          "two_sided_empirical_p": 0.09523809523809523
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.4625,
+          "null_sd": 0.1435102405570308,
+          "target_percentile": 1.0,
+          "target_value": 0.765625,
+          "two_sided_empirical_p": 0.047619047619047616
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 0.961125752294542,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.384375,
+        "auroc_empirical_p": 0.047619047619047616,
+        "balanced_accuracy_delta": 0.19374999999999998,
+        "balanced_accuracy_empirical_p": 0.09523809523809523
+      }
+    },
+    {
+      "activation_metadata_sha256": "a25a809e59f5784f5e93acf562a121055e1734c14e44350fb2f5eb4aeca29d2a",
+      "candidate_id": "layer_16::last_response_token",
+      "dev_auroc": 0.78125,
+      "dev_balanced_accuracy": 0.8125,
+      "dev_effect_size": 1.5131985138183275,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 1.1927723432919328,
+        "upper": 1.7857399799817923
+      },
+      "dev_pairwise_accuracy": 0.875,
+      "direction_equivalence_cosine": 1.0000000000000002,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.503125,
+          "null_sd": 0.16226893997798517,
+          "target_percentile": 0.95,
+          "target_value": 0.78125,
+          "two_sided_empirical_p": 0.09523809523809523
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.453125,
+          "null_sd": 0.18179364928691166,
+          "target_percentile": 0.9,
+          "target_value": 0.78125,
+          "two_sided_empirical_p": 0.14285714285714285
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 4.008531650694361,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.39453125,
+        "auroc_empirical_p": 0.047619047619047616,
+        "balanced_accuracy_delta": 0.22499999999999998,
+        "balanced_accuracy_empirical_p": 0.14285714285714285
+      }
+    },
+    {
+      "activation_metadata_sha256": "9a419e29505f3297c0e43d10450d92a08897c74a580eb28ff72557d1719a821a",
+      "candidate_id": "layer_16::mean_response_tokens",
+      "dev_auroc": 0.796875,
+      "dev_balanced_accuracy": 0.6875,
+      "dev_effect_size": 1.049223807838162,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 0.9235892723753425,
+        "upper": 1.5018655883011753
+      },
+      "dev_pairwise_accuracy": 1.0,
+      "direction_equivalence_cosine": 1.0000000000000002,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.49921875,
+          "null_sd": 0.07527277014954906,
+          "target_percentile": 1.0,
+          "target_value": 0.796875,
+          "two_sided_empirical_p": 0.047619047619047616
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.45546875,
+          "null_sd": 0.16073137668888,
+          "target_percentile": 0.95,
+          "target_value": 0.796875,
+          "two_sided_empirical_p": 0.09523809523809523
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 2.0780450256293705,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.45625,
+        "auroc_empirical_p": 0.047619047619047616,
+        "balanced_accuracy_delta": 0.18125000000000002,
+        "balanced_accuracy_empirical_p": 0.14285714285714285
+      }
+    },
+    {
+      "activation_metadata_sha256": "c48a7e81aa78bb47ccb9f2b5de9dc16c8d9432c6f8f0e1966b9b4f97bb3560be",
+      "candidate_id": "layer_24::last_response_token",
+      "dev_auroc": 0.953125,
+      "dev_balanced_accuracy": 0.75,
+      "dev_effect_size": 1.8346948032993384,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 1.8346948032993384,
+        "upper": 2.4484132466870734
+      },
+      "dev_pairwise_accuracy": 1.0,
+      "direction_equivalence_cosine": 0.9999999999999999,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.5,
+          "null_sd": 0.13190235747663775,
+          "target_percentile": 1.0,
+          "target_value": 0.953125,
+          "two_sided_empirical_p": 0.047619047619047616
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.46015625,
+          "null_sd": 0.29400338141125176,
+          "target_percentile": 0.95,
+          "target_value": 0.953125,
+          "two_sided_empirical_p": 0.09523809523809523
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 25.990172639537477,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.45234375,
+        "auroc_empirical_p": 0.047619047619047616,
+        "balanced_accuracy_delta": 0.33125,
+        "balanced_accuracy_empirical_p": 0.047619047619047616
+      }
+    },
+    {
+      "activation_metadata_sha256": "bf6fc096c35ac09245fc1576c3561aca765669f5531536b345b4d8f21eb0e629",
+      "candidate_id": "layer_24::mean_response_tokens",
+      "dev_auroc": 0.859375,
+      "dev_balanced_accuracy": 0.625,
+      "dev_effect_size": 1.2014219425344936,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 1.1249922361859062,
+        "upper": 1.418102251796673
+      },
+      "dev_pairwise_accuracy": 1.0,
+      "direction_equivalence_cosine": 1.0000000000000002,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.50625,
+          "null_sd": 0.11597785774380429,
+          "target_percentile": 1.0,
+          "target_value": 0.859375,
+          "two_sided_empirical_p": 0.047619047619047616
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.43359375,
+          "null_sd": 0.23439555830888564,
+          "target_percentile": 0.9,
+          "target_value": 0.859375,
+          "two_sided_empirical_p": 0.14285714285714285
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 8.977151200554157,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.475,
+        "auroc_empirical_p": 0.047619047619047616,
+        "balanced_accuracy_delta": 0.2875,
+        "balanced_accuracy_empirical_p": 0.047619047619047616
+      }
+    },
+    {
+      "activation_metadata_sha256": "44aede49573284f1aa0c1ac8d13aadd4ab4c477b440ad9a7b7f3a7386ee9092f",
+      "candidate_id": "layer_32::last_response_token",
+      "dev_auroc": 0.9375,
+      "dev_balanced_accuracy": 0.75,
+      "dev_effect_size": 1.3792863127100339,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 1.3792863127100339,
+        "upper": 1.5146033004482187
+      },
+      "dev_pairwise_accuracy": 1.0,
+      "direction_equivalence_cosine": 1.0,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.49140625,
+          "null_sd": 0.1358826643785675,
+          "target_percentile": 1.0,
+          "target_value": 0.9375,
+          "two_sided_empirical_p": 0.047619047619047616
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.4765625,
+          "null_sd": 0.26157909421988357,
+          "target_percentile": 0.95,
+          "target_value": 0.9375,
+          "two_sided_empirical_p": 0.09523809523809523
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 66.42693703746217,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.4765625,
+        "auroc_empirical_p": 0.047619047619047616,
+        "balanced_accuracy_delta": 0.3375,
+        "balanced_accuracy_empirical_p": 0.09523809523809523
+      }
+    },
+    {
+      "activation_metadata_sha256": "5f8acb0239523c74047d8e90f67c11e9d7ce78433d25468f212af936a98a2f21",
+      "candidate_id": "layer_32::mean_response_tokens",
+      "dev_auroc": 0.84375,
+      "dev_balanced_accuracy": 0.6875,
+      "dev_effect_size": 1.1009854835147552,
+      "dev_effect_size_ci": {
+        "level": 0.95,
+        "lower": 0.9849874936500073,
+        "upper": 1.415261620062432
+      },
+      "dev_pairwise_accuracy": 0.875,
+      "direction_equivalence_cosine": 1.0000000000000002,
+      "null_comparisons": {
+        "random_isotropic_auroc": {
+          "null_count": 20,
+          "null_mean": 0.4921875,
+          "null_sd": 0.10878600810403205,
+          "target_percentile": 1.0,
+          "target_value": 0.84375,
+          "two_sided_empirical_p": 0.047619047619047616
+        },
+        "shuffled_label_auroc": {
+          "null_count": 20,
+          "null_mean": 0.44765625,
+          "null_sd": 0.20292088681938533,
+          "target_percentile": 0.95,
+          "target_value": 0.84375,
+          "two_sided_empirical_p": 0.09523809523809523
+        }
+      },
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 17.4854877728783,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probe_selectivity": {
+        "auroc_delta": 0.43046875,
+        "auroc_empirical_p": 0.047619047619047616,
+        "balanced_accuracy_delta": 0.16874999999999996,
+        "balanced_accuracy_empirical_p": 0.19047619047619047
+      }
+    }
+  ],
+  "claim_boundary": "All frozen train/dev candidates are reported. No specification is selected until the external control artifacts are defined and evaluated. These results are not held-out test evidence or causal steering evidence.",
+  "created_at": "2026-08-04T09:04:19.266254+00:00",
+  "dataset_manifest_sha256": "00e10c3c6b1f07ad7e03daa42aead0dbe738ff74566307c9d5992370d4389a40",
+  "limitations": [
+    "Dev contains only eight pairs and too few independent family clusters for a low-resolution permutation test.",
+    "The minimum observed exact cluster sign-flip p-value is 0.5 for this dev family structure.",
+    "Surface-style, unrelated-trait, and nuisance-orthogonalized controls are not yet available.",
+    "Quantized runtime is an execution constraint and not a methodological contribution."
+  ],
+  "local_detailed_results_sha256": "eb0a05dc842ad8bff3a0cfae1e8e50d4fe53f0bfb9683e1c9181d3b1e1506512",
+  "missing_controls": [
+    "surface_style_direction",
+    "unrelated_trait_direction",
+    "orthogonalized_target_direction"
+  ],
+  "model": {
+    "dtype": "bfloat16",
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "quantization": "bitsandbytes_int8",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+  },
+  "runtime_config_sha256": "ef13eeb9893d655d48f1e6a7ea10f53918df9c3aff910cf82b315afe94d03c79",
+  "sample_counts": {
+    "dev": 16,
+    "train": 22
+  },
+  "selection_source_splits": [
+    "train",
+    "dev"
+  ],
+  "selection_status": "blocked_pending_external_controls",
+  "summary_version": "atlas_v2_train_dev_candidate_summary_v0_1",
+  "test_opened": false
+}

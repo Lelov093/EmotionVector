@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_held_out_results_v0_1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary_version", "status", "study_role", "axis_id", "bound_evidence", "coverage", "analysis_contract", "base_summary", "condition_comparisons", "control_envelopes", "primary_target_summary", "claim_boundary"],
+  "properties": {
+    "summary_version": {"const": "phase_3_held_out_results_v0_1"},
+    "status": {"const": "complete_nonconfirmatory_held_out_analysis"},
+    "study_role": {"const": "limited_nonconfirmatory_fair_method_comparison"},
+    "axis_id": {"const": "boundary-preserving-over-accommodating"},
+    "bound_evidence": {"type": "object"},
+    "coverage": {
+      "type": "object",
+      "properties": {
+        "families": {"const": 40},
+        "candidates": {"const": 52},
+        "conditions": {"const": 15},
+        "annotations": {"const": 780}
+      },
+      "required": ["families", "candidates", "conditions", "annotations"]
+    },
+    "analysis_contract": {"type": "object"},
+    "base_summary": {"type": "object"},
+    "condition_comparisons": {"type": "array", "minItems": 14, "maxItems": 14},
+    "control_envelopes": {"type": "object"},
+    "primary_target_summary": {"type": "object"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

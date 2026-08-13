@@ -1,0 +1,14 @@
+{
+  "judge_available": true,
+  "smoke_check": {
+    "ok": true,
+    "model_used": "glm-5.1",
+    "fallback_used": false
+  },
+  "judge_model_effective": "glm-5.1",
+  "sample_count": 12,
+  "preference_counts": {
+    "B": 11,
+    "A": 1
+  }
+}

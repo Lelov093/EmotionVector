@@ -1,0 +1,79 @@
+{
+  "analysis_plan_version": "representation_atlas_v2_analysis_plan_v0_1",
+  "status": "frozen_before_model_execution",
+  "frozen_at": "2026-08-04T00:00:00+08:00",
+  "dataset": {
+    "manifest_path": "data/research_foundation/manifests/representation_family_split_v2_1.json",
+    "manifest_sha256": "00e10c3c6b1f07ad7e03daa42aead0dbe738ff74566307c9d5992370d4389a40",
+    "freeze_path": "data/research_foundation/manifests/representation_family_split_v2_1.freeze.json",
+    "axis_scope": ["boundary-preserving-over-accommodating"],
+    "pair_counts": {"train": 11, "dev": 8, "test": 7},
+    "inference_role": "single_axis_pilot_due_to_small_family_count"
+  },
+  "evidence_target": "held-out representation evidence, not causal steering",
+  "primary_direction": {
+    "method": "difference_of_means",
+    "normalization": "l2",
+    "sign_convention": "boundary-preserving minus over-accommodating",
+    "equivalence_policy": "paired direct_contrast_axis is tested for algebraic equivalence and is not reported as a separate method"
+  },
+  "selection_policy": {
+    "allowed_splits": ["train", "dev"],
+    "locked_before_test": true,
+    "selectable": ["layer", "token_pooling", "classification_threshold", "probe_regularization"],
+    "test_openings": 1,
+    "test_opening_status": "not_opened"
+  },
+  "metrics": {
+    "required": [
+      "standardized_paired_effect_size",
+      "effect_size_95pct_ci",
+      "auroc",
+      "balanced_accuracy",
+      "paired_family_bootstrap",
+      "paired_structure_preserving_permutation"
+    ],
+    "bootstrap_iterations": 5000,
+    "permutation_iterations": 10000,
+    "resampling_unit": "source pair, stratified and summarized by scenario/task family",
+    "missing_metric_policy": "emit null with a machine-readable reason; never silently omit"
+  },
+  "null_and_control_registry": [
+    {"control_id": "random_isotropic_direction", "minimum_independent_draws": 20, "role": "null_distribution"},
+    {"control_id": "shuffled_label_direction", "minimum_independent_draws": 20, "role": "null_distribution"},
+    {"control_id": "surface_style_direction", "minimum_independent_draws": 1, "role": "confound_control"},
+    {"control_id": "unrelated_trait_direction", "minimum_independent_draws": 1, "role": "selectivity_control"},
+    {"control_id": "orthogonalized_target_direction", "minimum_independent_draws": 1, "role": "geometry_sanity_control"},
+    {"control_id": "sign_flipped_target_direction", "minimum_independent_draws": 1, "role": "sign_sanity_control"}
+  ],
+  "probe_registry": [
+    {"probe_id": "l2_logistic_regression", "role": "primary_linear_probe", "selection_split": "dev"},
+    {"probe_id": "linear_svm", "role": "sensitivity_probe", "selection_split": "dev"},
+    {"probe_id": "random_label_probe", "role": "selectivity_null", "minimum_independent_draws": 20}
+  ],
+  "multiplicity": {
+    "unit": "axis by selected representation specification",
+    "policy": "one primary axis and one train/dev-selected specification; all scanned layers and pooling modes remain visible",
+    "best_layer_only_reporting_forbidden": true
+  },
+  "sample_size_gate": {
+    "original_confirmatory_target": {"train_families": 30, "dev_families": 15, "test_families": 40},
+    "current_pair_counts": {"train": 11, "dev": 8, "test": 7},
+    "confirmatory_claim_allowed": false,
+    "required_interpretation": "pilot representation evidence only; confidence intervals and low power must be reported regardless of sign"
+  },
+  "automatic_evaluator_policy": {
+    "heuristic": "triage and separately reported sensitivity analysis only",
+    "llm_judge": "exploratory disagreement sampling only",
+    "human_replacement_allowed": false,
+    "model_selection_sole_signal_allowed": false
+  },
+  "result_schema": "data/research_foundation/schemas/representation_atlas_v2_result.schema.json",
+  "negative_result_policy": "retain and report every preregistered null, control, probe, and target result",
+  "non_goals": [
+    "no activation steering or causal-control claim",
+    "no assertive-compliant or cautious-impulsive inference from PKU",
+    "no 4-bit runtime, dashboard, pipeline, or algebraically equivalent direction-method novelty claim",
+    "no new Trait axis or tuning experiment added to seek a positive result"
+  ]
+}

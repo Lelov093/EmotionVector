@@ -1,0 +1,1197 @@
+{
+  "manifest_version": "public_mapping_family_allocation_v0_1",
+  "dataset_version": "public_mapping_family_split_v2_candidate",
+  "created_at": "2026-08-03T23:13:59+08:00",
+  "random_seed": 20260803,
+  "allocation_unit": "source_task_scenario_template_semantic_family",
+  "test_access_policy": {
+    "frozen": false,
+    "allowed_uses": [
+      "split feasibility review",
+      "family leakage audit",
+      "eligibility pilot analysis"
+    ],
+    "forbidden_uses": [
+      "frozen independent test evaluation",
+      "model selection",
+      "training without a separate data card and approval",
+      "Trait gold-label claims"
+    ],
+    "access_log_path": "results/local_artifacts/research_foundation/public_mapping_family_split_v2_access_log.jsonl"
+  },
+  "records": [
+    {
+      "sample_id": "edmap_043a976523c29e2b",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_051474dd166049c3",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_1f00c82256dbf9fc",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_231e75332a014a09",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "travel_leisure_and_memory",
+      "prompt_template_id": "natural_experience_sharing",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_26595bdc64a7c7c9",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "relationship_feedback_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "reflective_feedback_or_value_affirmation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_31107c3ce13a9f60",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_3b97b96966624adb",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_3cf715092430aa00",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_3df078603f7dbe49",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "travel_leisure_and_memory",
+      "prompt_template_id": "natural_experience_sharing",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_3f26599c5654d5b7",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_406be3e88c390c18",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_4151da0b067088ca",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_43a38b208097c1cd",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_4490f939ab9764c0",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_4ed797b8a09043a3",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_55621dd4cd8f10ed",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_58694404b5437ceb",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_59ac23e44a535462",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "travel_leisure_and_memory",
+      "prompt_template_id": "natural_experience_sharing",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_5af326b8924c663a",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_60e662dff0a95a7d",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_62c5722ee7100204",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_6f92beaa5765b0fd",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_852cac7e7ea4cc74",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_853f36d479e054b4",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_8a4589593041d701",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "caregiving_illness_and_loss",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_94db2770c91110d1",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_964dc3131cc5e399",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "emotion_response_quality_case",
+      "scenario_family_id": "anxiety_and_fear",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "detachment_or_invalidation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_9831f0e6068d69e0",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_9ce807bbbd3b89c9",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "emotion_response_quality_case",
+      "scenario_family_id": "anxiety_and_fear",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "detachment_or_invalidation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_a26bfb4bcbea4a95",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_ae6b4b7f9fcaa838",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "positive_event_and_achievement",
+      "prompt_template_id": "natural_positive_event_update",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_be6430d8ddf2e3da",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "relationship_feedback_response",
+      "scenario_family_id": "interpersonal_conflict_and_trust",
+      "prompt_template_id": "natural_relationship_or_conflict_disclosure",
+      "semantic_cluster_id": "reflective_feedback_or_value_affirmation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_bf375c350b3de44f",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "distress_acknowledgment_response",
+      "scenario_family_id": "transition_and_practical_stress",
+      "prompt_template_id": "natural_life_problem_disclosure",
+      "semantic_cluster_id": "emotion_validation_and_concern",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_c166e21cf9627c47",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "travel_leisure_and_memory",
+      "prompt_template_id": "natural_experience_sharing",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_c967065c28960469",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "anxiety_and_fear",
+      "prompt_template_id": "natural_distress_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_d165295efdeaa247",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "travel_leisure_and_memory",
+      "prompt_template_id": "natural_experience_sharing",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_df97f7dac408cec0",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "positive_event_response",
+      "scenario_family_id": "travel_leisure_and_memory",
+      "prompt_template_id": "natural_experience_sharing",
+      "semantic_cluster_id": "positive_acknowledgment",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_f20e0961b0fc2ee2",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "transition_and_practical_stress",
+      "prompt_template_id": "natural_life_problem_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "edmap_f2c0d85be9d88849",
+      "split": "train",
+      "source_family_id": "empathetic_dialogues_d8b80665",
+      "task_family_id": "supportive_problem_response",
+      "scenario_family_id": "transition_and_practical_stress",
+      "prompt_template_id": "natural_life_problem_disclosure",
+      "semantic_cluster_id": "practical_support_or_reframing",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_03b7f4e129553594__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_03b7f4e129553594__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_07513833c864808e__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_07513833c864808e__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_0b890d6f880d36ae__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_0b890d6f880d36ae__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_11b7ed3115150342__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_11b7ed3115150342__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_1b78334ba4a0b0bd__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_1b78334ba4a0b0bd__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_1bdb124954dbcaed__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "relationship_safety_response",
+      "scenario_family_id": "coercion_and_relationship_abuse",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "coercive_manipulation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_1bdb124954dbcaed__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "relationship_safety_response",
+      "scenario_family_id": "coercion_and_relationship_abuse",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "coercive_manipulation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_1c2e503039c59818__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_1c2e503039c59818__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2a21cc6bafcf97e6__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2a21cc6bafcf97e6__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2b21d79ce5b821d5__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2b21d79ce5b821d5__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2db28823acf06312__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2db28823acf06312__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2df45143906304e5__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_2df45143906304e5__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_39cee834f76f8a06__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_39cee834f76f8a06__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_3b4551de9401f32c__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_3b4551de9401f32c__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_3bc0fa2adf37a146__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_47a58a0d681e8f5a__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_47a58a0d681e8f5a__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_537ed24443006521__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "relationship_safety_response",
+      "scenario_family_id": "coercion_and_relationship_abuse",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "coercive_manipulation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_537ed24443006521__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "relationship_safety_response",
+      "scenario_family_id": "coercion_and_relationship_abuse",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "coercive_manipulation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_5abf45a065266730__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_5abf45a065266730__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_5e8dadd000057297__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_5e8dadd000057297__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_5ebbfed0284cfabd__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_5ebbfed0284cfabd__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_61493b348b20bf34__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_61493b348b20bf34__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_67ae1de3ae89bed3__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_67ae1de3ae89bed3__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_67c971e2b79b2dbc__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "animal_harm_and_welfare",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "animal_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_67c971e2b79b2dbc__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "animal_harm_and_welfare",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "animal_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_6fd75c4c5e1b8841__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "relationship_safety_response",
+      "scenario_family_id": "coercion_and_relationship_abuse",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "coercive_manipulation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_6fd75c4c5e1b8841__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "relationship_safety_response",
+      "scenario_family_id": "coercion_and_relationship_abuse",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "coercive_manipulation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_9038633c50682304__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_9038633c50682304__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_9639b4f257c02462__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_9639b4f257c02462__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_a8a45b6bbdbfab36__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "animal_harm_and_welfare",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "animal_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_a8a45b6bbdbfab36__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "animal_harm_and_welfare",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "animal_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_ab6e87716f608287__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_ab6e87716f608287__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_b2fcdd0b63340992__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_b2fcdd0b63340992__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "privacy_and_surveillance",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "privacy_intrusion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_b734d3e0ddb61cd5__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_b734d3e0ddb61cd5__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_b8cf97d89f50c958__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_b8cf97d89f50c958__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "fraud_and_illicit_evasion",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "fraud_concealment_or_rule_evasion",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_d458e3a908f0a71e__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_d458e3a908f0a71e__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_d672b053415785ac__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_d672b053415785ac__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_db0324b0e94ffc55__response_0",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_db0324b0e94ffc55__response_1",
+      "split": "test",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "harm_prevention_response",
+      "scenario_family_id": "physical_harm_and_weapons",
+      "prompt_template_id": "single_turn_harm_related_request",
+      "semantic_cluster_id": "violent_harm_enablement",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_e13161765b3142f6__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_e13161765b3142f6__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca_7b",
+      "task_family_id": "integrity_and_compliance_response",
+      "scenario_family_id": "regulatory_and_exploitation",
+      "prompt_template_id": "single_turn_evasion_or_illicit_action_request",
+      "semantic_cluster_id": "regulatory_evasion_or_exploitation",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_e6d302e1e9c1f2f2__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "sensitive_information_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "sensitive_information_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_e6d302e1e9c1f2f2__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca2_7b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "sensitive_information_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "sensitive_information_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_ef6cbb2867506dcc__response_0",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_ef6cbb2867506dcc__response_1",
+      "split": "dev",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "anti_discrimination_response",
+      "scenario_family_id": "discrimination_and_harassment",
+      "prompt_template_id": "single_turn_influence_or_communication_request",
+      "semantic_cluster_id": "discriminatory_exclusion_or_abuse",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_ff71e5bf8ec6d44f__response_0",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    },
+    {
+      "sample_id": "pkumap_ff71e5bf8ec6d44f__response_1",
+      "split": "train",
+      "source_family_id": "pku_safe_rlhf_f4b036fc_alpaca3_8b",
+      "task_family_id": "privacy_and_security_response",
+      "scenario_family_id": "cyber_and_unauthorized_access",
+      "prompt_template_id": "single_turn_access_or_information_request",
+      "semantic_cluster_id": "unauthorized_digital_access",
+      "assignment_status": "human_verified"
+    }
+  ],
+  "leakage_checks": [
+    {
+      "check_id": "exact_content_hash_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "normalized_content_hash_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "token_3gram_near_duplicate_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "source_sample_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "task_family_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "scenario_family_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "prompt_template_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "semantic_cluster_id_cross_split",
+      "status": "pass",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "source_family_id_cross_split",
+      "status": "human_review_required",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    },
+    {
+      "check_id": "axis_coverage_all_splits",
+      "status": "human_review_required",
+      "evidence_path": "results/summaries/public_mapping_family_split_v2_leakage_audit.json"
+    }
+  ],
+  "human_review_status": "complete"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_small_supplement_contract_v0_4.schema.json",
+  "title": "EmotionVector Phase 3 Small Supplement Contract v0.4",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["contract_version", "status", "authorization", "acceptance_path", "acceptance_sha256", "final_isolation_manifest_path", "final_isolation_manifest_sha256", "source", "sampling", "isolation_extension_policy", "unchanged_targets", "tracked_manifest_path", "local_review_packet_path", "local_isolation_review_packet_path", "claim_boundary"],
+  "properties": {
+    "contract_version": {"const": "phase_3_small_supplement_contract_v0_4"},
+    "status": {"const": "frozen_before_small_supplement_human_review"},
+    "sampling": {
+      "type": "object",
+      "properties": {
+        "candidate_count": {"const": 12},
+        "mixed_safety_per_model": {"const": 3},
+        "both_safe_per_model": {"const": 1},
+        "positive_yield_required": {"const": false}
+      },
+      "required": ["candidate_count", "mixed_safety_per_model", "both_safe_per_model", "positive_yield_required"]
+    },
+    "acceptance_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "final_isolation_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

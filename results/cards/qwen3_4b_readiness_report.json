@@ -1,0 +1,16 @@
+{
+  "cache_path": "D:\\AI_Models\\huggingface\\hub\\models--Qwen--Qwen3-4B-Instruct-2507",
+  "cache_size_gb_estimate": 7.507,
+  "conclusion": "ready for Batch 4",
+  "created_at": "2026-07-03T14:02:38.927399+00:00",
+  "downloaded": false,
+  "dtype_quantization_attempted": "config/tokenizer only unless --attempt-model-load is set",
+  "errors": [],
+  "full_model_load_result": "pass",
+  "local_availability_before_check": true,
+  "model_config_load_result": "pass",
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "snapshot_path": "D:\\AI_Models\\huggingface\\hub\\models--Qwen--Qwen3-4B-Instruct-2507",
+  "tokenizer_load_result": "pass",
+  "torch_cuda_available": true
+}

@@ -1,0 +1,73 @@
+{
+  "contract_version": "phase_3_train_dev_selection_contract_v0_1",
+  "status": "frozen_before_training_or_development_generation",
+  "bound_evidence": {
+    "protocol_path": "configs/research/phase_3_limited_fair_comparison_protocol_v0_1.json",
+    "protocol_sha256": "abb8cad4f28cd29456749fc315b56708c3a6dd0aff0d04ca8bb34887bb86dfcc",
+    "data_gate_amendment_path": "configs/research/phase_3_data_gate_amendment_v0_1.json",
+    "data_gate_amendment_sha256": "4cdc4d78864df8ec9f7bf919c180f9a05c3e6b7b48e0f3a3205a4b7de6ca5b0e",
+    "family_split_path": "data/research_foundation/manifests/phase_3_family_split_v0_1.json",
+    "family_split_sha256": "a76ba5500ff35247a1831ab06887b0bf7eee1b0cb0b7c309d479f3a61a05a417",
+    "leakage_audit_path": "results/summaries/phase_3_family_split_leakage_audit_v0_1.json",
+    "leakage_audit_sha256": "3feb2163dc76321a01b397aa12f4c291531858fe19100a52749a304ea0b9ede1",
+    "test_once_contract_path": "configs/research/phase_3_test_once_contract_v0_1.json",
+    "test_once_contract_sha256": "b95577f799cf6b7ddcf40a5867e7e87f2eec395b847d201aee155f5351788505"
+  },
+  "data_access": {
+    "qlora_train_families": 39,
+    "qlora_train_response_rows": 65,
+    "development_families": 15,
+    "development_pair_rows": 18,
+    "held_out_test_access_for_selection": false,
+    "phase_2_opened_test_access_for_selection": false,
+    "legacy_sft_training_allowed": false
+  },
+  "steering_selection": {
+    "layer": 24,
+    "pooling": "last_response_token",
+    "direction_source": "phase_2_train_only_difference_of_means",
+    "alpha_candidates": [1.0, 3.0],
+    "candidate_order_for_ties": [1.0, 3.0],
+    "random_draws": 5,
+    "shuffled_draws": 5,
+    "controls_may_influence_target_alpha_selection": false
+  },
+  "qlora_training": {
+    "single_training_run": true,
+    "seed": 2026080481,
+    "quantization": "4bit",
+    "compute_dtype": "fp16",
+    "learning_rate": 0.0002,
+    "max_seq_length": 384,
+    "gradient_accumulation_steps": 2,
+    "lora_rank": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+    "checkpoint_candidates": ["epoch_1", "epoch_2"],
+    "candidate_order_for_ties": ["epoch_1", "epoch_2"],
+    "prompt_tokens_masked_from_loss": true,
+    "response_tokens_only_supervised": true,
+    "all_65_rows_used": true,
+    "hyperparameter_sweep_allowed": false
+  },
+  "development_selection_rule": {
+    "source": "condition_blind_human_development_ratings_only",
+    "all_candidates_reported": true,
+    "quality_non_inferiority_margin_on_mean_task_quality": -0.5,
+    "primary_rank": "family_mean_trait_expression_gain_over_base_descending",
+    "secondary_rank": "family_mean_task_quality_difference_over_base_descending",
+    "tertiary_rank": "predeclared_candidate_order",
+    "if_no_candidate_meets_quality_margin": "select_smallest_task_quality_harm_then_predeclared_order_and_label_method_as_failed_quality_gate",
+    "test_retuning_allowed": false
+  },
+  "future_selection_lock": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_train_dev_selection_lock_v0_1.json",
+    "must_bind_all_candidate_results_hash": true,
+    "must_record_selected_alpha": true,
+    "must_record_selected_qlora_checkpoint": true,
+    "must_record_quality_gate_status": true,
+    "required_before_test_opening": true
+  },
+  "claim_boundary": "This contract freezes bounded train/dev selection before model execution. It does not create the future selection lock, open held-out test, authorize GPU use, require a positive result, or establish causal steering."
+}

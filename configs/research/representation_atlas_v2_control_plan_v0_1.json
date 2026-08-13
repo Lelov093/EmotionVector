@@ -1,0 +1,40 @@
+{
+  "control_plan_version": "atlas_v2_control_plan_v0_1",
+  "status": "frozen_before_control_activation_execution",
+  "timing_disclosure": "defined_after_train_dev_target_metrics_were_observed_before_any_control_results_or_test_opening",
+  "candidate_summary": {
+    "path": "results/summaries/atlas_v2_train_dev_candidate_summary_v0_1.json",
+    "sha256": "c045d618f06591ff51a6ccfbaa30885502ab065f68633609583db42f4b3c3379"
+  },
+  "preliminary_selection": {
+    "rule": "maximum_dev_auroc_then_balanced_accuracy_then_earlier_layer",
+    "layer": 24,
+    "pooling": "last_response_token",
+    "observed_dev_auroc": 0.953125,
+    "status": "provisional_pending_controls"
+  },
+  "surface_control": {
+    "feature": "response_token_count",
+    "fit_split": "train",
+    "method": "normalized_activation_feature_covariance"
+  },
+  "unrelated_control": {
+    "source_path": "data/trait_space/curated/trait_space_seed_v0_1.jsonl",
+    "source_sha256": "93a32975e3c5f8fb4d2292e946948640bbc6f162ef7eb9d67f882e10cdbabca2",
+    "axis_id": "calm-agitated",
+    "fit_split": "train",
+    "pair_count": 6,
+    "input_prompt": "Provide a concise, task-focused response to the situation.",
+    "role": "legacy_template_dominated_unrelated_confound_stress_test_only"
+  },
+  "orthogonal_control": {
+    "target": "difference_of_means_target_direction",
+    "nuisance": "surface_response_token_count_direction"
+  },
+  "veto_policy": {
+    "control_auroc_margin": 0.05,
+    "maximum_orthogonalized_auroc_drop": 0.10,
+    "on_veto": "do_not_create_selection_lock_or_open_test"
+  },
+  "claim_boundary": "This post-target-metrics control plan is a conservative pre-test veto. The legacy calm-agitated direction is not treated as validated Trait evidence, and passing controls would not establish causal steering."
+}

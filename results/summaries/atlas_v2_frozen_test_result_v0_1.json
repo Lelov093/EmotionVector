@@ -1,0 +1,257 @@
+{
+  "analysis_plan_version": "representation_atlas_v2_analysis_plan_v0_1",
+  "axis_results": [
+    {
+      "auroc": 0.8571428571428572,
+      "axis_id": "boundary-preserving-over-accommodating",
+      "balanced_accuracy": 0.8571428571428572,
+      "controls": [
+        {
+          "auroc": 0.14285714285714288,
+          "control_id": "sign_flipped_target_direction",
+          "mean_negative_projection": 13.497494170369254,
+          "mean_positive_projection": -7.089441739009601,
+          "projection_margin": -20.586935909378855
+        },
+        {
+          "auroc": 0.3061224489795919,
+          "control_id": "surface_style_direction",
+          "mean_negative_projection": 48.36415517865982,
+          "mean_positive_projection": 39.53195986050731,
+          "projection_margin": -8.832195318152515
+        },
+        {
+          "auroc": 0.6326530612244898,
+          "control_id": "unrelated_trait_direction",
+          "mean_negative_projection": -8.836249840534931,
+          "mean_positive_projection": -5.601952798031594,
+          "projection_margin": 3.2342970425033366
+        },
+        {
+          "auroc": 0.8571428571428572,
+          "control_id": "orthogonalized_target_direction",
+          "mean_negative_projection": 3.3544768795534603,
+          "mean_positive_projection": 22.043325677800055,
+          "projection_margin": 18.688848798246596
+        }
+      ],
+      "effect_size": 1.015477533064969,
+      "effect_size_ci": {
+        "level": 0.95,
+        "lower": 0.9056321678376499,
+        "upper": 1.9756404952641493
+      },
+      "limitations": [
+        "The frozen test contains only seven pairs and is a pilot, not confirmatory-scale evidence.",
+        "Family-cluster permutation resolution is limited by the small number of independent clusters.",
+        "The unrelated direction is a template-dominated legacy confound stress-test only.",
+        "The control plan was frozen after target train/dev metrics were observed."
+      ],
+      "null_distributions": [
+        {
+          "auroc_values": [
+            0.5102040816326531,
+            0.040816326530612256,
+            0.6122448979591837,
+            0.8163265306122449,
+            0.5918367346938775,
+            0.6122448979591837,
+            0.2857142857142857,
+            0.2857142857142857,
+            0.7142857142857142,
+            0.22448979591836737,
+            0.6530612244897959,
+            0.46938775510204084,
+            0.7959183673469388,
+            0.4897959183673469,
+            0.673469387755102,
+            0.46938775510204084,
+            0.5306122448979592,
+            0.5306122448979592,
+            0.7142857142857143,
+            0.2653061224489796
+          ],
+          "comparison": {
+            "null_count": 20,
+            "null_mean": 0.5142857142857142,
+            "null_sd": 0.205217034951465,
+            "target_percentile": 1.0,
+            "target_value": 0.8571428571428572,
+            "two_sided_empirical_p": 0.047619047619047616
+          },
+          "control_id": "random_isotropic_direction",
+          "draw_count": 20
+        },
+        {
+          "auroc_values": [
+            0.22448979591836735,
+            0.326530612244898,
+            0.061224489795918366,
+            0.7346938775510203,
+            0.12244897959183673,
+            0.8367346938775511,
+            0.36734693877551017,
+            0.10204081632653064,
+            0.1836734693877551,
+            0.30612244897959184,
+            0.20408163265306123,
+            0.163265306122449,
+            0.22448979591836732,
+            0.46938775510204084,
+            0.3061224489795919,
+            0.7959183673469388,
+            0.489795918367347,
+            0.8163265306122449,
+            0.20408163265306123,
+            0.8775510204081632
+          ],
+          "comparison": {
+            "null_count": 20,
+            "null_mean": 0.39081632653061227,
+            "null_sd": 0.27318508074267983,
+            "target_percentile": 0.95,
+            "target_value": 0.8571428571428572,
+            "two_sided_empirical_p": 0.09523809523809523
+          },
+          "control_id": "shuffled_label_direction",
+          "draw_count": 20
+        }
+      ],
+      "pair_count": 7,
+      "paired_bootstrap": {
+        "cluster_count": 2,
+        "iterations": 5000,
+        "level": 0.95,
+        "lower": 0.9056321678376499,
+        "method": "cluster_bootstrap_cohens_dz",
+        "reason": null,
+        "upper": 1.9756404952641493,
+        "valid_iterations": 5000
+      },
+      "pairwise_accuracy": 0.8571428571428571,
+      "permutation": {
+        "alternative": "two_sided",
+        "cluster_count": 2,
+        "method": "exact_cluster_sign_flip",
+        "observed_mean_difference": 20.586935909378845,
+        "p_value": 0.5,
+        "permutations": 4,
+        "seed": null
+      },
+      "probes": [
+        {
+          "auroc": 0.8367346938775511,
+          "balanced_accuracy": 0.8571428571428572,
+          "eval_count": 14,
+          "probe_id": "l2_logistic_regression",
+          "regularization_c": 1.0,
+          "seed": 20260807,
+          "train_count": 22
+        },
+        {
+          "auroc": 0.8367346938775511,
+          "balanced_accuracy": 0.7857142857142857,
+          "eval_count": 14,
+          "probe_id": "linear_svm",
+          "regularization_c": 1.0,
+          "seed": 20260808,
+          "train_count": 22
+        },
+        {
+          "draws": 20,
+          "probe_id": "l2_logistic_regression",
+          "random_label_null": {
+            "auroc": [
+              0.36734693877551017,
+              0.7755102040816326,
+              0.5714285714285715,
+              0.4489795918367347,
+              0.30612244897959184,
+              0.4489795918367347,
+              0.22448979591836735,
+              0.7755102040816326,
+              0.2448979591836735,
+              0.3673469387755102,
+              0.46938775510204084,
+              0.5918367346938775,
+              0.5510204081632653,
+              0.46938775510204084,
+              0.6938775510204082,
+              0.40816326530612246,
+              0.5102040816326531,
+              0.163265306122449,
+              0.4489795918367347,
+              0.5306122448979592
+            ],
+            "balanced_accuracy": [
+              0.5714285714285714,
+              0.7142857142857143,
+              0.7142857142857143,
+              0.35714285714285715,
+              0.3571428571428571,
+              0.42857142857142855,
+              0.42857142857142855,
+              0.5714285714285714,
+              0.4285714285714286,
+              0.4285714285714286,
+              0.5714285714285714,
+              0.6428571428571428,
+              0.5,
+              0.5,
+              0.6428571428571428,
+              0.5,
+              0.6428571428571428,
+              0.3571428571428571,
+              0.5,
+              0.42857142857142855
+            ]
+          },
+          "real": {
+            "auroc": 0.8367346938775511,
+            "balanced_accuracy": 0.8571428571428572,
+            "eval_count": 14,
+            "probe_id": "l2_logistic_regression",
+            "regularization_c": 1.0,
+            "seed": 20260809,
+            "train_count": 22
+          },
+          "seed": 20260809,
+          "selectivity": {
+            "auroc_delta": 0.36836734693877565,
+            "auroc_empirical_p": 0.047619047619047616,
+            "balanced_accuracy_delta": 0.34285714285714286,
+            "balanced_accuracy_empirical_p": 0.047619047619047616
+          }
+        }
+      ],
+      "split": "test",
+      "status": "exploratory"
+    }
+  ],
+  "claim_boundary": "Single-axis held-out pilot representation evidence only. The sample size forbids a confirmatory claim, and no intervention was performed, so causal steering is untested.",
+  "dataset_manifest_sha256": "00e10c3c6b1f07ad7e03daa42aead0dbe738ff74566307c9d5992370d4389a40",
+  "evidence_type": "representation_evidence_only",
+  "model": {
+    "dtype": "bfloat16",
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "quantization": "bitsandbytes_int8",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554"
+  },
+  "negative_results_retained": true,
+  "schema_version": "representation_atlas_v2_result_v0_1",
+  "selection": {
+    "locked_before_test": true,
+    "selected_layer": 24,
+    "selected_pooling": "last_response_token",
+    "selected_threshold": -2.1513442908022284,
+    "selection_splits": [
+      "train",
+      "dev"
+    ]
+  },
+  "test_access": {
+    "access_log_sha256": "26db00fb13d46a2bfcdd8dd976cd2461efddae1a4c48f55155609d81c7853a7e",
+    "opened_at": "2026-08-04T10:13:09.483699+00:00",
+    "opening_reason": "single_confirmatory_opening_after_train_dev_lock"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "contract_version": "phase_3_small_supplement_contract_v0_4",
+  "status": "frozen_before_small_supplement_human_review",
+  "authorization": "user_authorized_after_confirmed_270_left_a_three_family_train_shortfall",
+  "acceptance_path": "results/summaries/phase_3_additional_tranche_review_acceptance_v0_1.json",
+  "acceptance_sha256": "93b7f1fd92c7704f2fbcaa29867c5c761f9cf114365d783761fad400732a2c73",
+  "final_isolation_manifest_path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_2.json",
+  "final_isolation_manifest_sha256": "017bd8ffb4efe6fd29c35a4eb0587b0167af0bfebc84662d53c70a98951964b5",
+  "source": {
+    "dataset_id": "pku_safe_rlhf",
+    "revision": "f4b036fc262da341565c0d01b2e8cf47d386921e",
+    "model_paths": {
+      "Alpaca-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca-7B/train.jsonl",
+      "Alpaca2-7B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca2-7B/train.jsonl",
+      "Alpaca3-8B": "data/external/pku_safe_rlhf/f4b036fc262da341565c0d01b2e8cf47d386921e/data/Alpaca3-8B/train.jsonl"
+    }
+  },
+  "sampling": {
+    "seed": 2026080467,
+    "mixed_safety_per_model": 3,
+    "both_safe_per_model": 1,
+    "candidate_count": 12,
+    "exclude_phase_2_all_splits": true,
+    "exclude_reviewed_phase_3_270": true,
+    "positive_yield_required": false
+  },
+  "isolation_extension_policy": {
+    "strict_split_ownership_field": "isolation_family_id",
+    "compare_against_existing_candidate_count": 270,
+    "compare_against_existing_final_family_count": 198,
+    "exact_normalized_and_token_3gram_jaccard_at_or_above_0_90_excluded_before_review": true,
+    "human_semantic_merge_review_required": true,
+    "transitive_merge_with_existing_and_new_candidates_required": true
+  },
+  "unchanged_targets": {
+    "qlora_train_minimum_families": 40,
+    "development_minimum_families": 15,
+    "held_out_test_minimum_families": 40,
+    "current_qlora_train_shortfall": 3,
+    "allocation_before_review_forbidden": true
+  },
+  "tracked_manifest_path": "data/research_foundation/manifests/phase_3_small_supplement_manifest_v0_1.json",
+  "local_review_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_small_supplement_review_packet_v0_1.jsonl",
+  "local_isolation_review_packet_path": "results/local_artifacts/research_foundation/phase_3/phase_3_small_supplement_isolation_review_packet_v0_1.jsonl",
+  "claim_boundary": "This exact 12-candidate supplement is a user-authorized bounded exception after the confirmed 270 reached only 37/15/40. It promises no yield, creates no split, and does not lower the unchanged 40/15/40 gate."
+}

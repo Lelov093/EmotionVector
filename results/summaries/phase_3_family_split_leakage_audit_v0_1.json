@@ -1,0 +1,110 @@
+{
+  "blocking_leakage_counts": {
+    "candidate_id_cross_split_overlap": 0,
+    "content_prompt_response_hash_cross_split_overlap": 0,
+    "family_id_cross_split_overlap": 0,
+    "normalized_prompt_cross_split_overlap": 0,
+    "phase_2_content_hash_overlap": 0,
+    "phase_2_source_locator_overlap": 0,
+    "prompt_token_3gram_jaccard_at_or_above_0_90": 0,
+    "source_locator_cross_split_overlap": 0
+  },
+  "broad_family_stratifier_overlap_nonblocking": {
+    "prompt_template_id": {
+      "development_vs_held_out_test": 5,
+      "train_vs_development": 6,
+      "train_vs_held_out_test": 5
+    },
+    "scenario_family_id": {
+      "development_vs_held_out_test": 10,
+      "train_vs_development": 9,
+      "train_vs_held_out_test": 12
+    },
+    "semantic_cluster_id": {
+      "development_vs_held_out_test": 10,
+      "train_vs_development": 9,
+      "train_vs_held_out_test": 12
+    },
+    "task_family_id": {
+      "development_vs_held_out_test": 6,
+      "train_vs_development": 6,
+      "train_vs_held_out_test": 6
+    }
+  },
+  "checks": [
+    {
+      "check_id": "strict_isolation_family_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "candidate_and_source_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "content_hash_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "normalized_prompt_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "token_3gram_threshold_pass",
+      "status": "pass"
+    },
+    {
+      "check_id": "phase_2_overlap_zero",
+      "status": "pass"
+    },
+    {
+      "check_id": "human_semantic_closure_bound",
+      "status": "pass"
+    },
+    {
+      "check_id": "test_family_count_40",
+      "status": "pass"
+    },
+    {
+      "check_id": "test_access_openings_zero",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "Leakage checks pass under final_isolation_family_id ownership. Broad reviewed task/scenario/template/semantic fields intentionally remain overlapping stratifiers under contract v0.2 and are reported rather than misrepresented as independent ownership units. No model or test execution occurred.",
+  "counts": {
+    "assigned_families": 94,
+    "development_families": 15,
+    "development_pair_rows": 18,
+    "held_out_test_families": 40,
+    "held_out_test_pair_rows": 52,
+    "not_selected_ineligible_families": 111,
+    "total_isolation_families": 205,
+    "train_families": 39,
+    "train_response_rows": 65
+  },
+  "maximum_cross_split_prompt_token_3gram_jaccard": 0.26666666666666666,
+  "maximum_cross_split_prompt_token_3gram_jaccard_pair": [
+    "train",
+    "p3fam_6555d85bb1bd12529527",
+    "development",
+    "p3fam_4b50a12d406f889e4ee8"
+  ],
+  "semantic_isolation_evidence": {
+    "final_manifest_path": "data/research_foundation/manifests/phase_3_final_isolation_families_v0_3.json",
+    "human_reviewed_transitive_components": 205,
+    "status": "pass"
+  },
+  "split_manifest": {
+    "path": "data/research_foundation/manifests/phase_3_family_split_v0_1.json",
+    "sha256": "a76ba5500ff35247a1831ab06887b0bf7eee1b0cb0b7c309d479f3a61a05a417"
+  },
+  "status": "passed_family_isolated_39_15_40_split_no_model_execution",
+  "summary_version": "phase_3_family_split_leakage_audit_v0_1",
+  "test_freeze": {
+    "path": "data/research_foundation/manifests/phase_3_held_out_test_freeze_v0_1.json",
+    "sha256": "71986cb9d99e6f04e3b1a4cb3fa8a36c02ae3f5fb365cccaea5f0556b700d2c3"
+  },
+  "test_once_contract": {
+    "path": "configs/research/phase_3_test_once_contract_v0_1.json",
+    "sha256": "b95577f799cf6b7ddcf40a5867e7e87f2eec395b847d201aee155f5351788505"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "amendment_version": "phase_3_independent_blind_review_amendment_v0_2",
+  "status": "frozen_after_blinding_deviation_before_any_human_rating",
+  "bound_evidence": {
+    "original_contract_path": "configs/research/phase_3_blind_review_contract_v0_1.json",
+    "original_contract_sha256": "179e35960db4faf9785a1287131c179cc8b73e2d12554d855bb3ec0a4945c0df",
+    "held_out_execution_path": "results/summaries/phase_3_held_out_execution_v0_1.json",
+    "held_out_execution_sha256": "bbfc857777c6def4fabadc58ec662a5ae7fac3934f09f6e3cda4adbbc993f2ff"
+  },
+  "deviation": {
+    "restricted_condition_key_programmatically_accessed_before_rating_freeze": true,
+    "aggregate_condition_level_exact_match_diagnostics_disclosed_to_researcher_01": true,
+    "per_item_blind_id_condition_mapping_disclosed": false,
+    "human_ratings_completed_at_amendment": 0,
+    "model_output_rerun_allowed": false
+  },
+  "independent_reviewer": {
+    "reviewer_id": "independent_reviewer_01",
+    "researcher_01_eligible": false,
+    "codex_or_automated_agent_eligible": false,
+    "must_be_human": true,
+    "must_not_have_seen_aggregate_condition_diagnostics": true,
+    "must_not_have_accessed_condition_key_or_unblinded_outputs": true,
+    "signed_attestation_required_before_first_rating": true
+  },
+  "review_contract": {
+    "required_ratings": 780,
+    "packet_items": 52,
+    "review_rounds": 1,
+    "rubric_unchanged_from_v0_1": true,
+    "original_blind_ids_and_output_order_preserved": true,
+    "condition_key_access_for_packet_repackaging_allowed": false,
+    "partial_review_acceptance_allowed": false,
+    "condition_key_unblinding_allowed_only_after_all_780_ratings_and_attestation_are_frozen": true
+  },
+  "artifacts": {
+    "source_packet": "results/local_artifacts/research_foundation/phase_3/phase_3_test_blind_packet_v0_1.jsonl",
+    "independent_packet": "results/local_artifacts/research_foundation/phase_3/phase_3_independent_test_blind_packet_v0_2.jsonl",
+    "independent_review_sheet": "results/local_artifacts/research_foundation/phase_3/phase_3_independent_test_blind_review_sheet_v0_2.csv",
+    "reviewer_attestation": "results/local_artifacts/research_foundation/phase_3/phase_3_independent_reviewer_attestation_v0_2.json",
+    "formal_annotations": "results/local_artifacts/research_foundation/phase_3/phase_3_independent_test_blind_annotations_v0_2.jsonl"
+  },
+  "claim_boundary": "This amendment preserves the completed model outputs while replacing researcher_01 with an unexposed independent human reviewer. It does not erase the original blinding deviation, restore a deviation-free preregistration claim, authorize model rerun, or establish method effectiveness."
+}

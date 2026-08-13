@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/split_manifest.schema.json",
+  "title": "EmotionVector Trait Space Split Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "dataset_version",
+    "created_at",
+    "split_strategy",
+    "axes_included",
+    "prompt_families",
+    "counts",
+    "holdout_families",
+    "random_seed",
+    "leakage_checks",
+    "notes"
+  ],
+  "properties": {
+    "dataset_version": {
+      "type": "string",
+      "pattern": "^(trait_space_v[0-9]+(\\.[0-9]+)*|trait_space_seed_v[0-9]+_[0-9]+)$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "split_strategy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["axis_balanced", "pair_level_split", "prompt_family_holdout", "description"],
+      "properties": {
+        "axis_balanced": { "type": "boolean" },
+        "pair_level_split": { "type": "boolean" },
+        "prompt_family_holdout": { "type": "boolean" },
+        "description": { "type": "string" }
+      }
+    },
+    "axes_included": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "prompt_families": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["train", "dev", "test", "holdout"],
+      "properties": {
+        "train": { "$ref": "#/$defs/split_count" },
+        "dev": { "$ref": "#/$defs/split_count" },
+        "test": { "$ref": "#/$defs/split_count" },
+        "holdout": { "$ref": "#/$defs/split_count" }
+      }
+    },
+    "holdout_families": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "random_seed": {
+      "type": "integer"
+    },
+    "leakage_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["check_id", "description", "required_status"],
+        "properties": {
+          "check_id": { "type": "string" },
+          "description": { "type": "string" },
+          "required_status": {
+            "type": "string",
+            "enum": ["pass", "review_required"]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "split_count": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["samples", "pairs", "by_axis"],
+      "properties": {
+        "samples": { "type": "integer", "minimum": 0 },
+        "pairs": { "type": "integer", "minimum": 0 },
+        "by_axis": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "runtime_version": "atlas_v2_test_runtime_v0_1",
+  "status": "frozen_after_selection_before_test_opening",
+  "model": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "cache_root": "D:/AI_Models/huggingface/hub",
+    "load_dtype": "bfloat16",
+    "quantization": "bitsandbytes_int8"
+  },
+  "execution": {
+    "axis_id": "boundary-preserving-over-accommodating",
+    "allowed_splits": ["test"],
+    "batch_size": 1,
+    "local_files_only": true,
+    "device_map": "auto",
+    "max_sequence_tokens": 768,
+    "test_openings": 1
+  },
+  "input_contract": {
+    "format": "chat_user_prompt_plus_assistant_response",
+    "prefix": "tokenizer_chat_template_user_with_add_generation_prompt",
+    "response_tokens": "standalone_response_without_added_special_tokens_appended_to_prefix_ids",
+    "terminal_special_token": "not_appended",
+    "truncation": "reject_over_limit"
+  },
+  "representation_specification": {
+    "layer": 24,
+    "pooling": "last_response_token",
+    "dimension": 2560,
+    "array_dtype": "float32"
+  },
+  "artifact_policy": {
+    "array_path": "results/local_artifacts/research_foundation/atlas_v2/test_layer_24_last_response_token.npz",
+    "metadata_path": "results/local_artifacts/research_foundation/atlas_v2/test_layer_24_last_response_token.metadata.json",
+    "raw_text_persistence": "forbidden",
+    "overwrite": "forbidden"
+  },
+  "analysis": {
+    "seed": 20260804,
+    "bootstrap_iterations": 5000,
+    "permutation_iterations": 10000
+  },
+  "claim_boundary": "This runtime executes the single authorized held-out pilot test after an irreversible access event. It permits no selection, tuning, repeated opening, training, or causal steering claim."
+}

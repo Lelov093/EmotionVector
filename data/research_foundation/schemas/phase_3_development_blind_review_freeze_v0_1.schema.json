@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_development_blind_review_freeze_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Development Blind Review Freeze v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["freeze_version", "status", "frozen_at", "reviewer_id", "source_confirmed_csv", "original_blind_packet", "formal_annotations", "validation", "condition_key_access_at_freeze", "claim_boundary"],
+  "properties": {
+    "freeze_version": {"const": "phase_3_development_blind_review_freeze_v0_1"},
+    "status": {"const": "frozen_before_condition_key_access"},
+    "frozen_at": {"type": "string", "format": "date-time"},
+    "reviewer_id": {"const": "researcher_01"},
+    "source_confirmed_csv": {"type": "object"},
+    "original_blind_packet": {"type": "object"},
+    "formal_annotations": {"type": "object"},
+    "validation": {"type": "object"},
+    "condition_key_access_at_freeze": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "check_id": "all_30_input_ids_complete",
+      "status": "pass"
+    },
+    {
+      "check_id": "raw_packet_identity_hash_text_and_provenance_preserved",
+      "status": "pass"
+    },
+    {
+      "check_id": "family_schema_and_eligibility_valid",
+      "status": "pass"
+    },
+    {
+      "check_id": "isolation_schema_and_relations_valid",
+      "status": "pass"
+    },
+    {
+      "check_id": "merge_transitive_closure_and_canonical_ids",
+      "status": "pass"
+    },
+    {
+      "check_id": "split_not_created",
+      "status": "pass"
+    },
+    {
+      "check_id": "disjoint_40_15_40_feasibility",
+      "status": "blocked_shortfall_3"
+    }
+  ],
+  "claim_boundary": "The confirmed 30 improve the maximum disjoint allocation to 37/15/40, not 40/15/40. The user authorized one small bounded supplement; no automatic open-ended expansion or model execution is authorized.",
+  "decision": {
+    "authorized_supplement_candidate_count": 12,
+    "automatic_expansion_allowed": false,
+    "model_execution_authorized": false,
+    "outcome": "one_user_authorized_bounded_supplement",
+    "split_created": false
+  },
+  "disjoint_gate_audit": {
+    "both_role_families": 77,
+    "evaluation_eligible_families": 79,
+    "evaluation_only_families": 2,
+    "maximum_qlora_train_families_after_reserving_15_dev_and_40_test": 37,
+    "meets_40_15_40": false,
+    "qlora_eligible_families": 90,
+    "qlora_only_families": 13,
+    "qlora_train_shortfall": 3
+  },
+  "family_counts": {
+    "mapping_decisions": {
+      "accept": 21,
+      "ambiguous": 2,
+      "reject": 7
+    },
+    "pair_contrasts": {
+      "insufficient_trait_evidence": 9,
+      "same_axis_not_opposite": 12,
+      "valid_single_axis": 9
+    },
+    "paired_evaluation_eligible": 9,
+    "qlora_training_eligible_responses": 16
+  },
+  "formal_reviews": {
+    "family": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_additional_tranche_family_review_completed_v0_1.jsonl",
+      "row_count": 30,
+      "sha256": "594ddcdd721bd3d58791c5d329587e6f489f7639a420162bfbef9340da183a24",
+      "tracked": false
+    },
+    "isolation": {
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_additional_tranche_isolation_review_completed_v0_1.jsonl",
+      "row_count": 30,
+      "sha256": "01ce1ff0dea3c2d7be427215c64439a09e7cae73d38a8b65ba24908b01c675f0",
+      "tracked": false
+    }
+  },
+  "inputs": {
+    "family_packet": {
+      "modified": false,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_additional_tranche_review_packet_v0_1.jsonl",
+      "sha256": "6eb59c54b810dad5842d786595000c9b697eab007aebe16d1c33da913fbc1068"
+    },
+    "family_prereview": {
+      "filename": "phase_3_additional_tranche_family_ai_prereview_v0_1.jsonl",
+      "sha256": "57ac91f3f6d43c96f18114ffb0cc61c6292833998a881262100bee61a648f90e"
+    },
+    "isolation_packet": {
+      "modified": false,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_additional_tranche_isolation_review_packet_v0_1.jsonl",
+      "sha256": "faa164460cfd0892f8310791d972ff2649337440da6133ba9b429b60df929711"
+    },
+    "isolation_prereview": {
+      "filename": "phase_3_additional_tranche_isolation_ai_prereview_v0_1.jsonl",
+      "sha256": "6049dcd71370c65cf0460444e190cc8fd5f8837aaae0fbd307ab3233e902ba45"
+    }
+  },
+  "isolation_counts": {
+    "additional_confirm": 8,
+    "additional_exclude": 0,
+    "additional_ids_canonicalized_to_frozen_family_id": 20,
+    "additional_merge": 22,
+    "candidate_count": 270,
+    "component_size_distribution": {
+      "1": 157,
+      "2": 28,
+      "3": 5,
+      "4": 3,
+      "5": 2,
+      "6": 1,
+      "7": 2
+    },
+    "final_isolation_families": 198,
+    "merged_components": 41
+  },
+  "reviewed_at": "2026-08-04T21:15:44+08:00",
+  "reviewer_id": "researcher_01",
+  "status": "review_complete_shortfall_3_pending_user_authorized_small_supplement",
+  "summary_version": "phase_3_additional_tranche_review_acceptance_v0_1"
+}

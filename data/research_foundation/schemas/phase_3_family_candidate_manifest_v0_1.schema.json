@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_family_candidate_manifest_v0_1.schema.json",
+  "title": "EmotionVector Phase 3 Family Candidate Manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["manifest_version", "status", "contract", "source", "phase_2_exclusion", "sampling", "axis_scope", "post_review_targets", "local_review_packet", "records", "checks", "claim_boundary"],
+  "properties": {
+    "manifest_version": {"const": "phase_3_family_candidate_manifest_v0_1"},
+    "status": {"const": "generated_pending_human_review_no_split"},
+    "contract": {"type": "object"},
+    "source": {"type": "object"},
+    "phase_2_exclusion": {"type": "object"},
+    "sampling": {"type": "object"},
+    "axis_scope": {"const": ["boundary-preserving-over-accommodating"]},
+    "post_review_targets": {"type": "object"},
+    "local_review_packet": {"type": "object"},
+    "records": {
+      "type": "array", "minItems": 180, "maxItems": 180,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["candidate_id", "dataset_id", "source_revision", "source_family_id", "source_locator", "sampling_stratum", "prompt_sha256", "response_sha256", "content_sha256", "candidate_trait_axes", "human_review_status", "split_status"],
+        "properties": {
+          "candidate_id": {"type": "string", "pattern": "^p3fam_[a-f0-9]{20}$"},
+          "dataset_id": {"const": "pku_safe_rlhf"},
+          "source_revision": {"const": "f4b036fc262da341565c0d01b2e8cf47d386921e"},
+          "source_family_id": {"type": "string"},
+          "source_locator": {"type": "object"},
+          "sampling_stratum": {"enum": ["mixed_safety", "both_safe"]},
+          "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "response_sha256": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+          "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "candidate_trait_axes": {"const": ["boundary-preserving-over-accommodating"]},
+          "human_review_status": {"const": "pending"},
+          "split_status": {"const": "not_assigned_before_human_review"}
+        }
+      }
+    },
+    "checks": {"type": "array", "minItems": 6, "items": {"type": "object"}},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "check_id": "all_inputs_have_180_unique_matching_ids",
+      "status": "pass"
+    },
+    {
+      "check_id": "jsonl_csv_field_cross_check",
+      "mismatch_count": 0,
+      "status": "pass"
+    },
+    {
+      "check_id": "original_text_hash_and_provenance_preserved",
+      "status": "pass"
+    },
+    {
+      "check_id": "original_packet_unmodified",
+      "status": "pass"
+    },
+    {
+      "check_id": "schema_and_completed_review_validation",
+      "status": "pass"
+    },
+    {
+      "check_id": "family_ids_nonpending_and_reused",
+      "status": "pass"
+    },
+    {
+      "check_id": "family_connected_component_allocation_readiness",
+      "status": "blocked"
+    },
+    {
+      "check_id": "paired_eligibility_valid_single_axis_only",
+      "status": "pass"
+    },
+    {
+      "check_id": "same_axis_not_opposite_excluded_from_paired_evaluation",
+      "status": "pass"
+    },
+    {
+      "check_id": "qlora_single_response_quality_gates",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "The user confirmed the 180 prereview decisions as the single-researcher human review. This completes review but does not create a split, authorize model execution, or establish causal evidence.",
+  "counts": {
+    "mapping_decisions": {
+      "accept": 109,
+      "ambiguous": 31,
+      "reject": 40
+    },
+    "pair_contrasts": {
+      "insufficient_trait_evidence": 71,
+      "same_axis_not_opposite": 45,
+      "valid_single_axis": 64
+    },
+    "paired_evaluation_eligible": 64,
+    "qlora_training_eligible_responses": 85,
+    "unique_families": {
+      "prompt_template_id": 6,
+      "scenario_family_id": 29,
+      "semantic_cluster_id": 29,
+      "task_family_id": 6
+    }
+  },
+  "family_component_audit": {
+    "allocation_ready": false,
+    "claim_boundary": "Family IDs are legally formed and reused, but reuse connectivity is a separate split-isolation gate. Confirmed review values are not altered by this audit.",
+    "component_count": 1,
+    "fields": [
+      "source_family_id",
+      "task_family_id",
+      "scenario_family_id",
+      "prompt_template_id",
+      "semantic_cluster_id"
+    ],
+    "largest_component_rows": 180,
+    "paired_evaluation_component_count": 1,
+    "qlora_eligible_pair_component_count": 1,
+    "status": "blocked_single_connected_component"
+  },
+  "formal_review": {
+    "path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_review_completed_v0_1.jsonl",
+    "row_count": 180,
+    "schema_path": "data/research_foundation/schemas/phase_3_family_review_v0_1.schema.json",
+    "sha256": "5f1d4ec13572a3c6e6a196e28015bba7d392671400477a11be07d2146bb6ece2",
+    "tracked": false
+  },
+  "inputs": {
+    "confirmed_csv": {
+      "filename": "phase_3_family_review_ai_prereview_v0_1.csv",
+      "role": "cross_check",
+      "sha256": "e26ea71176edc14d92a120835629c43c34e4a990b39b8d161daea771ffe49739"
+    },
+    "confirmed_jsonl": {
+      "filename": "phase_3_family_review_ai_prereview_v0_1.jsonl",
+      "role": "primary",
+      "sha256": "dd965686a55d581e68f3c49859a1fa258d0c1435463e3626b30e20b977658586"
+    },
+    "original_packet": {
+      "modified": false,
+      "path": "results/local_artifacts/research_foundation/phase_3/phase_3_family_review_packet_v0_1.jsonl",
+      "sha256": "db1cf955bd372eb3ecdcf276925dc64087306231322fb4b75dcd5b4f409c0246"
+    }
+  },
+  "reviewed_at": "2026-08-04T19:26:00+08:00",
+  "reviewer_id": "researcher_01",
+  "status": "human_review_complete_pending_family_split_freeze",
+  "summary_version": "phase_3_family_review_acceptance_v0_1"
+}

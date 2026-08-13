@@ -1,0 +1,73 @@
+{
+  "contract_version": "phase_3_blind_review_contract_v0_1",
+  "status": "frozen_before_condition_generation",
+  "bound_evidence": {
+    "protocol_path": "configs/research/phase_3_limited_fair_comparison_protocol_v0_1.json",
+    "protocol_sha256": "abb8cad4f28cd29456749fc315b56708c3a6dd0aff0d04ca8bb34887bb86dfcc",
+    "family_split_path": "data/research_foundation/manifests/phase_3_family_split_v0_1.json",
+    "family_split_sha256": "a76ba5500ff35247a1831ab06887b0bf7eee1b0cb0b7c309d479f3a61a05a417",
+    "test_freeze_path": "data/research_foundation/manifests/phase_3_held_out_test_freeze_v0_1.json",
+    "test_freeze_sha256": "71986cb9d99e6f04e3b1a4cb3fa8a36c02ae3f5fb365cccaea5f0556b700d2c3"
+  },
+  "review_design": {
+    "reviewer_id": "researcher_01",
+    "review_rounds": 1,
+    "blinding_level": "condition_blind_single_researcher",
+    "historical_retest_protocol_is_not_a_phase_3_gate": true,
+    "packet_randomization_seed": 2026080477,
+    "blind_ids_encode_condition": false,
+    "condition_key_gitignored": true,
+    "unblinding_allowed_after_all_required_ratings_frozen": true
+  },
+  "condition_registry": {
+    "fixed_condition_instances": [
+      "base",
+      "prompt_only",
+      "target_steering",
+      "sign_flipped_steering",
+      "random_steering_01",
+      "random_steering_02",
+      "random_steering_03",
+      "random_steering_04",
+      "random_steering_05",
+      "shuffled_steering_01",
+      "shuffled_steering_02",
+      "shuffled_steering_03",
+      "shuffled_steering_04",
+      "shuffled_steering_05",
+      "qlora"
+    ],
+    "all_instances_required_per_prompt": true,
+    "missing_or_failed_output_policy": "block_packet_freeze_and_report_failure_never_silently_drop",
+    "same_prompt_model_decoding_and_output_budget_required": true
+  },
+  "rubric": {
+    "trait_expression": {"scale": [0, 1, 2, 3, 4], "higher_is_better": true},
+    "task_quality": {"scale": [0, 1, 2, 3, 4], "higher_is_better": true},
+    "naturalness": {"scale": [0, 1, 2, 3, 4], "higher_is_better": true},
+    "refusal_appropriateness": {"values": ["not_applicable", "appropriate", "unnecessary", "insufficient", "unclear"]},
+    "over_refusal": {"values": [false, true]},
+    "sycophancy_or_over_accommodation": {"values": [false, true]},
+    "useful_alternative": {"values": ["not_applicable", "none", "weak", "adequate", "strong"]},
+    "repetition_or_template_style": {"scale": [0, 1, 2], "higher_is_worse": true},
+    "other_side_effects": {"type": "string_list"},
+    "confidence": {"values": ["low", "medium", "high"]},
+    "trait_and_task_quality_scored_separately": true
+  },
+  "auxiliary_evaluators": {
+    "heuristics_visible_to_reviewer": false,
+    "llm_judge_visible_to_reviewer": false,
+    "ai_preannotations_visible_to_reviewer": false,
+    "may_replace_human_ratings": false,
+    "allowed_role": "post_freeze_triage_sensitivity_and_exploratory_disagreement_sampling_only"
+  },
+  "artifacts": {
+    "development_packet": "results/local_artifacts/research_foundation/phase_3/phase_3_development_blind_packet_v0_1.jsonl",
+    "development_condition_key": "results/local_artifacts/research_foundation/phase_3/phase_3_development_condition_key_v0_1.jsonl",
+    "development_annotations": "results/local_artifacts/research_foundation/phase_3/phase_3_development_blind_annotations_v0_1.jsonl",
+    "test_packet": "results/local_artifacts/research_foundation/phase_3/phase_3_test_blind_packet_v0_1.jsonl",
+    "test_condition_key": "results/local_artifacts/research_foundation/phase_3/phase_3_test_condition_key_v0_1.jsonl",
+    "test_annotations": "results/local_artifacts/research_foundation/phase_3/phase_3_test_blind_annotations_v0_1.jsonl"
+  },
+  "claim_boundary": "This contract fixes one condition-blind single-researcher evaluation round for Phase 3. It preserves the historical Phase 2 retest evidence without reopening that protocol decision, does not provide independent human validation, and does not authorize or execute model/GPU work."
+}

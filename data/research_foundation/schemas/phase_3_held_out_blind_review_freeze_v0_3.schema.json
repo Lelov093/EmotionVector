@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emotionvector.local/schemas/phase_3_held_out_blind_review_freeze_v0_3.schema.json",
+  "title": "EmotionVector Phase 3 Held-out Blind Review Freeze v0.3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["freeze_version", "status", "frozen_at", "reviewer_id", "review_provenance", "source_scored_csv", "source_review_summary", "original_blind_packet", "formal_annotations", "validation", "condition_key_access_at_freeze", "claim_boundary"],
+  "properties": {
+    "freeze_version": {"const": "phase_3_held_out_blind_review_freeze_v0_3"},
+    "status": {"const": "frozen_before_condition_key_access"},
+    "frozen_at": {"type": "string", "format": "date-time"},
+    "reviewer_id": {"const": "researcher_02"},
+    "review_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ai_preliminary_judgment_role", "final_human_review_role", "basis"],
+      "properties": {
+        "ai_preliminary_judgment_role": {"const": "auxiliary_preannotation_not_independent_primary_evidence"},
+        "final_human_review_role": {"const": "researcher_02_reviewed_and_owns_all_780_final_ratings"},
+        "basis": {"const": "user_reported_in_chat_at_submission"}
+      }
+    },
+    "source_scored_csv": {"type": "object"},
+    "source_review_summary": {"type": "object"},
+    "original_blind_packet": {"type": "object"},
+    "formal_annotations": {"type": "object"},
+    "validation": {"type": "object"},
+    "condition_key_access_at_freeze": {"const": false},
+    "claim_boundary": {"type": "string", "minLength": 1}
+  }
+}
