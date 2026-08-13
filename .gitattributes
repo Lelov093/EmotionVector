@@ -1,0 +1,7 @@
+# Frozen research manifests hash raw file bytes. Keep the recorded line endings
+# stable across Windows and Unix checkouts so provenance checks are portable.
+data/trait_space/curated/trait_space_seed_v0_1.jsonl text eol=lf
+data/evaluation/trait_eval_12axis_v0_1.jsonl text eol=crlf
+data/post_training/boundary_preserving_sft_v0_1.jsonl text eol=crlf
+data/post_training/boundary_preserving_sft_v0_2.jsonl text eol=crlf
+data/evaluation/human_review/phase_e_review_subset_ai_preannotated_v0_1.jsonl text eol=crlf
